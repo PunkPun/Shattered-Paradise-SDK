@@ -1,4 +1,4 @@
-SMECH:
+SMECH: #Wolverine
 	Inherits: ^Walker
 	Inherits@APAMMO: ^AffectedByAPAmmunition
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -79,7 +79,7 @@ SMECH:
 	ActorStatValues:
 		Damage: 40
 
-MMCH:
+MMCH: #Titan
 	Inherits: ^Walker
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -163,7 +163,7 @@ MMCH:
 	Carryable:
 		LocalOffset: 0,0,763
 
-APC:
+APC: #Amphibious APC
 	Inherits: ^Tank
 	Inherits@APAMMO: ^AffectedByAPAmmunition
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
@@ -311,7 +311,7 @@ APC:
 		OrderChance: 100
 		OrderInterval: 45
 
-HVR:
+HVR: #Hover MLRS
 	Inherits: ^HoverTank
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -330,7 +330,7 @@ HVR:
 		BuildDuration: 625
 		BuildDurationModifier: 100
 	Mobile:
-		Speed: 120
+		Speed: 135
 	Health:
 		HP: 25000
 	Armor:
@@ -2219,10 +2219,10 @@ WOLF: #Carnotaurus
 		BuildPaletteOrder: 30
 		Description: wolf-desc
 		Prerequisites: ~muweap, muradr, ~techlevel.4
-		BuildDuration: 375
+		BuildDuration: 250
 		BuildDurationModifier: 100
 	Valued:
-		Cost: 500
+		Cost: 400
 	Tooltip:
 		Name: wolf-name
 	Voiced:
@@ -3924,7 +3924,7 @@ SCRMOBMINE:
 	ActorStatValues:
 		Stats: Armor, Sight, Speed, MindControl, ReloadDelay, MaxRange
 
-TRIPOD:
+TRIPOD: #Annihilator Tripod
 	Inherits: ^Walker
 	Inherits@1: ^ScrinVehicleOverride
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove

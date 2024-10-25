@@ -370,7 +370,7 @@ UMAGON:
 	ActorStatValues:
 		Damage: 150
 
-PREDATOR:
+PREDATOR: #Predator Tank
 	Inherits: ^Tank
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -454,14 +454,14 @@ PREDATOR:
 	ActorStatValues:
 		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MinRange, None, MaxRange
 
-GHUMV:
+GHUMV: #Humvee
 	Inherits: ^Tank
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMoveWithBerserkable
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@PIPS: ^CargoPips
-	Inherits@VISION: ^6CellVision
+	Inherits@VISION: ^8CellVision
 	Valued:
-		Cost: 300
+		Cost: 400
 	Tooltip:
 		Name: ghumv-name
 	UpdatesPlayerStatistics:
@@ -476,10 +476,10 @@ GHUMV:
 		BuildDurationModifier: 100
 	Mobile:
 		TurnSpeed: 32
-		Speed: 165
+		Speed: 150
 		Locomotor: Vehicle
 	Health:
-		HP: 17500
+		HP: 20000
 	Armor:
 		Type: Light
 	Turreted:
@@ -611,7 +611,7 @@ SLIGHSHOT:
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@RENDER: ^MutRenderGreen
 	Valued:
-		Cost: 700
+		Cost: 600
 	Tooltip:
 		Name: slighshot-name
 	UpdatesPlayerStatistics:
@@ -622,10 +622,10 @@ SLIGHSHOT:
 		BuildPaletteOrder: 13
 		Description: slighshot-desc
 		Prerequisites: ~muweap, ~campaignunit, ~techlevel.2
-		BuildDuration: 500
+		BuildDuration: 375
 		BuildDurationModifier: 100
 	Mobile:
-		Speed: 120
+		Speed: 135
 	Health:
 		HP: 20000
 	Selectable:
@@ -1041,7 +1041,7 @@ PROMTHTNK: #Prometheus Tank
 		Description: promthtnk-desc
 		BuildPaletteOrder: 40
 		Prerequisites: ~muweap, muhall, ~campaignunit, ~techlevel.5
-		BuildDuration: 500
+		BuildDuration: 875
 		BuildDurationModifier: 100
 	Valued:
 		Cost: 1500
@@ -1093,10 +1093,10 @@ REGENTNK: #Regenisis Tank
 		Description: regentnk-desc
 		BuildPaletteOrder: 41
 		Prerequisites: ~muweap, muhall, ~campaignunit, ~techlevel.5
-		BuildDuration: 500
+		BuildDuration: 1000
 		BuildDurationModifier: 100
 	Valued:
-		Cost: 1750
+		Cost: 1600
 	Tooltip:
 		Name: regentnk-name
 	UpdatesPlayerStatistics:
@@ -1105,19 +1105,15 @@ REGENTNK: #Regenisis Tank
 		Bounds: 1250, 2100, 0, -500
 	Mobile:
 		TurnSpeed: 32
-		Speed: 75
+		Speed: 60
 		Locomotor: InfantryCrusherVehicle
 	BodyOrientation:
 		CameraPitch: 250
 	Health:
-		HP: 65000
+		HP: 75000
 	Voiced:
 		VoiceSet: Trike
 		Volume: 3
-	Mobile:
-		TurnSpeed: 32
-		Speed: 75
-		Locomotor: Vehicle
 	Armor:
 		Type: Heavy
 	Armament@PRIMARY:
@@ -1151,7 +1147,7 @@ TVDDEVICE: #T.V.D.D
 		Description: tvddevice-desc
 		BuildPaletteOrder: 51
 		Prerequisites: ~muweap, muhall, ~campaignunit, ~techlevel.5
-		BuildDuration: 500
+		BuildDuration: 2000
 		BuildDurationModifier: 100
 	Valued:
 		Cost: 4000

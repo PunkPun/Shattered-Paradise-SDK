@@ -430,7 +430,7 @@ QuadFireAA:
 JeepWeapon:
 	Inherits@1: ^RifleWeapon
 	Inherits@2: ^Piffs
-	ReloadDelay: 40
+	ReloadDelay: 30
 	Range: 5c0
 	Report: vhumweaa.aud
 	Warhead@1Dam: SpreadDamage

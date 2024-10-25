@@ -32,8 +32,8 @@ WELL: #Tiberium Extractor
 		Footprint: xxx xxx xxx
 		Dimensions: 3, 3
 	CashTrickler:
-		Interval: 400
-		Amount: 50
+		Interval: 150
+		Amount: 25
 		PauseOnCondition: empdisable
 		RequiresCondition: enabled
 	Health:
