@@ -771,23 +771,24 @@ trnsport:
 		UseClassicFacings: true
 		Offset: 0,-25
 		ZOffset: 3000
+	stand:
+	icon:
+		Filename: otrnicon.shp
+
+gdicarryall:
+	Inherits: trnsport
 	idle-white:
 		Filename: trnsportw.shp
 		Facings: -32
 		UseClassicFacings: true
 		ZOffset: 3000
-	stand:
-	rotor:
-		Filename: lrotor.shp
-		Length: 4
-		ZOffset: 4000
-	slow-rotor:
-		Filename: lrotor.shp
-		Start: 4
-		Length: 8
-		ZOffset: 4000
-	icon:
-		Filename: otrnicon.shp
+	rotor: 
+		ZRamp: 1
+		Start: 32
+		Length: 6
+		Tick: 10
+		Filename: trnsport.shp
+		ZOffset: 3001
 
 forgcarryall:
 	Inherits: trnsport
@@ -801,11 +802,13 @@ forgcarryall:
 		Filename: lrotor.shp
 		Length: 4
 		ZOffset: 4000
+		ZRamp: 1
 	slow-rotor:
 		Filename: lrotor.shp
 		Start: 4
 		Length: 8
 		ZOffset: 4000
+		ZRamp: 1
 	stand:
 		Filename: forgcarryall.shp
 

@@ -1498,7 +1498,7 @@ TRNSPORT:
 		BuildPaletteOrder: 11
 		Prerequisites: ~gahpad, gadept, ~techlevel.4
 	RenderSprites:
-		Image: trnsport
+		Image: gdicarryall
 	SpawnHuskEffectOnDeath:
 		Weapon: trnsport.husk
 		RequiresCondition: airborne && !ceramic_plating
@@ -1511,34 +1511,10 @@ TRNSPORT:
 		Name: white
 		Sequence: idle-white
 		RequiresCondition: ceramic_plating
-	WithIdleOverlay@Wind1:
-		Image: orcawind
-		Sequence: idle2
-		Offset: 420, 350, -500
-		RequiresCondition: airborne
-		Palette: apgrey
-		IsDecoration: true ## so this doesn't have shadow
-	WithIdleOverlay@Wind2:
-		Image: orcawind
-		Sequence: idle2
-		Offset: 420, -350, -500
-		RequiresCondition: airborne
-		Palette: apgrey
-		IsDecoration: true ## so this doesn't have shadow
-	WithIdleOverlay@Wind3:
-		Image: orcawind
-		Sequence: idle2
-		Offset: -600, 450, -500
-		RequiresCondition: airborne
-		Palette: apgrey
-		IsDecoration: true ## so this doesn't have shadow
-	WithIdleOverlay@Wind4:
-		Image: orcawind
-		Sequence: idle2
-		Offset: -600, -450, -500
-		RequiresCondition: airborne
-		Palette: apgrey
-		IsDecoration: true ## so this doesn't have shadow
+	WithIdleOverlay@Rotor:
+		Sequence: rotor
+		Palette: player
+		IsPlayerPalette: true
 	ActorStatOverride@CeramicPlating:
 		Health: 18000
 		RequiresCondition: ceramic_plating

@@ -989,6 +989,15 @@ orca:
 		Filename: orcaw.shp
 		ZRamp: 1
 		Facings: -32
+	rotor: 
+		ZRamp: 1
+		Start: 32
+		Length: 6
+		Tick: 10
+	ammo:
+		Filename: orca-ammo.shp
+		ZRamp: 1
+		Facings: -32
 	stand:
 		ZRamp: 1
 	icon:
@@ -1004,6 +1013,11 @@ orcab:
 		Filename: orcabw.shp
 		ZRamp: 1
 		Facings: -32
+	rotor: 
+		ZRamp: 1
+		Start: 32
+		Length: 6
+		Tick: 10
 	stand:
 		ZRamp: 1
 	icon:

@@ -73,20 +73,16 @@ ORCA:
 		Name: white
 		Sequence: idle-white
 		RequiresCondition: ceramic_plating
-	WithIdleOverlay@Wind1:
-		Image: orcawind
-		Sequence: idle
-		Offset: -100, 250, -650
-		RequiresCondition: airborne
-		Palette: apgrey
-		IsDecoration: true ## so this doesn't have shadow
-	WithIdleOverlay@Wind2:
-		Image: orcawind
-		Sequence: idle
-		Offset: -100, -250, -650
-		RequiresCondition: airborne
-		Palette: apgrey
-		IsDecoration: true ## so this doesn't have shadow
+	WithIdleOverlay@Rotor:
+		Sequence: rotor
+		Palette: player
+		IsPlayerPalette: true
+	WithIdleOverlay@Ammo:
+		Sequence: ammo
+		Palette: player
+		IsPlayerPalette: true
+		IsDecoration: true
+		RequiresCondition: ammo
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
@@ -166,20 +162,10 @@ ORCAB:
 		Name: white
 		Sequence: idle-white
 		RequiresCondition: ceramic_plating
-	WithIdleOverlay@Wind1:
-		Image: orcawind
-		Sequence: idle
-		Offset: 140, 450, -600
-		RequiresCondition: airborne
-		Palette: apgrey
-		IsDecoration: true ## so this doesn't have shadow
-	WithIdleOverlay@Wind2:
-		Image: orcawind
-		Sequence: idle
-		Offset: 140, -450, -600
-		RequiresCondition: airborne
-		Palette: apgrey
-		IsDecoration: true ## so this doesn't have shadow
+	WithIdleOverlay@Rotor:
+		Sequence: rotor
+		Palette: player
+		IsPlayerPalette: true
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
