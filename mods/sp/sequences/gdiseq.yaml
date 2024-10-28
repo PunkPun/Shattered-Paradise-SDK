@@ -1023,6 +1023,27 @@ orcab:
 	icon:
 		Filename: obmbicon.shp
 
+orcai:
+	Inherits@1: ^SpriteVehicle
+	Inherits@2: ^MissileMuzzle
+	Defaults:
+		Filename: orcai.shp
+	idle:
+		ZRamp: 1
+	idle-white:
+		Filename: orcaiw.shp
+		ZRamp: 1
+		Facings: -32
+	rotor: 
+		ZRamp: 1
+		Start: 32
+		Length: 6
+		Tick: 10
+	stand:
+		ZRamp: 1
+	icon:
+		Filename: orcaiicon.shp
+
 orcatran:
 	Inherits: ^EmpOverlay
 	Defaults:

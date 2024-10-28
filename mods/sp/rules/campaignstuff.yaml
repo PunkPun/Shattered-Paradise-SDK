@@ -527,6 +527,116 @@ GHUMV: #Humvee
 		OrderChance: 100
 		OrderInterval: 45
 
+ORCAI:
+	Inherits: ^CombatHelicopter
+	Inherits@AMMO: ^UsesAmmunition
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMoveWithBerserkable
+	Inherits@CERAMICS: ^AffectedByCeramicPlating
+	Inherits@DETECTION: ^BasicStealthDetectionAir
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@SHADOW: ^AircraftShadow
+	Inherits@VISION: ^12CellVisionAir
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: orcai-name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		Queue: Air.Shared, Air.GDI
+		Description: orcai-desc
+		BuildPaletteOrder: 1
+		Prerequisites: ~gahpad, ~techlevel.4, ~campaignunit
+		BuildDuration: 750
+		BuildDurationModifier: 100
+	Voiced:
+		VoiceSet: Orca
+		Volume: 2
+	Selectable:
+		Bounds: 903,1447
+	Aircraft:
+		MaximumPitch: 90
+		TurnSpeed: 40
+		Speed: 210
+		IdleTurnSpeed: 10
+		IdleSpeed: 85
+		AirborneCondition: airborne
+		MoveIntoShroud: true
+		VTOL: true
+		CanSlide: false
+		CanHover: false
+		TakeOffOnResupply: false #To fix a bug in non VTOL aircraft that still go to former target location after resupply
+		TakeoffSounds: orcaup1.aud
+		LandingSounds: orcadwn1.aud
+	AutoTarget:
+		ScanRadius: 7 #PREF: save trait looks up and scan armaments
+		InitialStance: ReturnFire
+		InitialStanceAI: AttackAnything
+	Health:
+		HP: 15000
+	Armament:
+		Weapon: InterceptorHellfire
+		LocalOffset: 300,0,60, 300,0,60
+		LocalYaw: -90, 90
+		MuzzleSequence: muzzle
+		MuzzlePalette: gensmkexploj
+		PauseOnCondition: !ammo
+	Armament@AA:
+		Weapon: InterceptorHellfireAA
+		LocalOffset: 300,0,60, 300,0,60
+		LocalYaw: -90, 90
+		MuzzleSequence: muzzle
+		MuzzlePalette: gensmkexploj
+		PauseOnCondition: !ammo
+	WithMuzzleOverlay:
+	AttackAircraft:
+		#AttackType: Hover
+		FacingTolerance: 40
+	AmmoPool:
+		Ammo: 4
+		ReloadCount: 2
+		ReloadDelay: 50
+		AmmoCondition: ammo
+	SpawnHuskEffectOnDeath:
+		Weapon: orca.husk
+		RequiresCondition: airborne && !ceramic_plating
+	SpawnHuskEffectOnDeath@white:
+		Weapon: orcaw.husk
+		RequiresCondition: airborne && ceramic_plating
+	WithFacingSpriteBody:
+		RequiresCondition: !ceramic_plating
+	WithFacingSpriteBody@white:
+		Name: white
+		Sequence: idle-white
+		RequiresCondition: ceramic_plating
+	WithIdleOverlay@Rotor:
+		Sequence: rotor
+		Palette: player
+		IsPlayerPalette: true
+	#Contrail@FlameTrail:
+	#	RequiresCondition: airborne
+	#	Offset: -100,0,50
+	#	StartColor: FFEA0080
+	#	StartColorAlpha: 128
+	#	StartColorUsePlayerColor: false
+	#	EndColor: FFEA0000
+	#	StartWidth: 128
+	#	TrailLength: 6
+	#	EndWidth: 0
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		PipCount: 5
+		FullSequence: pip-missile
+		EmptySequence: pip-missileempty
+		Palette: pips
+	ActorStatValues:
+		Damage: 40
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MinRange, None, MaxRange
+	ActorStatOverride@CeramicPlating:
+		Health: 18750
+		RequiresCondition: ceramic_plating
+
 MUJEEP:
 	Inherits: ^Tank
 	Inherits@RENDER: ^MutRenderGreen

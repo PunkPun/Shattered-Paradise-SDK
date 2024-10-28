@@ -1769,6 +1769,20 @@ predator-desc =  GDI's main battle tank armed with an anti-tank cannon and missi
     Upgrades:
      - Railgun Barrels
 
+orcai-name = Orca Interceptor
+orcai-desc = Fast interceptor with missile.
+
+    Good vs: Vehicles, Aircraft
+
+    Special:
+     - Can attack air
+     - Provides stealth detection when at air
+     - Can attack enemies ahead while moving
+
+    Upgrades:
+     - Ceramic Plating
+
+
 mujeep-name = Technical
 mujeep-desc = Infantry transport.
 
