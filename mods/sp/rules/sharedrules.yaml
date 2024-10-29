@@ -1515,6 +1515,12 @@ TRNSPORT:
 		Sequence: rotor
 		Palette: player
 		IsPlayerPalette: true
+		RequiresCondition: !ceramic_plating
+	WithIdleOverlay@RotorW:
+		Sequence: rotorw
+		Palette: player
+		IsPlayerPalette: true
+		RequiresCondition: ceramic_plating
 	ActorStatOverride@CeramicPlating:
 		Health: 18000
 		RequiresCondition: ceramic_plating

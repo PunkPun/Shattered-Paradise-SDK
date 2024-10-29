@@ -77,6 +77,12 @@ ORCA:
 		Sequence: rotor
 		Palette: player
 		IsPlayerPalette: true
+		RequiresCondition: !ceramic_plating
+	WithIdleOverlay@RotorW:
+		Sequence: rotorw
+		Palette: player
+		IsPlayerPalette: true
+		RequiresCondition: ceramic_plating
 	WithIdleOverlay@Ammo:
 		Sequence: ammo
 		Palette: player
@@ -166,6 +172,12 @@ ORCAB:
 		Sequence: rotor
 		Palette: player
 		IsPlayerPalette: true
+		RequiresCondition: !ceramic_plating
+	WithIdleOverlay@RotorW:
+		Sequence: rotorw
+		Palette: player
+		IsPlayerPalette: true
+		RequiresCondition: ceramic_plating
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
@@ -484,7 +496,7 @@ SCRIN:
 		Palette: pips
 	Contrail@1:
 		RequiresCondition: airborne
-		Offset: -404,-177, 124
+		Offset: -404,-200, 124
 		StartColor: 99FF99
 		StartColorAlpha: 200
 		StartColorUsePlayerColor: false

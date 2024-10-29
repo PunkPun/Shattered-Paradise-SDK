@@ -993,7 +993,13 @@ orca:
 		ZRamp: 1
 		Start: 32
 		Length: 8
-		Tick: 12
+		Tick: 20
+	rotorw: 
+		Filename: orcaw.shp
+		ZRamp: 1
+		Start: 32
+		Length: 8
+		Tick: 20
 	ammo:
 		Filename: orca-ammo.shp
 		ZRamp: 1
@@ -1017,7 +1023,13 @@ orcab:
 		ZRamp: 1
 		Start: 32
 		Length: 8
-		Tick: 12
+		Tick: 20
+	rotorw: 
+		Filename: orcabw.shp
+		ZRamp: 1
+		Start: 32
+		Length: 8
+		Tick: 20
 	stand:
 		ZRamp: 1
 	icon:
@@ -1038,7 +1050,13 @@ orcai:
 		ZRamp: 1
 		Start: 32
 		Length: 8
-		Tick: 12
+		Tick: 20
+	rotorw: 
+		Filename: orcaiw.shp
+		ZRamp: 1
+		Start: 32
+		Length: 8
+		Tick: 20
 	stand:
 		ZRamp: 1
 	icon:

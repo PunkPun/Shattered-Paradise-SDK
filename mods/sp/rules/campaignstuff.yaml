@@ -528,7 +528,7 @@ GHUMV: #Humvee
 		OrderInterval: 45
 
 ORCAI:
-	Inherits: ^CombatHelicopter
+	Inherits: ^CombatPlane
 	Inherits@AMMO: ^UsesAmmunition
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMoveWithBerserkable
 	Inherits@CERAMICS: ^AffectedByCeramicPlating
@@ -590,7 +590,6 @@ ORCAI:
 		PauseOnCondition: !ammo
 	WithMuzzleOverlay:
 	AttackAircraft:
-		#AttackType: Hover
 		FacingTolerance: 40
 	AmmoPool:
 		Ammo: 4
@@ -613,16 +612,22 @@ ORCAI:
 		Sequence: rotor
 		Palette: player
 		IsPlayerPalette: true
-	#Contrail@FlameTrail:
-	#	RequiresCondition: airborne
-	#	Offset: -100,0,50
-	#	StartColor: FFEA0080
-	#	StartColorAlpha: 128
-	#	StartColorUsePlayerColor: false
-	#	EndColor: FFEA0000
-	#	StartWidth: 128
-	#	TrailLength: 6
-	#	EndWidth: 0
+		RequiresCondition: !ceramic_plating
+	WithIdleOverlay@RotorW:
+		Sequence: rotorw
+		Palette: player
+		IsPlayerPalette: true
+		RequiresCondition: ceramic_plating
+	Contrail@FlameTrail:
+		RequiresCondition: airborne
+		Offset: -300,0,100
+		StartColor: FFEA0088
+		StartColorAlpha: 128
+		StartColorUsePlayerColor: false
+		EndColor: FFEA0000
+		StartWidth: 128
+		TrailLength: 7
+		EndWidth: 0
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true

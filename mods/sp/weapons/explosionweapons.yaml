@@ -1081,7 +1081,7 @@ trnsport.husk:
 	Inherits@explo: SmallPlaneExplode
 	Inherits: ^plane.husk
 	Projectile: ProjetcileHusk
-		Image: trnsport
+		Image: gdicarryall
 
 trnsportw.husk:
 	Inherits: trnsport.husk

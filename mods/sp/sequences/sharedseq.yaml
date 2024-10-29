@@ -786,8 +786,15 @@ gdicarryall:
 		ZRamp: 1
 		Start: 32
 		Length: 8
-		Tick: 12
+		Tick: 20
 		Filename: trnsport.shp
+		ZOffset: 3001
+	rotorw: 
+		ZRamp: 1
+		Start: 32
+		Length: 8
+		Tick: 20
+		Filename: trnsportw.shp
 		ZOffset: 3001
 
 forgcarryall:
