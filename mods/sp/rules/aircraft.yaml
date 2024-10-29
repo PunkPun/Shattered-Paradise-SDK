@@ -484,7 +484,7 @@ SCRIN:
 		Palette: pips
 	Contrail@1:
 		RequiresCondition: airborne
-		Offset: -400,-176, 123
+		Offset: -404,-177, 124
 		StartColor: 99FF99
 		StartColorAlpha: 200
 		StartColorUsePlayerColor: false
@@ -495,7 +495,7 @@ SCRIN:
 		EndWidth: 0
 	Contrail@2:
 		RequiresCondition: airborne
-		Offset: -414,163, 123
+		Offset: -418,164, 124
 		StartColor: 99FF99
 		StartColorAlpha: 200
 		StartColorUsePlayerColor: false
