@@ -598,10 +598,10 @@ ORCAI:
 		ReloadDelay: 50
 		AmmoCondition: ammo
 	SpawnHuskEffectOnDeath:
-		Weapon: orca.husk
+		Weapon: orcai.husk
 		RequiresCondition: airborne && !ceramic_plating
 	SpawnHuskEffectOnDeath@white:
-		Weapon: orcaw.husk
+		Weapon: orcaiw.husk
 		RequiresCondition: airborne && ceramic_plating
 	WithFacingSpriteBody:
 		RequiresCondition: !ceramic_plating

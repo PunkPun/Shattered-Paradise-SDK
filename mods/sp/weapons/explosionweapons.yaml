@@ -1114,6 +1114,19 @@ orcabw.husk:
 	Projectile: ProjetcileHusk
 		Sequences: idle-white
 
+orcai.husk:
+	Inherits@explo: SmallPlaneExplode
+	Inherits: ^plane.husk
+	Projectile: ProjetcileHusk
+		Image: orcai
+		SpinChance: 50
+		SpinWhenVelocityXIsLowerThan: 40
+
+orcaiw.husk:
+	Inherits: orcai.husk
+	Projectile: ProjetcileHusk
+		Sequences: idle-white
+
 dshp.husk:
 	Inherits@explo: BigAircraftExplode
 	Inherits: ^plane.husk
