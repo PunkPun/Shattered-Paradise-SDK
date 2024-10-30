@@ -1770,9 +1770,9 @@ predator-desc =  GDI's main battle tank armed with an anti-tank cannon and missi
      - Railgun Barrels
 
 orcai-name = Orca Interceptor
-orcai-desc = Fast interceptor with missile.
+orcai-desc = Fast anti-air aircraft with missile and machine gun.
 
-    Good vs: Vehicles, Aircraft
+    Good vs: Aircraft, Vehicles
 
     Special:
      - Can attack air
@@ -1781,7 +1781,6 @@ orcai-desc = Fast interceptor with missile.
 
     Upgrades:
      - Ceramic Plating
-
 
 mujeep-name = Technical
 mujeep-desc = Infantry transport.
@@ -2696,7 +2695,7 @@ nanos-name = Small Nano Swarm
 
 ## Upgrades
 ap_ammunition-name = AP Ammunition
-ap_ammunition-desc = Increases the damage of the following assets by 50%:
+ap_ammunition-desc = Increases the bullet damage of the following assets by 50%:
     - Vulcan Tower
     - Marine
     - Wolverine

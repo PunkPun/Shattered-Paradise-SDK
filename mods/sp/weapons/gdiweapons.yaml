@@ -786,52 +786,12 @@ FighterHellfireAA:
 	Inherits: FighterHellfire
 	Inherits@1: ^AARocketWeaponOverride
 	ValidTargets: Air
-	Burst: 2
-	ReloadDelay: 35
 	Range: 6c512
 	Projectile: MissileTA
 		Speed: 650
 		RangeLimit: 15c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 4000
-		ValidTargets: Air
-		NoUnintendedFriendlyFire: All
-
-InterceptorHellfire:
-	Inherits: ^RocketWeapon
-	Inherits@2: ^Small_Clsn
-	ReloadDelay: 50
-	Range: 5c0
-	MinRange: 0c100
-	Report: orcamis1.aud
-	SoundVolume: 2
-	Burst: 4
-	ValidTargets: Ground, Water, Vehicle, Building, Infantry
-	Projectile: MissileTA
-		Speed: 650
-		#Arm: 0 ##When cannot reach Arm, missle will also explode but just disappear
-		Blockable: false
-		TrailImage: explosion
-		TrailSequences: jgcmuzzlemini
-		TrailPalette: gensmkexploj
-		TrailInterval: 0
-		RangeLimit: 40c0
-		CruiseAltitude: 2000
-	Warhead@1Dam: SpreadDamage
-		Damage: 5000
-		ValidTargets: Ground, Water, Vehicle, Building, Infantry
-		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
-
-InterceptorHellfireAA:
-	Inherits: InterceptorHellfire
-	Inherits@1: ^AARocketWeaponOverride
-	ValidTargets: Air
-	Range: 6c512
-	Projectile: MissileTA
-		Speed: 650
-		RangeLimit: 15c0
-	Warhead@1Dam: SpreadDamage
-		Damage: 5000
 		ValidTargets: Air
 		NoUnintendedFriendlyFire: All
 

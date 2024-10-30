@@ -2158,6 +2158,9 @@ apache:
 		Filename: apache.shp
 	icon:
 		Filename: apchicon.shp
+	muzzle:
+		Frames: 0, 2, 1, 0, 1
+		Alpha: 0.5, 1, 0.5, 0.4, 1
 	rotor:
 		Filename: tsrotor.shp
 		Start: 32

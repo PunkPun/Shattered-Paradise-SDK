@@ -552,6 +552,7 @@ cyc2:
 
 centurion:
 	Inherits: ^EmpOverlay
+	Inherits@2: ^BuggyMuzzle
 	Defaults:
 		Filename: centurion.shp
 	stand:

@@ -876,7 +876,7 @@ BGGY:
 		Weapon: BuggyCannonLoaded
 		Damage: 40
 		LocalOffset: 250,0,125
-		CasingWeapon: BuggyBullet3Spawner
+		CasingWeapon: BuggyBullet2Spawner
 		CasingSpawnLocalOffset: 140,0,125
 		CasingTargetOffset: 150,0,125
 		CasingHitGroundLevel: false
@@ -2791,10 +2791,10 @@ CENTURION:
 	WithMuzzleOverlay:
 	Armament:
 		Weapon: CenturionVulcan
-		LocalOffset: 900,550,1200, 900,-550,1200
+		LocalOffset: 800,550,1200, 800,-550,1200
 		CasingWeapon: CasingDebris
-		CasingSpawnLocalOffset: 900,550,1200, 900,-550,1200
-		CasingTargetOffset: 900,1280,1200, 900,-1280,1200
+		CasingSpawnLocalOffset: 800,550,1200, 800,-550,1200
+		CasingTargetOffset: 800,1280,1200, 800,-1280,1200
 		PauseOnCondition: empdisable
 		MuzzleSequence: muzzle
 	AutoTarget:

@@ -1037,7 +1037,6 @@ orcab:
 
 orcai:
 	Inherits@1: ^SpriteVehicle
-	Inherits@2: ^MissileMuzzle
 	Defaults:
 		Filename: orcai.shp
 	idle:
@@ -1059,6 +1058,14 @@ orcai:
 		Tick: 20
 	stand:
 		ZRamp: 1
+	muzzle:
+		Frames: 2, 1, 0, 1, 2
+		Alpha: 1, 0.5, 0.4, 1, 0.3
+	muzzle3:
+		Filename: japmuzzleb.shp
+		Scale: 0.5
+		Length: *
+		IgnoreWorldTint: true
 	icon:
 		Filename: orcaiicon.shp
 

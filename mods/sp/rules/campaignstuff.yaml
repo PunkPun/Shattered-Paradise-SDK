@@ -527,10 +527,11 @@ GHUMV: #Humvee
 		OrderChance: 100
 		OrderInterval: 45
 
-ORCAI:
+ORCAI: #Orca Interceptor
 	Inherits: ^CombatPlane
 	Inherits@AMMO: ^UsesAmmunition
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMoveWithBerserkable
+	Inherits@APAMMO: ^AffectedByAPAmmunition
 	Inherits@CERAMICS: ^AffectedByCeramicPlating
 	Inherits@DETECTION: ^BasicStealthDetectionAir
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -574,20 +575,50 @@ ORCAI:
 		InitialStanceAI: AttackAnything
 	Health:
 		HP: 15000
+	-FirepowerMultiplier@APAMMUNITION:
 	Armament:
 		Weapon: InterceptorHellfire
-		LocalOffset: 300,0,60, 300,0,60
+		LocalOffset: 300,300,60, 300,-300,60
 		LocalYaw: -90, 90
 		MuzzleSequence: muzzle
 		MuzzlePalette: gensmkexploj
 		PauseOnCondition: !ammo
 	Armament@AA:
 		Weapon: InterceptorHellfireAA
-		LocalOffset: 300,0,60, 300,0,60
+		LocalOffset: 300,300,60, 300,-300,60
 		LocalYaw: -90, 90
-		MuzzleSequence: muzzle
+		MuzzleSequence: muzzle3
 		MuzzlePalette: gensmkexploj
 		PauseOnCondition: !ammo
+	Armament@gun:
+		Weapon: InterceptorGun
+		LocalOffset: 800,0,-100
+		AmmoUsage: 0
+		CasingWeapon: BuggyBullet3Spawner
+		CasingHitGroundLevel: false
+		CasingSpawnLocalOffset: 800,0,-100
+		CasingTargetOffset: 799,0,-100
+		MuzzleSequence: muzzle
+		MuzzlePalette: apyel
+		PauseOnCondition: !attack
+		RequiresCondition: !apammo
+	Armament@gunAP:
+		Weapon: InterceptorGunAP
+		LocalOffset: 800,0,-100
+		AmmoUsage: 0
+		CasingWeapon: BuggyBullet3Spawner
+		CasingHitGroundLevel: false
+		CasingSpawnLocalOffset: 800,0,-100
+		CasingTargetOffset: 799,0,-100
+		MuzzleSequence: muzzle
+		MuzzlePalette: apyel
+		PauseOnCondition: !attack
+		RequiresCondition: apammo
+	## HACK: only after missile fire, the gun can fire.
+	## so we can use one weapon for both air and ground, range won't be an issue
+	GrantConditionOnAttack: 
+		Condition: attack
+		RevokeDelay: 1
 	WithMuzzleOverlay:
 	AttackAircraft:
 		FacingTolerance: 40
@@ -631,12 +662,13 @@ ORCAI:
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
-		PipCount: 5
+		PipCount: 2
 		FullSequence: pip-missile
 		EmptySequence: pip-missileempty
 		Palette: pips
 	ActorStatValues:
 		Damage: 40
+		Upgrades: upgrade.ap_ammunition, upgrade.ceramic_plating
 		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MinRange, None, MaxRange
 	ActorStatOverride@CeramicPlating:
 		Health: 18750
