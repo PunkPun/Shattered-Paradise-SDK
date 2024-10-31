@@ -592,7 +592,7 @@ Actors:
 	Actor179: gapowr
 		Owner: You
 		Location: 39,23
-	Actor178: napuls
+	Actor178: gatech
 		Owner: You
 		Location: 47,26
 		TurretFacing: 634

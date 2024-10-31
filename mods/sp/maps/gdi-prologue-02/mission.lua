@@ -358,7 +358,7 @@ WorldLoaded = function()
 
 		-- Sell Mission
 		if (objectiveID == PowerDownTrainingObjective) then
-			local sellable = LocalPlayer.GetActorsByTypes({"gaplug","garadr","gavulc", "garock", "gapowr", "gacsam", "napuls"})
+			local sellable = LocalPlayer.GetActorsByTypes({"gaplug","garadr","gavulc", "garock", "gapowr", "gacsam", "gatech"})
 			-- if there is no building we consider training is finished
 			if next(sellable) == nil then
 				 -- Hack: add a delay to avoid `OnObjectiveCompleted` is called directly within `OnObjectiveCompleted`, which will crash the game
