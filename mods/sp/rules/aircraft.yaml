@@ -689,11 +689,19 @@ MUTHELI:
 	Health:
 		HP: 15000
 	WithIdleOverlay@ROTORAIR:
-		Offset: 300,0,500
+		Offset: 150,-475,448
 		Sequence: rotor
 		RequiresCondition: airborne
 	WithIdleOverlay@ROTORGROUND:
-		Offset: 300,0,500
+		Offset: 150,-475,448
+		Sequence: slow-rotor
+		RequiresCondition: !airborne
+	WithIdleOverlay@ROTORAIR2:
+		Offset: 150,475,448
+		Sequence: rotor
+		RequiresCondition: airborne
+	WithIdleOverlay@ROTORGROUND2:
+		Offset: 150,475,448
 		Sequence: slow-rotor
 		RequiresCondition: !airborne
 	Armament@primary:
@@ -732,9 +740,14 @@ MUTHELI:
 		Weapon: mutheli.husk
 		RequiresCondition: airborne
 	SpawnHuskEffectOnDeath@ROTOR:
-		Weapon: big.rotor.husk
+		Weapon: small.rotor.husk
 		RandomFacing: true
-		LocalOffset: 150,0,200
+		LocalOffset: 150,475,448
+		RequiresCondition: airborne
+	SpawnHuskEffectOnDeath@ROTOR2:
+		Weapon: small.rotor.husk
+		RandomFacing: true
+		LocalOffset: 150,-475,448
 		RequiresCondition: airborne
 	WithAmmoPipsDecoration:
 		Position: BottomLeft

@@ -1014,16 +1014,15 @@ mutheli:
 	icon:
 		Filename: kamovicon.shp
 	rotor:
-		Filename: tsrotor.shp
-		Start: 32
-		Length: 31
+		Filename: lrotor.shp
+		Length: 4
 		Offset: 0, 0, 16
 		ZRamp: 1
 		Tick: 25
 	slow-rotor:
-		Filename: tsrotor.shp
-		Start: 64
-		Length: 31
+		Filename: lrotor.shp
+		Start: 4
+		Length: 8
 		Offset: 0, 0, 16
 		ZRamp: 1
 		Tick: 50

@@ -219,6 +219,7 @@ Assets come from three sources, Public, Vanilla and made by Nolt, if an asset is
    > Nod Specter
    > Ion Turret in minigame
    > TVD device
+   > Gargoyle (also reworked by Mig Eater)
  Marn:
    > Weapon light effects
  Mevitar:
@@ -309,7 +310,6 @@ Assets come from three sources, Public, Vanilla and made by Nolt, if an asset is
  Zoidzilla:
    > His template
  Zero18:
-   > Gargoyle
    > Quad Cannon
    > Basilisk
    > Lynx
@@ -324,6 +324,7 @@ Assets come from three sources, Public, Vanilla and made by Nolt, if an asset is
    > GDI MCV
    > Old Nod Drill Pod
    > Remade Orcas assets with the help of Milk
+   > Remade Gargoyle
    > Remade Mobile Stealth Generator
    > Remade Mobile EMP
    > Remade many other stuff with help of VXL
