@@ -1505,8 +1505,8 @@ tripod-desc = Advanced walker.
      - Can crush infantry
 
 ## Aircraft
-orcaf-name = Orca Fighter
-orcaf-desc = Fast assault gunship with dual missile launchers.
+orcaheli-name = Orca Chopper
+orcaheli-desc = Fast assault gunship with dual missile launchers.
 
     Good vs: Vehicles, Aircraft
 

@@ -10,12 +10,12 @@ ORCA:
 	Valued:
 		Cost: 1200
 	Tooltip:
-		Name: orcaf-name
+		Name: orcaheli-name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		Queue: Air.Shared, Air.GDI
-		Description: orcaf-desc
+		Description: orcaheli-desc
 		BuildPaletteOrder: 1
 		Prerequisites: ~gahpad, ~techlevel.4
 		BuildDuration: 750
