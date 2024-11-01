@@ -1236,6 +1236,12 @@ mutheli.husk:
 		Palette: playerunittemgreen
 		SpinAcc: 8
 
+smaller.rotor.husk:
+	Inherits: ^rotor.husk
+	Projectile: ProjetcileHusk
+		Image: mutheli
+		Palette: playermut
+
 wetp.husk:
 	Inherits@explo: SmallPlaneExplode
 	Inherits: ^plane.husk

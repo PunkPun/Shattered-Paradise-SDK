@@ -740,12 +740,12 @@ MUTHELI:
 		Weapon: mutheli.husk
 		RequiresCondition: airborne
 	SpawnHuskEffectOnDeath@ROTOR:
-		Weapon: small.rotor.husk
+		Weapon: smaller.rotor.husk
 		RandomFacing: true
 		LocalOffset: 150,475,448
 		RequiresCondition: airborne
 	SpawnHuskEffectOnDeath@ROTOR2:
-		Weapon: small.rotor.husk
+		Weapon: smaller.rotor.husk
 		RandomFacing: true
 		LocalOffset: 150,-475,448
 		RequiresCondition: airborne
