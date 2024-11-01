@@ -662,7 +662,7 @@ MUTHELI:
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMoveWithBerserkable
 	Inherits@DETECTION: ^BasicStealthDetectionAir
 	Inherits@EXPERIENCE: ^GainsExperience
-	Inherits@RENDER: ^MutRender
+	Inherits@RENDER: ^MutRenderGreen
 	Inherits@SHADOW: ^AircraftShadow
 	Inherits@VISION: ^12CellVisionAir
 	Valued:

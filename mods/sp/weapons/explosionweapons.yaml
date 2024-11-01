@@ -1233,7 +1233,7 @@ mutheli.husk:
 	Inherits: ^plane.husk
 	Projectile: ProjetcileHusk
 		Image: mutheli
-		Palette: playermut
+		Palette: playerunittemgreen
 		SpinAcc: 8
 
 wetp.husk:

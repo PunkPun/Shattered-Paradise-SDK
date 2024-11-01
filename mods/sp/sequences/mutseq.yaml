@@ -977,11 +977,6 @@ hvrtruk3:
 	icon:
 		Filename: muthoverbombtruckicon.shp
 
-fortress:
-	Inherits: ^EmpOverlay
-	icon:
-		Filename: fortressicon.shp
-
 mutqueen:
 	Inherits: ^EmpOverlay
 	Defaults:
@@ -1012,7 +1007,7 @@ mutheli:
 	Defaults:
 		Filename: mutheli.shp
 	icon:
-		Filename: kamovicon.shp
+		Filename: muthelicon.shp
 	rotor:
 		Filename: lrotor.shp
 		Length: 4
