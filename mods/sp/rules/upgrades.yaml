@@ -424,12 +424,12 @@ upgrade.aerial_gliders:
 	Buildable:
 		Queue: Upgrade.Shared, Upgrade.Scrin
 		BuildPaletteOrder: 15
-		BuildDuration: 750
+		BuildDuration: 1500
 		Prerequisites: ~upgrade.scr, scrradr, ~techlevel.4
 		Description: aerial_gliders-desc
 		IconPalette: chromesilver
 	Valued:
-		Cost: 1500
+		Cost: 2000
 	WithProductionIconOverlay:
 		Prerequisites: upgrade.aerial_gliders
 

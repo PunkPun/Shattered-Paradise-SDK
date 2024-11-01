@@ -391,7 +391,7 @@ ReaperScythe:
 	Inherits@2: ^Small_Clsn
 	ReloadDelay: 90
 	Range: 7c0
-	Burst: 4
+	Burst: 2
 	Report: samshot1.aud
 	SoundVolume: 1.5
 	ValidTargets: Ground, Water
@@ -401,7 +401,7 @@ ReaperScythe:
 		TrailSequences: idle2
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 4000
+		Damage: 8000
 		ValidTargets: Ground, Water
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 
@@ -414,7 +414,7 @@ ReaperScytheAA:
 	Projectile: MissileTA
 		RangeLimit: 15c0
 	Warhead@1Dam: SpreadDamage
-		Damage: 4000
+		Damage: 8000
 		NoUnintendedFriendlyFire: All
 		ValidTargets: Air
 
