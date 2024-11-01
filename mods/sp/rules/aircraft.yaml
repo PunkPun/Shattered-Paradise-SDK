@@ -856,6 +856,7 @@ WETP:
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@SHADOW: ^AircraftShadow
 	Inherits@TIBGASWH: ^AffectedByTiberiumGasWarheads
+	Inherits@RENDER: ^MutRenderGreen
 	Inherits@AImicroManagable: ^AImicroManagable
 	Valued:
 		Cost: 2000
