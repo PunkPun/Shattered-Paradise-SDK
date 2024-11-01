@@ -2155,7 +2155,7 @@ nastlh:
 apache:
 	Inherits@1: ^SpriteVehicle
 	Defaults:
-		Filename: apache.shp
+		Filename: harpy.shp
 	icon:
 		Filename: apchicon.shp
 	muzzle:

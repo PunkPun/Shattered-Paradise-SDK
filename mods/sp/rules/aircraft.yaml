@@ -363,7 +363,7 @@ APACHE:
 		HP: 15000
 	Armament:
 		Weapon: HarpyClaw
-		LocalOffset: 700,0,0
+		LocalOffset: 600,0,0
 		CasingWeapon: HarpyBulletSpawner
 		CasingSpawnLocalOffset: 600,0,0
 		CasingTargetOffset: 700,0,0
@@ -373,7 +373,7 @@ APACHE:
 		PauseOnCondition: !ammo
 	Armament@AA:
 		Weapon: HarpyClawAA
-		LocalOffset: 700,0,0
+		LocalOffset: 600,0,0
 		CasingWeapon: HarpyBulletSpawner
 		CasingSpawnLocalOffset: 600,0,0
 		CasingTargetOffset: 700,0,0
@@ -397,11 +397,11 @@ APACHE:
 		InitialStance: ReturnFire
 		InitialStanceAI: AttackAnything
 	WithIdleOverlay@ROTORAIR:
-		Offset: 150,0,200
+		Offset: 0,0,450
 		Sequence: rotor
 		RequiresCondition: airborne
 	WithIdleOverlay@ROTORGROUND:
-		Offset: 150,0,200
+		Offset: 0,0,450
 		Sequence: slow-rotor
 		RequiresCondition: !airborne
 	SpawnHuskEffectOnDeath:
@@ -410,7 +410,7 @@ APACHE:
 	SpawnHuskEffectOnDeath@ROTOR:
 		Weapon: big.rotor.husk
 		RandomFacing: true
-		LocalOffset: 150,0,200
+		LocalOffset: 0,0,450
 		RequiresCondition: airborne
 	WithAmmoPipsDecoration:
 		Position: BottomLeft

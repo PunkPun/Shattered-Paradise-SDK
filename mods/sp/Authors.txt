@@ -260,6 +260,8 @@ Assets come from three sources, Public, Vanilla and made by Nolt, if an asset is
    > Skirmisher Cameo
    > EM Pulse Cameo
    > Harvester and Mut MCV, Wrench and Tiberium Cameos
+ TeleVisor:
+   > New Harpy
  HG_SCIPCIÓN:
    > Weasauruses
    > Scrin Generator model
