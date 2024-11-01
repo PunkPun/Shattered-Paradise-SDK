@@ -248,24 +248,29 @@ World:
 		Darkest: 16
 		Brightest: 256
 	TintedCellsLayer@BlueRadiation:
-		Color: 220099
 		Name: BlueRadiation
+		Color: 220099
 		UpdateDelay: 75
 		FadeoutDelay: 150
 		Darkest: 16
 		Brightest: 256
 	TintedCellsLayer@OrangeRadiation:
-		Color: EFFF00
 		Name: OrangeRadiation
+		Color: EFFF00
 		UpdateDelay: 25
 		FadeoutDelay: 150
 		Darkest: 8
 	TintedCellsLayer@ColossusRadiation:
+		Name: ColossusRadiation
+		FadeoutDelay: 25
+		Darkest: 16
+		Brightest: 128
+	TintedCellsLayer@ColossusBlueRadiation:
+		Name: ColossusBlueRadiation
 		Color: 220099
 		FadeoutDelay: 25
 		Darkest: 16
 		Brightest: 128
-		Name: ColossusRadiation
 	WeaponTriggerCells@catalyst:
 		Name: catalystLayer
 		#ShowDebugOverlay: true

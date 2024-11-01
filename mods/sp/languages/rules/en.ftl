@@ -2559,6 +2559,9 @@ colossus-desc = Heavy duty alien.
      - Crush class: crushable only by Epics
      - Does not receive damage from tiberium fields and all radiations
 
+    Upgrades:
+     - Vinifera Catalysts
+
 mastermind-name = Mastermind
 mastermind-desc = The commando unit of Scrin born with the ability
     to mind control everyone and everything.

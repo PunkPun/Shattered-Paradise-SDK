@@ -102,6 +102,11 @@ ColossiBlast:
 		LayerName: ColossusRadiation
 		AirThreshold: 8c0
 
+ColossiBlastBlue:
+	Inherits: ColossiBlast
+	Warhead@8Radio: CreateTintedCells
+		LayerName: ColossusBlueRadiation
+
 FloatTesla:
 	ReloadDelay: 75
 	Range: 7c0

@@ -1981,6 +1981,7 @@ COLOSSI:
 	Inherits: ^ScrinSoldier
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
 	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@VINIFERA: ^AffectedByViniferaCatalysts
 	Inherits@AImicroManagable: ^AImicroManagable
 	Buildable:
 		Queue: Infantry.Shared, Infantry.Scrin
@@ -2006,6 +2007,7 @@ COLOSSI:
 	Passenger:
 		RequireForceMoveCondition: !undeployed
 	-DamagedByTintedCells@Colossus:
+	-DamagedByTintedCells@ColossusBlue:
 	SpawnActorOnDeath@conversion:
 		Actor: chusk
 	SpawnActorOnDeath@conversionUpg:
@@ -2050,7 +2052,12 @@ COLOSSI:
 		SparkWeapon: ColossiBlast
 		Amount: 1
 		Interval: 10
-		RequiresCondition: deployed && !WebDisable
+		RequiresCondition: deployed && !vinifera_catalysts && !WebDisable
+	SpawnSparks@deploy-blue:
+		SparkWeapon: ColossiBlastBlue
+		Amount: 1
+		Interval: 10
+		RequiresCondition: deployed && vinifera_catalysts && !WebDisable
 	WithIdleOverlay@deploy:
 		Sequence: colossideploy
 		Palette: scrinenergystuffs
@@ -2723,6 +2730,8 @@ MOTH:
 	DamagedByTintedCells@OrangeRadiation:
 		RequiresCondition: deployed || WebDisable || empdisable
 	DamagedByTintedCells@Colossus:
+		RequiresCondition: deployed || WebDisable || empdisable
+	DamagedByTintedCells@ColossusBlue:
 		RequiresCondition: deployed || WebDisable || empdisable
 	Armament@1:
 		Weapon: LurkerProj
