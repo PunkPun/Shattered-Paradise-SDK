@@ -1013,16 +1013,14 @@ mutheli:
 		Length: 4
 		Offset: 0, 0, 16
 		ZRamp: 1
-		Tick: 25
-		Scale: 0.9
+		Scale: 0.85
 	slow-rotor:
 		Filename: lrotor.shp
 		Start: 4
 		Length: 8
 		Offset: 0, 0, 16
 		ZRamp: 1
-		Tick: 50
-		Scale: 0.9
+		Scale: 0.85
 
 ##########################################################################
 # Buildings
