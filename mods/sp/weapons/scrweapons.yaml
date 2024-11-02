@@ -90,22 +90,7 @@ ColossiShard:
 		ExplosionPalette: scrinenergystuffs
 		InvalidTargets: Water
 
-ColossiBlast:
-	ReloadDelay: 5
-	Range: 8c0
-	Projectile: InstantExplode
-	ValidTargets: Ground, Water, Air
-	Warhead@8Radio: CreateTintedCells
-		Spread: 1c128
-		Level: 30
-		Falloff: 100, 85, 60, 45, 30, 15
-		LayerName: ColossusRadiation
-		AirThreshold: 8c0
 
-ColossiBlastBlue:
-	Inherits: ColossiBlast
-	Warhead@8Radio: CreateTintedCells
-		LayerName: ColossusBlueRadiation
 
 FloatTesla:
 	ReloadDelay: 75
@@ -1234,3 +1219,56 @@ MasterMindTeleportTrace:
 		ContrailLength: 20
 		ContrailStartWidth: 220
 		ContrailZOffset: 3000
+
+ColoussTeleTo:
+	ValidTargets: Vehicle, Infantry, Building, Ground, Water
+	Warhead@4Eff: CreateEffect
+		ImpactActors: false
+		Explosions: tibexp
+		ExplosionPalette: jascgreenalpha
+		ValidTargets: Vehicle, Building, Infantry, Ground, Water, Air
+		AirThreshold: 8c0
+	Warhead@8Radio: CreateTintedCells
+		Spread: 0c768
+		Level: 60
+		Falloff: 100, 85, 60, 45, 30, 15
+		LayerName: radioactivity
+		AirThreshold: 8c0
+
+ColoussTeleFrom:
+	ValidTargets: Vehicle, Infantry, Building, Ground, Water
+	Warhead@flyback: BackFireShrapnel
+		Weapon: ColoussTeleportTrace
+		ImpactActors: false
+		ValidTargets: Ground, Water, Air
+		AirThreshold: 8c0
+
+ColoussTeleportTrace:
+	ValidTargets: Ground, Water, Air
+	Projectile: SpriteRailgun
+		BeamColor: 00f4f4
+		Duration: 0
+		BeamWidth: 32
+		QuantizationCount: 1
+		HelixRadius: 0
+		HelixPitch: 1536
+		HelixAnim: colossi
+		HelixAnimSequence: phantom
+		HelixAnimPalette: apgreen
+
+ColoussTeleToBlue:
+	Inherits: ColoussTeleTo
+	Warhead@4Eff: CreateEffect
+		ExplosionPalette: jascbluealpha
+	Warhead@8Radio: CreateTintedCells
+		LayerName: BlueRadiation
+
+ColoussTeleFromBlue:
+	Inherits: ColoussTeleFrom
+	Warhead@flyback: BackFireShrapnel
+		Weapon: ColoussTeleportTraceBlue
+
+ColoussTeleportTraceBlue:
+	Inherits: ColoussTeleportTrace
+	Projectile: SpriteRailgun
+		HelixAnimPalette: apblue

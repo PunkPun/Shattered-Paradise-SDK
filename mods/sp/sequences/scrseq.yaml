@@ -401,15 +401,19 @@ colossi:
 		ShadowStart: 319
 	dummy:
 		Filename: dot.shp
-	make:
-		Start: 136
-		Length: 25
-		ShadowStart: 383
-		Tick: 40
-	deployed:
+	#make:
+	#	Start: 136
+	#	Length: 25
+	#	ShadowStart: 383
+	#	Tick: 40
+	#deployed:
+	#	Start: 154
+	#	Length: 9
+	#	ShadowStart: 401
+	phantom:
 		Start: 154
 		Length: 9
-		ShadowStart: 401
+		AlphaFade: true
 	icon:
 		Filename: colossiicon.shp
 	webguy:
@@ -463,6 +467,11 @@ mastermind:
 		Length: 11
 		Facings: 8
 		ShadowStart: 496
+	phantom:
+		Start: 8
+		Length: 20
+		Tick: 30
+		AlphaFade: true
 	icon:
 		Filename: mastermindicon.shp
 	webguy:

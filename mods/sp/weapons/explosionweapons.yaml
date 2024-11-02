@@ -1247,7 +1247,7 @@ wetp.husk:
 	Inherits: ^plane.husk
 	Projectile: ProjetcileHusk
 		Image: wetp
-		Palette: playermut
+		Palette: playerunittemgreen
 		SpinChance: 0
 		SpinWhenVelocityXIsLowerThan: 50
 

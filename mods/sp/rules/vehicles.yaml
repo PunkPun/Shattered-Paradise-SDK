@@ -3031,10 +3031,6 @@ LIMPED:
 		RequiresCondition: deployed || empdisable
 	DamagedByTintedCells@OrangeRadiation:
 		RequiresCondition: deployed || empdisable
-	DamagedByTintedCells@Colossus:
-		RequiresCondition: deployed || empdisable
-	DamagedByTintedCells@ColossusBlue:
-		RequiresCondition: deployed || empdisable
 	-ChangesHealth@veinholedrain:
 	-ExternalCondition@veinholedrain:
 	-WithIdleOverlay@veinholedrain:

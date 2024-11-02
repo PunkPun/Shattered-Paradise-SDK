@@ -1016,18 +1016,6 @@
 		DamageLevel: 5
 		DamageInterval: 25
 		LayerName: OrangeRadiation
-	DamagedByTintedCells@Colossus:
-		Damage: 30
-		DamageTypes: EnergyDeath
-		DamageLevel: 5
-		DamageInterval: 25
-		LayerName: ColossusRadiation
-	DamagedByTintedCells@ColossusBlue:
-		Damage: 60
-		DamageTypes: EnergyDeath
-		DamageLevel: 5
-		DamageInterval: 25
-		LayerName: ColossusBlueRadiation
 
 ^AffectedByAPAmmunition:
 	ActorStatValues:
@@ -2140,10 +2128,6 @@
 		RequiresCondition: WebDisable || empdisable
 	DamagedByTintedCells@OrangeRadiation:
 		RequiresCondition: WebDisable || empdisable
-	DamagedByTintedCells@Colossus:
-		RequiresCondition: WebDisable || empdisable
-	DamagedByTintedCells@ColossusBlue:
-		RequiresCondition: WebDisable || empdisable
 	RA2Chronoshiftable:
 		-TerrainsAndDeathTypes:
 
@@ -2474,10 +2458,6 @@
 	DamagedByTintedCells@BlueRadiation:
 		RequiresCondition: empdisable
 	DamagedByTintedCells@OrangeRadiation:
-		RequiresCondition: empdisable
-	DamagedByTintedCells@Colossus:
-		RequiresCondition: empdisable
-	DamagedByTintedCells@ColossusBlue:
 		RequiresCondition: empdisable
 	RA2Chronoshiftable:
 		-TerrainsAndDeathTypes:

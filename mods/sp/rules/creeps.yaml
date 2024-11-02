@@ -497,10 +497,6 @@ JFISH:
 	-DamagedByTintedCells@BlueRadiation:
 	DamagedByTintedCells@OrangeRadiation:
 		RequiresCondition: attack
-	DamagedByTintedCells@Colossus:
-		RequiresCondition: attack
-	DamagedByTintedCells@ColossusBlue:
-		RequiresCondition: attack
 	DamagedByTintedCells@Default:
 		Damage: -30
 	ExplodesAlsoTransported@VisceroidDefault:

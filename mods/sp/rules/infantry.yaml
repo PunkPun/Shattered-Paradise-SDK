@@ -1895,8 +1895,6 @@ FLOAT:
 		RequiresCondition: WebDisable
 	DamagedByTintedCells@OrangeRadiation:
 		RequiresCondition: WebDisable
-	DamagedByTintedCells@Colossus:
-		RequiresCondition: WebDisable
 	RA2Chronoshiftable:
 		-TerrainsAndDeathTypes:
 	-FirepowerMultiplier@ZealousBuff:
@@ -1982,7 +1980,6 @@ COLOSSI:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@VINIFERA: ^AffectedByViniferaCatalysts
-	Inherits@AImicroManagable: ^AImicroManagable
 	Buildable:
 		Queue: Infantry.Shared, Infantry.Scrin
 		BuildPaletteOrder: 35
@@ -2002,12 +1999,6 @@ COLOSSI:
 		HP: 40000
 	Mobile:
 		Locomotor: HeavyInfantry
-		ImmovableCondition: !undeployed
-		RequireForceMoveCondition: !AImicroManage && !undeployed
-	Passenger:
-		RequireForceMoveCondition: !undeployed
-	-DamagedByTintedCells@Colossus:
-	-DamagedByTintedCells@ColossusBlue:
 	SpawnActorOnDeath@conversion:
 		Actor: chusk
 	SpawnActorOnDeath@conversionUpg:
@@ -2015,13 +2006,27 @@ COLOSSI:
 	Armament@1:
 		Weapon: ColossiShard
 		LocalOffset: 400,0,1300
-		RequiresCondition: undeployed
 		PauseOnCondition: WebDisable
 		Name: OnFoot
 	Armament@Garrison:
 		Weapon: GColossiShard
-		RequiresCondition: undeployed
 		PauseOnCondition: WebDisable
+	ExplodeWeaponTeleportEffect@1:
+		TeleportType: ColoussTele
+		ImpactWeapon: ColoussTeleFrom
+		TeleportWeapon: ColoussTeleTo
+		RequiresCondition: !vinifera_catalysts
+	ExplodeWeaponTeleportEffect@blue:
+		TeleportType: ColoussTele
+		ImpactWeapon: ColoussTeleFromBlue
+		TeleportWeapon: ColoussTeleToBlue
+		RequiresCondition: vinifera_catalysts
+	RA2PortableChrono:
+		TeleportType: ColoussTele
+		Voice: Move
+		ChargeDelay: 1200
+		MaxTeleportDistance: 8
+		TargetCursor: emp
 	AttackFrontal:
 		Voice: Attack
 		Armaments: OnFoot
@@ -2030,69 +2035,13 @@ COLOSSI:
 		ScanRadius: 6 #PREF: save trait looks up and scan armaments
 	Crushable:
 		CrushClasses: HeavyInfantry
+	-DamagedByTintedCells@Default:
+	-DamagedByTintedCells@BlueRadiation:
 	-TakeCover:
-	GrantConditionOnDeploy:
-		DeployedCondition: deployed
-		UndeployedCondition: undeployed
-		Facing: 640
-		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Green, Tiberium, BlueTiberium, Veins
-		DeploySounds:
-		UndeploySounds:
-		SmartDeploy: true
-		UndeployOnMove: true
-		CanDeployOnRamps: true
-		RequiresCondition: !inside-tunnel && !WebDisable
-	WithMakeAnimation:
 	WithInfantryBody:
-		RequiresCondition: undeployed &&  !WebDisable && !inside-tunnel
-	WithSpriteBody@deployed:
-		Sequence: deployed
-		RequiresCondition: !undeployed && !WebDisable
-	SpawnSparks@deploy:
-		SparkWeapon: ColossiBlast
-		Amount: 1
-		Interval: 10
-		RequiresCondition: deployed && !vinifera_catalysts && !WebDisable
-	SpawnSparks@deploy-blue:
-		SparkWeapon: ColossiBlastBlue
-		Amount: 1
-		Interval: 10
-		RequiresCondition: deployed && vinifera_catalysts && !WebDisable
-	WithIdleOverlay@deploy:
-		Image: scrintele
-		Sequence: loop
-		Palette: jascgreenalpha
-		IsDecoration: true ## so this doesn't affect by cloak palette
-		RequiresCondition: deployed && !WebDisable && !vinifera_catalysts 
-	WithIdleOverlay@deploy-blue:
-		Image: scrintele
-		Sequence: loop
-		Palette: jascbluealpha
-		IsDecoration: true ## so this doesn't affect by cloak palette
-		RequiresCondition: deployed && !WebDisable && vinifera_catalysts 
-	AmbientSound:
-		SoundFiles: ScrinAcid0000.wav, ScrinAcid0001.wav, ScrinAcid0002.wav, ScrinAcid0003.wav, ScrinAcid0004.wav
-		Interval: 30
-		RequiresCondition: deployed && !WebDisable
-	RejectsOrders@deployment:
-		Reject: AttackMove, AssaultMove
-		RequiresCondition: !AImicroManage && deployed
+		RequiresCondition:  !WebDisable && !inside-tunnel
 	ActorStatValues:
 		Damage: 200
-	## AI rules: make Colossus get close and use its deploy ability
-	GrantConditionAfterDelay@AIclose:
-		ShowSelectionBar: false
-		Condition: no-close
-		Delay: 300
-	RangeMultiplier@AI:
-		Modifier: 31
-		RequiresCondition: AImicroManage && !no-close
-	IssueOrderToBot@AI:
-		RequiresCondition: (!deployed && !no-close) || (deployed && no-close)
-		OrderName: GrantConditionOnDeploy
-		OrderChance: 100
-		OrderInterval: 55
-		OrderTrigger: Attack
 
 MASTERMIND:
 	Inherits: ^ScrinSoldier
@@ -2735,10 +2684,6 @@ MOTH:
 	DamagedByTintedCells@BlueRadiation:
 		RequiresCondition: deployed || WebDisable || empdisable
 	DamagedByTintedCells@OrangeRadiation:
-		RequiresCondition: deployed || WebDisable || empdisable
-	DamagedByTintedCells@Colossus:
-		RequiresCondition: deployed || WebDisable || empdisable
-	DamagedByTintedCells@ColossusBlue:
 		RequiresCondition: deployed || WebDisable || empdisable
 	Armament@1:
 		Weapon: LurkerProj
