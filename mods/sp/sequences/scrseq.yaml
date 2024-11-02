@@ -402,14 +402,14 @@ colossi:
 	dummy:
 		Filename: dot.shp
 	make:
-		Start: 226
-		Length: 4
-		ShadowStart: 473
+		Start: 136
+		Length: 25
+		ShadowStart: 383
+		Tick: 40
 	deployed:
-		Start: 230
-		Length: 17
-		ShadowStart: 477
-		IgnoreWorldTint: true
+		Start: 154
+		Length: 9
+		ShadowStart: 401
 	icon:
 		Filename: colossiicon.shp
 	webguy:
@@ -420,13 +420,6 @@ colossi:
 		Filename: shieldmedium.shp
 		Length: 1
 		Offset: 0,-12
-	colossideploy:
-		Filename: colossideploy.shp
-		Length: *
-		Offset: 0,0,0
-		ZOffset: -5c512
-		IgnoreWorldTint: true
-		ZRamp: 1
 
 mastermind:
 	Inherits@1: ^SrcinInfantryDeathAnims
