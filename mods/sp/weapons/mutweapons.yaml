@@ -552,7 +552,7 @@ MUTMRLSRocketGas:
 	Warhead@1Dam: SpreadDamage
 		DamageTypes: Prone70Percent, TriggerProne, TiberiumDeath
 	Warhead@3Radio: CreateTintedCells
-		Level: 10
+		Level: 6
 
 RavagerStrike:
 	Inherits: ^FullDamage
