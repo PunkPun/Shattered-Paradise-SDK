@@ -113,3 +113,20 @@
 		AllowModifiers: true
 		ShadowIndex: 1
 		#RBGSwapMode: None #None #GRB #BGR #RBG #BRG #GBR
+
+	## Change color of clouds
+	GradientColorsPalette@cloud:
+		Name: cloud
+		AllowModifiers: false
+		# Jascgrey
+		StartColor: 010101
+		EndColor: FFFFFF
+		
+		# snow normal green cloud (best)
+		#StartColor: 000100
+		#EndColor: F1FFF1
+
+		# temp normal green cloud (not good)
+		#StartColor: 000F00
+		#EndColor: E0FFE0
+
