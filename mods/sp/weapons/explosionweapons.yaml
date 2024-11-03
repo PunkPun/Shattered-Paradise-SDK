@@ -852,11 +852,20 @@ NuclearMissile:
 		AirThreshold: 8c0
 	Warhead@8Radio: CreateTintedCells
 		Spread: 1c0
-		Level: 1500
-		Falloff: 100, 100, 80, 70, 60, 50, 40, 30, 20, 10
+		Level: 1000
+		Falloff: 50, 45, 35, 25, 15, 10, 5, 1, 0
 		MaxLevel: 2000
 		LayerName: OrangeRadiation
 		AirThreshold: 8c0
+		Delay: 2
+	Warhead@9Radio: CreateTintedCells
+		Spread: 0c512
+		Level: 1000
+		Falloff: 50, 50, 45, 45, 40, 40, 35, 30, 25, 20, 15, 10, 5, 1, 0
+		MaxLevel: 2000
+		LayerName: OrangeRadiation
+		AirThreshold: 8c0
+		Delay: 25
 
 NukeFlame:
 	Inherits: ^FlameDamage

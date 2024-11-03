@@ -10,6 +10,7 @@ ExplosionGas:
 		DamageTypes: Prone70Percent, TriggerProne, TiberiumDeath
 	Warhead@3Radio: CreateTintedCells
 		Level: 90
+		Delay: 1
 	Warhead@2Eff: CreateEffect
 		Explosions: smallacidfire
 		ExplosionPalette: jascgreenalpha
@@ -245,6 +246,7 @@ SkirmisherMortarGas:
 		DamageTypes: Prone70Percent, TriggerProne, TiberiumDeath
 	Warhead@3Radio: CreateTintedCells
 		Level: 10
+		Delay: 1
 
 SeerTesla:
 	Inherits: ^FullDamage
@@ -391,6 +393,7 @@ LynxRocketGas:
 		DamageTypes: Prone70Percent, TriggerProne, TiberiumDeath
 	Warhead@3Radio: CreateTintedCells
 		Level: 10
+		Delay: 1
 
 QuadFire:
 	Inherits: ^VulcanWeapon
@@ -553,6 +556,7 @@ MUTMRLSRocketGas:
 		DamageTypes: Prone70Percent, TriggerProne, TiberiumDeath
 	Warhead@3Radio: CreateTintedCells
 		Level: 6
+		Delay: 1
 
 RavagerStrike:
 	Inherits: ^FullDamage
@@ -629,6 +633,7 @@ NukeFuelDrop:
 	Warhead@3Radio: CreateTintedCells
 		LayerName: OrangeRadiation
 		Level: 750
+		Delay: 1
 
 GargoylACannon:
 	Inherits: ^FullDamage
@@ -863,6 +868,7 @@ FalconPunchGas:
 	Warhead@3Radio: CreateTintedCells
 		Level: 10
 		Spread: 768
+		Delay: 1
 	Warhead@1Dam: SpreadDamage
 		DamageTypes: Prone70Percent, TriggerProne, TiberiumDeath
 
