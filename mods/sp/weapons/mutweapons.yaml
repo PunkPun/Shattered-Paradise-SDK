@@ -551,6 +551,8 @@ MUTMRLSRocketGas:
 		AirThreshold: 8c0
 	Warhead@1Dam: SpreadDamage
 		DamageTypes: Prone70Percent, TriggerProne, TiberiumDeath
+	Warhead@3Radio: CreateTintedCells
+		Level: 10
 
 RavagerStrike:
 	Inherits: ^FullDamage
