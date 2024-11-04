@@ -118,15 +118,26 @@
 	GradientColorsPalette@cloud:
 		Name: cloud
 		AllowModifiers: false
-		# Jascgrey
+		# normal cloud = Jascgrey
 		StartColor: 010101
 		EndColor: FFFFFF
 		
-		# snow normal green cloud (best)
+		## *** Changes of Cloud color ***
+		#  GradientColorsPalette@cloud:
+		## *** Some good exampe ***
+
+		# snow normal, green cloud (best)
 		#StartColor: 000100
-		#EndColor: F1FFF1
+		#EndColor: F3FFF3
 
-		# temp normal green cloud (not good)
-		#StartColor: 000F00
-		#EndColor: E0FFE0
+		## snow normal, blue cloud (best)
+		#StartColor: 000001
+		#EndColor: F3F3FF
 
+		#temp normal, green cloud (good)
+		#StartColor: 000300
+		#EndColor: F0FFF0
+
+		#temp normal, blue cloud (good)
+		#StartColor: 000007
+		#EndColor: EEEEFF

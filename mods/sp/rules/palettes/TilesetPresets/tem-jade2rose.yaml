@@ -7,3 +7,17 @@
 		RBGSwapMode: BRG
 	LoadPaletteWithLightModifiedAndRBGSwapped@playertem-nobright:
 		RBGSwapMode: BRG
+	## *** Changes of Cloud color ***
+	#  GradientColorsPalette@cloud:
+	## *** Some good exampe ***
+	## blue cloud (best)
+	#StartColor: 000002
+	#EndColor: EFEFFF
+	
+	## green cloud (good)
+	#StartColor: 000300
+	#EndColor: EDFCF2
+
+	## red cloud (good)
+	#StartColor: 050000
+	#EndColor: FFECEC

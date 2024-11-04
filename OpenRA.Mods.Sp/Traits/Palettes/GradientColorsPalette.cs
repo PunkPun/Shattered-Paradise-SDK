@@ -18,7 +18,7 @@ namespace OpenRA.Mods.SP.Traits
 {
 	[TraitLocation(SystemActors.World | SystemActors.EditorWorld)]
 	[Desc("Add this to the World actor definition.")]
-	public class GradientColorsPaletteInfo : TraitInfo
+	public class GradientColorsPaletteInfo : TraitInfo, ILobbyCustomRulesIgnore
 	{
 		[PaletteDefinition]
 		[Desc("The name of the resulting palette")]
