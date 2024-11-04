@@ -14,6 +14,9 @@ World:
 		BackgroundMusic: maps
 		DisableWorldSounds: true
 	-StartGameNotification:
+	GradientColorsPalette@cloud: ## We can make it greener as viewport is moving
+		StartColor: 000400
+		EndColor: F0FFF0
 	ExternalCondition@@rain:
 		Condition: rain
 	WeatherOverlay:
