@@ -414,6 +414,14 @@ colossi:
 		Start: 154
 		Length: 9
 		AlphaFade: true
+		IgnoreWorldTint: true
+		Offset: 0, -9, 10
+	phantom-skill:
+		Start: 154
+		Length: 20
+		AlphaFade: true
+		Offset: 0, -9, 10
+		ZOffset: 1
 	icon:
 		Filename: colossiicon.shp
 	webguy:

@@ -1246,6 +1246,21 @@ ColoussTeleFrom:
 		ImpactActors: false
 		ValidTargets: Ground, Water, Air
 		AirThreshold: 8c0
+	Warhead@1Eff: CreateEffect
+		Explosions: scrinpulse3
+		ExplosionPalette: jascgreenalpha
+		ImpactSounds: instantrift.wav
+		ImpactActors: false
+		ValidTargets: Vehicle, Building, Infantry, Ground, Water, Air
+		AirThreshold: 8c0
+	Warhead@2Eff: CreateEffect
+		ImpactActors: false
+		Image: colossi
+		Explosions: phantom-skill
+		ExplosionPalette: playerscrin
+		UsePlayerPalette: true
+		ValidTargets: Vehicle, Building, Infantry, Ground, Water, Air
+		AirThreshold: 8c0
 
 ColoussTeleportTrace:
 	ValidTargets: Ground, Water, Air
@@ -1269,6 +1284,8 @@ ColoussTeleToBlue:
 
 ColoussTeleFromBlue:
 	Inherits: ColoussTeleFrom
+	Warhead@1Eff: CreateEffect
+		ExplosionPalette: jascbluealpha
 	Warhead@flyback: BackFireShrapnel
 		Weapon: ColoussTeleportTraceBlue
 
