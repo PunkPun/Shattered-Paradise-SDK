@@ -145,3 +145,7 @@
 		# temp normal, blue cloud (good)
 		#StartColor: 000007
 		#EndColor: EEEEFF
+
+		# temp normal, red cloud (good)
+		#StartColor: 010000
+		#EndColor: FFFAE7
