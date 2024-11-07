@@ -513,7 +513,7 @@ SCRIN:
 		EndWidth: 0
 	Contrail@2:
 		RequiresCondition: airborne
-		Offset: -418,164, 124
+		Offset: -404,200, 124
 		StartColor: 99FF99
 		StartColorAlpha: 200
 		StartColorUsePlayerColor: false
