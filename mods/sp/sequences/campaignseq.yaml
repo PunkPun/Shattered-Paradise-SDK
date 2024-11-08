@@ -290,6 +290,18 @@ regentnk:
 	icon:
 		Filename: regentnkicon.shp
 
+mrinotnk:
+	Inherits@1: ^SpriteVehicleWithShadow
+	Inherits@2: ^CannonMuzzle
+	Defaults:
+		Filename: mrinotnk.shp
+	turret:
+		Filename: mrinotnk_tur.shp
+		Facings: -32
+		Start: 0
+	icon:
+		Filename: mrinotnkicon.shp
+
 slighshot:
 	Inherits@2: ^SpriteVehicleWithShadowAndTurret
 	Defaults:

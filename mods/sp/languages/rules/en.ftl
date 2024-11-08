@@ -1837,6 +1837,16 @@ weasau3-desc = A long forgotten creature trained by the mutants.
      - Deployability: use melee attack for a short period
      - Does not slow down on critical HP
 
+mrinotnk-name = Rino Tank
+mrinotnk-desc = Heavy tank armed with dual anti-tank cannon.
+
+    Good vs: Vehicles
+
+    Special:
+     - Can crush infantry
+     - Can attack while moving
+
+
 promthtnk-name = Prometheus Tank
 promthtnk-desc = Mutant tank attached with a scavenged Scrin weapon.
 

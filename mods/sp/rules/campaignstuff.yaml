@@ -828,7 +828,6 @@ SLIGHSHOT:
 		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MinRange, None, MaxRange
 		Damage: 80
 
-
 MINELAYER:
 	Inherits: ^CombatVehicle
 	Inherits@RENDER: ^MutRenderGreen
@@ -908,6 +907,61 @@ MINELAYER:
 		Prerequisite: HasMinelayer
 	ActorStatValues:
 		Stats: Armor, Sight, Speed
+
+MRINOTNK:
+	Inherits: ^Tank
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@RENDER: ^MutRenderGreen
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: mrinotnk-name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		Queue: Vehicle.Shared, Vehicle.Mutant
+		BuildAtProductionType: Tank
+		Description: mrinotnk-desc
+		BuildPaletteOrder: 14
+		Prerequisites: ~muweap, ~campaignunit, ~techlevel.2
+		BuildDuration: 625
+		BuildDurationModifier: 100
+	Mobile:
+		Speed: 60
+		TurnSpeed: 20
+		Locomotor: InfantryCrusherVehicle
+	Health:
+		HP: 45000
+	Voiced:
+		VoiceSet: Trike
+		Volume: 3
+	Turreted:
+		TurnSpeed: 20
+		Offset: -32,0,660
+	Armament@PRIMARY:
+		Weapon: RinoCannon
+		Damage: 140
+		LocalOffset: 880,100,100, 880,-100,100
+		MuzzleSequence: muzzle
+		MuzzlePalette: gensmkexploj
+		Recoil: 127
+		RecoilRecovery: 26
+		CasingWeapon: ShellCasingDebris #CasingDebris
+		CasingSpawnLocalOffset: 1000,120,550, 1000,-120,550
+		CasingTargetOffset: 256, 1024, 0, 256, -1024, 0
+		PauseOnCondition: empdisable
+	AttackTurreted:
+		Voice: Attack
+		PauseOnCondition: empdisable
+	AutoTarget:
+		ScanRadius: 8 #PREF: save trait looks up and scan armaments
+	BodyOrientation:
+		QuantizedFacings: 32
+		CameraPitch: 250
+	WithMuzzleOverlay:
+	Selectable:
+		Bounds: 1206,2050, 0, -400
 
 NAHFAC:
 	Inherits: ^Factory
