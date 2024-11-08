@@ -948,7 +948,7 @@ MRINOTNK:
 		Recoil: 127
 		RecoilRecovery: 26
 		CasingWeapon: ShellCasingDebris #CasingDebris
-		CasingSpawnLocalOffset: 1000,120,550, 1000,-120,550
+		CasingSpawnLocalOffset: 880,100,110, 880,-100,110
 		CasingTargetOffset: 256, 1024, 0, 256, -1024, 0
 		PauseOnCondition: empdisable
 	AttackTurreted:
