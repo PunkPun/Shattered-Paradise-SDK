@@ -49,7 +49,7 @@ button-command-bar-deploy =
    .tooltipdesc = Selected units will perform their default deploy activity
     - MCVs will transform into a Construction Yard and vice versa
     - Transports will unload their passengers
-    - Unit like Tick Tanks or Limped Drone will switch to combat state, vise versa
+    - Unit like Tick Tanks or Limpet Drone will switch to combat state, vise versa
     - Unit or building like Black Hand or firestorm generator use charged skills.
     - Aircraft will return to base.
 

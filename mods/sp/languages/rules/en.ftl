@@ -130,7 +130,7 @@ checkbox-upgrades =
         - Nod can build Cardinal
         - Blighter MLRS will have tib-gas warhead
         - Glider can transform into aircraft but price increased
-        - Limped Drone can target air units
+        - Limpet Drone can target air units
 
 checkbox-domination =
     .label = Domination
@@ -1372,7 +1372,7 @@ reapercab-desc = Fast raiding walker armed with missiles and Web launchers.
      - Regenerative Materials
 
 limped-name = Limpet Drone
-limped-desc = Small drone armed with explosives. Good vs: Infantry, Vehicles
+limped-desc = Small drone armed with explosives. Good vs: Vehicles
 
     Special:
      - Needs to be deployed to be armed
