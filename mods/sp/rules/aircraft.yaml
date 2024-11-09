@@ -1612,7 +1612,7 @@ WASP:
 	Inherits@SHADOW: ^AircraftShadow
 	Inherits@VISION: ^12CellVisionAir
 	Valued:
-		Cost: 1400
+		Cost: 1500
 	Tooltip:
 		Name: wasp-name
 	UpdatesPlayerStatistics:
@@ -1628,12 +1628,12 @@ WASP:
 		Bounds: 903,1280, 0, -612
 	Aircraft:
 		TurnSpeed: 28
-		Speed: 180
+		Speed: 195
 		Repulsable: true
 		MoveIntoShroud: true
 	-Rearmable:
 	Health:
-		HP: 21000
+		HP: 25000
 	Voiced:
 		VoiceSet: CabalAirDrone
 		Volume: 1.25

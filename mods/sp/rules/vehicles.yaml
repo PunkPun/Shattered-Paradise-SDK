@@ -425,7 +425,7 @@ JUG:
 	ActorStatValues:
 		Damage: 120
 
-SONIC:
+SONIC: #Disruptor
 	Inherits: ^Tank
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -764,7 +764,7 @@ NODMCV:
 	Carryable:
 		LocalOffset: 0,0,763
 
-BGGY:
+BGGY: #Raider Buggy
 	Inherits: ^CombatVehicle
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@BLUEFLAME: ^AffectedByPurifyingFlame
@@ -799,7 +799,7 @@ BGGY:
 		Offset: -250,0,400
 		TurnSpeed: 32
 	Health:
-		HP: 17500
+		HP: 15000
 	Armor:
 		Type: Light
 	WithMuzzleOverlay:
@@ -3621,10 +3621,10 @@ SCRGLYDER2:
 		BuildPaletteOrder: 22
 		Description: glider-desc
 		Prerequisites: ~scrweap, ~techlevel.2
-		BuildDuration: 500
+		BuildDuration: 625
 		BuildDurationModifier: 100
 	Valued:
-		Cost: 800
+		Cost: 900
 	GrantConditionOnPrerequisite@enable-upgrade:
 		Condition: enable-upgrade
 		Prerequisites: global-upgrades

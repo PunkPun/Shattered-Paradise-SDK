@@ -200,11 +200,6 @@ CorruptorAcid:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c384
 		Damage: 975
-		Versus:
-			Infantry: 200
-			Building: 75
-			Defense: 25
-			Heavy: 25
 		DamageTypes: Prone70Percent, TriggerProne, TiberiumDeath, ScrinEssenceKill
 		NoUnintendedFriendlyFire: Actor
 	Warhead@3Radio: CreateTintedCells
@@ -918,10 +913,7 @@ WasteTurretWeapon:
 	StartBurstReport: ScrinAcid0000.wav, ScrinAcid0001.wav, ScrinAcid0002.wav, ScrinAcid0003.wav, ScrinAcid0004.wav
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c400
-		Damage: 400
-		Versus:
-			Infantry: 200
-			Heavy: 75
+		Damage: 500
 		DamageTypes: Prone70Percent, TriggerProne, TiberiumDeath, ScrinEssenceKill
 		ValidTargets: Building, Structure, Infantry, Vehicle, Ground
 		NoUnintendedFriendlyFire: Actor

@@ -2043,7 +2043,7 @@ COLOSSI:
 	ActorStatValues:
 		Damage: 200
 
-MASTERMIND:
+MASTERMIND: #Mastermind
 	Inherits: ^ScrinSoldier
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMoveWithBerserkable
 	Inherits@COMMANDO: ^CommandoIcon
@@ -2156,6 +2156,7 @@ MASTERMIND:
 	-ExternalCondition@ZealousBuff:
 	-WithIdleOverlayOnGround@ZealousBuff:
 	ActorStatValues:
+		ReloadDelay: 100
 		Stats: Armor, Sight, Speed, MindControl, ReloadDelay, MinRange, None, MaxRange
 
 CABSENTRY:

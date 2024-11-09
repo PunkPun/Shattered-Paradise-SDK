@@ -54,8 +54,6 @@ LimpetMissile:
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c181
 		Damage: 15000
-		Versus:
-			Infantry: 100
 		ValidTargets: Ground, Water
 		InvalidTargets: Building, Wall
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath

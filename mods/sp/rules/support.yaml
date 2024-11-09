@@ -784,7 +784,7 @@ SCRNEEDLER:
 		VoiceSet: IchorWasteTurretVoice
 		Volume: 0.5
 	ActorStatValues:
-		Damage: 40
+		Damage: 50
 
 SCRDRONE:
 	Inherits: ^Defence
