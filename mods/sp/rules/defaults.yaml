@@ -1213,12 +1213,12 @@
 		Condition: gatling
 		Prerequisites: upgrade.gatling_cannons
 
-^AffectedByViniferaCatalysts:
+^AffectedByViniferaComponents:
 	ActorStatValues:
-		Upgrades: upgrade.vinifera_catalysts
+		Upgrades: upgrade.vinifera_components
 	GrantConditionOnPrerequisite@VINIFERACATALYSTS:
-		Condition: vinifera_catalysts
-		Prerequisites: upgrade.vinifera_catalysts
+		Condition: vinifera_components
+		Prerequisites: upgrade.vinifera_components
 
 ^AffectedByTiberiumConversion:
 	GrantConditionOnPrerequisite@megawealth:

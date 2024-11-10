@@ -3443,7 +3443,7 @@ CORRUPTOR:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@DETECTION: ^BasicStealthDetection
 	Inherits@EXPERIENCE: ^GainsExperience
-	Inherits@VINIFERA: ^AffectedByViniferaCatalysts
+	Inherits@VINIFERA: ^AffectedByViniferaComponents
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -3482,12 +3482,12 @@ CORRUPTOR:
 		MuzzlePalette: jascgreen
 		MuzzleSequence: muzzle
 		PauseOnCondition: empdisable
-		RequiresCondition: !vinifera_catalysts
+		RequiresCondition: !vinifera_components
 	Armament@VINIFERA:
 		Weapon: CorruptorAcidBlue
 		LocalOffset: 800,0,200
 		PauseOnCondition: empdisable
-		RequiresCondition: vinifera_catalysts
+		RequiresCondition: vinifera_components
 		MuzzlePalette: jascblue
 		MuzzleSequence: muzzle
 	WithMuzzleOverlay:
@@ -3498,11 +3498,11 @@ CORRUPTOR:
 		Sequence: stand
 	WithInfantryBody:
 		-DefaultAttackSequence:
-		RequiresCondition: !vinifera_catalysts && !inside-tunnel
+		RequiresCondition: !vinifera_components && !inside-tunnel
 	WithInfantryBody@Blue:
 		MoveSequence: run-blue
 		StandSequences: stand-blue
-		RequiresCondition: vinifera_catalysts && !inside-tunnel
+		RequiresCondition: vinifera_components && !inside-tunnel
 	Selectable:
 		Bounds: 1508, 1568, 0, -482
 	-DamagedByTintedCells@Default:
@@ -3511,9 +3511,9 @@ CORRUPTOR:
 		Image: corruptor
 		Sequence: icon-blue
 		Palette: chromescrin
-		RequiresCondition: vinifera_catalysts
+		RequiresCondition: vinifera_components
 	WithProductionIconOverlay:
-		Prerequisites: upgrade.vinifera_catalysts
+		Prerequisites: upgrade.vinifera_components
 		Types: corruptor-blue
 	ActorStatValues:
 		Damage: 98

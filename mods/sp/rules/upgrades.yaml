@@ -385,21 +385,21 @@ upgrade.gatling_cannons:
 	WithProductionIconOverlay:
 		Prerequisites: upgrade.gatling_cannons
 
-upgrade.vinifera_catalysts:
+upgrade.vinifera_components:
 	Inherits: ^default.upgrade
 	Tooltip:
-		Name: vinifera_catalysts-name
+		Name: vinifera_components-name
 	Buildable:
 		Queue: Upgrade.Shared, Upgrade.Scrin
 		BuildPaletteOrder: 13
 		BuildDuration: 1500
 		Prerequisites: ~upgrade.scr, scrradr, ~techlevel.4
-		Description: vinifera_catalysts-desc
+		Description: vinifera_components-desc
 		IconPalette: chromesilver
 	Valued:
 		Cost: 1500
 	WithProductionIconOverlay:
-		Prerequisites: upgrade.vinifera_catalysts
+		Prerequisites: upgrade.vinifera_components
 
 upgrade.tiberium_conversion:
 	Inherits: ^default.upgrade

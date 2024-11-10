@@ -94,7 +94,7 @@ upgrade.gatling_cannons:
 	icon:
 		Filename: cgunicon.shp
 
-upgrade.vinifera_catalysts:
+upgrade.vinifera_components:
 	icon:
 		Filename: vnfcicon.shp
 

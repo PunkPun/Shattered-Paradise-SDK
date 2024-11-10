@@ -126,7 +126,7 @@ hack.no_bases:
 		Actor: upgrade.gatling_cannons
 		RequiresCondition: upgrades && cab
 	FreeActor@22:
-		Actor: upgrade.vinifera_catalysts
+		Actor: upgrade.vinifera_components
 		RequiresCondition: upgrades && scr
 	FreeActor@23:
 		Actor: upgrade.tiberium_conversion

@@ -2814,8 +2814,8 @@ regenerative_materials-desc = Enables Reaper and all C.A.B.A.L. infantry to repa
 gatling_cannons-name = Gatling Cannons
 gatling_cannons-desc = Centurions fire faster as they continue firing.
 
-vinifera_catalysts-name = Vinifera Catalysts
-vinifera_catalysts-desc = Increases range of Ichor Waste Turrets and Corruptors by 1 cell.
+vinifera_components-name = Vinifera Components
+vinifera_components-desc = Increases range of Ichor Waste Turrets and Corruptors by 1 cell.
     Doubles the damage of the tib-radiation left by those assets.
 
 tiberium_conversion-name = Ichor Conversion

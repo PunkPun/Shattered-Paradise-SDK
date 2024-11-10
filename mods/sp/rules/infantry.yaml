@@ -1979,7 +1979,7 @@ COLOSSI:
 	Inherits: ^ScrinSoldier
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
 	Inherits@EXPERIENCE: ^GainsExperience
-	Inherits@VINIFERA: ^AffectedByViniferaCatalysts
+	Inherits@VINIFERA: ^AffectedByViniferaComponents
 	Buildable:
 		Queue: Infantry.Shared, Infantry.Scrin
 		BuildPaletteOrder: 35
@@ -2015,12 +2015,12 @@ COLOSSI:
 		TeleportType: ColoussTele
 		ImpactWeapon: ColoussTeleFrom
 		TeleportWeapon: ColoussTeleTo
-		RequiresCondition: !vinifera_catalysts
+		RequiresCondition: !vinifera_components
 	ExplodeWeaponTeleportEffect@blue:
 		TeleportType: ColoussTele
 		ImpactWeapon: ColoussTeleFromBlue
 		TeleportWeapon: ColoussTeleToBlue
-		RequiresCondition: vinifera_catalysts
+		RequiresCondition: vinifera_components
 	RA2PortableChrono:
 		TeleportType: ColoussTele
 		Voice: Move
