@@ -2562,7 +2562,7 @@ colossus-desc = Heavy duty alien.
     Good vs Infantry
 
     Special:
-     - Can irradiate its surroundings when deployed
+     - Teleport and irradiate its surroundings at destination
      - Radiation harms all units regardless of owner
      - Can absorb essence from killed units to heal
      - Can shoot over walls
