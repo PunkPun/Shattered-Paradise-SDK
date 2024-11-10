@@ -627,7 +627,7 @@
 		LaunchAngle: 96
 		Blockable: false
 		ContrailLength: 12
-		ContrailStartColor: 009800BB
+		ContrailStartColor: 00A000BB
 		ContrailStartColorAlpha: 187
 		ContrailStartWidth: 0c156
 		ContrailEndColor: 00440055

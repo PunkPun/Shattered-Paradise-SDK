@@ -209,7 +209,7 @@ CorruptorAcidBlue:
 	Inherits: CorruptorAcid
 	Range: 6c0
 	Projectile: BulletAS
-		ContrailStartColor: 0000ABBB
+		ContrailStartColor: 0022BABB
 		ContrailEndColor: 00005555
 	Warhead@2Eff: CreateEffect
 		ExplosionPalette: apolbluealpha
@@ -927,7 +927,7 @@ WasteTurretWeaponBlue:
 	Inherits: WasteTurretWeapon
 	Range: 8c0
 	Projectile: BulletAS
-		ContrailStartColor: 0000ABBB
+		ContrailStartColor: 0022BABB
 		ContrailEndColor: 00005555
 	Warhead@2Eff: CreateEffect
 		ExplosionPalette: apolbluealpha
