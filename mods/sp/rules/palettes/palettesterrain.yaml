@@ -138,6 +138,10 @@
 		#StartColor: 010100
 		#EndColor: FFFFEE
 
+		# snow normal, purp cloud (best)
+		#StartColor: 010001
+		#EndColor: FFF2FF
+
 		# temp normal, green cloud (good)
 		#StartColor: 000300
 		#EndColor: F0FFF0

@@ -21,3 +21,7 @@
 	# red cloud (good)
 	#StartColor: 050000
 	#EndColor: FFF0F0
+
+	# purp cloud (good)
+	#StartColor: 050005
+	#EndColor: FFECFF
