@@ -2845,16 +2845,16 @@ REAPERCAB:
 		VoiceSet: CyborgReap
 	Armament@primary:
 		Weapon: ReaperScythe
-		LocalOffset: 300,-400,950, 300,400,950
-		LocalYaw: 168, -168
+		LocalOffset: 300,-400,950, 300,400,950, 300,-400,950, 300,400,950
+		LocalYaw: 168, -168, -336, 336
 		MuzzleSequence: muzzle
 		MuzzlePalette: gensmkexplojFblue
 		ReloadingCondition: reload-ground
 		PauseOnCondition: empdisable || reload-air
 	Armament@AA:
 		Weapon: ReaperScytheAA
-		LocalOffset: 300,-400,950, 300,400,950
-		LocalYaw: 168, -168
+		LocalOffset: 300,-400,950, 300,400,950, 300,-400,950, 300,400,950
+		LocalYaw: 168, -168, -336, 336
 		MuzzleSequence: muzzle
 		MuzzlePalette: gensmkexplojFblue
 		ReloadingCondition: reload-air
