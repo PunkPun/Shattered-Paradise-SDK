@@ -575,6 +575,11 @@ pips:
 	pip-protonempty:
 		Filename: protonpips.shp
 		Start: 1
+	pip-apoloammo:
+		Filename: apoloammopips.shp
+	pip-apoloammoempty:
+		Filename: apoloammopips.shp
+		Start: 1
 	pip-chargedlaser:
 		Filename: ammopips.shp
 	pip-chargedlaserempty:

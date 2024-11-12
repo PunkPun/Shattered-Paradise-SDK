@@ -1136,6 +1136,19 @@ orcaiw.husk:
 	Projectile: ProjetcileHusk
 		Sequences: idle-white
 
+zomca.husk:
+	Inherits@explo: SmallPlaneExplode
+	Inherits: ^plane.husk
+	Projectile: ProjetcileHusk
+		Image: zomca
+		MaximumSpinSpeed: 64
+		Spin: 20
+
+zomcaw.husk:
+	Inherits: zomca.husk
+	Projectile: ProjetcileHusk
+		Sequences: idle-white
+
 dshp.husk:
 	Inherits@explo: BigAircraftExplode
 	Inherits: ^plane.husk

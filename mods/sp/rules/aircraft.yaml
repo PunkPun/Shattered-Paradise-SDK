@@ -83,16 +83,10 @@ ORCA:
 		Palette: player
 		IsPlayerPalette: true
 		RequiresCondition: ceramic_plating
-	WithIdleOverlay@Ammo:
-		Sequence: ammo
-		Palette: player
-		IsPlayerPalette: true
-		IsDecoration: true
-		RequiresCondition: ammo
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
-		PipCount: 5
+		PipCount: 4
 		FullSequence: pip-missile
 		EmptySequence: pip-missileempty
 		Palette: pips

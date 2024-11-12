@@ -1782,6 +1782,17 @@ orcai-desc = Fast anti-air aircraft with missile and machine gun.
     Upgrades:
      - Ceramic Plating
 
+zomca-name = Orca Fighter
+zomca-desc = Heavey aircraft with sonic ammo
+
+    Good vs: Ground
+
+    Special:
+     - Can attack enemies ahead while moving
+
+    Upgrades:
+     - Ceramic Plating
+
 mujeep-name = Technical
 mujeep-desc = Infantry transport.
 

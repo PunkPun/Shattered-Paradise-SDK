@@ -511,6 +511,61 @@ InterceptorGunAP:
 		ValidTargets: Ground, Air, Water
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 
+ZomcaBlast:
+	Inherits: ^FullDamage
+	Inherits@2: ^Small_Clsn
+	ReloadDelay: 50
+	Range: 5c0
+	MinRange: 0c100
+	Report: rketinf1.aud
+	SoundVolume: 2
+	Burst: 4
+	BurstDelays: 2
+	ValidTargets: Ground, Water, Vehicle, Building, Infantry
+	Projectile: BulletAS
+		Speed: 1000
+		Image: cannonball
+		LaunchAngle: 64
+		Shadow: true
+		Blockable: false
+		ContrailDelay: 0
+		ContrailLength: 8
+		ContrailStartColor: 88DDFF
+		ContrailStartColorAlpha: 230
+		ContrailStartWidth: 0c60
+		ContrailEndColor: 88AAE0
+		ContrailEndColorAlpha: 10
+		ContrailEndWidth: 0
+		ContrailZOffset: 3000
+		Inaccuracy: 1c0
+		Palette: gensmkexploFcyan70
+		TrailImage: litning
+		TrailSequences: bright
+		#TrailImage: cannonsmokecircle
+		TrailPalette: apcyan
+		TrailDelay: 0
+		TrailInterval: 0
+	Warhead@1Dam: SpreadDamage
+		Falloff: 100, 65, 45, 25, 5
+		Damage: 5000
+		Spread: 0c512
+		ValidTargets: Ground, Water, Vehicle, Building, Infantry
+		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: SonicMissleExplosionSmall
+		ExplosionPalette: gensmkexploFcyan
+		ValidTargets: Ground, Air, Water
+		AirThreshold: 8c0
+		ImpactActors: false
+	Warhead@3Eff: CreateEffect
+		Explosions: sonic_explo, sonic_explof
+		ExplosionPalette: gensmkexploFcyan40
+		ValidTargets: Ground, Air, Water
+		AirThreshold: 8c0
+		ImpactActors: false
+		Delay: 3
+	-Warhead@MarnFlash:
+
 Sniper:
 	Inherits: ^RifleWeapon
 	Inherits@2: ^Piffs

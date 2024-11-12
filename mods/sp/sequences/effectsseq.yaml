@@ -1171,6 +1171,9 @@ explosion:
 		Filename: shinydustexplo.shp
 	SonicMissleExplosion:
 		Filename: SonicMissleExplosion.shp
+	SonicMissleExplosionSmall:
+		Filename: SonicMissleExplosion.shp
+		Scale: 0.45
 	SonicShockwave:
 		Filename: tripodshockwave.shp
 		Length: *

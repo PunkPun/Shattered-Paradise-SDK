@@ -1000,14 +1000,10 @@ orca:
 		Start: 32
 		Length: 8
 		Tick: 20
-	ammo:
-		Filename: orca-ammo.shp
-		ZRamp: 1
-		Facings: -32
 	stand:
 		ZRamp: 1
 	icon:
-		Filename: orcaicon.shp
+		Filename: orcacicon.shp
 
 orcab:
 	Inherits@1: ^SpriteVehicle
@@ -1068,6 +1064,33 @@ orcai:
 		IgnoreWorldTint: true
 	icon:
 		Filename: orcaiicon.shp
+
+zomca:
+	Inherits@1: ^SpriteVehicle
+	Inherits@2: ^MissileMuzzle
+	Defaults:
+		Filename: zomca.shp
+	idle:
+		ZRamp: 1
+	idle-white:
+		Filename: zomcaw.shp
+		ZRamp: 1
+		Facings: -32
+	rotor: 
+		ZRamp: 1
+		Start: 32
+		Length: 8
+		Tick: 20
+	rotorw: 
+		Filename: zomcaw.shp
+		ZRamp: 1
+		Start: 32
+		Length: 8
+		Tick: 20
+	stand:
+		ZRamp: 1
+	icon:
+		Filename: orcaicon.shp
 
 orcatran:
 	Inherits: ^EmpOverlay

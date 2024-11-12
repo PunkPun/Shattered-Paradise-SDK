@@ -674,6 +674,110 @@ ORCAI: #Orca Interceptor
 		Health: 18750
 		RequiresCondition: ceramic_plating
 
+ZOMCA:
+	Inherits: ^CombatHelicopter
+	Inherits@AMMO: ^UsesAmmunition
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMoveWithBerserkable
+	Inherits@CERAMICS: ^AffectedByCeramicPlating
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@SHADOW: ^AircraftShadow
+	Inherits@VISION: ^12CellVisionAir
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: zomca-name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		Queue: Air.Shared, Air.GDI
+		Description: zomca-desc
+		BuildPaletteOrder: 22
+		Prerequisites: ~gahpad, gatech, ~techlevel.5
+		BuildDuration: 1125
+		BuildDurationModifier: 100
+	Voiced:
+		VoiceSet: Orca
+		Volume: 2
+	Selectable:
+		Bounds: 903,1447
+	Aircraft:
+		TurnSpeed: 28
+		Speed: 210
+		MoveIntoShroud: true
+		TakeoffSounds: orcaup1.aud
+		LandingSounds: orcadwn1.aud
+		#CanSlide: false
+	AutoTarget:
+		ScanRadius: 7 #PREF: save trait looks up and scan armaments
+		InitialStance: ReturnFire
+		InitialStanceAI: AttackAnything
+	Health:
+		HP: 20000
+	Armament:
+		Weapon: ZomcaBlast
+		LocalOffset: 500,300,0, 500,-300,0
+		MuzzleSequence: muzzle
+		MuzzlePalette: gensmkexploFcyan70
+		PauseOnCondition: !ammo
+	WithMuzzleOverlay:
+	AttackAircraft:
+		AttackType: Hover
+		FacingTolerance: 40
+	AmmoPool:
+		Ammo: 8
+		ReloadCount: 2
+		ReloadDelay: 50
+		AmmoCondition: ammo
+	SpawnHuskEffectOnDeath:
+		Weapon: zomca.husk
+		RequiresCondition: airborne && !ceramic_plating
+	SpawnHuskEffectOnDeath@white:
+		Weapon: zomcaw.husk
+		RequiresCondition: airborne && ceramic_plating
+	WithFacingSpriteBody:
+		RequiresCondition: !ceramic_plating
+	WithFacingSpriteBody@white:
+		Name: white
+		Sequence: idle-white
+		RequiresCondition: ceramic_plating
+	WithIdleOverlay@Rotor:
+		Sequence: rotor
+		Palette: player
+		IsPlayerPalette: true
+		Offset: 10,-360, 85
+		RequiresCondition: !ceramic_plating
+	WithIdleOverlay@RotorW:
+		Sequence: rotorw
+		Palette: player
+		IsPlayerPalette: true
+		Offset: 10,-360, 85
+		RequiresCondition: ceramic_plating
+	WithIdleOverlay@Rotor2:
+		Sequence: rotor
+		Palette: player
+		IsPlayerPalette: true
+		Offset: 10, 360, 85
+		RequiresCondition: !ceramic_plating
+	WithIdleOverlay@RotorW2:
+		Sequence: rotorw
+		Palette: player
+		IsPlayerPalette: true
+		Offset: 10, 360, 85
+		RequiresCondition: ceramic_plating
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		PipCount: 4
+		FullSequence: pip-apoloammo
+		EmptySequence: pip-apoloammoempty
+		Palette: apcyan
+	ActorStatValues:
+		Damage: 40
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MinRange, None, MaxRange
+	ActorStatOverride@CeramicPlating:
+		Health: 25000
+		RequiresCondition: ceramic_plating
+
 MUJEEP:
 	Inherits: ^Tank
 	Inherits@RENDER: ^MutRenderGreen
