@@ -2262,7 +2262,7 @@ CABSENTRY:
 	-ExternalCondition@ZealousBuff:
 	-WithIdleOverlayOnGround@ZealousBuff:
 
-CYBORG:
+CYBORG: #Cyborg
 	Inherits: ^CyborgSoldier
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
 	Inherits@CYBORGLEGS: ^AffectedByCyberneticLegEnhancements
@@ -2363,7 +2363,7 @@ CYBORG15-SCR:
 		DeathSequencePalette: jascblue
 		CrushedSequencePalette: jascblue
 
-CBORG:
+CBORG: #Missile Cyborg
 	Inherits: ^CyborgSoldier
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMoveWithBerserkable
 	Inherits@CYBORGLEGS: ^AffectedByCyberneticLegEnhancements
@@ -2469,7 +2469,7 @@ SWARMLING:
 	-ExternalCondition@ZealousBuff:
 	-WithIdleOverlayOnGround@ZealousBuff:
 
-PDRONE:
+PDRONE: #Reclaimer
 	Inherits: ^HoverDroneSoldier
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -2543,7 +2543,7 @@ GLAD:
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@REGENMATERIALS: ^AffectedByRegenerativeMaterials
 	Valued:
-		Cost: 800
+		Cost: 900
 	Tooltip:
 		Name: glad-name
 	UpdatesPlayerStatistics:
@@ -2553,7 +2553,7 @@ GLAD:
 		BuildPaletteOrder: 21
 		Prerequisites: ~cabclaw, cabradr, ~techlevel.4
 		Description: glad-desc
-		BuildDuration: 500
+		BuildDuration: 625
 		BuildDurationModifier: 100
 	Selectable:
 		Bounds: 1056,1809,0,-603

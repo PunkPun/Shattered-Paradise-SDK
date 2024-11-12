@@ -592,7 +592,7 @@ StealthRocketAA:
 	Inherits: StealthRocket
 	Inherits@1: ^AARocketWeaponOverride
 	ValidTargets: Air
-	Range: 9c0
+	Range: 8c0
 	Projectile: MissileTA
 		RangeLimit: 15c0
 	Warhead@1Dam: SpreadDamage

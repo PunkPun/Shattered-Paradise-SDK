@@ -1560,6 +1560,9 @@ SAPC:
 		OwnerChangedAffectsPassengers: false
 		LoadedCondition: loaded
 		PauseOnCondition: submerged
+	WithCargoSounds:
+		EnterSounds: genter1a.wav
+		ExitSounds: gexit1a.wav
 	Passenger:
 		CargoType: Apc
 	Targetable@MC:
@@ -1583,7 +1586,7 @@ SUBTANK:
 	Inherits@BLUEFLAME: ^AffectedByPurifyingFlame
 	Inherits@EXPERIENCE: ^GainsExperience
 	Valued:
-		Cost: 800
+		Cost: 1000
 	Tooltip:
 		Name: subtnk-name
 	UpdatesPlayerStatistics:
@@ -1594,7 +1597,7 @@ SUBTANK:
 		Description: subtnk-desc
 		BuildPaletteOrder: 37
 		Prerequisites: ~naweap, natech, ~techlevel.5
-		BuildDuration: 500
+		BuildDuration: 625
 		BuildDurationModifier: 100
 	ProductionCostMultiplier@AI: ## AI cannot use it well
 		Multiplier: 50
@@ -2219,10 +2222,10 @@ WOLF: #Carnotaurus
 		BuildPaletteOrder: 30
 		Description: wolf-desc
 		Prerequisites: ~muweap, muradr, ~techlevel.4
-		BuildDuration: 250
+		BuildDuration: 375
 		BuildDurationModifier: 100
 	Valued:
-		Cost: 400
+		Cost: 500
 	Tooltip:
 		Name: wolf-name
 	Voiced:
@@ -2406,7 +2409,7 @@ DEATHCLAW: #Ravager
 		Health: 87500
 		RequiresCondition: tibinfusion
 
-HVRTRUK3:
+HVRTRUK3: #Demotruck
 	Inherits@: ^HoverVehicle
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@RENDER: ^MutRenderGreen
@@ -2480,6 +2483,8 @@ HVRTRUK3:
 		ScanRadius: 6
 		InitialStance: HoldFire
 		InitialStanceAI: AttackAnything
+	VoiceAnnouncementOnProductionExit:
+		Voice: Build
 	ActorStatValues:
 		Damage: 3240
 		Spread: 6c0

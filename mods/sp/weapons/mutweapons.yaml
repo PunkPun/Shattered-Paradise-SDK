@@ -183,7 +183,7 @@ SkirmisherMortar:
 	Inherits@2: ^Small_Clsn
 	Inherits@3: ^FlameScorch
 	ReloadDelay: 75
-	Range: 12c0
+	Range: 10c0
 	MinRange: 3c0
 	Report: specfire0000.wav, specfire0001.wav, specfire0002.wav
 	Projectile: BulletAS
@@ -482,7 +482,7 @@ BullAcid:
 		DamageTypes: Prone70Percent, TriggerProne, TiberiumDeath
 		ValidTargets: Vehicle, Infantry, Building, Ground, Water
 		Condition: WolfDebuff
-		ConditionDuration: 125
+		ConditionDuration: 200
 		NoUnintendedFriendlyFire: Actor
 	Warhead@2Eff: CreateEffect
 		Explosions: tib_expsmall

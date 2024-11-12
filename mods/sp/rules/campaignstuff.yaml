@@ -928,11 +928,11 @@ MRINOTNK:
 		BuildDuration: 625
 		BuildDurationModifier: 100
 	Mobile:
-		Speed: 60
-		TurnSpeed: 20
+		Speed: 75
+		TurnSpeed: 32
 		Locomotor: InfantryCrusherVehicle
 	Health:
-		HP: 45000
+		HP: 40000
 	Voiced:
 		VoiceSet: Trike
 		Volume: 3

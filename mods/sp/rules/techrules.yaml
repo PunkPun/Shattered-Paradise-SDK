@@ -433,7 +433,7 @@ CABCANNON: #Cannon Turret
 		Name: cabcannon-name
 	Building:
 	Health:
-		HP: 45000
+		HP: 60000
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithMuzzleOverlay:
@@ -474,7 +474,7 @@ REPAIRTUR: #Maintenance Turret
 		Footprint: xx xx
 		Dimensions: 2,2
 	Health:
-		HP: 50000
+		HP: 60000
 	BodyOrientation:
 		QuantizedFacings: 32
 	RenderRangeCircle:

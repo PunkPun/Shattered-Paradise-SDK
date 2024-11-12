@@ -367,8 +367,8 @@ ZombieAttack:
 RepairNeutralTurret:
 	Inherits: RepairVehicleLasor
 	Range: 5c0
-	Burst: 4
-	BurstDelays: 1
+	Warhead@1Dam: SpreadDamage
+		Damage: -15000
 
 BerserkerBlow:
 	Inherits: ^ArtilleryDamage
