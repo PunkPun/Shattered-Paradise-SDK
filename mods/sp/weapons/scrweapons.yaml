@@ -1178,12 +1178,6 @@ MasterMindTeleTo:
 		ImpactActors: false
 		ValidTargets: Vehicle, Building, Infantry, Ground, Water, Air
 		AirThreshold: 8c0
-	Warhead@4Eff: CreateEffect
-		ImpactActors: false
-		Explosions: smallacidfire
-		ExplosionPalette: jascbluealpha
-		ValidTargets: Vehicle, Building, Infantry, Ground, Water, Air
-		AirThreshold: 8c0
 
 MasterMindTeleFrom:
 	Inherits: MasterMindTeleTo
@@ -1199,6 +1193,14 @@ MasterMindTeleFrom:
 		ValidTargets: Ground, Water, Air
 		AirThreshold: 8c0
 		RevealGeneratedShroud: true
+	Warhead@3Eff: CreateEffect
+		ImpactActors: false
+		Image: mastermind
+		Explosions: phantom-skill
+		ExplosionPalette: playerscrin
+		UsePlayerPalette: true
+		ValidTargets: Vehicle, Building, Infantry, Ground, Water, Air
+		AirThreshold: 8c0
 
 MasterMindTeleportTrace:
 	ValidTargets: Ground, Water, Air

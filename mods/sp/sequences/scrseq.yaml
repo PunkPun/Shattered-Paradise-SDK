@@ -456,6 +456,12 @@ mastermind:
 		Start: 276
 		Length: 21
 		ShadowStart: 604
+	phantom-skill:
+		Start: 276
+		Length: 21
+		ShadowStart: 604
+		AlphaFade: true
+		Tick: 60
 	die1:
 		Start: 312
 		Length: 16
