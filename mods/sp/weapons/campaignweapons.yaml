@@ -579,6 +579,9 @@ ZoneRaiderBlast:
 	Report: rketinf1.aud
 	SoundVolume: 1.2
 	ValidTargets: Ground, Water, Vehicle, Building, Infantry
+	Projectile: BulletAS
+		Speed: 800
+		TrailInterval: 1
 	Warhead@1Dam: SpreadDamage
 		Damage: 4000
 		Spread: 0c512
@@ -586,7 +589,6 @@ ZoneRaiderBlast:
 		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
 	Warhead@3Eff: CreateEffect
 		Explosions: sonic_explo2, sonic_explof2
-
 
 Sniper:
 	Inherits: ^RifleWeapon
