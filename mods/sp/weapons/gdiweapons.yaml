@@ -255,12 +255,13 @@ TrooperRail:
 	Report: railgunfire.wav
 	SoundVolume: 0.5
 	TargetActorCenter: true
-	Projectile: BulletAS
+	Projectile: InstantHitWithFakeBullets
+		FakeBulletNumber: 1
+		FakeBulletSpeed: 1000
 		ContrailDelay: 0
 		ContrailStartColor: AAAAFF
-		ContrailLength: 4
-		ContrailStartWidth: 45
-		Speed: 1c256
+		ContrailLength: 5
+		ContrailStartWidth: 50
 		Palette: gensmkexplojFblue
 		Sequences: idle3
 		TrailImage: litning
@@ -268,7 +269,7 @@ TrooperRail:
 		TrailPalette: apblue
 		TrailInterval: 0
 		ContrailEndColor: 3333FF
-		ContrailEndWidth: 9
+		ContrailEndWidth: 4
 	Warhead@1Dam: SpreadDamageWithCondition
 		ValidTargets: Ground, Water, TibChargeable
 		Spread: 0c045
@@ -283,16 +284,19 @@ TrooperRail:
 			Infantry: 50
 			Shield: 0
 		AirThreshold: 8c0
+		Delay: 1
 	Warhead@2Eff: CreateEffect
 		Image: explosion
 		Explosions: plasmaballexplosion
 		ExplosionPalette: gensmkexplojFblue
+		Delay: 1
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ImpactSounds: ssplash1.aud, ssplash2.aud, ssplash3.aud
 		ExplosionPalette: terrain
 		ValidTargets: Water
 		ImpactActors: false
+		Delay: 1
 
 WolverineVulcan:
 	Inherits: ^RifleWeapon
