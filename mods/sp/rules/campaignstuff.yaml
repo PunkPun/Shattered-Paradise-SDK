@@ -370,6 +370,62 @@ UMAGON:
 	ActorStatValues:
 		Damage: 150
 
+ZONERAIDER: #ZoneRaider
+	Inherits: ^Soldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
+	Inherits@EXPERIENCE: ^GainsExperience
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: zoneraider-name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		Queue: Infantry.Shared, Infantry.GDI
+		Description: zoneraider-desc
+		BuildPaletteOrder: 24
+		Prerequisites: ~gapile, gatech, upgrade.sonic_emitter_protocol, ~techlevel.5, ~campaignunit
+		BuildDuration: 500
+		BuildDurationModifier: 100
+	Voiced:
+		VoiceSet: Umagon
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 40000
+	-DamagedByTerrain:
+	-TakeCover:
+	Armament@1:
+		Weapon: ZoneRaiderBlast
+		LocalOffset: 600,100,900
+		PauseOnCondition: WebDisable
+		MuzzleSequence: garrison-muzzle
+		MuzzlePalette: gensmkexploFcyan70
+		Name: OnFoot
+	Armament@Garrison:
+		Weapon: ZoneRaiderBlast
+		PauseOnCondition: WebDisable
+		MuzzleSequence: garrison-muzzle
+		MuzzlePalette: gensmkexploFcyan70
+	WithMuzzleOverlay:
+	Crushable:
+		CrushClasses: HeavyInfantry
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+		FacingTolerance: 2
+	AutoTarget:
+		ScanRadius: 9 #PREF: save trait looks up and scan armaments
+	Passenger:
+		CustomPipType: blue
+	WithDeathAnimation@explosion:
+		DeathSequence: die5
+		FallbackSequence: die5
+		UseDeathTypeSuffix: false
+		-DeathTypes:
+	ActorStatValues:
+		Damage: 60
+
 PREDATOR: #Predator Tank
 	Inherits: ^Tank
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
@@ -674,7 +730,7 @@ ORCAI: #Orca Interceptor
 		Health: 18750
 		RequiresCondition: ceramic_plating
 
-ZOMCA:
+ZOMCA: ## Orca Fighter
 	Inherits: ^CombatHelicopter
 	Inherits@AMMO: ^UsesAmmunition
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMoveWithBerserkable
@@ -692,7 +748,7 @@ ZOMCA:
 		Queue: Air.Shared, Air.GDI
 		Description: zomca-desc
 		BuildPaletteOrder: 22
-		Prerequisites: ~gahpad, gatech, ~techlevel.5
+		Prerequisites: ~gahpad, gatech, upgrade.sonic_emitter_protocol, ~techlevel.5, ~campaignunit
 		BuildDuration: 1125
 		BuildDurationModifier: 100
 	Voiced:

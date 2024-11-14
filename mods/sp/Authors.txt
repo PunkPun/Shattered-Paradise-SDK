@@ -245,6 +245,7 @@ Assets come from three sources, Public, Vanilla and made by Nolt, if an asset is
    > Tripod
    > Avatar
    > Hexapod(meme_horror)
+   > Zone Raider
  MustaphaTR:
    > Upgrade cameos
    > Mutant/CABAL announcer voiceline edits

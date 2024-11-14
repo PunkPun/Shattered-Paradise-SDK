@@ -1755,6 +1755,16 @@ umagon-desc = Umagon was one of the GDI's "good girls", she sure was.
      - Immune to mindcontrol
      - Crush class: crushable
 
+zoneraider-name = Zone Raider
+zoneraider-desc = Elite Soldier armed with an sonic grenade launcher.
+
+    Good vs: Vehicles
+
+    Special:
+     - Does not go prone after taking fire
+     - Immune to Tiberium fields
+     - Crush class: crushable only by Epics.
+
 predator-name = Predator Tank
 predator-desc =  GDI's main battle tank armed with an anti-tank cannon and missile pod.
 
@@ -1783,7 +1793,7 @@ orcai-desc = Fast anti-air aircraft with missile and machine gun.
      - Ceramic Plating
 
 zomca-name = Orca Fighter
-zomca-desc = Heavey aircraft with sonic ammo
+zomca-desc = Heavy aircraft with sonic ammo
 
     Good vs: Ground
 
@@ -2443,6 +2453,7 @@ mutfiend-desc = Tiberium beasts trained to take out enemies with tiberium shards
     Good vs: Vehicles, Aircraft
 
     Special:
+     - Does not go prone after taking fire
      - Heals on Tiberium fields
      - Can attack Air
      - Crush class: crushable
@@ -2562,6 +2573,7 @@ bug-desc =  Alien breed that poisons enemies.
      - Can shoot over walls
      - Crush class: crushable only by Epics
      - Does not receive damage from tiberium fields
+     - Does not go prone after taking fire
      - Absorbs essence from killed enemies to heal
 
     Upgrades:
@@ -2578,6 +2590,7 @@ colossus-desc = Heavy duty alien.
      - Can absorb essence from killed units to heal
      - Can shoot over walls
      - Crush class: crushable only by Epics
+     - Does not go prone after taking fire
      - Does not receive damage from tiberium fields and all radiations
 
     Upgrades:
@@ -2589,14 +2602,15 @@ mastermind-desc = The commando unit of Scrin born with the ability
 
     Special:
      - Can mind control everything but Commandos and Epics
-     - Gain 50% EXP from enemy killed by controlled unit/defence
      - Takes some time to mind control Structures
+     - Gain 50% EXP from enemy killed by controlled unit/defence
      - Absorbs essence from killed units to heal
-     - Can teleport over a short distance
+     - Can teleport over a middle distance
      - Can mind control over walls
      - Immune to mind control
      - Does not receive damage from tiberium fields
      - Build limit: 1
+     - Does not go prone after taking fire
      - Crush class: crushable only by Epics
 
 cabsentry-name = Sentry Drone

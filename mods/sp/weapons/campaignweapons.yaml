@@ -511,22 +511,13 @@ InterceptorGunAP:
 		ValidTargets: Ground, Air, Water
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 
-ZomcaBlast:
-	Inherits: ^FullDamage
+^SonicGrenade:
 	Inherits@2: ^Small_Clsn
-	ReloadDelay: 50
-	Range: 5c0
-	MinRange: 0c100
-	Report: rketinf1.aud
-	SoundVolume: 2
-	Burst: 4
-	BurstDelays: 2
-	ValidTargets: Ground, Water, Vehicle, Building, Infantry
 	Projectile: BulletAS
 		Speed: 1000
 		Image: cannonball
 		LaunchAngle: 64
-		Shadow: true
+		Shadow: false
 		Blockable: false
 		ContrailDelay: 0
 		ContrailLength: 8
@@ -545,16 +536,9 @@ ZomcaBlast:
 		TrailPalette: apcyan
 		TrailDelay: 0
 		TrailInterval: 0
-	Warhead@1Dam: SpreadDamage
-		Falloff: 100, 65, 45, 25, 5
-		Damage: 5000
-		Spread: 0c512
-		ValidTargets: Ground, Water, Vehicle, Building, Infantry
-		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: SonicMissleExplosionSmall
 		ExplosionPalette: gensmkexploFcyan
-		ValidTargets: Ground, Air, Water
 		AirThreshold: 8c0
 		ImpactActors: false
 	Warhead@3Eff: CreateEffect
@@ -563,8 +547,46 @@ ZomcaBlast:
 		ValidTargets: Ground, Air, Water
 		AirThreshold: 8c0
 		ImpactActors: false
-		Delay: 3
+		Delay: 4
 	-Warhead@MarnFlash:
+
+ZomcaBlast:
+	Inherits: ^FullDamage
+	Inherits@2: ^SonicGrenade
+	ReloadDelay: 50
+	Range: 5c512
+	MinRange: 0c100
+	Report: rketinf1.aud
+	SoundVolume: 2
+	Burst: 4
+	BurstDelays: 2
+	ValidTargets: Ground, Water, Vehicle, Building, Infantry
+	Warhead@1Dam: SpreadDamage
+		Falloff: 100, 65, 45, 25, 5
+		Damage: 5000
+		Spread: 0c512
+		ValidTargets: Ground, Water, Vehicle, Building, Infantry
+		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
+
+ZoneRaiderBlast:
+	Inherits: ^FullDamage
+	Inherits@2: ^SonicGrenade
+	Range: 6c0
+	MinRange: 0c100
+	ReloadDelay: 80
+	Burst: 3
+	BurstDelays: 5
+	Report: rketinf1.aud
+	SoundVolume: 1.2
+	ValidTargets: Ground, Water, Vehicle, Building, Infantry
+	Warhead@1Dam: SpreadDamage
+		Damage: 4000
+		Spread: 0c512
+		ValidTargets: Ground, Water, Vehicle, Building, Infantry
+		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
+	Warhead@3Eff: CreateEffect
+		Explosions: sonic_explo2, sonic_explof2
+
 
 Sniper:
 	Inherits: ^RifleWeapon

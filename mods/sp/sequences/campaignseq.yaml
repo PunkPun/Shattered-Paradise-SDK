@@ -538,6 +538,61 @@ umagon:
 		ShadowStart: 552
 	icon:
 		Filename: umagicon.shp
+
+zoneraider:
+	Inherits: ^InfantryDeathAnims
+	Defaults:
+		Filename: zoneraider.shp
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 267
+	run:
+		Start: 8
+		Length: 7
+		Facings: 8
+		ShadowStart: 275
+	idle1:
+		Start: 64
+		Length: 33
+		ShadowStart: 331
+	idle2:
+		Start: 97
+		Length: 35
+		ShadowStart: 364
+	die1:
+		Start: 132
+		Length: 24
+		ShadowStart: 399
+	die2:
+		Start: 156
+		Length: 30
+		ShadowStart: 423
+	die-crushed:
+		Start: 152
+		Length: 1
+		ShadowStart: 419
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 186
+		Length: 10
+		Facings: 8
+		ShadowStart: 453
+		IgnoreWorldTint: true
+	garrison-muzzle:
+		-Combine:
+		Facings: 1
+		Filename: japmuzzleb.shp
+		Length: *
+		Scale: 0.23
+		Tick: 10
+		Reverses: true
+		FlipY: true
+		ZOffset: 4001
+		IgnoreWorldTint: true
+	icon:
+		Filename: umagicon.shp
 		
 scrincouncil:
 	Inherits: ^EmpOverlay
