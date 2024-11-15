@@ -249,7 +249,7 @@ Heal:
 		AffectsParent: false
 
 TrooperRail:
-	Inherits: ^ArmorPierceAmmoWeapon
+	Inherits: ^ArmorPierceDamage
 	ReloadDelay: 90
 	Range: 6c0
 	Report: railgunfire.wav
@@ -263,9 +263,9 @@ TrooperRail:
 		ContrailLength: 5
 		ContrailStartWidth: 50
 		Palette: gensmkexplojFblue
-		Sequences: idle3
+		Sequence: idle3
 		TrailImage: litning
-		TrailSequences: bright
+		TrailSequence: bright
 		TrailPalette: apblue
 		TrailInterval: 0
 		ContrailEndColor: 3333FF

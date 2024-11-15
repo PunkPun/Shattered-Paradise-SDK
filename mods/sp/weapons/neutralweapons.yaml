@@ -369,8 +369,6 @@ RepairNeutralTurret:
 	Range: 5c0
 	Burst: 4
 	BurstDelays: 0
-	Warhead@1Dam: TargetDamage
-		Spead: 0
 
 BerserkerBlow:
 	Inherits: ^ArtilleryDamage

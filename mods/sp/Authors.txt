@@ -144,7 +144,8 @@ Assets come from three sources, Public, Vanilla and made by Nolt, if an asset is
  BoundaryHand:
    > Onion Drone
  Bittah Commander:
-   > Remapped Civilian Array (with build-up animation)
+   > Remapped Civilian Array
+   > Remapped Civilian Armory
  Chronojam:
    > Nod Banshee
  CptNaughty:
