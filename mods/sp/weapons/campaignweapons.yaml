@@ -532,7 +532,6 @@ InterceptorGunAP:
 		Palette: gensmkexploFcyan70
 		TrailImage: litning
 		TrailSequences: bright
-		#TrailImage: cannonsmokecircle
 		TrailPalette: apcyan
 		TrailDelay: 0
 		TrailInterval: 0
@@ -582,6 +581,7 @@ ZoneRaiderBlast:
 	Projectile: BulletAS
 		Speed: 800
 		TrailInterval: 1
+		Sequences: idle2
 	Warhead@1Dam: SpreadDamage
 		Damage: 4000
 		Spread: 0c512
