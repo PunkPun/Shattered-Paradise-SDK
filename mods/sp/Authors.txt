@@ -285,6 +285,8 @@ Assets come from three sources, Public, Vanilla and made by Nolt, if an asset is
    > Battle Bus
  ppap11404:
    > Apocalypse Missile Explosion Effect (Mushroom Cloud)
+ QuantumGhost:
+   > Rage flash
  Kothvir
    > Clouds, Flags and Billboard textures
  SMIFFGIG:
