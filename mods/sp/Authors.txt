@@ -394,6 +394,8 @@ Assets come from three sources, Public, Vanilla and made by Nolt, if an asset is
    > sonic wave explosion and ioncannon_sparks: https://weisinx7.itch.io/earth-element
  Unknown
    > Hacked code stream effect: https://gifs.alphacoders.com/gifs/view/209037
+ 206UE
+   > Predator Tank body
 
 # Sounds:
  CptNaughty:
