@@ -453,7 +453,7 @@ PREDATOR: #Predator Tank
 		HP: 35000
 	Turreted:
 		TurnSpeed: 20
-		Offset: -100,0,414 ##new turret
+		Offset: -100,0,400 ##new turret
 	Armament@PRIMARY:
 		Weapon: PredatorCannon
 		Damage: 50
