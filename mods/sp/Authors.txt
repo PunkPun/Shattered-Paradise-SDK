@@ -131,6 +131,8 @@ Assets come from three sources, Public, Vanilla and made by Nolt, if an asset is
    > Nod Stealth Tank
  ansimuz.itch.io
    > spitspark: https://ansimuz.itch.io/gothicvania-magic-pack-9
+ ASVNiX
+   > Kodiak Cruiser
  B.A.Znd:
    > Nod subterranean apc
    > Lynx tank turret

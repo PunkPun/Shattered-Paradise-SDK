@@ -2337,7 +2337,7 @@ GAIONTUR:
 	ActorStatValues:
 		Damage: 2000
 
-KODK:
+KODK: ## Kodiak Command Ship
 	Inherits: ^CombatAirCruiser
 	Inherits@SHADOW: ^AircraftShadow
 	Inherits@VISION: ^9CellVisionAir
@@ -2409,6 +2409,110 @@ KODK:
 		EndColor: FFEA0000
 		TrailLength: 8
 		StartWidth: 96
+	ActorStatValues:
+		Icon: icon
+		IconPalette: chrome
+		Stats: Armor, Sight, Speed
+
+KODCRUISER: ## Kodiak Cruiser
+	Inherits: ^CombatAirCruiser
+	Inherits@SHADOW: ^AircraftShadow
+	Inherits@VISION: ^9CellVisionAir
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: kodk-name
+	Buildable:
+		Queue: Air.Shared, Air.GDI
+		Description: zomca-desc
+		BuildPaletteOrder: 22
+		Prerequisites: ~gahpad, gatech, ~techlevel.5, ~campaignunit
+		BuildDuration: 1125
+		BuildDurationModifier: 100
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Selectable:
+		Bounds: 2109,2200, 0, -512
+	Aircraft:
+		AltitudeVelocity: 180
+		TurnSpeed: 20
+		Speed: 90
+		Repulsable: true
+		MoveIntoShroud: true
+		IdealSeparation: 1706
+		TakeoffSounds: orcaup1.aud
+		LandingSounds: orcadwn1.aud
+	## Hack: No armament here, add AttackAircraft&AutoTarget only for LUA
+	AttackTurreted:
+		AttackType: Hover
+		FacingTolerance: 512
+		Turrets: primary, secondary
+		Voice: Attack
+	Turreted@1:
+		Offset: 280,-480,0
+		TurnSpeed: 64
+		Turret: primary
+	Turreted@2:
+		Offset: 280,480,0
+		TurnSpeed: 64
+		Turret: secondary
+	WithSpriteTurret@1:
+		Turret: primary
+	WithSpriteTurret@2:
+		Turret: secondary
+	Armament@1:
+		Weapon: KODCCannon
+		LocalOffset: 400,-80,-200, 400,0,-200, 400,80,-200
+		Recoil: 180
+		RecoilRecovery: 26
+		MuzzleSequence: muzzle
+		MuzzlePalette: gensmkexploj
+		CasingWeapon: ShellCasingDebris
+		CasingSpawnLocalOffset: 400,-80,-200, 400,0,-200, 400,80,-200
+		CasingTargetOffset: 0, 512, 0, 0, -512, 0, 512, 0, 0
+		Turret: primary
+	Armament@2:
+		Weapon: KODCCannon
+		LocalOffset: 400,-80,-200, 400,0,-200, 400,80,-200
+		Recoil: 180
+		RecoilRecovery: 26
+		MuzzleSequence: muzzle
+		MuzzlePalette: gensmkexploj
+		CasingWeapon: ShellCasingDebris
+		CasingSpawnLocalOffset: 400,-80,-200, 400,0,-200, 400,80,-200
+		CasingTargetOffset: 0, 512, 0, 0, -512, 0, 512, 0, 0
+		Turret: secondary
+	WithMuzzleOverlay:
+	AutoTarget:
+		ScanRadius: 9 #PREF: save trait looks up and scan armaments
+	Health:
+		HP: 40000
+	SpawnHuskEffectOnDeath:
+		Weapon: kodcruiser.husk
+		RequiresCondition: airborne
+	ExplodesAlsoTransported@Shrapnel:
+		Weapon: BigAircraftShrapnel
+	Contrail@2:
+		RequiresCondition: airborne
+		Offset: -1400, 480, 230
+		StartColor: 00EAFF80
+		StartColorAlpha: 128
+		StartColorUsePlayerColor: false
+		EndColor: 00EAFF80
+		TrailLength: 8
+		StartWidth: 128
+		EndWidth: 40
+	Contrail@3:
+		RequiresCondition: airborne
+		Offset: -1400, -480, 230
+		StartColor: 00EAFF80
+		StartColorAlpha: 128
+		StartColorUsePlayerColor: false
+		EndColor: 00EAFF80
+		TrailLength: 8
+		StartWidth: 128
+		EndWidth: 40
 	ActorStatValues:
 		Icon: icon
 		IconPalette: chrome

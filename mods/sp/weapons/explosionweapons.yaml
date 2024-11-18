@@ -1149,20 +1149,26 @@ zomcaw.husk:
 	Projectile: ProjetcileHusk
 		Sequences: idle-white
 
-dshp.husk:
+kodcruiser.husk:
 	Inherits@explo: BigAircraftExplode
 	Inherits: ^plane.husk
 	Projectile: ProjetcileHusk
-		Image: dshp
+		Image: kodcruiser
 		SpinChance: 50
-		
+
 kodk.husk:
 	Inherits@explo: BigAircraftExplode
 	Inherits: ^plane.husk
 	Projectile: ProjetcileHusk
 		Image: kodk
 		SpinChance: 50
-
+		
+dshp.husk:
+	Inherits@explo: BigAircraftExplode
+	Inherits: ^plane.husk
+	Projectile: ProjetcileHusk
+		Image: dshp
+		SpinChance: 50
 dshp.high.husk:
 	Inherits: dshp.husk
 	Projectile: ProjetcileHusk
