@@ -554,12 +554,12 @@ CERBERUS:
 		HP: 40000
 	Armament@sweep1:
 		Weapon: CerberusSublazor1
-		LocalOffset: 1400, 225, 0
+		LocalOffset: 1348, 215, 0
 		MuzzleSequence: muzzle
 		MuzzlePalette: gensmkexplojFred
 	Armament@sweep2:
 		Weapon: CerberusSublazor2
-		LocalOffset: 1400, -225, 0
+		LocalOffset: 1348, -215, 0
 		ReloadingCondition: reloading
 		MuzzleSequence: muzzle
 		MuzzlePalette: gensmkexplojFred
@@ -604,7 +604,7 @@ CERBERUS:
 		RequiresCondition: !Attacking && !reloading
 	WithIdleOverlay@cloakgeneratoreff:
 		Sequence: cloakgeneratorwave
-		Offset: -25, 0, 0
+		Offset: -24, 0, 0
 		RequiresCondition: !Attacking && !reloading
 		Image: explosion
 		Palette: effect
@@ -613,7 +613,7 @@ CERBERUS:
 		Weapon: BigAircraftShrapnel
 	Contrail@1:
 		RequiresCondition: airborne
-		Offset: -1500, 336, -50
+		Offset: -1420, 336, -80
 		StartColor: FFEA0080
 		StartColorAlpha: 128
 		StartColorUsePlayerColor: false
@@ -622,7 +622,7 @@ CERBERUS:
 		StartWidth: 96
 	Contrail@2:
 		RequiresCondition: airborne
-		Offset: -1500, 112, -50
+		Offset: -1420, 112, -80
 		StartColor: FFEA0080
 		StartColorAlpha: 128
 		StartColorUsePlayerColor: false
@@ -631,7 +631,7 @@ CERBERUS:
 		StartWidth: 96
 	Contrail@3:
 		RequiresCondition: airborne
-		Offset: -1500, -112, -50
+		Offset: -1420, -112, -80
 		StartColor: FFEA0080
 		StartColorAlpha: 128
 		StartColorUsePlayerColor: false
@@ -640,7 +640,7 @@ CERBERUS:
 		StartWidth: 96
 	Contrail@4:
 		RequiresCondition: airborne
-		Offset: -1500, -336, -50
+		Offset: -1420, -336, -80
 		StartColor: FFEA0080
 		StartColorAlpha: 128
 		StartColorUsePlayerColor: false
