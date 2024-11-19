@@ -83,6 +83,28 @@ ORCA:
 		Palette: player
 		IsPlayerPalette: true
 		RequiresCondition: ceramic_plating
+	Contrail@2:
+		RequiresCondition: airborne
+		Offset: -10, 330, 64
+		StartColor: FFEE0080
+		StartColorAlpha: 128
+		StartColorUsePlayerColor: false
+		EndColor: FFEA0000
+		EndColorAlpha: 20
+		TrailLength: 4
+		StartWidth: 64
+		EndWidth: 10
+	Contrail@3:
+		RequiresCondition: airborne
+		Offset: -10, -330, 64
+		StartColor: FFEE0080
+		StartColorAlpha: 128
+		StartColorUsePlayerColor: false
+		EndColor: FFEA0000
+		EndColorAlpha: 20
+		TrailLength: 4
+		StartWidth: 64
+		EndWidth: 10
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
