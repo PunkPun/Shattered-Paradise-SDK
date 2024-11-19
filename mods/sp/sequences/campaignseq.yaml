@@ -619,8 +619,10 @@ kodcruiser:
 		Offset: 0,0,0
 		ZOffset: -2
 		Facings: -32
+	muzzle:
+		Scale: 0.75
 	icon:
-		Filename: kodkicon.shp
+		Filename: kodcruisericon.shp
 
 mkiiidrone:
 	Inherits: ^SpriteVehicle

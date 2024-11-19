@@ -1942,6 +1942,15 @@ cabecm-desc = Support unit can recon and infiltrate.
      - Send the Quadrotor to hack hackable.
      - Capture building without consumed.
 
+kodcruiser-name = Kodiak Cruiser
+kodcruiser-desc = Heavy cruiser that use magnetronic cannon.
+
+    Good vs: Vehicle
+
+    Special:
+     - Can attack enemies while moving
+
+
 qdrone-name = Quadrotor
 
 mutmound-name = Suspicious Mound

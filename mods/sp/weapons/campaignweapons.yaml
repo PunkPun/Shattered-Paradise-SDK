@@ -594,9 +594,11 @@ ZoneRaiderBlast:
 KODCCannon:
 	Inherits: ^ArmorPierceAmmoWeapon
 	Inherits@2: ^Mediuml_Clsn
+	FirstBurstTargetOffset: 0,200,0
+	FollowingBurstTargetOffset: 0,-50,0
 	ReloadDelay: 70
 	Burst: 3
-	BurstDelays: 5
+	BurstDelays: 6
 	Range: 7c0
 	Report: 120mmf.aud
 	Projectile: BulletAS
@@ -604,9 +606,17 @@ KODCCannon:
 		ContrailStartWidth: 0c66
 		Speed: 1124
 		Blockable: false
+		ContrailEndColor: 00FFFF
+		TrailPalette: apyel
+		TrailSequences: idle3
 	Warhead@1Dam: SpreadDamage
 		Damage: 5000
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+		
+KODCCannon2:
+	Inherits: KODCCannon
+	FirstBurstTargetOffset: 0,-200,0
+	FollowingBurstTargetOffset: 0,50,0
 
 Sniper:
 	Inherits: ^RifleWeapon

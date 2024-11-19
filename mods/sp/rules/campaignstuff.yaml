@@ -713,7 +713,7 @@ ORCAI: #Orca Interceptor
 		StartColorUsePlayerColor: false
 		EndColor: FFEA0000
 		StartWidth: 128
-		TrailLength: 7
+		TrailLength: 6
 		EndWidth: 0
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
@@ -2422,10 +2422,10 @@ KODCRUISER: ## Kodiak Cruiser
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: kodk-name
+		Name: kodcruiser-name
 	Buildable:
 		Queue: Air.Shared, Air.GDI
-		Description: zomca-desc
+		Description: kodcruiser-desc
 		BuildPaletteOrder: 22
 		Prerequisites: ~gahpad, gatech, ~techlevel.5, ~campaignunit
 		BuildDuration: 1125
@@ -2462,26 +2462,20 @@ KODCRUISER: ## Kodiak Cruiser
 	WithSpriteTurret@2:
 		Turret: secondary
 	Armament@1:
-		Weapon: KODCCannon
-		LocalOffset: 400,-80,-200, 400,0,-200, 400,80,-200
+		Weapon: KODCCannon2
+		LocalOffset: 400,-80,-200, 400,80,-200, 400,0,-200
 		Recoil: 180
 		RecoilRecovery: 26
 		MuzzleSequence: muzzle
-		MuzzlePalette: gensmkexploj
-		CasingWeapon: ShellCasingDebris
-		CasingSpawnLocalOffset: 400,-80,-200, 400,0,-200, 400,80,-200
-		CasingTargetOffset: 0, 512, 0, 0, -512, 0, 512, 0, 0
+		MuzzlePalette: gensmkexploFcyan70
 		Turret: primary
 	Armament@2:
 		Weapon: KODCCannon
-		LocalOffset: 400,-80,-200, 400,0,-200, 400,80,-200
+		LocalOffset: 400,80,-200, 400,-80,-200, 400,0,-200
 		Recoil: 180
 		RecoilRecovery: 26
 		MuzzleSequence: muzzle
-		MuzzlePalette: gensmkexploj
-		CasingWeapon: ShellCasingDebris
-		CasingSpawnLocalOffset: 400,-80,-200, 400,0,-200, 400,80,-200
-		CasingTargetOffset: 0, 512, 0, 0, -512, 0, 512, 0, 0
+		MuzzlePalette: gensmkexploFcyan70
 		Turret: secondary
 	WithMuzzleOverlay:
 	AutoTarget:
