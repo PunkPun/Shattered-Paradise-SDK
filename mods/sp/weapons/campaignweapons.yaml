@@ -603,6 +603,7 @@ KODCCannon:
 		Sequences: idle2
 		ContrailStartWidth: 0c66
 		Speed: 1124
+		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Damage: 5000
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
