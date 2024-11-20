@@ -114,6 +114,10 @@ FileSystem: DefaultFileSystem
 		sp|bits/cabal/audio/voice
 		sp|bits/scrin/audio/voice
 		sp|bits/neutral/audio/voice
+		sp|bits/gdi/air
+		sp|bits/nod/air
+		sp|bits/mutant/air
+		sp|bits/cabal/air
 		sp|bits/scrin/air
 		sp|bits/nod/effects
 		sp|bits/tiles
