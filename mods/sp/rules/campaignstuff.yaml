@@ -2375,7 +2375,7 @@ KODK: ## Kodiak Command Ship
 		Weapon: BigAircraftShrapnel
 	Contrail@1:
 		RequiresCondition: airborne
-		Offset: -1600, 800, 50
+		Offset: -1600, 800, 60
 		StartColor: FFEA0080
 		StartColorAlpha: 128
 		StartColorUsePlayerColor: false
@@ -2384,7 +2384,7 @@ KODK: ## Kodiak Command Ship
 		StartWidth: 96
 	Contrail@2:
 		RequiresCondition: airborne
-		Offset: -1600, 500, 50
+		Offset: -1600, 500, 60
 		StartColor: FFEA0080
 		StartColorAlpha: 128
 		StartColorUsePlayerColor: false
@@ -2393,7 +2393,7 @@ KODK: ## Kodiak Command Ship
 		StartWidth: 96
 	Contrail@3:
 		RequiresCondition: airborne
-		Offset: -1600, -500, 50
+		Offset: -1600, -500, 60
 		StartColor: FFEA0080
 		StartColorAlpha: 128
 		StartColorUsePlayerColor: false
@@ -2402,7 +2402,7 @@ KODK: ## Kodiak Command Ship
 		StartWidth: 96
 	Contrail@4:
 		RequiresCondition: airborne
-		Offset: -1600, -800, 50
+		Offset: -1600, -800, 60
 		StartColor: FFEA0080
 		StartColorAlpha: 128
 		StartColorUsePlayerColor: false
