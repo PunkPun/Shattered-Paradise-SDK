@@ -424,6 +424,61 @@ ZONERAIDER: #ZoneRaider
 		UseDeathTypeSuffix: false
 		-DeathTypes:
 	ActorStatValues:
+		Damage: 90
+
+ZONEDEFR:
+	Inherits: ^Soldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
+	Inherits@EXPERIENCE: ^GainsExperience
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: zonedefr-name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		Queue: Infantry.Shared, Infantry.GDI
+		Description: zonedefr-desc
+		BuildPaletteOrder: 24
+		Prerequisites: ~gapile, gatech, ~techlevel.5, ~campaignunit
+		BuildDuration: 500
+		BuildDurationModifier: 100
+	Voiced:
+		VoiceSet: Ghost
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 60000
+	-DamagedByTerrain:
+	TakeCover:
+		SpeedModifier: 100
+		ProneOffset: 0, 0, 0
+	Armament@1:
+		Weapon: ZoneDefrBlast
+		LocalOffset: 480,200,600
+		PauseOnCondition: WebDisable
+		Name: OnFoot
+	Armament@Garrison:
+		Weapon: ZoneDefrBlast
+		PauseOnCondition: WebDisable
+		MuzzleSequence: garrison-muzzle
+		MuzzlePalette: apblue
+	Crushable:
+		CrushClasses: HeavyInfantry
+	WithDeathAnimation@explosion:
+		DeathSequence: die5
+		FallbackSequence: die5
+		UseDeathTypeSuffix: false
+		-DeathTypes:
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+		FacingTolerance: 2
+	AutoTarget:
+		ScanRadius: 7 #PREF: save trait looks up and scan armaments
+	Passenger:
+		CustomPipType: blue
+	ActorStatValues:
 		Damage: 60
 
 PREDATOR: #Predator Tank

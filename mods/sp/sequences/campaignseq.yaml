@@ -594,6 +594,81 @@ zoneraider:
 	icon:
 		Filename: umagicon.shp
 		
+zonedefr:
+	Inherits@1: ^InfantryDeathAnims
+	Defaults:
+		Filename: zonedefr.shp
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 361
+	run:
+		Start: 8
+		Length: 12
+		Facings: 8
+		Tick: 40
+		ShadowStart: 369
+	prone-stand:
+		Start: 104
+		Facings: 8
+		ShadowStart: 465
+	standup-0:
+		Start: 104
+		Facings: 8
+		ShadowStart: 465
+	prone-run:
+		Start: 112
+		Length: 9
+		Facings: 8
+		Tick: 50
+		ShadowStart: 473
+	shoot:
+		Start: 184
+		Length: 6
+		Facings: 8
+		Stride: 12
+		ShadowStart: 545
+		IgnoreWorldTint: true
+	prone-shoot:
+		Start: 190
+		Length: 6
+		Facings: 8
+		Stride: 12
+		ShadowStart: 551
+		IgnoreWorldTint: true
+	die1:
+		Start: 280
+		Length: 9
+		ShadowStart: 641
+	die2:
+		Start: 289
+		Length: 9
+		ShadowStart: 650
+	die-crushed:
+		Start: 297
+		Length: 1
+		ShadowStart: 658
+		Tick: 200
+		ZOffset: -511
+	idle1:
+		Start: 298
+		Length: 21
+		ShadowStart: 659
+	idle2:
+		Start: 319
+		Length: 21
+		ShadowStart: 680
+	idle3:
+		Start: 340
+		Length: 21
+		ShadowStart: 701
+	webguy:
+		Filename: webguySPbig.shp
+		Length: 6
+		ShadowStart: 6
+	icon:
+		Filename: gosticon.shp
+
 kodk:
 	Inherits: ^EmpOverlay
 	Defaults:

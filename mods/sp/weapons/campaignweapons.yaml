@@ -590,6 +590,47 @@ ZoneRaiderBlast:
 	Warhead@3Eff: CreateEffect
 		Explosions: sonic_explo2, sonic_explof2
 
+ZoneDefrBlast:
+	Inherits: ^ArmorPierceAmmoWeapon
+	Inherits@2: ^Mediuml_Clsn
+	ReloadDelay: 90
+	Range: 6c0
+	Report: 120mmf.aud
+	Projectile: BulletAS
+		Sequences: idle2
+		ContrailStartWidth: 0c66
+		Speed: 1000
+		ContrailEndColor: 00FFFF
+		TrailPalette: apyel
+		TrailSequences: idle3
+	Warhead@1Dam: SpreadDamage
+		Damage: 5000
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	Warhead@op: FireShrapnel
+		Weapon: ZoneDefrShrapnel
+		ImpactActors: false
+		Amount: 1
+		AimChance: 100
+		AllowDirectHit: false
+		AimTargetStances: Enemy
+		AirThreshold: 4c0
+		ValidTargets: Infantry, Vehicle, Building, Ground, Wall, Water
+
+ZoneDefrShrapnel:
+	Inherits: ZoneDefrBlast
+	Inherits@2: ^Small_Clsn
+	Range: 5c0
+	MinRange: 0c990
+	Projectile: BulletAS
+		Sequences: idle3
+		ContrailStartWidth: 0c50
+		ContrailEndColor: 00FFFF
+		TrailPalette: apyel
+		TrailSequences: idle2
+	Warhead@1Dam: SpreadDamage
+		Damage: 3000
+	-Report:
+	-Warhead@op:
 
 KODCCannon:
 	Inherits: ^ArmorPierceAmmoWeapon

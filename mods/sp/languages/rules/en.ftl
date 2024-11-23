@@ -1758,10 +1758,20 @@ umagon-desc = Umagon was one of the GDI's "good girls", she sure was.
 zoneraider-name = Zone Raider
 zoneraider-desc = Elite Soldier armed with an sonic grenade launcher.
 
-    Good vs: Vehicles
+    Good vs: Ground
 
     Special:
      - Does not go prone after taking fire
+     - Immune to Tiberium fields
+     - Crush class: crushable only by Epics.
+
+
+zonedefr-name = Zone Defender
+zonedefr-desc = Durable Elite Soldier armed with an magnetronic cannon.
+
+    Good vs: Vehicles
+
+    Special:
      - Immune to Tiberium fields
      - Crush class: crushable only by Epics.
 
