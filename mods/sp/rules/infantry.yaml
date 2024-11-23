@@ -1425,6 +1425,7 @@ CUTMAN:
 	Mobile:
 		Voice: Move
 	WithInfantryBody:
+		IdleSequences: idle1, idle2, shoot
 	Mobile:
 		Locomotor: TibInmuneInfantry
 	RenderSprites:

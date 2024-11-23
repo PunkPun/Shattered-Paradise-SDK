@@ -157,8 +157,10 @@ cutman:
 		Facings: 8
 		ShadowStart: 342
 	shoot:
+		Start: 88
 		Facings: 8
-		ShadowStart: 342
+		Length: 10
+		ShadowStart: 430
 	prone-stand:
 		Start: 334
 		Facings: 8
