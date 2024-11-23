@@ -864,11 +864,8 @@ EXEMPLAR:
 		Sequence: idle
 		Palette: apred
 		ValidRelationships: Enemy, Neutral, Ally
-	WithDeathAnimation@explosion:
-		DeathSequence: die5
-		FallbackSequence: die5
-		UseDeathTypeSuffix: false
-		-DeathTypes:
+	WithDeathAnimation@blood1:
+		Delay: 3
 	-DamagedByTerrain:
 	-TakeCover:
 	-FirepowerMultiplier@ZealousBuff:

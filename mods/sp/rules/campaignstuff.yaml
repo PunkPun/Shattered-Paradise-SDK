@@ -465,11 +465,8 @@ ZONEDEFR:
 		MuzzlePalette: apblue
 	Crushable:
 		CrushClasses: HeavyInfantry
-	WithDeathAnimation@explosion:
-		DeathSequence: die5
-		FallbackSequence: die5
-		UseDeathTypeSuffix: false
-		-DeathTypes:
+	WithDeathAnimation@blood1:
+		Delay: 3
 	AttackFrontal:
 		Voice: Attack
 		Armaments: OnFoot
