@@ -148,6 +148,8 @@ Assets come from three sources, Public, Vanilla and made by Nolt, if an asset is
  Bittah Commander:
    > Remapped Civilian Array
    > Remapped Civilian Armory
+ Blubb:
+   > Nod sniper
  Chronojam:
    > Nod Banshee
  CptNaughty:
