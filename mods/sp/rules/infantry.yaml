@@ -1085,6 +1085,8 @@ BHS:
 	SharedPassenger:
 		CustomPipType: red
 	RenderSprites:
+	WithInfantryBody:
+		StandSequences: stand, stand2
 	-DamagedByTerrain:
 	ActorStatValues:
 		Damage: 75

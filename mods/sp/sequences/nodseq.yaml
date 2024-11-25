@@ -344,41 +344,46 @@ bhs:
 		Filename: bhs2.shp
 		Tick: 80
 	stand:
+		Start: 124
 		Facings: 8
-		ShadowStart: 132
+		Stride: 2
+		ShadowStart: 263
+	stand2:
+		Facings: 8
+		ShadowStart: 139
 	run:
 		Start: 8
 		Length: 6
 		Facings: 8
-		ShadowStart: 140
+		ShadowStart: 147
 	idle1:
 		Start: 56
-		Length: 15
-		ShadowStart: 188
+		Length: 20
+		ShadowStart: 195
 	idle2:
-		Start: 71
-		Length: 15
-		ShadowStart: 203
+		Start: 76
+		Length: 17
+		ShadowStart: 215
 	die1:
-		Start: 86
+		Start: 93
 		Length: 15
-		ShadowStart: 218
+		ShadowStart: 232
 	die2:
-		Start: 101
+		Start: 108
 		Length: 15
-		ShadowStart: 233
+		ShadowStart: 247
 		Tick: 80
 	die-crushed:
-		Start: 111
+		Start: 118
 		Length: 5
-		ShadowStart: 243
+		ShadowStart: 257
 		Tick: 800
 		ZOffset: -511
 	shoot:
-		Start: 116
+		Start: 123
 		Length: 2
 		Facings: 8
-		ShadowStart: 248
+		ShadowStart: 262
 		IgnoreWorldTint: true
 		Tick: 120
 	icon:
