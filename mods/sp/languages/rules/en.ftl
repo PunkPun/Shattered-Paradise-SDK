@@ -1755,6 +1755,21 @@ umagon-desc = Umagon was one of the GDI's "good girls", she sure was.
      - Immune to mindcontrol
      - Crush class: crushable
 
+cycd-name = Cyborg Elite
+cycd-desc =  Elite cyborg armed with a plasma cannon.
+
+    Good vs: Ground targets
+
+    Special:
+     - Can be deactivated with E.M.P.
+     - Does not receive damage from tiberium fields
+     - Loses its legs when at critical health
+     - Crush class: crushable only by Epics
+
+    Upgrades:
+     - Cybernetic Leg Enhancements
+     - Regenerative Materials
+
 zoneraider-name = Zone Raider
 zoneraider-desc = Elite Soldier armed with an sonic grenade launcher.
 

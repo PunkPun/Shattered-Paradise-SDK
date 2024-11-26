@@ -539,6 +539,63 @@ umagon:
 	icon:
 		Filename: umagicon.shp
 
+cyc3:
+	Inherits@1: ^InfantryDeathAnims
+	Defaults:
+		Filename: cyc3.shp
+	stand:
+		Facings: 8
+		ShadowStart: 308
+	run:
+		Start: 8
+		Length: 9
+		Facings: 8
+		ShadowStart: 316
+	idle1:
+		Start: 80
+		Length: 15
+		ShadowStart: 388
+	idle2:
+		Start: 95
+		Length: 15
+		ShadowStart: 403
+	crippled-run:
+		Start: 110
+		Length: 9
+		Facings: 8
+		ShadowStart: 418
+	crippled-stand:
+		Start: 110
+		Facings: 8
+		Stride: 9
+		ShadowStart: 418
+	die1:
+		Start: 182
+		Length: 15
+		ShadowStart: 490
+	die2:
+		Start: 197
+		Length: 15
+		ShadowStart: 505
+	shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		ShadowStart: 520
+		IgnoreWorldTint: true
+	crippled-shoot:
+		Start: 260
+		Length: 6
+		Facings: 8
+		ShadowStart: 568
+		IgnoreWorldTint: true
+	webguy:
+		Filename: webguySPmid.shp
+		Length: 6
+		ShadowStart: 6
+	icon:
+		Filename: cyc3icon.shp
+
 zoneraider:
 	Inherits: ^InfantryDeathAnims
 	Defaults:

@@ -370,6 +370,66 @@ UMAGON:
 	ActorStatValues:
 		Damage: 150
 
+CYC3:
+	Inherits: ^CyborgSoldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
+	Inherits@CYBORGLEGS: ^AffectedByCyberneticLegEnhancements
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@REGENMATERIALS: ^AffectedByRegenerativeMaterials
+	Inherits@VISION: ^10CellVision
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: cycd-name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		Queue: Infantry.Shared, Infantry.CABAL
+		Description: cycd-desc
+		BuildPaletteOrder: 34
+		Prerequisites: ~cabclaw, cabtech, ~techlevel.5, ~campaignunit
+		BuildLimit: 1
+		BuildDuration: 1250
+		BuildDurationModifier: 100
+	Voiced:
+		VoiceSet: CyborgCommando
+	AnnounceOnSeen:
+		PingRadar: true
+		Notification: CommandoDetected
+		TextNotification: notification-commando
+	Mobile:
+		Speed: 45
+	Health:
+		HP: 60000
+	Armament@1:
+		Weapon: CyCannon
+		LocalOffset: 170,85,683
+		PauseOnCondition: WebDisable || empdisable
+		Name: OnFoot
+	Armament@Garrison:
+		Weapon: GCyCannon
+		PauseOnCondition: WebDisable || empdisable
+		MuzzleSequence: garrison-muzzle
+		MuzzlePalette: apgreen
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+		FacingTolerance: 2
+	AutoTarget:
+		ScanRadius: 9 #PREF: save trait looks up and scan armaments
+	Passenger:
+		CustomPipType: red
+	SharedPassenger:
+		CustomPipType: red
+	SelectionDecorations:
+	Selectable:
+		DecorationBounds: 664,1568,-30,-723
+	SpawnSmokeParticleOnDeath@FLAMEGUY:
+		Image: bigflameguy
+	ActorStatValues:
+		Damage: 300
+		Upgrades: upgrade.cybernetic_leg_enhancements, upgrade.regenerative_materials
+
 ZONERAIDER: #ZoneRaider
 	Inherits: ^Soldier
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
@@ -440,7 +500,7 @@ ZONEDEFR:
 		Queue: Infantry.Shared, Infantry.GDI
 		Description: zonedefr-desc
 		BuildPaletteOrder: 24
-		Prerequisites: ~gapile, gatech, ~techlevel.5, ~campaignunit
+		Prerequisites: ~gapile, gatech, upgrade.ceramic_plating, ~techlevel.5, ~campaignunit
 		BuildDuration: 500
 		BuildDurationModifier: 100
 	Voiced:
