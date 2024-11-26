@@ -1,26 +1,3 @@
-WEEDGUY:
-	Inherits: ^Soldier
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
-	Tooltip:
-		Name: weedguy-name
-	Voiced:
-		VoiceSet: Weed
-	Mobile:
-		Speed: 55
-	Health:
-		HP: 13000
-	Armament:
-		Weapon: CrabAcid
-		LocalOffset: 85,0,384
-	AttackFrontal:
-		Voice: Attack
-		PauseOnCondition: WebDisable
-		FacingTolerance: 2
-	AutoTarget:
-		ScanRadius: 5 #PREF: save trait looks up and scan armaments
-	ActorStatValues:
-		Damage: 125
-
 CHAMSPY:
 	Inherits: ^Soldier
 	Tooltip:

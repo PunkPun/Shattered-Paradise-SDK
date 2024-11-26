@@ -35,6 +35,66 @@ talkbubl:
 		Length: *
 		Tick: 500
 
+weedguy:
+	Inherits: ^InfantryDeathAnims
+	Defaults:
+		Filename: weed.shp
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 202
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		ShadowStart: 210
+	shoot:
+		Start: 56
+		Facings: 8
+		ShadowStart: 258
+	prone-shoot:
+		Start: 56
+		Facings: 8
+		ShadowStart: 258
+	standup-0:
+		Start: 112
+		Length: 2
+		Facings: 8
+		ShadowStart: 314
+	prone-run:
+		Start: 64
+		Length: 6
+		Facings: 8
+		ShadowStart: 266
+	prone-stand:
+		Start: 64
+		Facings: 8
+		Stride: 6
+		ShadowStart: 266
+	idle1:
+		Start: 128
+		Length: 8
+		ShadowStart: 330
+	idle2:
+		Start: 136
+		Length: 16
+		ShadowStart: 338
+	die1:
+		Start: 152
+		Length: 8
+		ShadowStart: 354
+	die2:
+		Start: 160
+		Length: 6
+		ShadowStart: 362
+	die-crushed:
+		Start: 174
+		Length: 3
+		ShadowStart: 376
+		Tick: 1000
+	icon:
+		Filename: weaticon.shp
+
 cabecm:
 	Inherits@1: ^EmpOverlay
 	Defaults:
