@@ -110,7 +110,8 @@ Assets come from three sources, Public, Vanilla and made by Nolt, if an asset is
    > Mutant Harvester
  Astor:
    > Veterancy Chevrons
-   > Bullets (I guess its Astor :/)
+  Apoclord
+   > Rino tank
  Askhati:
    > Hyperion Corvette
    > mut1icon
@@ -138,7 +139,6 @@ Assets come from three sources, Public, Vanilla and made by Nolt, if an asset is
    > Lynx tank turret
    > Mutant mrls body
    > hover mrls body
-   > Rino tank
  BaRaKa:
    > Tunnel Dirt animation when creating
  Bdragon1727:
