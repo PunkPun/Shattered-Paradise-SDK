@@ -1234,7 +1234,7 @@ MRINOTNK:
 		Volume: 3
 	Turreted:
 		TurnSpeed: 20
-		Offset: -32,0,660
+		Offset: -20,0,540
 	Armament@PRIMARY:
 		Weapon: RinoCannon
 		Damage: 140
