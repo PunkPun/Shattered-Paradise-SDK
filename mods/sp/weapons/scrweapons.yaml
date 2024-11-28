@@ -171,6 +171,7 @@ FloatGlaive:
 
 FloatGlaive2:
 	Inherits: FloatGlaive
+	AirThreshold: 8c0
 	-Report:
 	-Warhead@op:
 
@@ -183,6 +184,7 @@ FloatGlaiveUpg:
 
 FloatGlaiveUpg2:
 	Inherits: FloatGlaiveUpg
+	AirThreshold: 8c0
 	-Report:
 	-Warhead@op:
 

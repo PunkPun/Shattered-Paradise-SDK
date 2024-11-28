@@ -1893,16 +1893,6 @@ mrinotnk-desc = Heavy tank armed with dual anti-tank cannon.
      - Can attack while moving
 
 
-promthtnk-name = Prometheus Tank
-promthtnk-desc = Mutant tank attached with a scavenged Scrin weapon.
-
-    Good vs: Vehicle
-
-    Special:
-     - Can shoot over walls
-     - Projectile tracks target
-     - Can crush Infantry 
-     - Can attack enemies ahead while moving
 
 regentnk-name = Regenisis Tank
 regentnk-desc = Mutant heavy tank armed with a huge barrel.
@@ -1923,6 +1913,29 @@ tvddevice-desc = "Tiberium Vein Detonation Device"
      - Release shock wave that harm nearby area upon detonation
      - Cannot enter Tunnel Networks or transport, can be carried by carryall
      - Can crush Infantry 
+
+promthtnk-name = Prometheus Tank
+promthtnk-desc = Mutant tank attached with a scavenged Scrin weapon.
+
+    Good vs: Vehicle
+
+    Special:
+     - Can shoot over walls
+     - Projectile tracks target
+     - Can crush Infantry 
+     - Can attack enemies ahead while moving
+
+
+mzhurongtnk-name = Zhurong Tank
+mzhurongtnk-desc = Mutant tank with a flame storm ammo launcher
+
+    Good vs: Infantry, Building
+
+    Special:
+     - Can shoot over walls
+     - Projectile cause flame storm
+     - Can crush Infantry 
+     - Can attack enemies while moving
 
 lpst-name = Sensor Array
 lpst-desc = Support unit for large stealth detection.

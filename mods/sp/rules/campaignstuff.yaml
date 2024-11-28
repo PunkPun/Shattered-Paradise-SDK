@@ -1527,58 +1527,6 @@ WEASAU3: #Green Weasaurus
 	-ExternalCondition@ZealousBuff:
 	-WithIdleOverlayOnGround@ZealousBuff:
 
-PROMTHTNK: #Prometheus Tank
-	Inherits: ^CombatVehicle
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
-	Inherits@EXPERIENCE: ^GainsExperience
-	Inherits@RENDER: ^MutRenderGreen
-	Buildable:
-		Queue: Vehicle.Shared, Vehicle.Mutant
-		BuildAtProductionType: Tank
-		Description: promthtnk-desc
-		BuildPaletteOrder: 40
-		Prerequisites: ~muweap, muhall, ~campaignunit, ~techlevel.5
-		BuildDuration: 875
-		BuildDurationModifier: 100
-	Valued:
-		Cost: 1500
-	Tooltip:
-		Name: promthtnk-name
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Selectable:
-		Bounds: 1000, 1680, 0, -480
-	Mobile:
-		TurnSpeed: 32
-		Speed: 75
-		Locomotor: InfantryCrusherVehicle
-	BodyOrientation:
-		CameraPitch: 250
-	Health:
-		HP: 45000
-	Voiced:
-		VoiceSet: Trike
-		Volume: 3
-	Armor:
-		Type: Heavy
-	Armament@PRIMARY:
-		Weapon: PrometheusCannon
-		LocalOffset: 670,67,900
-		MuzzleSequence: muzzle
-		MuzzlePalette: gensmkexplojFblue
-		PauseOnCondition: empdisable
-	WithMuzzleOverlay:
-	AttackFollowFrontal:
-		PauseOnCondition: empdisable
-		FacingTolerance: 64
-		MustFaceTarget: true
-	AutoTarget:
-		ScanRadius: 9 #PREF: save trait looks up and scan armaments
-	ExplodesAlsoTransported:
-		Weapon: UnitExplodeBig
-	ActorStatValues:
-		Damage: 200
-
 REGENTNK: #Regenisis Tank
 	Inherits: ^Tank
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
@@ -1725,6 +1673,112 @@ TVDDEVICE: #T.V.D.D
 		OrderInterval: 150
 	ActorStatValues:
 		Damage: 2000
+
+PROMTHTNK: #Prometheus Tank
+	Inherits: ^CombatVehicle
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@RENDER: ^MutRenderGreen
+	Buildable:
+		Queue: Vehicle.Shared, Vehicle.Mutant
+		BuildAtProductionType: Tank
+		Description: promthtnk-desc
+		BuildPaletteOrder: 40
+		Prerequisites: ~muweap, muhall, ~campaignunit, ~techlevel.5
+		BuildDuration: 875
+		BuildDurationModifier: 100
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: promthtnk-name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Selectable:
+		Bounds: 1000, 1680, 0, -480
+	Mobile:
+		TurnSpeed: 32
+		Speed: 75
+		Locomotor: InfantryCrusherVehicle
+	BodyOrientation:
+		CameraPitch: 250
+	Health:
+		HP: 45000
+	Voiced:
+		VoiceSet: Trike
+		Volume: 3
+	Armor:
+		Type: Heavy
+	Armament@PRIMARY:
+		Weapon: PrometheusCannon
+		LocalOffset: 670,67,900
+		MuzzleSequence: muzzle
+		MuzzlePalette: gensmkexplojFblue
+		PauseOnCondition: empdisable
+	WithMuzzleOverlay:
+	AttackFollowFrontal:
+		PauseOnCondition: empdisable
+		FacingTolerance: 64
+		MustFaceTarget: true
+	AutoTarget:
+		ScanRadius: 9 #PREF: save trait looks up and scan armaments
+	ExplodesAlsoTransported:
+		Weapon: UnitExplodeBig
+	ActorStatValues:
+		Damage: 200
+
+MZHURONGTNK: #Zhurong Tank
+	Inherits: ^Tank
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@RENDER: ^MutRenderGreen
+	Buildable:
+		Queue: Vehicle.Shared, Vehicle.Mutant
+		BuildAtProductionType: Tank
+		Description: mzhurongtnk-desc
+		BuildPaletteOrder: 40
+		Prerequisites: ~muweap, muhall, ~campaignunit, ~techlevel.5
+		BuildDuration: 875
+		BuildDurationModifier: 100
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: mzhurongtnk-name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Selectable:
+		Bounds: 1250, 2100, 0, -500
+	Mobile:
+		TurnSpeed: 32
+		Speed: 60
+		Locomotor: InfantryCrusherVehicle
+	BodyOrientation:
+		CameraPitch: 250
+	Health:
+		HP: 75000
+	Voiced:
+		VoiceSet: Trike
+		Volume: 3
+	Armor:
+		Type: Heavy
+	Armament@PRIMARY:
+		Weapon: ZhurongCannon
+		LocalOffset: 1080,0,400
+		MuzzleSequence: muzzle
+		MuzzlePalette: gensmkexploj
+		Recoil: 127
+		RecoilRecovery: 26
+		PauseOnCondition: empdisable
+	WithMuzzleOverlay:
+	Turreted:
+		TurnSpeed: 20
+		Offset: -100,0,768
+	AutoTarget:
+		ScanRadius: 7 #PREF: save trait looks up and scan armaments
+	ExplodesAlsoTransported:
+		Weapon: UnitExplodeBig
+	ActorStatValues:
+		Damage: 200
+
 
 LPST: #Sensor Array
 	Inherits: ^Vehicle

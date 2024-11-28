@@ -144,6 +144,7 @@ PrometheusCannon:
 	Projectile: MissileTA
 		Blockable: false
 		TerrainHeightAware: true
+		CruiseAltitude: 1024
 		Speed: 300
 		Acceleration: 0
 		Shadow: false
@@ -178,6 +179,24 @@ PrometheusCannon:
 		ExplosionPalette: gensmkexplojFblue
 		AirThreshold: 8c0
 		Delay: 3
+	Warhead@op: FireShrapnel
+		Weapon: PrometheusShrapnel
+		ImpactActors: false
+		Amount: 1
+		AimChance: 100
+		AllowDirectHit: false
+		AimTargetStances: Enemy
+		AirThreshold: 4c0
+		ValidTargets: Infantry, Vehicle, Building, Ground, Wall, Water
+
+PrometheusShrapnel:
+	Inherits: PrometheusCannon
+	MinRange: 1c0
+	Range: 5c0
+	AirThreshold: 8c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 10000
+	-Warhead@op: FireShrapnel
 
 RinoCannon:
 	Inherits: ^ArmorPierceAmmoWeapon
@@ -204,21 +223,21 @@ RegensisCannon:
 	Report: tankmediumfire.wav
 	Projectile: BulletAS
 		Speed: 1000
-		Image: spectreball
+		Image: cannonball
+		Palette: gensmkexplogreen
 		LaunchAngle: 64
-		Shadow: true
+		Shadow: false
 		Inaccuracy: 0c256
 		Blockable: false
 		ContrailDelay: 0
 		ContrailLength: 9
 		ContrailStartColor: 7EFF01
 		ContrailStartColorAlpha: 255
-		ContrailStartWidth: 0c100
+		ContrailStartWidth: 0c98
 		ContrailEndColor: 009900
 		ContrailEndColorAlpha: 30
 		ContrailEndWidth: 0
 		ContrailZOffset: 3000
-		Palette: jascgreen
 		TrailImage: cannonsmokecircle
 		TrailPalette: gensmkexplogreen
 		TrailDelay: 0
@@ -238,6 +257,82 @@ RegensisCannon:
 		ExplosionPalette: apgreen
 		AirThreshold: 8c0
 		Delay: 2
+
+ZhurongCannon:
+	Inherits: ^FlameDamage
+	Inherits@2: ^FlameScorch
+	FirstBurstTargetOffset: -896,0,0
+	MinRange: 1c0
+	TargetActorCenter: true
+	ReloadDelay: 90
+	Range: 8c0
+	Report: tankmediumfire.wav
+	Projectile: BulletAS
+		Speed: 400
+		Image: pulsar
+		Sequences: sorbtiny
+		Palette: apolra2
+		TrailImage: explosion
+		TrailPalette: gensmkexploj
+		TrailSequences: jsbrnl30fireball, jsbrnl20fireball
+		TrailInterval: 1
+		TrailDelay: 0
+	Warhead@1Dam: SpreadDamage
+		Damage: 10000
+		Spread: 1c256
+		DamageTypes: Prone70Percent, TriggerProne, FireDeath
+		-InvalidTargets:
+	-Warhead@2Dam:
+	Warhead@2Eff: CreateEffect
+		Explosions: shinydustexplo
+		ExplosionPalette: gensmkexploj
+	Warhead@3Eff: CreateEffect
+		Explosions: smallacidfire
+		ImpactSounds: firebl3.aud
+		ExplosionPalette: gensmkexploj
+		ImpactActors: false
+		ValidTargets: Ground, Water, Air
+		AirThreshold: 8c0
+	Warhead@4Eff: CreateEffect
+		Explosions: MilkFire1,MilkFire2, MilkFire3
+		ExplosionPalette: gensmkexploj
+		ImpactActors: false
+		ValidTargets: Ground, Water, Air
+		AirThreshold: 8c0
+		Delay: 7
+	Warhead@op: FireFragment
+		Offsets: 0,-896, 0
+		Weapon: ZhurongFragment1
+		ImpactActors: false
+		Rotate: true
+		AirThreshold: 8c0
+		Delay: 8
+
+ZhurongFragment1:
+	Inherits: ZhurongCannon
+	-Report:
+	AirThreshold: 8c0
+	Projectile: InstantHit
+	Warhead@1Dam: SpreadDamage
+		Damage: 8000
+	-Warhead@2Eff:
+	Warhead@op: FireFragment
+		Offsets: 0,-896, 0
+		Weapon: ZhurongFragment2
+		ImpactActors: false
+		Rotate: true
+		AirThreshold: 8c0
+		Delay: 7
+
+ZhurongFragment2:
+	Inherits: ZhurongFragment1
+	Warhead@op: FireFragment
+		Offsets: 0,896, 0
+		Weapon: ZhurongFragment3
+	
+ZhurongFragment3:
+	Inherits: ZhurongFragment2
+	-Warhead@op: 
 
 TiberuimQuake:
 	Inherits@1: ^ArmorPierceDamage

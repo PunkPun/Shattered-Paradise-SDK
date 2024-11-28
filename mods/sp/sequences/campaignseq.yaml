@@ -400,6 +400,22 @@ tvddevice:
 	icon:
 		Filename: tvddeviceicon.shp
 
+mzhurongtnk:
+	Inherits@1: ^SpriteVehicleWithShadow
+	Defaults:
+		Filename: mzhurongtnk.shp
+	turret:
+		Filename: mzhurongtnk_tur.shp
+		Facings: -32
+		Start: 0
+	muzzle:
+		Filename: jxgrymed2.shp
+		Scale: 0.4
+		Length: *
+		Tick: 30
+	icon:
+		Filename: mzhurongtnkicon.shp
+
 tratos:
 	Inherits: ^InfantryDeathAnims
 	Defaults:
