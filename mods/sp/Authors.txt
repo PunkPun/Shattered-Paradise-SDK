@@ -226,6 +226,7 @@ Assets come from three sources, Public, Vanilla and made by Nolt, if an asset is
    > Ion Turret in minigame
    > TVD device
    > Gargoyle (also reworked by Mig Eater)
+   > Regensis Tank
  Marn:
    > Weapon light effects
  Mevitar:
@@ -240,7 +241,7 @@ Assets come from three sources, Public, Vanilla and made by Nolt, if an asset is
    > Mutant bomb truck
    > Minelayer's shovel
    > Mutant technical
-   > Regensis Tank
+   > Zhurong Tank
  Moder.U:
    > Falcon
    > Battle Fortress
