@@ -1883,7 +1883,7 @@ weasau3-desc = A long forgotten creature trained by the mutants.
      - Deployability: use melee attack for a short period
      - Does not slow down on critical HP
 
-mrinotnk-name = Rino Tank
+mrinotnk-name = Goliath Tank
 mrinotnk-desc = Heavy tank armed with dual anti-tank cannon.
 
     Good vs: Vehicles
