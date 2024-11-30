@@ -252,6 +252,7 @@ Assets come from three sources, Public, Vanilla and made by Nolt, if an asset is
    > Avatar
    > Hexapod(meme_horror)
    > Zone Raider
+   > Man on beast ridder
  MustaphaTR:
    > Upgrade cameos
    > Mutant/CABAL announcer voiceline edits

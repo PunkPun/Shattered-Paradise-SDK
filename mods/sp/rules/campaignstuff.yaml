@@ -1124,6 +1124,92 @@ SLIGHSHOT:
 		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MinRange, None, MaxRange
 		Damage: 80
 
+BEASTRIDER: # Beast Rider
+	Inherits: ^TibBeast
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@CLOAKEFFECT: ^WithTriggerCloakEffect-Vehicle
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@MC: ^MindControllableMastermind
+	Inherits@TIBINFUSION: ^AffectedByTiberiumInfusion
+	Buildable:
+		Queue: Vehicle.Shared, Vehicle.Mutant
+		BuildAtProductionType: Tank
+		BuildPaletteOrder: 14
+		Description: beastrider-desc
+		Prerequisites: ~muweap, ~campaignunit, ~techlevel.2
+		BuildDuration: 500
+		BuildDurationModifier: 100
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: beastrider-name
+	Voiced:
+		VoiceSet: DinoVoice
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Targetable:
+		TargetTypes: Ground, Vehicle, OrganicVehicle, NoRepair
+	Health:
+		HP: 25000
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 120
+		Locomotor: HeavyInfantry
+		PauseOnCondition: carrylock
+	SpeedMultiplier@TIBERIUMINFUSION:
+		Modifier: 113
+	Selectable:
+		DecorationBounds: 903,2100,0,-700
+	AttackTurreted:
+		Voice: Attack
+	Turreted:
+		TurnSpeed: 64
+		Offset: -50,0,1024
+	WithSpriteTurret:
+		Sequence: turret
+		Recoils: false
+		RequiresCondition: !inside-tunnel
+		Palette: playerunittemgreen
+		IsPlayerPalette: true
+	WithTurretAttackAnimation:
+		RequiresCondition: !inside-tunnel
+		Sequence: turret-firing
+	Armament@PRIMARY:
+		Weapon: LynxCannon
+		Damage: 140
+		LocalOffset: 500,100,300
+		MuzzleSequence: muzzle
+		MuzzlePalette: gensmkexploj
+		CasingWeapon: ShellCasingDebris
+		CasingSpawnLocalOffset: 880,100,110, 880,100,110
+		CasingTargetOffset: 256, 1024, 0, 256, -1024, 0
+	WithMuzzleOverlay:
+	WithInfantryBody:
+		-DefaultAttackSequence:
+		-IdleSequences:
+	Carryable:
+		LocalOffset: 0, 0, 400
+		RequiresCondition: !inside-tunnel
+		CarriedCondition: carried
+		LockedCondition: carrylock
+	Passenger:
+		CargoCondition: ascargo
+	ExplodesAlsoTransported:
+		Weapon: BigBeastExplode
+		RequiresCondition: carried || ascargo
+	AutoTarget:
+		ScanRadius: 7 #PREF: save trait looks up and scan armaments
+	-AttackFrontal:
+	-FirepowerMultiplier@ZealousBuff:
+	-ExternalCondition@ZealousBuff:
+	-WithIdleOverlayOnGround@ZealousBuff:
+	ActorStatValues:
+		Damage: 18
+	ActorStatOverride@Tibinfusion:
+		Health: 25000
+		RequiresCondition: tibinfusion
+
 MINELAYER:
 	Inherits: ^CombatVehicle
 	Inherits@RENDER: ^MutRenderGreen

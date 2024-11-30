@@ -1782,7 +1782,7 @@ zoneraider-desc = Elite Soldier armed with an sonic grenade launcher.
 
 
 zonedefr-name = Zone Defender
-zonedefr-desc = Durable Elite Soldier armed with an magnetronic cannon.
+zonedefr-desc = Durable Elite Soldier armed with an coil cannon.
 
     Good vs: Vehicles
 
@@ -1857,6 +1857,21 @@ slighshot-desc = Hover vehicle armed with a quad cannon.
      - Can attack while moving
      - Hovers (ignores terrain like Veins, Water and Radiations)
      - No longer hovers when disabled by EMP
+
+beastrider-name = Beastrider
+beastrider-desc = A beast rider with recoilless rifle.
+
+    Good vs: Vehicles, Light Vehicles
+
+    Special:
+     - Heals on Tiberium fields
+     - Can attack enemies while moving
+     - E.M.P. Immune
+     - Wild mind: Mind only controllable by Mastermind
+     - Does not slow down on critical HP
+
+    Upgrades:
+     - Tiberium Infusion
 
 avatar-name = Avatar
 avatar-desc = Heavy Walker armed with a strong laser.
@@ -1981,7 +1996,7 @@ cabecm-desc = Support unit can recon and infiltrate.
      - Capture building without consumed.
 
 kodcruiser-name = Kodiak Cruiser
-kodcruiser-desc = Heavy cruiser that use magnetronic cannon.
+kodcruiser-desc = Heavy cruiser that use coil cannon.
 
     Good vs: Vehicle
 

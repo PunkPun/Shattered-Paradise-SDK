@@ -362,6 +362,95 @@ mrinotnk:
 	icon:
 		Filename: mrinotnkicon.shp
 
+beastrider:
+	Inherits@1: ^InfantryDeathAnims
+	Inherits@2: ^CannonMuzzle
+	Defaults:
+		Filename: beastrider-blue.shp
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 108
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		ShadowStart: 116
+		Tick: 60
+	die1:
+		Start: 90
+		Length: 10
+		ShadowStart: 180
+	die2:
+		Start: 99
+		Length: 9
+		ShadowStart: 190
+	die-crushed:
+		Start: 76
+		Length: 1
+		ShadowStart: 184
+		Tick: 1000
+	turret: 
+		Filename: beastrider_tur.shp
+		Stride: 2
+		Facings: 8
+	turret-firing: 
+		Filename: beastrider_tur.shp
+		Start: 1
+		Stride: 2
+		Facings: 8
+		Tick: 400
+	die4:
+		Filename: queenexplo.shp
+	die5:
+		Filename: queenexplo.shp
+	die7:
+		Filename: queenexplo.shp
+	dieblood1:
+		Filename: infblood1.shp
+		Scale: 1.1
+	dieblood2:
+		Filename: infblood2.shp
+		Scale: 1.1
+	dieblood3:
+		Filename: infblood3.shp
+		Scale: 1.1
+	dieblood4:
+		Filename: infblood4.shp
+		Scale: 1.1
+	dieblood5:
+		Filename: infblood5.shp
+		Scale: 1.1
+	dieblood6:
+		Filename: infblood6.shp
+		Scale: 1.1
+	diebody1:
+		Filename: tibody01.shp
+		Frames: 4, 3, 2, 1, 0
+		Offset: 0, -15, 0
+	diebody2:
+		Filename: tibody02.shp
+		Frames: 4, 3, 2, 1, 0
+		Offset: 0, -15, 0
+	diebody3:
+		Filename: tibody03.shp
+		Frames: 4, 3, 2, 1, 0
+		Offset: 0, -15, 0
+	diebody4:
+		Filename: tibody04.shp
+		Frames: 4, 3, 2, 1, 0
+		Offset: 0, -15, 0
+	diebody5:
+		Filename: tibody05.shp
+		Frames: 4, 3, 2, 1, 0
+		Offset: 0, -15, 0
+	shield:
+		Filename: shieldmedium.shp
+		Length: 1
+		Offset: 0,-12
+	icon:
+		Filename: beastridericon.shp
+
 slighshot:
 	Inherits@2: ^SpriteVehicleWithShadowAndTurret
 	Defaults:
