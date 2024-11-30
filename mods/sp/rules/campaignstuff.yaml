@@ -1204,7 +1204,7 @@ MINELAYER:
 	ActorStatValues:
 		Stats: Armor, Sight, Speed
 
-MRINOTNK:
+MRINOTNK: ## Goliath tank
 	Inherits: ^Tank
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -1236,7 +1236,7 @@ MRINOTNK:
 		TurnSpeed: 20
 		Offset: -20,0,540
 	Armament@PRIMARY:
-		Weapon: RinoCannon
+		Weapon: GoliathCannon
 		Damage: 140
 		LocalOffset: 880,100,100, 880,-100,100
 		MuzzleSequence: muzzle
@@ -2635,7 +2635,6 @@ KODCRUISER: ## Kodiak Cruiser
 		LandingSounds: orcadwn1.aud
 	## Hack: No armament here, add AttackAircraft&AutoTarget only for LUA
 	AttackTurreted:
-		AttackType: Hover
 		FacingTolerance: 512
 		Turrets: primary, secondary
 		Voice: Attack
