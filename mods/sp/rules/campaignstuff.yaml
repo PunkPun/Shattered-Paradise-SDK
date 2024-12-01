@@ -1165,7 +1165,7 @@ BEASTRIDER: # Beast Rider
 		Voice: Attack
 	Turreted:
 		TurnSpeed: 64
-		Offset: -50,0,1024
+		Offset: -30,0,1080
 	WithSpriteTurret:
 		Sequence: turret
 		Recoils: false
