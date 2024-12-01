@@ -461,12 +461,12 @@ JeepBullet2Spawner:
 		Rotate: true
 		AirThreshold: 8c0
 
-BullAcid:
+WolfAcid:
 	Inherits: ^AcidDamage
 	ReloadDelay: 60
 	Range: 5c0
 	Burst: 3
-	StartBurstReport: dinoatk1.aud
+	StartBurstReport: fiend2.aud
 	Projectile: BulletAS
 		Speed: 500
 		Image: torpedo

@@ -678,53 +678,35 @@ psyker:
 wolf:
 	Inherits@1: ^InfantryDeathAnims
 	Defaults:
-		Filename: wolf2.shp
+		Filename: lepus.shp
 		Tick: 80
-	stand:
-		Facings: 8
-		ShadowStart: 390
 	run:
-		Start: 72
-		Length: 8
-		Facings: 8
-		ShadowStart: 462
+		Length: 10
+		Facings: -8
+		ShadowStart: 188
 		Tick: 60
-	prone-run:
-		Start: 8
-		Length: 8
-		Facings: 8
-		ShadowStart: 398
 	shoot:
-		Start: 226
-		Length: 8
-		Facings: 8
-		ShadowStart: 616
-	idle1:
-		Start: 156
-		Length: 11
-		ShadowStart: 548
-		Scale: 0.9
-	idle2:
-		Start: 167
-		Length: 14
-		ShadowStart: 556
-	idle3:
-		Start: 181
-		Length: 22
-		ShadowStart: 571
-		Tick: 120
+		Start: 80
+		Length: 10
+		Facings: -8
+		ShadowStart: 268
 	die1:
-		Start: 354
+		Start: 160
 		Length: 10
-		ShadowStart: 744
+		ShadowStart: 348
 	die2:
-		Start: 381
-		Length: 9
-		ShadowStart: 771
-	die-crushed:
-		Start: 354
+		Start: 170
 		Length: 10
-		ShadowStart: 744
+		ShadowStart: 358
+	die-crushed:
+		Start: 169
+		Length: 1
+		ShadowStart: 357
+		Tick: 2000
+	stand:
+		Start: 180
+		Facings: -8
+		ShadowStart: 368
 	die4:
 		Filename: queenexplo.shp
 		Scale: 0.9
@@ -777,7 +759,7 @@ wolf:
 		Length: 1
 		Offset: 0,-12
 	icon:
-		Filename: wolficon.shp
+		Filename: lepusicon.shp
 
 deathclaw:
 	Inherits@1: ^InfantryDeathAnims

@@ -1257,7 +1257,7 @@ minelayer-desc = Mines...mines everywhere!
      - Mines are cloaked
      - Can crush Infantry
 
-wolf-name = Carnotaurus
+wolf-name = Warg
 wolf-desc = Tiberium beast that uses tiberium acid to melt its prey.
 
     Good vs: Infantry, Light Vehicles

@@ -2216,6 +2216,7 @@ WOLF: #Carnotaurus
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@MC: ^MindControllableMastermind
 	Inherits@TIBINFUSION: ^AffectedByTiberiumInfusion
+	Inherits@RENDER: ^MutRenderGreen
 	Buildable:
 		Queue: Vehicle.Shared, Vehicle.Mutant
 		BuildAtProductionType: Tank
@@ -2229,14 +2230,14 @@ WOLF: #Carnotaurus
 	Tooltip:
 		Name: wolf-name
 	Voiced:
-		VoiceSet: DinoVoice
+		VoiceSet: Fiend
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Targetable:
 		TargetTypes: Ground, Vehicle, OrganicVehicle, NoRepair
 	Armament@PRIMARY:
-		Weapon: BullAcid
-		LocalOffset: 128,0,400
+		Weapon: WolfAcid
+		LocalOffset: 256,0,700
 	Health:
 		HP: 20000
 	Armor:
@@ -2265,6 +2266,8 @@ WOLF: #Carnotaurus
 		RequiresCondition: carried || ascargo
 	AutoTarget:
 		ScanRadius: 6 #PREF: save trait looks up and scan armaments
+	WithInfantryBody:
+		IdleSequences: shoot
 	-AttackFrontal:
 	-FirepowerMultiplier@ZealousBuff:
 	-ExternalCondition@ZealousBuff:
