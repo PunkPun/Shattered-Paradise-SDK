@@ -2209,7 +2209,7 @@ STRUCK:
 	ActorStatValues:
 		Stats: Armor, Sight, Speed, None, None, None, Cargo
 
-WOLF: #Carnotaurus
+WOLF: #Warg
 	Inherits: ^TibBeast
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@CLOAKEFFECT: ^WithTriggerCloakEffect-Vehicle
@@ -2249,7 +2249,7 @@ WOLF: #Carnotaurus
 	SpeedMultiplier@TIBERIUMINFUSION:
 		Modifier: 113
 	Selectable:
-		DecorationBounds: 903,1800,0,-600
+		DecorationBounds: 903,1800,0,-800
 	AttackFollowFrontal:
 		Voice: Attack
 		FacingTolerance: 64
