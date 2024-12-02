@@ -25,16 +25,16 @@ bigflameguy:
 	Defaults:
 		Filename: bigflameguy.shp
 		Tick: 60
-		ShadowStart: 59
 		IgnoreWorldTint: true
 	die:
 		Start: 48
 		Facings: 1
 		Length: 11
-		ShadowStart: 113
+		ShadowStart: 107
 	run-all:
 		Start: 0
 		Length: 48
+		ShadowStart: 59
 
 tibcloud: ## Notice: this used for pariticle only
 	Defaults:
