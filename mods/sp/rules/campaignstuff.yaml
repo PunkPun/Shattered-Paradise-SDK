@@ -1177,8 +1177,9 @@ BEASTRIDER: # Beast Rider
 	WithTurretAttackAnimation:
 		RequiresCondition: !inside-tunnel
 		Sequence: turret-firing
+	WithMuzzleOverlay:
 	Armament@PRIMARY:
-		Weapon: LynxCannon
+		Weapon: BeastRiderCannon
 		Damage: 140
 		LocalOffset: 500,100,300
 		MuzzleSequence: muzzle
@@ -1189,7 +1190,22 @@ BEASTRIDER: # Beast Rider
 	AutoTarget:
 		ScanRadius: 7 #PREF: save trait looks up and scan armaments
 	-FirepowerMultiplier@BLUESHARDS:
-	WithMuzzleOverlay:
+	GrantConditionOnDeployWithCharge:
+		DeployedCondition: deployed
+		ChargeDuration: 4000
+		ConditionDuration: 30
+	SpawnSparks@Deployed:
+		LocalOffset: 0,0, 600
+		Interval: 6
+		SparkWeapon: BeastRiderSwarm
+		Amount: 1
+		RequiresCondition: !blue_shards && deployed
+	SpawnSparks@DeployedBlue:
+		LocalOffset: 0,0, 600
+		Interval: 6
+		SparkWeapon: BeastRiderSwarmBlue
+		Amount: 1
+		RequiresCondition: blue_shards && deployed
 	WithInfantryBody:
 		-DefaultAttackSequence:
 		-IdleSequences:

@@ -84,6 +84,100 @@ DroneEMPWeaponFinal:
 		Condition: empdisable
 		Duration: 400
 
+BeastRiderCannon:
+	Inherits: ^ArmorPierceAmmoWeapon
+	Inherits@2: ^Mediuml_Clsn
+	ReloadDelay: 70
+	Range: 6c0
+	Report: 120mmf.aud
+	Projectile: BulletAS
+		Sequences: idle2
+		ContrailStartWidth: 0c66
+	Warhead@1Dam: SpreadDamage
+		Damage: 5000
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+
+BeastRiderSwarm:
+	Range: 8c0
+	ValidTargets: Ground, Air, Water
+	AirThreshold: 8c0
+	ReloadDelay: 3
+	Projectile: InstantExplode
+	Warhead@op: FireShrapnel
+		Weapon: BeastRiderSwarmSharp
+		ImpactActors: false
+		Amount: 1
+		AimChance: 100
+		ThrowWithoutTarget: true
+		AllowDirectHit: true
+		AimTargetStances: Enemy, Neutral
+		ValidTargets: Ground, Water, Air
+		AirThreshold: 8c0
+
+BeastRiderSwarmBlue:
+	Inherits: BeastRiderSwarm
+	Warhead@op: FireShrapnel
+		Weapon: BeastRiderSwarmSharpBlue
+
+BeastRiderSwarmBack:
+	ValidTargets: Ground, Air, Water
+	AirThreshold: 8c0
+	TargetActorCenter: true
+	Projectile: MissileTA
+		Blockable: false
+		TerrainHeightAware: true
+		CruiseAltitude: 1024
+		Speed: 200
+		Acceleration: 0
+		Shadow: true
+		Palette: apgreen
+		Image: tibbees
+		Sequences: idle
+		HorizontalRateOfTurn: 100
+		HorizontalRateOfTurnStart: 64
+		VerticalRateOfTurn: 240
+		Jammable: false ## help to save a little bit performance
+		ExplodeWhenEmpty: true
+		RangeLimit: 40c0
+
+BeastRiderSwarmBackBlue:
+	Inherits: BeastRiderSwarmBack
+	Projectile: MissileTA
+		Palette: apcybl
+
+BeastRiderSwarmSharp:
+	Inherits@1: ^RifleDamage
+	Inherits@2: BeastRiderSwarmBack
+	Range: 7c0
+	ValidTargets: Infantry, Ground
+	InvalidTargets: Air, Vehicle
+	TargetActorCenter: true
+		RangeLimit: 10c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 4000
+		ValidTargets: Ground, Water
+		Versus:
+			Infantry: 100
+			Building: 100
+			Defense: 100
+			Heavy: 100
+			Concrete: 35
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@flyback: BackFireShrapnel
+		Weapon: BeastRiderSwarmBack
+		ImpactActors: false
+		ValidTargets: Ground, Water, Air
+		AirThreshold: 8c0
+
+BeastRiderSwarmSharpBlue:
+	Inherits: BeastRiderSwarmSharp
+	Projectile: MissileTA
+		Palette: apcybl
+	Warhead@1Dam: SpreadDamage
+		Damage: 5000
+	Warhead@flyback: BackFireShrapnel
+		Weapon: BeastRiderSwarmBackBlue
+
 WeasaurusStrikeGreen:
 	Inherits: WeasaurusStrike
 	Range: 1c800

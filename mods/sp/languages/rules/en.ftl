@@ -1864,6 +1864,7 @@ beastrider-desc = A beast rider with recoilless rifle.
     Good vs: Vehicles, Light Vehicles
 
     Special:
+     - Deployability: Release tiberium bees to harm nearby enemy infantry
      - Heals on Tiberium fields
      - Can attack enemies while moving
      - E.M.P. Immune
@@ -1871,6 +1872,7 @@ beastrider-desc = A beast rider with recoilless rifle.
      - Does not slow down on critical HP
 
     Upgrades:
+     - Blue Shards
      - Tiberium Infusion
 
 avatar-name = Avatar

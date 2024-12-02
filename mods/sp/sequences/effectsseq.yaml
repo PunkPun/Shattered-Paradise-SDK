@@ -2159,6 +2159,14 @@ queentooth:
 		Tick: 10
 		ZOffset: 1023
 
+tibbees:
+	idle:
+		Filename: tibbees.shp
+		Length: *
+		Reverses: true
+		Tick: 40
+		ZOffset: 1023
+
 pulsar:
 	Defaults:
 		Length: *
