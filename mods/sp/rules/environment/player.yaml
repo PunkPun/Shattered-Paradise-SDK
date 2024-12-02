@@ -391,6 +391,10 @@ Player:
 		Type: doggie-blue
 		Image: doggie
 		Sequence: icon-blue
+	ProductionIconOverlayManager@bull-blue:
+		Type: bull-blue
+		Image: beastrider
+		Sequence: icon-blue
 	ProductionIconOverlayManager@corruptor-blue:
 		Type: corruptor-blue
 		Image: corruptor

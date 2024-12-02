@@ -1369,6 +1369,7 @@ MUTFIEND:
 		RequiresCondition: !blue_shards
 	WithDeathAnimation@blue-normal:
 		DeathSequence: die-blue
+		CrushedSequence: die-crushed-blue
 		DeathTypes:
 			TiberiumDeath: 1, 2
 			EnergyDeath: 1, 2

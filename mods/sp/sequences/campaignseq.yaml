@@ -366,7 +366,7 @@ beastrider:
 	Inherits@1: ^InfantryDeathAnims
 	Inherits@2: ^CannonMuzzle
 	Defaults:
-		Filename: beastrider-blue.shp
+		Filename: beastrider.shp
 		Tick: 80
 	stand:
 		Facings: 8
@@ -386,6 +386,33 @@ beastrider:
 		Length: 9
 		ShadowStart: 190
 	die-crushed:
+		Start: 76
+		Length: 1
+		ShadowStart: 184
+		Tick: 1000
+	stand-blue:
+		Filename: beastrider-blue.shp
+		Facings: 8
+		ShadowStart: 108
+	run-blue:
+		Filename: beastrider-blue.shp
+		Start: 8
+		Length: 8
+		Facings: 8
+		ShadowStart: 116
+		Tick: 60
+	die-blue1:
+		Filename: beastrider-blue.shp
+		Start: 90
+		Length: 10
+		ShadowStart: 180
+	die-blue2:
+		Filename: beastrider-blue.shp
+		Start: 99
+		Length: 9
+		ShadowStart: 190
+	die-crushed-blue:
+		Filename: beastrider-blue.shp
 		Start: 76
 		Length: 1
 		ShadowStart: 184
@@ -450,6 +477,8 @@ beastrider:
 		Offset: 0,-12
 	icon:
 		Filename: beastridericon.shp
+	icon-blue:
+		Filename: beastridericon-blue.shp
 
 slighshot:
 	Inherits@2: ^SpriteVehicleWithShadowAndTurret

@@ -1130,6 +1130,7 @@ BEASTRIDER: # Beast Rider
 	Inherits@CLOAKEFFECT: ^WithTriggerCloakEffect-Vehicle
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@MC: ^MindControllableMastermind
+	Inherits@BLUESHARDS: ^AffectedByBlueShards
 	Inherits@TIBINFUSION: ^AffectedByTiberiumInfusion
 	Buildable:
 		Queue: Vehicle.Shared, Vehicle.Mutant
@@ -1150,7 +1151,7 @@ BEASTRIDER: # Beast Rider
 	Targetable:
 		TargetTypes: Ground, Vehicle, OrganicVehicle, NoRepair
 	Health:
-		HP: 25000
+		HP: 26000
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -1161,6 +1162,7 @@ BEASTRIDER: # Beast Rider
 		Modifier: 113
 	Selectable:
 		DecorationBounds: 903,2100,0,-700
+	-AttackFrontal:
 	AttackTurreted:
 		Voice: Attack
 	Turreted:
@@ -1182,12 +1184,40 @@ BEASTRIDER: # Beast Rider
 		MuzzleSequence: muzzle
 		MuzzlePalette: gensmkexploj
 		CasingWeapon: ShellCasingDebris
-		CasingSpawnLocalOffset: 880,100,110, 880,100,110
-		CasingTargetOffset: 256, 1024, 0, 256, -1024, 0
+		CasingSpawnLocalOffset: -200,100,300
+		CasingTargetOffset: -1256, 100, 0
+	AutoTarget:
+		ScanRadius: 7 #PREF: save trait looks up and scan armaments
+	-FirepowerMultiplier@BLUESHARDS:
 	WithMuzzleOverlay:
 	WithInfantryBody:
 		-DefaultAttackSequence:
 		-IdleSequences:
+		RequiresCondition: !blue_shards && !inside-tunnel
+	WithInfantryBody@blue:
+		MoveSequence: run-blue
+		StandSequences: stand-blue
+		RequiresCondition: blue_shards && !inside-tunnel
+	WithDeathAnimation@normal:
+		RequiresCondition: !blue_shards
+	WithDeathAnimation@blue-normal:
+		DeathSequence: die-blue
+		RequiresCondition: blue_shards
+		CrushedSequence: die-crushed-blue
+		DeathTypes:
+			BulletDeath: 1, 2
+			CabalDeath: 1, 2
+			CabalDeathUpg: 1, 2
+			FireDeath: 1, 2
+			EnergyDeath: 1, 2
+			TiberiumDeath: 1, 2
+	WithStatIconOverlay@VINIFERA:
+		Image: beastrider
+		Sequence: icon-blue
+		RequiresCondition: blue_shards
+	WithProductionIconOverlay:
+		Prerequisites: upgrade.blue_shards
+		Types: bull-blue
 	Carryable:
 		LocalOffset: 0, 0, 400
 		RequiresCondition: !inside-tunnel
@@ -1198,16 +1228,14 @@ BEASTRIDER: # Beast Rider
 	ExplodesAlsoTransported:
 		Weapon: BigBeastExplode
 		RequiresCondition: carried || ascargo
-	AutoTarget:
-		ScanRadius: 7 #PREF: save trait looks up and scan armaments
-	-AttackFrontal:
 	-FirepowerMultiplier@ZealousBuff:
 	-ExternalCondition@ZealousBuff:
 	-WithIdleOverlayOnGround@ZealousBuff:
 	ActorStatValues:
 		Damage: 18
+		Upgrades: upgrade.blue_shards, upgrade.tiberium_infusion
 	ActorStatOverride@Tibinfusion:
-		Health: 25000
+		Health: 32500
 		RequiresCondition: tibinfusion
 
 MINELAYER:
