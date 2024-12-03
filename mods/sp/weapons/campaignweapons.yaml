@@ -97,28 +97,6 @@ BeastRiderCannon:
 		Damage: 5000
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 
-BeastRiderSwarm:
-	Range: 8c0
-	ValidTargets: Ground, Air, Water
-	AirThreshold: 8c0
-	ReloadDelay: 3
-	Projectile: InstantExplode
-	Warhead@op: FireShrapnel
-		Weapon: BeastRiderSwarmSharp
-		ImpactActors: false
-		Amount: 1
-		AimChance: 100
-		ThrowWithoutTarget: true
-		AllowDirectHit: true
-		AimTargetStances: Enemy, Neutral
-		ValidTargets: Ground, Water, Air
-		AirThreshold: 8c0
-
-BeastRiderSwarmBlue:
-	Inherits: BeastRiderSwarm
-	Warhead@op: FireShrapnel
-		Weapon: BeastRiderSwarmSharpBlue
-
 BeastRiderSwarmBack:
 	ValidTargets: Ground, Air, Water
 	AirThreshold: 8c0
@@ -127,12 +105,12 @@ BeastRiderSwarmBack:
 		Blockable: false
 		TerrainHeightAware: true
 		CruiseAltitude: 1024
-		Speed: 200
+		Speed: 160
 		Acceleration: 0
 		Shadow: true
 		Palette: apgreen
 		Image: tibbees
-		Sequences: idle
+		Sequences: idle1
 		HorizontalRateOfTurn: 100
 		HorizontalRateOfTurnStart: 64
 		VerticalRateOfTurn: 240
@@ -145,23 +123,29 @@ BeastRiderSwarmBackBlue:
 	Projectile: MissileTA
 		Palette: apcybl
 
-BeastRiderSwarmSharp:
+BeastRiderSwarm:
 	Inherits@1: ^RifleDamage
 	Inherits@2: BeastRiderSwarmBack
-	Range: 7c0
-	ValidTargets: Infantry, Ground
-	InvalidTargets: Air, Vehicle
-	TargetActorCenter: true
-		RangeLimit: 10c0
+	ReloadDelay: 150
+	-AirThreshold:
+	Range: 6c0
+	ValidTargets: Infantry
+	InvalidTargets: Air
+	Projectile: MissileTA
+		RangeLimit: 13c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 4000
 		ValidTargets: Ground, Water
+		Falloff: 100, 100
+		Spread: 0c500
 		Versus:
 			Infantry: 100
-			Building: 100
-			Defense: 100
-			Heavy: 100
-			Concrete: 35
+			Building: 1
+			Defense: 1
+			Heavy: 1
+			Light: 1
+			Concrete: 0
+		NoUnintendedFriendlyFire: Actor
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@flyback: BackFireShrapnel
 		Weapon: BeastRiderSwarmBack
@@ -169,8 +153,8 @@ BeastRiderSwarmSharp:
 		ValidTargets: Ground, Water, Air
 		AirThreshold: 8c0
 
-BeastRiderSwarmSharpBlue:
-	Inherits: BeastRiderSwarmSharp
+BeastRiderSwarmBlue:
+	Inherits: BeastRiderSwarm
 	Projectile: MissileTA
 		Palette: apcybl
 	Warhead@1Dam: SpreadDamage

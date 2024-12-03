@@ -1155,16 +1155,17 @@ BEASTRIDER: # Beast Rider
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 120
+		Speed: 105
 		Locomotor: HeavyInfantry
 		PauseOnCondition: carrylock
 	SpeedMultiplier@TIBERIUMINFUSION:
-		Modifier: 113
+		Modifier: 115
 	Selectable:
 		DecorationBounds: 903,2100,0,-700
 	-AttackFrontal:
 	AttackTurreted:
 		Voice: Attack
+		Armaments: primary, secondary
 	Turreted:
 		TurnSpeed: 64
 		Offset: -30,0,1080
@@ -1187,25 +1188,21 @@ BEASTRIDER: # Beast Rider
 		CasingWeapon: ShellCasingDebris
 		CasingSpawnLocalOffset: -200,100,300
 		CasingTargetOffset: -1256, 100, 0
+	Armament@Secondary1:
+		Name: secondary
+		Weapon: BeastRiderSwarmBlue
+		LocalOffset: 30,0,-480
+		Damage: 40
+		RequiresCondition: blue_shards
+	Armament@Secondary2:
+		Name: secondary
+		Weapon: BeastRiderSwarm
+		LocalOffset: 30,0,-480
+		Damage: 40
+		RequiresCondition: !blue_shards
 	AutoTarget:
 		ScanRadius: 7 #PREF: save trait looks up and scan armaments
 	-FirepowerMultiplier@BLUESHARDS:
-	GrantConditionOnDeployWithCharge:
-		DeployedCondition: deployed
-		ChargeDuration: 4000
-		ConditionDuration: 30
-	SpawnSparks@Deployed:
-		LocalOffset: 0,0, 600
-		Interval: 6
-		SparkWeapon: BeastRiderSwarm
-		Amount: 1
-		RequiresCondition: !blue_shards && deployed
-	SpawnSparks@DeployedBlue:
-		LocalOffset: 0,0, 600
-		Interval: 6
-		SparkWeapon: BeastRiderSwarmBlue
-		Amount: 1
-		RequiresCondition: blue_shards && deployed
 	WithInfantryBody:
 		-DefaultAttackSequence:
 		-IdleSequences:

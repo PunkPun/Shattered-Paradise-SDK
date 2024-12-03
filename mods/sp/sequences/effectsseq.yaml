@@ -2160,12 +2160,15 @@ queentooth:
 		ZOffset: 1023
 
 tibbees:
-	idle:
+	Defaults:
 		Filename: tibbees.shp
 		Length: *
-		Reverses: true
 		Tick: 40
 		ZOffset: 1023
+		IgnoreWorldTint: true
+	idle:
+	idle1:
+		Reverses: true
 
 pulsar:
 	Defaults:

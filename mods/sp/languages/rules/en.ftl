@@ -1858,13 +1858,13 @@ slighshot-desc = Hover vehicle armed with a quad cannon.
      - Hovers (ignores terrain like Veins, Water and Radiations)
      - No longer hovers when disabled by EMP
 
-beastrider-name = Beastrider
-beastrider-desc = A beast rider with recoilless rifle.
+beastrider-name = Cavalry
+beastrider-desc =  Cavalry use recoilless rifle and tiberium bees
 
     Good vs: Vehicles, Light Vehicles
 
     Special:
-     - Deployability: Release tiberium bees to harm nearby enemy infantry
+     - Recoilless rifle for vehicle, bees for Infantry
      - Heals on Tiberium fields
      - Can attack enemies while moving
      - E.M.P. Immune
