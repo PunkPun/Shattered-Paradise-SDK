@@ -422,8 +422,10 @@ Assets come from three sources, Public, Vanilla and made by Nolt, if an asset is
  soundjay.com:
    > Chainsaw sounds
  soundbible.com:
-   > Chainsaw sounds, 
+   > Chainsaw sounds
    > Mine attack sound
+ orangefreesounds.com
+   > Bees sound
 
 # Voice Cast:
  Comrade Crimson:

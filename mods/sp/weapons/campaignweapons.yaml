@@ -129,6 +129,8 @@ BeastRiderSwarm:
 	ReloadDelay: 150
 	-AirThreshold:
 	Range: 6c0
+	Report: tibbees.aud
+	SoundVolume: 2
 	ValidTargets: Infantry
 	InvalidTargets: Air
 	Projectile: MissileTA
