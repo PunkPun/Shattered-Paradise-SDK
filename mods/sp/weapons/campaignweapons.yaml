@@ -100,6 +100,7 @@ BeastRiderCannon:
 BeastRiderSwarmBack:
 	ValidTargets: Ground, Air, Water
 	AirThreshold: 8c0
+	Report: tibbees.aud
 	TargetActorCenter: true
 	Projectile: MissileTA
 		Blockable: false
@@ -129,10 +130,9 @@ BeastRiderSwarm:
 	ReloadDelay: 150
 	-AirThreshold:
 	Range: 6c0
-	Report: tibbees.aud
-	SoundVolume: 2
 	ValidTargets: Infantry
 	InvalidTargets: Air
+	SoundVolume: 2
 	Projectile: MissileTA
 		RangeLimit: 13c0
 	Warhead@1Dam: SpreadDamage
