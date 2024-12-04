@@ -1678,10 +1678,10 @@ fatballprojectile:
 		Facings: 32
 		IgnoreWorldTint: true
 
-highcaliberprojectile:
+crossproj:
 	idle:
-		Filename: highcaliberprojectile.shp
-		Facings: 32
+		Filename: crossproj.shp
+		Length: *
 		IgnoreWorldTint: true
 
 sparklong:

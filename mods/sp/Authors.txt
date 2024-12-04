@@ -296,6 +296,8 @@ Assets come from three sources, Public, Vanilla and made by Nolt, if an asset is
    > Apocalypse Missile Explosion Effect (Mushroom Cloud)
  QuantumGhost:
    > Rage flash
+ Quiet:
+   > Stingray
  Kothvir
    > Clouds, Flags and Billboard textures
  SMIFFGIG:

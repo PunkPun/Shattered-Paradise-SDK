@@ -604,8 +604,8 @@ Glyder1Cannon:
 	ValidTargets: Ground, Water
 	Projectile: BulletAS
 		Speed: 500
-		Image: explosion
-		Sequences: lazerflare
+		Image: crossproj
+		Sequences: idle
 		IsPlayerPalette: false
 		Shadow: false
 		Palette: apblue
@@ -644,8 +644,8 @@ Glyder2Cannon:
 		-JetImage:
 		-JetSequences:
 		-JetPalette:
-		Image: explosion
-		Sequences: lazerflare
+		Image: crossproj
+		Sequences: idle
 		IsPlayerPalette: false
 		RangeLimit: 15c0
 		HorizontalRateOfTurn: 100

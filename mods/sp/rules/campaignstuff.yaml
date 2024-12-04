@@ -1251,6 +1251,91 @@ BEASTRIDER: # Beast Rider
 		Health: 32500
 		RequiresCondition: tibinfusion
 
+RAYRIDER:
+	Inherits: ^CombatHelicopter
+	Inherits@1: ^SpriteActor
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@RENDER: ^MutRenderGreen
+	Inherits@SHADOW: ^AircraftShadow
+	Inherits@TIBINFUSION: ^AffectedByTiberiumInfusion
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: rayrider-name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		Queue: Air.Shared, Air.Mutant
+		Description: rayrider-desc
+		BuildPaletteOrder: 3
+		Prerequisites: ~muair, ~campaignunit,~techlevel.4
+		BuildDuration: 625
+		BuildDurationModifier: 100
+	Selectable:
+		Bounds: 903,1447
+	Voiced:
+		VoiceSet: Queen
+	Aircraft:
+		TurnSpeed: 40
+		Speed: 180
+		Repulsable: true
+		MoveIntoShroud: true
+		IdealSeparation: 1c0
+	-Rearmable:
+	-Repairable:
+	Targetable@GROUND:
+		TargetTypes: Vehicle, OrganicVehicle, NoRepair, Ground, LandedCraft
+		RequiresCondition: !airborne
+	Targetable@AIRBORNE:
+		TargetTypes: Air, OrganicVehicle, NoRepair
+		RequiresCondition: airborne
+	Health:
+		HP: 9000
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 8
+	AttackAircraft:
+		AttackType: Hover
+		FacingTolerance: 40
+	AutoTarget:
+		ScanRadius: 6 #PREF: save trait looks up and scan armaments
+	Armament@1:
+		Weapon: RayriderMolotov
+		LocalOffset: 300, -100, 300
+	Armament@2:
+		Name: secondary
+		Weapon: RayriderRayAA
+		MuzzleSequence: muzzle
+		MuzzlePalette: apblue
+		LocalOffset: 500, 0, 0
+	WithMuzzleOverlay:
+	WithAttackAnimation:
+		Armament: primary
+		Sequence: shoot
+	WithIdleOverlay:
+		Palette: playermut
+		IsPlayerPalette: true
+	Cloak@CLOAKGENERATOR:
+		-CloakedCondition:
+	-GrantConditionOnDamageState@HeavyDamaged:
+	-GrantConditionOnDamageState@CriticalDamaged:
+	-SpawnSparks:
+	-FloatingSpriteEmitter@spawnsmoke:
+	-ExplodesAlsoTransported@Shrapnel:
+	ExplodesAlsoTransported:
+		Weapon: BigBeastExplode
+	ActorStatValues:
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MinRange, None, MaxRange
+		Damage: 50
+	ActorStatOverride@Tibinfusion:
+		Health: 11250
+		RequiresCondition: tibinfusion
+	-Sellable:
+	-GrantConditionOnClientDock@Sellable:
+	-IssueOrderToBot@AISell:
+
+
 MINELAYER:
 	Inherits: ^CombatVehicle
 	Inherits@RENDER: ^MutRenderGreen

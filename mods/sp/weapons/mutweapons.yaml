@@ -257,7 +257,7 @@ SeerTesla:
 	Projectile: TeslaZap
 		Palette: apblue
 		Duration: 10
-		ZOffset: 4000
+		ZOffset: 8000
 	Warhead@1Dam: SpreadDamage
 		Damage: 7000
 		ValidTargets: Ground, Water

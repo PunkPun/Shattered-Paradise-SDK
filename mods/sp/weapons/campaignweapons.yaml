@@ -686,6 +686,45 @@ InterceptorGunAP:
 		ValidTargets: Ground, Air, Water
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 
+RayriderRayAA:
+	Inherits: ^VulcanWeapon
+	ReloadDelay: 70
+	Range: 6c0
+	Report: voltautofire.wav
+	ValidTargets: Air
+	TargetActorCenter: true
+	Projectile: TeslaZap
+		BrightZaps: 1
+		Duration: 8
+		DimZaps: 1
+		Palette: apblue
+		ZOffset: 8000
+	Warhead@1Dam: SpreadDamage
+		Damage: 4000
+		ValidTargets: Air
+		DamageTypes: Prone70Percent, TriggerProne, EnergyDeath
+		NoUnintendedFriendlyFire: All
+	Warhead@2Eff: CreateEffect
+		Explosions: bluefire4_higher
+		ValidTargets: Ground, Water, Air
+		ExplosionPalette: effect
+		ImpactActors: false
+		AirThreshold: 8c0
+
+RayriderMolotov:
+	Inherits: SkirmisherMortar
+	ReloadDelay: 100
+	-MinRange:
+	Range: 6c0
+	Report: grenade-throw.aud
+	SoundVolume: 0.4
+	Projectile: BulletAS
+		Blockable: false
+		ContrailLength: 4
+	Warhead@1Dam: SpreadDamage
+		Spread: 300
+		Damage: 4000
+
 ^SonicGrenade:
 	Inherits@2: ^Small_Clsn
 	Projectile: BulletAS

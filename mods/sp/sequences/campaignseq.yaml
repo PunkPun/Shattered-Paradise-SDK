@@ -480,6 +480,36 @@ beastrider:
 	icon-blue:
 		Filename: beastridericon-blue.shp
 
+rayrider:
+	Inherits: ^EmpOverlay
+	Defaults:
+		Filename: rayrider_tur.shp
+		ZRamp: 1
+	idle-overlay:
+		Filename: rayrider.shp
+		Facings: -8
+		Length: 7
+		ZOffset: -1
+	idle:
+		Facings: -8
+		Start: 2
+		Stride: 3
+		ZOffset: 1
+	shoot:
+		Length: 3
+		Facings: -8
+		Tick: 300
+		ZOffset: 1
+	muzzle:
+		Filename: floatermuzzle.shp
+		Length: 7
+		Start: 7
+		IgnoreWorldTint: true
+		Facings: 1
+		Scale: 0.6
+	icon:
+		Filename: rayridericon.shp
+
 slighshot:
 	Inherits@2: ^SpriteVehicleWithShadowAndTurret
 	Defaults:
