@@ -11,49 +11,42 @@ ModCredits:
 
 PackageFormats: Mix
 
-FileSystem: DefaultFileSystem
+FileSystem: ContentInstallerFileSystem
     Packages:
-		~^SupportDir|Content/ts
-		~^SupportDir|Content/ts/firestorm
 		^EngineDir
+		^EngineDir|mods/cnc: cnc
 		^EngineDir|mods/common: common
 		^EngineDir|mods/ts: ts
+		~^SupportDir|Content/ts: content
 		$sp: sp
-
+		sp|uibits
+	ContentPackages:
 		# Tiberian Sun
-		~scores.mix
-		~sidenc01.mix
-		~sidenc02.mix
-		~e01scd01.mix
-		~e01scd02.mix
-		~movies01.mix
-		~movies02.mix
-		~sidecd01.mix
-		~sidecd02.mix
-		~cache.mix
-		~conquer.mix
-		~isosnow.mix
-		~isotemp.mix
-		~local.mix
-		~sidec01.mix: sidebar-gdi
-		~sidec02.mix: sidebar-nod
-		~sno.mix
-		~snow.mix
-		~sounds.mix
-		~speech01.mix: speech-gdi
-		~speech02.mix: speech-nod
-		~tem.mix
-		~temperat.mix
+		content|cache.mix
+		content|conquer.mix
+		content|isosnow.mix
+		content|isotemp.mix
+		content|local.mix
+		content|sidec01.mix: sidebar-gdi
+		content|sidec02.mix: sidebar-nod
+		content|sno.mix
+		content|snow.mix
+		content|sounds.mix
+		content|speech01.mix: speech-gdi
+		content|speech02.mix: speech-nod
+		content|tem.mix
+		content|temperat.mix
+		~content|scores.mix
 
 		# Firestorm
-		~scores01.mix
-		~expand01.mix
-		~sounds01.mix
-		~e01sc01.mix
-		~e01sc02.mix
-		~e01vox01.mix
-		~e01vox02.mix
-		~ecache01.mix
+		content|firestorm
+		content|firestorm/sounds01.mix
+		content|firestorm/e01sc01.mix
+		content|firestorm/e01sc02.mix
+		content|firestorm/e01vox01.mix
+		content|firestorm/e01vox02.mix
+		content|firestorm/ecache01.mix
+		~content|firestorm/scores01.mix
 
 		# Shattered Paradise
 		sp|bits
@@ -136,8 +129,8 @@ FileSystem: DefaultFileSystem
 		sp|bits/neutral/props
 		sp|bits/neutral/naval
 		sp|bits/neutral/campaignstuff
-		sp|uibits
 		sp|scripts
+	ContentInstallerMod: sp-content
 
 MapFolders:
 	sp|maps: System
@@ -167,15 +160,6 @@ Rules:
 	sp|rules/misc.yaml
 	sp|rules/dummies.yaml
 	sp|rules/campaignstuff.yaml
-
-Translations:
-	common|languages/en.ftl
-	common|languages/rules/en.ftl
-	common|languages/chrome/en.ftl
-	ts|languages/chrome/en.ftl
-	ts|languages/rules/en.ftl
-	sp|languages/en.ftl
-	sp|languages/rules/en.ftl
 
 Weapons:
 	sp|weapons/weapondefaults.yaml
@@ -294,6 +278,22 @@ ChromeLayout:
 Missions:
 	sp|missions.yaml
 
+FluentMessages:
+	common|fluent/common.ftl
+	common|fluent/chrome.ftl
+	common|fluent/hotkeys.ftl
+	common|fluent/rules.ftl
+	cnc|fluent/hotkeys.ftl
+	ts|fluent/ts.ftl
+	ts|fluent/chrome.ftl
+	ts|fluent/hotkeys.ftl
+	ts|fluent/rules.ftl
+	sp|fluent/sp.ftl
+	sp|fluent/hotkeys.ftl
+	sp|fluent/rules.ftl
+
+AllowUnusedFluentMessagesInExternalPackages: true
+
 Voices:
 	sp|audio/voices.yaml
 
@@ -309,7 +309,6 @@ Hotkeys:
 	common|hotkeys/game.yaml
 	common|hotkeys/observer.yaml
 	common|hotkeys/production-common.yaml
-	common|hotkeys/production-peractor.yaml
 	common|hotkeys/supportpowers.yaml
 	common|hotkeys/viewport.yaml
 	common|hotkeys/chat.yaml
@@ -412,45 +411,6 @@ WorldViewportSizes:
 	CloseWindowHeights: 600, 700
 	MediumWindowHeights: 700, 800
 	FarWindowHeights: 800, 900
-
-ModContent:
-	InstallPromptMessage: modcontent-installprompt
-	QuickDownload: quickinstall
-	HeaderMessage: modcontent-header
-	Packages:
-		ContentPackage@tibsun:
-			Title: modcontent-package-basefiles
-			Identifier: tibsun
-			TestFiles: ^SupportDir|Content/ts/cache.mix, ^SupportDir|Content/ts/conquer.mix, ^SupportDir|Content/ts/isosnow.mix, ^SupportDir|Content/ts/isotemp.mix, ^SupportDir|Content/ts/local.mix, ^SupportDir|Content/ts/sidec01.mix, ^SupportDir|Content/ts/sidec02.mix, ^SupportDir|Content/ts/sno.mix, ^SupportDir|Content/ts/snow.mix, ^SupportDir|Content/ts/sounds.mix, ^SupportDir|Content/ts/speech01.mix, ^SupportDir|Content/ts/tem.mix, ^SupportDir|Content/ts/temperat.mix
-			Sources: tibsun, tfd, origin
-			Required: true
-			Download: basefiles
-		ContentPackage@tibsun-music:
-			Title: modcontent-package-basemusic
-			Identifier: tibsun-music
-			TestFiles: ^SupportDir|Content/ts/scores.mix
-			Sources: tibsun, tfd, origin
-		ContentPackage@fstorm:
-			Title: modcontent-package-firestormfiles
-			Identifier: fstorm
-			TestFiles: ^SupportDir|Content/ts/firestorm/e01sc01.mix, ^SupportDir|Content/ts/firestorm/e01sc02.mix, ^SupportDir|Content/ts/firestorm/e01vox01.mix, ^SupportDir|Content/ts/firestorm/e01vox02.mix
-			Sources: tfd, origin, fstorm
-			Required: true
-			Download: fstorm
-		ContentPackage@fstorm-music:
-			Title: modcontent-package-firestormmusic
-			Identifier: fstorm-music
-			Sources: tfd, origin, fstorm
-			TestFiles: ^SupportDir|Content/ts/firestorm/scores01.mix
-	Downloads:
-		ts|installer/downloads.yaml
-	Sources:
-		ts|installer/downloads.yaml
-		ts|installer/firestorm.yaml
-		ts|installer/firstdecade.yaml
-		ts|installer/origin.yaml
-		ts|installer/tibsun.yaml
-	Translation: ts|languages/modcontent/en.ftl
 
 DiscordService:
 	ApplicationId: 742369365529460747

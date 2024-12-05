@@ -54,7 +54,6 @@ button-command-bar-deploy =
      - Units or buildings like Black Hands or Firestorm Generators use charged abilities
      - Aircraft will return to base
 
-button-production-types-defense-tooltip = Defense
 button-production-types-upgrade-tooltip = Upgrade
 button-top-buttons-debug-tooltip = Debug Menu
 

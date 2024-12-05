@@ -354,11 +354,11 @@ GACNST:
 		Voice: Move
 		RequiresForceMove: true
 	Production@Shared:
-		Produces: Building.Shared, Defense.Shared
+		Produces: Building.Shared, Support.Shared
 		PauseOnCondition: empdisable
 		RequiresCondition: !multiqueue
 	Production:
-		Produces: Building.GDI, Defense.GDI
+		Produces: Building.GDI, Support.GDI
 		PauseOnCondition: empdisable
 		RequiresCondition: multiqueue
 	ProductionQueue@Building:
@@ -374,9 +374,9 @@ GACNST:
 		ReadyTextNotification: notification-building-ready
 		LimitedAudio: BuildingInProgress
 		LimitedTextNotification: notification-unable-to-comply
-	ProductionQueue@Defense:
-		Type: Defense.GDI
-		Group: Defense
+	ProductionQueue@Support:
+		Type: Support.GDI
+		Group: Support
 		DisplayOrder: 5
 		LowPowerModifier: 200
 		QueuedAudio: Building
@@ -391,11 +391,11 @@ GACNST:
 		ProductionType: Building.Shared
 	ProductionBar@Building:
 		ProductionType: Building.GDI
-	ProductionBar@Defense.Shared:
-		ProductionType: Defense.Shared
+	ProductionBar@Support.Shared:
+		ProductionType: Support.Shared
 		Color: 8A8A8A
-	ProductionBar@Defense:
-		ProductionType: Defense.GDI
+	ProductionBar@Support:
+		ProductionType: Support.GDI
 		Color: 8A8A8A
 	GrantConditionOnPrerequisite@multiqueue:
 		Condition: multiqueue
@@ -1154,7 +1154,7 @@ SCRDEPOT:
 SHAWALL:
 	Inherits: ^Wall
 	Buildable:
-		Queue: Defense.Shared, Defense.GDI, Defense.CABAL
+		Queue: Support.Shared, Support.GDI, Support.CABAL
 		BuildPaletteOrder: 1
 		Prerequisites: ~structures.wall, ~techlevel.1
 		Description: sharedwall-desc
@@ -1181,7 +1181,7 @@ NAPOST:
 	Inherits: ^Defence
 	Inherits@IDISABLED: ^DisableOnLowPowerOrPowerDown
 	Buildable:
-		Queue: Defense.Shared, Defense.Nod
+		Queue: Support.Shared, Support.Nod
 		BuildPaletteOrder: 2
 		Prerequisites: ~nodyard, napowr, ~techlevel.1
 		Description: napost-desc
@@ -1322,7 +1322,7 @@ MUTWALL:
 	Inherits: ^Wall
 	Inherits@RENDER: ^MutRender
 	Buildable:
-		Queue: Defense.Shared, Defense.Mutant
+		Queue: Support.Shared, Support.Mutant
 		BuildPaletteOrder: 3
 		Description: sharedwall-desc
 		Prerequisites: ~mutyard, ~techlevel.1
@@ -1346,7 +1346,7 @@ SCRWALL:
 	Inherits: ^Wall
 	Inherits@RENDER: ^ScrinRender
 	Buildable:
-		Queue: Defense.Shared, Defense.Scrin
+		Queue: Support.Shared, Support.Scrin
 		BuildPaletteOrder: 5
 		Description: sharedwall-desc
 		Prerequisites: ~drached, ~techlevel.1
@@ -1368,7 +1368,7 @@ GASILO:
 	Inherits: ^AffectPowerBuilding
 	Inherits@SHAPE: ^2x2Shape
 	Buildable:
-		Queue: Defense.Shared, Defense.GDI, Defense.Nod, Defense.Mutant, Defense.CABAL
+		Queue: Support.Shared, Support.GDI, Support.Nod, Support.Mutant, Support.CABAL
 		BuildPaletteOrder: 11
 		Prerequisites: ~structures.human, proc, ~techlevel.1, ~!global-megawealth
 		Description: gasilo-desc
@@ -1649,7 +1649,7 @@ trnsport.scr: ## only used for AI
 GATE_A:
 	Inherits: ^Gate_A
 	Buildable:
-		Queue: Defense.Shared, Defense.GDI, Defense.Nod, Defense.CABAL
+		Queue: Support.Shared, Support.GDI, Support.Nod, Support.CABAL
 		BuildPaletteOrder: 6
 		Prerequisites: ~structures.gate, ~techlevel.1
 		Description: gate-desc
@@ -1690,7 +1690,7 @@ MUTGATE_A:
 	Inherits: ^Gate_A
 	Inherits@RENDER: ^MutRender
 	Buildable:
-		Queue: Defense.Shared, Defense.Mutant
+		Queue: Support.Shared, Support.Mutant
 		BuildPaletteOrder: 7
 		Prerequisites: ~mutyard, ~techlevel.1
 		Description: gate-desc
@@ -1718,7 +1718,7 @@ SCRGATE_A:
 	Inherits@2: ^ScrinDefenceFire
 	Inherits@RENDER: ^ScrinRender
 	Buildable:
-		Queue: Defense.Shared, Defense.Scrin
+		Queue: Support.Shared, Support.Scrin
 		BuildPaletteOrder: 10
 		Prerequisites: ~drached, ~techlevel.1
 		Description: gate-desc

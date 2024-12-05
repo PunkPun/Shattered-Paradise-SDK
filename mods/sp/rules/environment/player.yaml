@@ -29,9 +29,9 @@ Player:
 		LimitedTextNotification: notification-unable-to-comply
 		SpeedUp: true
 		BuildTimeSpeedReduction: 100, 91, 82, 73, 64, 55, 50
-	ClassicProductionQueue@Defense:
-		Type: Defense.Shared
-		Group: Defense
+	ClassicProductionQueue@Support:
+		Type: Support.Shared
+		Group: Support
 		DisplayOrder: 1
 		BuildDurationModifier: 100
 		LowPowerModifier: 200

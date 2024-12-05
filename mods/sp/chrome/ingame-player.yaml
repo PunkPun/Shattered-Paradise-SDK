@@ -785,7 +785,7 @@ Container@PLAYER_WIDGETS:
 									X: 7
 									Y: 7
 									ImageCollection: production-icons
-						ProductionTypeButton@DEFENSE:
+						ProductionTypeButton@SUPPORT:
 							Logic: AddFactionSuffixLogic
 							X: 57
 							Y: 1
@@ -793,10 +793,10 @@ Container@PLAYER_WIDGETS:
 							Height: 31
 							VisualHeight: 0
 							Background: sidebar-button
-							TooltipText: button-production-types-defense-tooltip
+							TooltipText: button-production-types-support-tooltip
 							TooltipContainer: TOOLTIP_CONTAINER
-							ProductionGroup: Defense
-							Key: ProductionTypeDefense
+							ProductionGroup: Support
+							Key: ProductionTypeSupport
 							Children:
 								Image@ICON:
 									X: 7

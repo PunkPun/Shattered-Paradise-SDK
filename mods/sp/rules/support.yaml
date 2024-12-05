@@ -5,7 +5,7 @@ GAPOWRUP:
 	Tooltip:
 		Name: gapowrup-name
 	Buildable:
-		Queue: Defense.Shared, Defense.GDI
+		Queue: Support.Shared, Support.GDI
 		Description: gapowrup-desc
 		BuildPaletteOrder: 36
 		Prerequisites: ~gacnst, gapowr, garadr, ~!global-upgrades, ~techlevel.4
@@ -32,7 +32,7 @@ GAVULC:
 	Tooltip:
 		Name: gavulc-name
 	Buildable:
-		Queue: Defense.Shared, Defense.GDI
+		Queue: Support.Shared, Support.GDI
 		BuildPaletteOrder: 16
 		Prerequisites: ~gacnst, gapile, ~techlevel.1
 		Description: gavulc-desc
@@ -110,7 +110,7 @@ GAROCK:
 	Tooltip:
 		Name: garock-name
 	Buildable:
-		Queue: Defense.Shared, Defense.GDI
+		Queue: Support.Shared, Support.GDI
 		BuildPaletteOrder: 17
 		Prerequisites: ~gacnst, gaweap, ~techlevel.2
 		Description: garock-desc
@@ -167,7 +167,7 @@ GACSAM:
 	Tooltip:
 		Name: gacsam-name
 	Buildable:
-		Queue: Defense.Shared, Defense.GDI
+		Queue: Support.Shared, Support.GDI
 		BuildPaletteOrder: 18
 		Prerequisites: ~gacnst, garadr, ~techlevel.4
 		Description: gacsam-desc
@@ -231,7 +231,7 @@ GASONC:
 	Tooltip:
 		Name: gasonc-name
 	Buildable:
-		Queue: Defense.Shared, Defense.GDI
+		Queue: Support.Shared, Support.GDI
 		BuildPaletteOrder: 42
 		Prerequisites: ~gacnst, upgrade.sonic_emitter_protocol, ~global-upgrades, ~techlevel.5
 		Description: gasonc-desc
@@ -303,7 +303,7 @@ NALASR:
 	Tooltip:
 		Name: nalasr-name
 	Buildable:
-		Queue: Defense.Shared, Defense.Nod
+		Queue: Support.Shared, Support.Nod
 		Description: nalasr-desc
 		Prerequisites: ~nodyard, nahand, ~techlevel.1
 		BuildPaletteOrder: 19
@@ -346,7 +346,7 @@ NAOBEL:
 	Tooltip:
 		Name: naobel-name
 	Buildable:
-		Queue: Defense.Shared, Defense.Nod
+		Queue: Support.Shared, Support.Nod
 		Description: naobel-desc
 		BuildPaletteOrder: 20
 		Prerequisites: ~nodyard, natech, ~techlevel.5
@@ -400,7 +400,7 @@ NASAM:
 	Tooltip:
 		Name: nasam-name
 	Buildable:
-		Queue: Defense.Shared, Defense.Nod
+		Queue: Support.Shared, Support.Nod
 		Description: nasam-desc
 		Prerequisites: ~nodyard, naradr, ~techlevel.4
 		BuildPaletteOrder: 21
@@ -443,7 +443,7 @@ MUBUNKR:
 	Tooltip:
 		Name: mubunkr-name
 	Buildable:
-		Queue: Defense.Shared, Defense.Mutant
+		Queue: Support.Shared, Support.Mutant
 		Description: mubunkr-desc
 		BuildPaletteOrder: 22
 		Prerequisites: ~mutyard, murax, ~techlevel.1
@@ -531,7 +531,7 @@ MUCANNON:
 	Tooltip:
 		Name: mucannon-name
 	Buildable:
-		Queue: Defense.Shared, Defense.Mutant
+		Queue: Support.Shared, Support.Mutant
 		Description: mucannon-desc
 		Prerequisites: ~mutyard, muweap, ~techlevel.2
 		BuildPaletteOrder: 23
@@ -579,7 +579,7 @@ MUFLAK:
 	Tooltip:
 		Name: muflak-name
 	Buildable:
-		Queue: Defense.Shared, Defense.Mutant
+		Queue: Support.Shared, Support.Mutant
 		Description: muflak-desc
 		Prerequisites: ~mutyard, muradr, ~techlevel.4
 		BuildPaletteOrder: 24
@@ -630,7 +630,7 @@ CABPIT:
 	Tooltip:
 		Name: cabpit-name
 	Buildable:
-		Queue: Defense.Shared, Defense.CABAL
+		Queue: Support.Shared, Support.CABAL
 		Description: cabpit-desc
 		BuildPaletteOrder: 25
 		Prerequisites: ~cabyard, cabclaw, ~techlevel.1
@@ -679,7 +679,7 @@ CABBLAST:
 	Tooltip:
 		Name: cabblast-name
 	Buildable:
-		Queue: Defense.Shared, Defense.CABAL
+		Queue: Support.Shared, Support.CABAL
 		Description: cabblast-desc
 		Prerequisites: ~cabyard, cabradr, ~techlevel.4
 		BuildPaletteOrder: 26
@@ -716,7 +716,7 @@ CABRAIL:
 	Tooltip:
 		Name: cabrail-name
 	Buildable:
-		Queue: Defense.Shared, Defense.CABAL
+		Queue: Support.Shared, Support.CABAL
 		Description: cabrail-desc
 		Prerequisites: ~cabyard, cabradr, ~techlevel.4
 		BuildPaletteOrder: 27
@@ -749,7 +749,7 @@ SCRNEEDLER:
 	Tooltip:
 		Name: scrneedler-name
 	Buildable:
-		Queue: Defense.Shared, Defense.Scrin
+		Queue: Support.Shared, Support.Scrin
 		Description: scrneedler-desc
 		Prerequisites: ~drached, scrrax, ~techlevel.1
 		BuildPaletteOrder: 28
@@ -801,7 +801,7 @@ SCRDRONE:
 	Tooltip:
 		Name: scrdrone-name
 	Buildable:
-		Queue: Defense.Shared, Defense.Scrin
+		Queue: Support.Shared, Support.Scrin
 		BuildPaletteOrder: 45
 		Description: scrdrone-desc
 		Prerequisites: ~drached, scrtech, ~techlevel.5
@@ -869,7 +869,7 @@ SCRTRACTOR:
 	Tooltip:
 		Name: scrtractor-name
 	Buildable:
-		Queue: Defense.Shared, Defense.Scrin
+		Queue: Support.Shared, Support.Scrin
 		Description: scrtractor-desc
 		Prerequisites: ~drached, scrradr, ~techlevel.4
 		BuildPaletteOrder: 30
@@ -904,7 +904,7 @@ GAFIRE:
 	Inherits@FirestormWall: ^FirestormWallSP
 	Inherits@AIbuilding: ^AImicroManagable
 	Buildable:
-		Queue: Defense.Shared, Defense.GDI
+		Queue: Support.Shared, Support.GDI
 		BuildPaletteOrder: 41
 		Description: gafire-desc
 		Prerequisites: ~gacnst, gatech, ~techlevel.5
@@ -1011,7 +1011,7 @@ GAPLUG:
 	Tooltip:
 		Name: gaplug-name
 	Buildable:
-		Queue: Defense.Shared, Defense.GDI
+		Queue: Support.Shared, Support.GDI
 		BuildPaletteOrder: 46
 		Prerequisites: ~gacnst, gatech, !enoughgaplug, ~techlevel.6
 		Description: gaplug-desc
@@ -1113,7 +1113,7 @@ NASTLH:
 	Tooltip:
 		Name: nastlh-name
 	Buildable:
-		Queue: Defense.Shared, Defense.Nod
+		Queue: Support.Shared, Support.Nod
 		BuildPaletteOrder: 43
 		Prerequisites: ~nodyard, natech, ~techlevel.5, ~!AINASTLHBuildLimit
 		Description: nastlh-desc
@@ -1171,7 +1171,7 @@ NATMPL:
 	Inherits@2: ^HasMisslePower
 	Inherits@SHAPE: ^3x3Shape
 	Buildable:
-		Queue: Defense.Shared, Defense.Nod
+		Queue: Support.Shared, Support.Nod
 		BuildPaletteOrder: 47
 		Prerequisites: ~nodyard, natech, !enoughnatmpl, ~techlevel.6
 		Description: natmpl-desc
@@ -1312,7 +1312,7 @@ MUVENTI:
 	Inherits@2: ^HasSuperSupportPower
 	Inherits@SHAPE: ^3x3Shape
 	Buildable:
-		Queue: Defense.Shared, Defense.Mutant
+		Queue: Support.Shared, Support.Mutant
 		BuildPaletteOrder: 44
 		Description: muventi-desc
 		Prerequisites: ~mutyard, muhall, !enoughmuventi, ~techlevel.4
@@ -1373,7 +1373,7 @@ MUVENT:
 	Tooltip:
 		Name: muvent-name
 	Buildable: ### AI cannot use the support power properly as defence purpose, so AI build tunnel instead
-		Queue: Defense.Shared, Defense.Mutant
+		Queue: Support.Shared, Support.Mutant
 		BuildPaletteOrder: 44
 		Description: muvent-desc
 		Prerequisites: ~mutyard, muventi, ~AIOnly, ~techlevel.4
@@ -1427,7 +1427,7 @@ MUTSW1:
 	Inherits@RENDER: ^MutRenderBuilding
 	Inherits@SHAPE: ^3x2Shape
 	Buildable:
-		Queue: Defense.Shared, Defense.Mutant
+		Queue: Support.Shared, Support.Mutant
 		BuildPaletteOrder: 48
 		Prerequisites: ~mutyard, muhall, !enoughmutsw1, ~techlevel.6
 		Description: mutsw1-desc
@@ -1507,7 +1507,7 @@ SCREXTRACTOR:
 	Tooltip:
 		Name: scrextractor-name
 	Buildable:
-		Queue: Defense.Shared, Defense.Scrin
+		Queue: Support.Shared, Support.Scrin
 		BuildPaletteOrder: 29
 		Description: scrextractor-desc
 		Prerequisites: ~drached, scrradr, ~techlevel.4
@@ -1566,7 +1566,7 @@ SCRSW1:
 	Inherits@RENDER: ^ScrinRenderBuilding
 	Inherits@SHAPE: ^3x2Shape
 	Buildable:
-		Queue: Defense.Shared, Defense.Scrin
+		Queue: Support.Shared, Support.Scrin
 		BuildPaletteOrder: 51
 		Prerequisites: ~drached, scrtech, !enoughscrsw1, ~techlevel.6
 		Description: scrsw1-desc
@@ -1634,7 +1634,7 @@ CABEYE:
 	Inherits@RENDER: ^CabRenderBuilding
 	Inherits@SHAPE: ^2x2Shape
 	Buildable:
-		Queue: Defense.Shared, Defense.CABAL
+		Queue: Support.Shared, Support.CABAL
 		BuildPaletteOrder: 39
 		Description: cabeye-desc
 		Prerequisites: ~cabyard, cabradr, ~techlevel.4
@@ -1691,7 +1691,7 @@ CABSW1:
 	Tooltip:
 		Name: cabsw1-name
 	Buildable:
-		Queue: Defense.Shared, Defense.CABAL
+		Queue: Support.Shared, Support.CABAL
 		Prerequisites: ~cabyard, cabtech, !enoughcabsw1, ~techlevel.6
 		Description: cabsw1-desc
 		BuildPaletteOrder: 49
@@ -1845,7 +1845,7 @@ BLACKDEFD:
 			TopLeft: 512, 512
 			BottomRight: 1536, 1536
 	Buildable:
-		Queue: Defense.Shared, Defense.CABAL
+		Queue: Support.Shared, Support.CABAL
 		Prerequisites: ~cabyard, cabobelisk, ~techlevel.6, !DarkDefenderExists
 		Description: blackdefd-desc
 		BuildPaletteOrder: 50

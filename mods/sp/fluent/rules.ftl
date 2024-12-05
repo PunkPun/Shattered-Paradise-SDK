@@ -471,7 +471,7 @@ napuls-desc = Cannon that uses EMP projectiles.
 
     Special:
      - Fires a pulse blast which disables all ground machines in the area
-         - For example: Buildings, Defences, Vehicles and Cyborgs
+         - For example: Buildings, Defenses, Vehicles and Cyborgs
      - Requires power to operate
 
 scrshield-name = EMP Field Generator
@@ -1875,17 +1875,6 @@ beastrider-desc =  Cavalry use recoilless rifle and tiberium bees
      - Blue Shards
      - Tiberium Infusion
 
-rayrider-name = Air Cavalry
-rayrider-desc =  Cavalry use zaps and firey bomb
-    Good vs: Aircraft, Buildings
-
-    Special:
-     - Can attack enemies ahead while moving
-     - Instant hit air unit.
-
-    Upgrades:
-     - Tiberium Infusion
-
 avatar-name = Avatar
 avatar-desc = Heavy Walker armed with a strong laser.
 
@@ -1996,7 +1985,7 @@ memp-desc = Support unit can generate emp pulse.
 
     Special:
      - Deploy to generate emp pulse to disable all ground machines in the area
-         - For example: Buildings, Defences, Vehicles and Cyborgs
+         - For example: Buildings, Defenses, Vehicles and Cyborgs
      - Immumes to EMP
      - Can crush Infantry
 
@@ -2308,7 +2297,7 @@ jfish-desc  = Hovering amphibious lifeform attacks with electrical tentacles.
      - Heals on Tiberium fields and Green Tiberium Radiation
      - Can't hover when Attack.
      - Attack with EMP : Disable ground machines for a short time
-         - For example: Buildings, Defences, Vehicles and Cyborgs
+         - For example: Buildings, Defenses, Vehicles and Cyborgs
      - Wild mind: Mind only controllable by Mastermind
      - Does not slow down on critical HP
 
@@ -2419,7 +2408,7 @@ eagleguard-desc = Elite Soldier armed with an EMP rifle.
     Special:
      - Immune to Tiberium fields
      - Attack with EMP : Disable ground machines for a short time
-         - For example: Buildings, Defences, Vehicles and Cyborgs
+         - For example: Buildings, Defenses, Vehicles and Cyborgs
      - Crush class: crushable only by Epics.
 
 jjcomm-name = Jumpjet Commando
@@ -2678,7 +2667,7 @@ mastermind-desc = The commando unit of Scrin born with the ability
     Special:
      - Can mind control everything but Commandos and Epics
      - Takes some time to mind control Structures
-     - Gain 50% EXP from enemy killed by controlled unit/defence
+     - Gain 50% EXP from enemy killed by controlled unit/defense
      - Absorbs essence from killed units to heal
      - Can teleport over a middle distance
      - Can mind control over walls
@@ -2826,7 +2815,7 @@ power_turbines-name = Power Turbines
 power_turbines-desc = Doubles the power output of all GDI Power Plants.
 
 sonic_emitter_protocol-name = Sonic Emitter Protocols
-sonic_emitter_protocol-desc = Enables construction of Sonic Emitter defence structure.
+sonic_emitter_protocol-desc = Enables construction of Sonic Emitter defense structure.
 
 railguns-name = Railgun Barrels
 railguns-desc = Provides Titans and Mammoth Tanks with railguns increasing their damage by 50%.

@@ -500,17 +500,17 @@ NODYARD:
 		DeployCursor: undeploy
 		PauseOnCondition: empdisable
 	Production:
-		Produces: Building.Nod, Defense.Nod
+		Produces: Building.Nod, Support.Nod
 	ProductionQueue@Building:
 		Type: Building.Nod
 		DisplayOrder: 1
-	ProductionQueue@Defense:
-		Type: Defense.Nod
+	ProductionQueue@Support:
+		Type: Support.Nod
 		DisplayOrder: 6
 	ProductionBar@Building:
 		ProductionType: Building.Nod
-	ProductionBar@Defense:
-		ProductionType: Defense.Nod
+	ProductionBar@Support:
+		ProductionType: Support.Nod
 	-WithBuildingPlacedOverlay:
 	WithBuildingPlacedAnimation:
 		Sequence: build
@@ -1058,17 +1058,17 @@ MUTYARD:
 		DeployCursor: undeploy
 		PauseOnCondition: empdisable
 	Production:
-		Produces: Building.Mutant, Defense.Mutant
+		Produces: Building.Mutant, Support.Mutant
 	ProductionQueue@Building:
 		Type: Building.Mutant
 		DisplayOrder: 2
-	ProductionQueue@Defense:
-		Type: Defense.Mutant
+	ProductionQueue@Support:
+		Type: Support.Mutant
 		DisplayOrder: 7
 	ProductionBar@Building:
 		ProductionType: Building.Mutant
-	ProductionBar@Defense:
-		ProductionType: Defense.Mutant
+	ProductionBar@Support:
+		ProductionType: Support.Mutant
 	-WithBuildingPlacedOverlay:
 	WithBuildingPlacedAnimation:
 		Sequence: build
@@ -1465,17 +1465,17 @@ DRACHED:
 		Factions: scr
 		ResetOnOwnerChange: true
 	Production:
-		Produces: Building.Scrin, Defense.Scrin
+		Produces: Building.Scrin, Support.Scrin
 	ProductionQueue@Building:
 		Type: Building.Scrin
 		DisplayOrder: 4
-	ProductionQueue@Defense:
-		Type: Defense.Scrin
+	ProductionQueue@Support:
+		Type: Support.Scrin
 		DisplayOrder: 9
 	ProductionBar@Building:
 		ProductionType: Building.Scrin
-	ProductionBar@Defense:
-		ProductionType: Defense.Scrin
+	ProductionBar@Support:
+		ProductionType: Support.Scrin
 	WithBuildingPlacedOverlay:
 		Sequence: ball
 		Palette: playerscrin
@@ -2020,17 +2020,17 @@ CABYARD:
 		DeployCursor: undeploy
 		PauseOnCondition: empdisable
 	Production:
-		Produces: Building.CABAL, Defense.CABAL
+		Produces: Building.CABAL, Support.CABAL
 	ProductionQueue@Building:
 		Type: Building.CABAL
 		DisplayOrder: 3
-	ProductionQueue@Defense:
-		Type: Defense.CABAL
+	ProductionQueue@Support:
+		Type: Support.CABAL
 		DisplayOrder: 8
 	ProductionBar@Building:
 		ProductionType: Building.CABAL
-	ProductionBar@Defense:
-		ProductionType: Defense.CABAL
+	ProductionBar@Support:
+		ProductionType: Support.CABAL
 	WithBuildingPlacedOverlay:
 		Sequence: circus
 		Palette: playercab

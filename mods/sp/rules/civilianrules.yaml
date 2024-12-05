@@ -1010,7 +1010,7 @@ FOUNTAINBLOOD:
 AMMOCRAT:
 	Inherits: ^CivBuilding
 	Buildable:
-		Queue: Defense.Tech
+		Queue: Support.Tech
 	Tooltip:
 		Name: ammocrat-name
 	Building:
@@ -2309,7 +2309,7 @@ GAOLDCC5:
 GAOLDCC6:
 	Inherits: ^OldBase
 	Buildable:
-		Queue: Defense.Tech
+		Queue: Support.Tech
 	Tooltip:
 		Name: gaoldcc6-name
 	Building:
@@ -2995,7 +2995,7 @@ TDADVGTWR:
 	Inherits@0: ^8CellVision
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Buildable:
-		Queue: Defense.Tech
+		Queue: Support.Tech
 	Tooltip:
 		Name: tdadvgtwr-name
 	BodyOrientation:
@@ -3257,7 +3257,7 @@ TDGTWR:
 	Inherits: ^Defence
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Buildable:
-		Queue: Defense.Tech
+		Queue: Support.Tech
 	Tooltip:
 		Name: tdgtwr-name
 	Health:
@@ -3458,7 +3458,7 @@ TDNTUR:
 	Inherits: ^TurretedDefence
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Buildable:
-		Queue: Defense.Tech
+		Queue: Support.Tech
 	Tooltip:
 		Name: tdntur-name
 	Valued:
@@ -3502,7 +3502,7 @@ TDOBELISK:
 	Inherits@DETECTION: ^TowerStealthDetection
 	Inherits@SHAPE: ^1x1Shape
 	Buildable:
-		Queue: Defense.Tech
+		Queue: Support.Tech
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -3657,7 +3657,7 @@ TDSAMSITE:
 	Inherits@AA: ^AntiAir
 	Inherits@SHAPE: ^2x2Shape
 	Buildable:
-		Queue: Defense.Tech
+		Queue: Support.Tech
 	Tooltip:
 		Name: tdsamsite-name
 	Valued:
@@ -3748,7 +3748,7 @@ TDSILO:
 	Inherits: ^AffectPowerBuilding
 	Inherits@SHAPE: ^2x2Shape
 	Buildable:
-		Queue: Defense.Tech
+		Queue: Support.Tech
 	Valued:
 		Cost: 200
 	Tooltip:

@@ -106,7 +106,7 @@ Player:
 	BaseBuilderBotModule@AIBase:
 		RequiresCondition: AIBase || AIEasy
 		BuildingQueues: Building.Shared, Building.GDI, Building.Nod, Building.Mutant, Building.CABAL, Building.Scrin
-		DefenseQueues: Defense.Shared, Defense.GDI, Defense.Nod, Defense.Mutant, Defense.CABAL, Defense.Scrin
+		DefenseQueues: Support.Shared, Support.GDI, Support.Nod, Support.Mutant, Support.CABAL, Support.Scrin
 		MinimumExcessPower: 50
 		MaximumExcessPower: 750
 		ExcessPowerIncrement: 50

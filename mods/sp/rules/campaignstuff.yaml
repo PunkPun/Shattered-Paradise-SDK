@@ -2706,7 +2706,7 @@ GAIONTUR:
 	Inherits: ^TurretedDefence
 	Inherits@SHAPE: ^2x2Shape
 	Buildable:
-		Queue: Defense.Tech
+		Queue: Support.Tech
 		BuildPaletteOrder: 10
 	Building:
 		Footprint: xx xx
