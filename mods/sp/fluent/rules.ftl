@@ -1875,6 +1875,17 @@ beastrider-desc =  Cavalry use recoilless rifle and tiberium bees
      - Blue Shards
      - Tiberium Infusion
 
+rayrider-name = Air Cavalry
+rayrider-desc =  Cavalry use zaps and firey bomb
+    Good vs: Aircraft, Buildings
+
+    Special:
+     - Can attack enemies ahead while moving
+     - Instant hit air unit.
+
+    Upgrades:
+     - Tiberium Infusion
+
 avatar-name = Avatar
 avatar-desc = Heavy Walker armed with a strong laser.
 
