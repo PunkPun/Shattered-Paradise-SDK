@@ -844,10 +844,10 @@ ORCAI: #Orca Interceptor
 	Contrail@FlameTrail:
 		RequiresCondition: airborne
 		Offset: -300,0,100
-		StartColor: FFEA0088
+		StartColor: EEFF00
 		StartColorAlpha: 128
 		StartColorUsePlayerColor: false
-		EndColor: FFEA0000
+		EndColor: FF0000
 		StartWidth: 128
 		TrailLength: 6
 		EndWidth: 0
@@ -2778,28 +2778,28 @@ KODK: ## Kodiak Command Ship
 	Contrail@1:
 		RequiresCondition: airborne
 		Offset: -1600, 800, 60
-		StartColor: FFEA0080
+		StartColor: EEFF00
 		StartColorAlpha: 128
 		StartColorUsePlayerColor: false
-		EndColor: FFEA0000
+		EndColor: FF0000
 		TrailLength: 8
 		StartWidth: 96
 	Contrail@2:
 		RequiresCondition: airborne
 		Offset: -1600, 500, 60
-		StartColor: FFEA0080
+		StartColor: EEFF00
 		StartColorAlpha: 128
 		StartColorUsePlayerColor: false
-		EndColor: FFEA0000
+		EndColor: FF0000
 		TrailLength: 8
 		StartWidth: 96
 	Contrail@3:
 		RequiresCondition: airborne
 		Offset: -1600, -500, 60
-		StartColor: FFEA0080
+		StartColor: EEFF00
 		StartColorAlpha: 128
 		StartColorUsePlayerColor: false
-		EndColor: FFEA0000
+		EndColor: FF0000
 		TrailLength: 8
 		StartWidth: 96
 	Contrail@4:

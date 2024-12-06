@@ -86,10 +86,10 @@ ORCA:
 	Contrail@2:
 		RequiresCondition: airborne
 		Offset: -10, 330, 64
-		StartColor: FFEE0080
+		StartColor: EEFF00
 		StartColorAlpha: 128
 		StartColorUsePlayerColor: false
-		EndColor: FFEA0000
+		EndColor: FF0000
 		EndColorAlpha: 20
 		TrailLength: 4
 		StartWidth: 64
@@ -97,10 +97,10 @@ ORCA:
 	Contrail@3:
 		RequiresCondition: airborne
 		Offset: -10, -330, 64
-		StartColor: FFEE0080
+		StartColor: EEFF00
 		StartColorAlpha: 128
 		StartColorUsePlayerColor: false
-		EndColor: FFEA0000
+		EndColor: FF0000
 		EndColorAlpha: 20
 		TrailLength: 4
 		StartWidth: 64
@@ -379,9 +379,9 @@ APACHE:
 		HP: 15000
 	Armament:
 		Weapon: HarpyClaw
-		LocalOffset: 600,0,0
+		LocalOffset: 300,0,-300
 		CasingWeapon: HarpyBulletSpawner
-		CasingSpawnLocalOffset: 600,0,0
+		CasingSpawnLocalOffset: 300,0,-300
 		CasingTargetOffset: 700,0,0
 		CasingHitGroundLevel: false
 		MuzzleSequence: muzzle
@@ -389,9 +389,9 @@ APACHE:
 		PauseOnCondition: !ammo
 	Armament@AA:
 		Weapon: HarpyClawAA
-		LocalOffset: 600,0,0
+		LocalOffset: 300,0,-300
 		CasingWeapon: HarpyBulletSpawner
-		CasingSpawnLocalOffset: 600,0,0
+		CasingSpawnLocalOffset: 300,0,-300
 		CasingTargetOffset: 700,0,0
 		CasingHitGroundLevel: false
 		MuzzleSequence: muzzle
