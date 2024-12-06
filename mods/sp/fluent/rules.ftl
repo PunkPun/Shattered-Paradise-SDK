@@ -474,8 +474,6 @@ napuls-desc = Cannon that uses EMP projectiles.
          - For example: Buildings, Defenses, Vehicles and Cyborgs
      - Requires power to operate
 
-scrshield-name = EMP Field Generator
-
 king-name = King Drone
 suddendeath-ally = Protect it at all cost!
 suddendeath-foe = Destroy it to checkmate!
