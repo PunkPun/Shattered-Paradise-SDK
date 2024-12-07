@@ -562,6 +562,136 @@ ZONEDEFR:
 	ActorStatValues:
 		Damage: 60
 
+SHADTEAM:
+	Inherits: ^Soldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
+	Inherits@EXPERIENCE: ^GainsExperience
+	Valued:
+		Cost: 400
+	Buildable:
+		Queue: Infantry.Shared, Infantry.Nod
+		BuildPaletteOrder: 19
+		Prerequisites: ~napile, naradr, ~techlevel.4, ~campaignunit
+		Description: shadteam-desc
+		BuildDuration: 250
+		BuildDurationModifier: 100
+	Tooltip:
+		Name: shadteam-name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	-TakeCover:
+	Voiced:
+		VoiceSet: BlackHand
+		Volume: 8
+	Mobile:
+		Speed: 80
+	Health:
+		HP: 15000
+	Transforms:
+		IntoActor: shadteamair
+		RequiresCondition: !inside-tunnel
+		PauseOnCondition: WebDisable
+	GrantConditionAfterDelay@1: ## Prevent player switch between modes to refresh reload
+		Condition: grenadeready
+		Delay: 70
+		ShowSelectionBar: false
+	Armament@1:
+		Name: OnFoot
+		Weapon: ShadteamGun
+		LocalOffset: 400,0,800
+		PauseOnCondition: WebDisable || !grenadeready
+	Armament@Garrison:
+		Weapon: ShadteamGun
+		PauseOnCondition: WebDisable
+		MuzzleSequence: garrison-muzzle
+	Passenger:
+		CustomPipType: blue
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+		FacingTolerance: 2
+	AutoTarget:
+		ScanRadius: 6 #PREF: save trait looks up and scan armaments
+	Cloak@CLOAKGENERATOR:
+		InitialDelay: 80
+		CloakDelay: 80
+		IsPlayerPalette: true
+		-RequiresCondition:
+	-ExternalCondition@CLOAKGENERATOR:
+
+SHADTEAMAIR:
+	Inherits: ^AirInfantry
+	Inherits@1: ^FullHealthRepairCondition
+	#Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@VISION: ^8CellVisionAir
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: shadteam-name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Voiced:
+		VoiceSet: BlackHand
+		Volume: 8
+	Health:
+		HP: 15000
+	#AttackAircraft:
+	#	FacingTolerance: 20
+	#	Voice: Attack
+	#	AttackType: Hover
+	#AutoTarget:
+	#	ScanRadius: 6 #PREF: save trait looks up and scan armaments
+	#GrantConditionAfterDelay@1: ## Prevent player switch between modes to refresh reload
+	#	Condition: grenadeready
+	#	Delay: 70
+	#	ShowSelectionBar: false
+	#Armament@1:
+	#	Weapon: JJGrenade
+	#	LocalOffset: 300,0,1000
+	#	PauseOnCondition: !grenadeready
+	Transforms:
+		IntoActor: shadteam
+	Armor:
+		Type: Aircraft
+	Aircraft:
+		MaximumPitch: 120
+		TurnSpeed: 64
+		IdleTurnSpeed: 24
+		IdleSpeed: 80
+		VTOL: true
+	WithFacingSpriteBody:
+	QuantizeFacingsFromSequence:
+		Sequence: idle
+	WithShadow:
+	Cloak@CLOAKGENERATOR:
+		InitialDelay: 80
+		CloakDelay: 80
+		IsPlayerPalette: true
+		-RequiresCondition:
+	-ExternalCondition@CLOAKGENERATOR:
+	IssueOrderToBot@AI:
+		OrderName: DeployTransform
+		OrderTrigger: Damage
+		OrderInterval: 550
+		OrderChance: 100
+	DeathSounds@NORMAL:
+		DeathTypes: BulletDeath, ExplosionDeath, CabalDeath, CabalDeathUpg, TiberiumDeath
+	DeathSounds@BURNED:
+		Voice: Burned
+		DeathTypes: FireDeath
+	DeathSounds@ZAPPED:
+		Voice: Zapped
+		DeathTypes: EnergyDeath
+	SpawnHuskEffectOnDeath:
+		Weapon: shadteamair.husk
+	ActorStatValues:
+		Icon: icon
+		IconPalette: chrome
+		TooltipActor: shadteam
+		#Damage: 50
+
+
 PREDATOR: #Predator Tank
 	Inherits: ^Tank
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMove

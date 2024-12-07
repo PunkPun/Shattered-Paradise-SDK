@@ -1788,6 +1788,15 @@ zonedefr-desc = Durable Elite Soldier armed with an coil cannon.
      - Immune to Tiberium fields
      - Crush class: crushable only by Epics.
 
+shadteam-name =  Shadow Warrior
+shadteam-desc = Shadowy soldier armed with dual handgun and glider
+
+    Good vs: Infantry
+
+    Special:
+     - Will fly when ordered to deploy
+     - Crush class: crushable
+
 predator-name = Predator Tank
 predator-desc =  GDI's main battle tank armed with an anti-tank cannon and missile pod.
 

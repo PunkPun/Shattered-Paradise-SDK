@@ -873,6 +873,24 @@ KODCCannon2:
 	FirstBurstTargetOffset: 0,-200,0
 	FollowingBurstTargetOffset: 0,50,0
 
+ShadteamGun:
+	Inherits: ^RifleWeapon
+	Inherits@2: ^Piffs
+	ReloadDelay: 35
+	Range: 4c0
+	Report: infgun3.aud, gostgun1.aud, slvkgun1.aud
+	ValidTargets: Infantry, Ground, Water
+	InvalidTargets: Vehicle, Building, Defence, Air
+	Warhead@1Dam: SpreadDamage
+		Damage: 4500
+		Versus:
+			Infantry: 600
+			Building: 5
+			Defense: 5
+			Heavy: 5
+			Concrete: 5
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+
 Sniper:
 	Inherits: ^RifleWeapon
 	Inherits@2: ^Piffs

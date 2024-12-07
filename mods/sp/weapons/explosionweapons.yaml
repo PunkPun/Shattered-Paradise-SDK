@@ -1312,6 +1312,28 @@ devourer.husk:
 		MaximumSpinSpeed: 0
 		Acceleration: 0, 0, -4
 
+shadteamair.husk:
+	Inherits: ^plane.husk
+	Projectile: ProjetcileHusk
+		Image: shadteamair
+		TrailImage: explosion
+		TrailPalette: gradientred
+		TrailSequences: sparks
+		TrailInterval: 10000 # only play once at start
+		SpinChance: 0
+		SpinWhenVelocityXIsLowerThan: 40
+	Warhead@1: CreateEffect
+		Image: shadteamair
+		Explosions: die-onground
+		ValidTargets: Ground, Air, Water
+		ExplosionPalette: player
+		UsePlayerPalette: true
+	Warhead@2: CreateEffect
+		Image: shadteamair
+		Explosions: dieblood1, dieblood2, dieblood3, dieblood4, dieblood5, dieblood6
+		ValidTargets: Ground, Air, Water
+		ExplosionPalette: gradientred
+
 ^scrplane.husk:
 	Inherits: ^plane.husk
 	Projectile: ProjetcileHusk
@@ -1385,3 +1407,4 @@ scrincouncil.husk:
 		Image: scrincouncil
 		MaximumSpinSpeed: 0
 		Acceleration: 0, 0, -4
+
