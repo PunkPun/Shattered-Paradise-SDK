@@ -1795,6 +1795,8 @@ shadteam-desc = Shadowy soldier armed with dual handgun and glider
 
     Special:
      - Will fly when ordered to deploy
+     - No weapon when fly
+     - Cloaked
      - Crush class: crushable
 
 predator-name = Predator Tank
