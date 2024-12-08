@@ -231,6 +231,20 @@ scrciv1:
 		Tick: 60
 		Offset: 0, -20
 
+mwmn:
+	Inherits: civ1
+	Defaults:
+		Filename: muciv1.shp
+
+mutant:
+	Inherits: civ2
+	Defaults:
+		Filename: muciv2.shp
+
+mutant3:
+	Inherits: civ3
+	Defaults:
+		Filename: muciv3.shp
 
 cat:
 	Inherits@1: ^InfantryDeathAnims

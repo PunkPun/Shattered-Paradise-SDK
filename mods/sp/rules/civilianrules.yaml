@@ -1,181 +1,4 @@
-CHAMSPY:
-	Inherits: ^Soldier
-	Tooltip:
-		Name: chamspy-name
-	Voiced:
-		VoiceSet: Spy
-	Health:
-		HP: 12000
-	Mobile:
-		Speed: 95
-	Passenger:
-	-FirepowerMultiplier@ZealousBuff:
-	-ExternalCondition@ZealousBuff:
-	-WithIdleOverlayOnGround@ZealousBuff:
-	WithInfantryBody:
-		AttackSequences: shoot
-	ActorStatValues:
-		Icon: icon
-		IconPalette: chrome
-		Stats: Armor, Sight, Speed
 
-MUTANT:
-	Inherits: ^MutantSoldier
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
-	Inherits@EXPERIENCE: ^GainsExperience
-	Valued:
-		Cost: 120
-	Tooltip:
-		Name: mutantguy1-name
-	Voiced:
-		VoiceSet: Mutant
-	Health:
-		HP: 10000
-	Mobile:
-		Speed: 70
-	Armament@1:
-		Name: OnFoot
-		Weapon: MarineRifle
-		LocalOffset: 400,0,800
-		PauseOnCondition: WebDisable
-	Armament@Garrison:
-		Weapon: GMarineRifle
-		PauseOnCondition: WebDisable
-		MuzzleSequence: garrison-muzzle
-	AttackFrontal:
-		Voice: Attack
-		Armaments: OnFoot
-		FacingTolerance: 2
-	AutoTarget:
-		ScanRadius: 5 #PREF: save trait looks up and scan armaments
-	WithInfantryBody:
-		AttackSequences: shoot
-	ActorStatValues:
-		Damage: 25
-		Icon: icon
-		IconPalette: chrome
-
-MWMN:
-	Inherits: ^MutantSoldier
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
-	Inherits@EXPERIENCE: ^GainsExperience
-	Valued:
-		Cost: 120
-	Tooltip:
-		Name: mutantguy1-name
-	Voiced:
-		VoiceSet: CivilianFemale
-	Health:
-		HP: 10000
-	Mobile:
-		Speed: 70
-	Armament@1:
-		Name: OnFoot
-		Weapon: MarineRifle
-		LocalOffset: 400,0,800
-		PauseOnCondition: WebDisable
-	Armament@Garrison:
-		Weapon: GMarineRifle
-		PauseOnCondition: WebDisable
-		MuzzleSequence: garrison-muzzle
-	AttackFrontal:
-		Voice: Attack
-		Armaments: OnFoot
-		FacingTolerance: 2
-	AutoTarget:
-		ScanRadius: 5 #PREF: save trait looks up and scan armaments
-	WithInfantryBody:
-		AttackSequences: shoot
-	ActorStatValues:
-		Damage: 25
-		Icon: icon
-		IconPalette: chrome
-
-MUTANT3:
-	Inherits: ^MutantSoldier
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
-	Inherits@EXPERIENCE: ^GainsExperience
-	Valued:
-		Cost: 120
-	Tooltip:
-		Name: mutantguy2-name
-	Voiced:
-		VoiceSet: Mutant
-	Health:
-		HP: 10000
-	Mobile:
-		Speed: 70
-	Armament@1AP:
-		Name: OnFoot
-		Weapon: MarineRifleAP
-		LocalOffset: 400,0,800
-		PauseOnCondition: WebDisable
-	Armament@GarrisonAP:
-		Weapon: GMarineRifleAP
-		PauseOnCondition: WebDisable
-		MuzzleSequence: garrison-muzzle
-	AttackFrontal:
-		Voice: Attack
-		Armaments: OnFoot
-		FacingTolerance: 2
-	AutoTarget:
-		ScanRadius: 5 #PREF: save trait looks up and scan armaments
-	WithInfantryBody:
-		AttackSequences: shoot
-	ActorStatValues:
-		Damage: 25
-		Icon: icon
-		IconPalette: chrome
-
-TRATOS:
-	Inherits: ^Mutant
-	Tooltip:
-		Name: tratos-name
-	Voiced:
-		VoiceSet: Tratos
-	Health:
-		HP: 10000
-	Mobile:
-		Speed: 80
-	-FirepowerMultiplier@ZealousBuff:
-	-ExternalCondition@ZealousBuff:
-	-WithIdleOverlayOnGround@ZealousBuff:
-	ActorStatValues:
-		Icon: icon
-		IconPalette: chrome
-
-OXANNA:
-	Inherits: ^Soldier
-	Tooltip:
-		Name: oxanna-name
-	Voiced:
-		VoiceSet: Oxanna
-	Health:
-		HP: 10000
-	Mobile:
-		Speed: 65
-	WithInfantryBody:
-		AttackSequences: shoot
-	-FirepowerMultiplier@ZealousBuff:
-	-ExternalCondition@ZealousBuff:
-	-WithIdleOverlayOnGround@ZealousBuff:
-	ActorStatValues:
-		Stats: Armor, Sight, Speed
-
-SLAV:
-	Inherits: ^Soldier
-	Tooltip:
-		Name: slavik-name
-	Voiced:
-		VoiceSet: Slavick
-	Health:
-		HP: 30000
-	Mobile:
-		Speed: 65
-	WithInfantryBody:
-		AttackSequences: shoot
-	ActorStatValues:
-		Stats: Armor, Sight, Speed
 
 CIV1:
 	Inherits: ^CivilianInfantry
@@ -196,6 +19,29 @@ CIV2:
 	Inherits: ^CivilianInfantry
 	ActorStatValues:
 		Stats: Armor, Sight, Speed
+
+MWMN:
+	Inherits: CIV1
+	Inherits@Render: ^MutRenderGreen
+	Inherits@1: ^HealsOnTiberium
+	-DamagedByTerrain:
+	Mobile:
+		Locomotor: TibInmuneInfantry
+	Tooltip:
+		Name: muciv-name
+
+MUTANT3:
+	Inherits: MWMN
+
+MUTANT:
+	Inherits: CIV2
+	Inherits@Render: ^MutRender
+	Inherits@1: ^HealsOnTiberium
+	-DamagedByTerrain:
+	Mobile:
+		Locomotor: TibInmuneInfantry
+	Tooltip:
+		Name: muciv-name
 
 SCRCIV1:
 	Inherits: ^CivilianInfantry

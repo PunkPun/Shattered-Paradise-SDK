@@ -1,0 +1,307 @@
+#Seq:
+mutant:
+	Inherits: ^InfantryDeathAnims
+	Defaults:
+		Filename: mutant.shp
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 292
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		ShadowStart: 300
+	idle1:
+		Start: 56
+		Length: 15
+		ShadowStart: 348
+	idle2:
+		Start: 71
+		Length: 15
+		ShadowStart: 363
+	prone-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+		ShadowStart: 378
+	prone-stand:
+		Start: 86
+		Facings: 8
+		Stride: 6
+		ShadowStart: 378
+	die1:
+		Start: 134
+		Length: 15
+		ShadowStart: 426
+	die2:
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+	die-crushed:
+		Start: 159
+		Length: 5
+		ShadowStart: 451
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 164
+		Length: 6
+		Facings: 8
+		ShadowStart: 456
+		IgnoreWorldTint: true
+	prone-shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		ShadowStart: 504
+		IgnoreWorldTint: true
+	standup-0:
+		Start: 260
+		Length: 2
+		Facings: 8
+		ShadowStart: 552
+	icon:
+		Filename: mutciv1icon.shp
+		Offset: 0, 0
+
+mwmn:
+	Inherits: ^InfantryDeathAnims
+	Defaults:
+		Filename: mwmn1.shp
+		Tick: 80
+	stand:
+		Facings: 8
+		#ShadowStart: 292
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		#ShadowStart: 300
+	idle1:
+		Start: 56
+		Length: 15
+		#ShadowStart: 348
+	idle2:
+		Start: 71
+		Length: 15
+		#ShadowStart: 363
+	prone-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+		#ShadowStart: 378
+	prone-stand:
+		Start: 86
+		Facings: 8
+		Stride: 6
+		#ShadowStart: 378
+	die1:
+		Start: 134
+		Length: 15
+		#ShadowStart: 426
+	die2:
+		Start: 149
+		Length: 15
+		#ShadowStart: 441
+		Tick: 80
+	die-crushed:
+		Start: 159
+		Length: 5
+		#ShadowStart: 451
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 164
+		Length: 6
+		Facings: 8
+		IgnoreWorldTint: true
+		#ShadowStart: 456
+	prone-shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		IgnoreWorldTint: true
+		#ShadowStart: 504
+	standup-0:
+		Start: 260
+		Length: 2
+		Facings: 8
+		#ShadowStart: 552
+	icon:
+		Filename: mutwmnicon.shp
+
+mutant3:
+	Inherits: ^InfantryDeathAnims
+	Defaults:
+		Filename: mutant3.shp
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 292
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		ShadowStart: 300
+	idle1:
+		Start: 56
+		Length: 15
+		ShadowStart: 348
+	idle2:
+		Start: 71
+		Length: 15
+		ShadowStart: 363
+	prone-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+		ShadowStart: 378
+	prone-stand:
+		Start: 86
+		Facings: 8
+		Stride: 6
+		ShadowStart: 378
+	die1:
+		Start: 134
+		Length: 15
+		ShadowStart: 426
+	die2:
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+		Tick: 80
+	die-crushed:
+		Start: 159
+		Length: 5
+		ShadowStart: 451
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 164
+		Length: 6
+		Facings: 8
+		ShadowStart: 456
+		IgnoreWorldTint: true
+	prone-shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		ShadowStart: 504
+		IgnoreWorldTint: true
+	standup-0:
+		Start: 260
+		Length: 2
+		Facings: 8
+		ShadowStart: 552
+	icon:
+		Filename: muthandgun2icon.shp
+
+#rule:
+MUTANT:
+	Inherits: ^MutantSoldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
+	Inherits@EXPERIENCE: ^GainsExperience
+	Valued:
+		Cost: 120
+	Tooltip:
+		Name: mutantguy1-name
+	Voiced:
+		VoiceSet: Mutant
+	Health:
+		HP: 10000
+	Mobile:
+		Speed: 70
+	Armament@1:
+		Name: OnFoot
+		Weapon: MarineRifle
+		LocalOffset: 400,0,800
+		PauseOnCondition: WebDisable
+	Armament@Garrison:
+		Weapon: GMarineRifle
+		PauseOnCondition: WebDisable
+		MuzzleSequence: garrison-muzzle
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+		FacingTolerance: 2
+	AutoTarget:
+		ScanRadius: 5 #PREF: save trait looks up and scan armaments
+	WithInfantryBody:
+		AttackSequences: shoot
+	ActorStatValues:
+		Damage: 25
+		Icon: icon
+		IconPalette: chrome
+
+MWMN:
+	Inherits: ^MutantSoldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
+	Inherits@EXPERIENCE: ^GainsExperience
+	Valued:
+		Cost: 120
+	Tooltip:
+		Name: mutantguy1-name
+	Voiced:
+		VoiceSet: CivilianFemale
+	Health:
+		HP: 10000
+	Mobile:
+		Speed: 70
+	Armament@1:
+		Name: OnFoot
+		Weapon: MarineRifle
+		LocalOffset: 400,0,800
+		PauseOnCondition: WebDisable
+	Armament@Garrison:
+		Weapon: GMarineRifle
+		PauseOnCondition: WebDisable
+		MuzzleSequence: garrison-muzzle
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+		FacingTolerance: 2
+	AutoTarget:
+		ScanRadius: 5 #PREF: save trait looks up and scan armaments
+	WithInfantryBody:
+		AttackSequences: shoot
+	ActorStatValues:
+		Damage: 25
+		Icon: icon
+		IconPalette: chrome
+
+MUTANT3:
+	Inherits: ^MutantSoldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
+	Inherits@EXPERIENCE: ^GainsExperience
+	Valued:
+		Cost: 120
+	Tooltip:
+		Name: mutantguy2-name
+	Voiced:
+		VoiceSet: Mutant
+	Health:
+		HP: 10000
+	Mobile:
+		Speed: 70
+	Armament@1AP:
+		Name: OnFoot
+		Weapon: MarineRifleAP
+		LocalOffset: 400,0,800
+		PauseOnCondition: WebDisable
+	Armament@GarrisonAP:
+		Weapon: GMarineRifleAP
+		PauseOnCondition: WebDisable
+		MuzzleSequence: garrison-muzzle
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+		FacingTolerance: 2
+	AutoTarget:
+		ScanRadius: 5 #PREF: save trait looks up and scan armaments
+	WithInfantryBody:
+		AttackSequences: shoot
+	ActorStatValues:
+		Damage: 25
+		Icon: icon
+		IconPalette: chrome
