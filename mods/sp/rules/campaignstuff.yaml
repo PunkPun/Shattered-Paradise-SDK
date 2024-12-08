@@ -642,7 +642,7 @@ SHADTEAM:
 	Buildable:
 		Queue: Infantry.Shared, Infantry.Nod
 		BuildPaletteOrder: 19
-		Prerequisites: ~napile, naradr, ~techlevel.4, ~campaignunit
+		Prerequisites: ~nahand, naradr, ~techlevel.4, ~campaignunit
 		Description: shadteam-desc
 		BuildDuration: 250
 		BuildDurationModifier: 100
