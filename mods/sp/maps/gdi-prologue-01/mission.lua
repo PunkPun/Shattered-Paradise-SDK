@@ -29,7 +29,7 @@ end
 
 -- ####### information
 IntroductionInfo = function()
-	UserInterface.SetMissionText(UserInterface.Translate("mission-lua-begin"))
+	UserInterface.SetMissionText(UserInterface.GetFluentMessage("mission-lua-begin"))
 	Notification("eva-lua-intro-1")
 	Trigger.AfterDelay(DateTime.Seconds(7), function()
 			Tip("tip-lua-usage-select")
@@ -118,7 +118,7 @@ end
 
 FinalFlagMessage = function()
 	Notification("eva-lua-finish")
-	UserInterface.SetMissionText(UserInterface.Translate("eva-lua-finish"))
+	UserInterface.SetMissionText(UserInterface.GetFluentMessage("eva-lua-finish"))
 end
 
 Notification = function(text)

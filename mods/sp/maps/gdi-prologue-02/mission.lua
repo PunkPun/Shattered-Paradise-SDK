@@ -63,7 +63,7 @@ end
 MissionMapSetUp = function()
 	Camera.Position = MCVBeacon.CenterPosition
 	LocalPlayer.Cash = 0
-	CurrentMissionText = UserInterface.Translate("mission-lua-begin")
+	CurrentMissionText = UserInterface.GetFluentMessage("mission-lua-begin")
 end
 
 

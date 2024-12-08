@@ -200,7 +200,7 @@ SendWaveLoop = function()
 	Reinforcements.Reinforce(Gdi_ai, GDIForces, Utils.Random(GDIWays), 60,  function(a)
 		if a.Type == "mcv" then
 			MCVprotected = MCVprotected + 1
-			Media.DisplayMessage(UserInterface.Translate("notification-lua-mcv") .. string.format(" %d.", MCVprotected), UserInterface.Translate("notification-lua-name"), HSLColor.FromHex("EEEE66"))
+			Media.DisplayMessage(UserInterface.GetFluentMessage("notification-lua-mcv") .. string.format(" %d.", MCVprotected), UserInterface.GetFluentMessage("notification-lua-name"), HSLColor.FromHex("EEEE66"))
 		end
 		a.Destroy()
 	end)
@@ -296,9 +296,9 @@ KodiakComingDuration = 280;
 Tick = function()
 	if RemainingTime >= 0 then
 		RemainingTime = RemainingTime - 1
-		UserInterface.SetMissionText(UserInterface.Translate("mission-lua-timer") .." " .. Utils.FormatTime(RemainingTime))
+		UserInterface.SetMissionText(UserInterface.GetFluentMessage("mission-lua-timer") .." " .. Utils.FormatTime(RemainingTime))
 	else
-		UserInterface.SetMissionText(UserInterface.Translate("mission-lua-complete"))
+		UserInterface.SetMissionText(UserInterface.GetFluentMessage("mission-lua-complete"))
 		CheckObjectivesOnMissionEnd(true)
 	end
 

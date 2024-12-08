@@ -105,7 +105,7 @@ end
 
 -- ####### information
 IntroductionInfo = function()
-	CurrentMissionText = UserInterface.Translate("mission-lua-begin")
+	CurrentMissionText = UserInterface.GetFluentMessage("mission-lua-begin")
 	Notification("cabal-lua-intro-1")
 	Trigger.AfterDelay(DateTime.Seconds(7), function()
 			Notification("cabal-lua-intro-2")
@@ -195,7 +195,7 @@ HackOneArrayMessage = function()
 		Notification("cabal-lua-hack-one-array-3")
 	end)
 
-	CurrentMissionText = UserInterface.Translate("mission-lua-locate-alien")
+	CurrentMissionText = UserInterface.GetFluentMessage("mission-lua-locate-alien")
 end
 
 HackTwoArrayMessage = function()
@@ -237,12 +237,12 @@ end
 
 ReplicatorFoundMessage = function()
 	Notification("cabal-lua-find-alien")
-	CurrentMissionText = UserInterface.Translate("mission-lua-capture-alien")
+	CurrentMissionText = UserInterface.GetFluentMessage("mission-lua-capture-alien")
 	LocalPlayer.MarkCompletedObjective(ObjectiveFindAlien)
 end
 
 MissionCompleteMessage = function()
-	CurrentMissionText = UserInterface.Translate("mission-lua-complete")
+	CurrentMissionText = UserInterface.GetFluentMessage("mission-lua-complete")
 	LocalPlayer.MarkCompletedObjective(ObjectiveCaptureAlien)
 end
 
@@ -684,7 +684,7 @@ end
 Tick = function()
 	if RemainingSabotogeTime > 0 then
 		RemainingSabotogeTime = RemainingSabotogeTime - 1
-		UserInterface.SetMissionText(CurrentMissionText .. "\n" .. UserInterface.Translate("mission-lua-timmer") .. " " .. Utils.FormatTime(RemainingSabotogeTime))
+		UserInterface.SetMissionText(CurrentMissionText .. "\n" .. UserInterface.GetFluentMessage("mission-lua-timmer") .. " " .. Utils.FormatTime(RemainingSabotogeTime))
 	else
 		UserInterface.SetMissionText(CurrentMissionText)
 	end

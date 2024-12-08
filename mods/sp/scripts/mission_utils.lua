@@ -12,8 +12,8 @@
 ---@param description string key of the translation string
 ---@return number id used to query for the objective later
 AddPrimaryObjective = function(player, description)
-	local translation = UserInterface.Translate(description)
-	return player.AddObjective(translation, UserInterface.Translate("primary-objective"), true)
+	local translation = UserInterface.GetFluentMessage(description)
+	return player.AddObjective(translation, UserInterface.GetFluentMessage("primary-objective"), true)
 end
 
 ---Adds a new optional objective, translates it and announces it via in-game chat message.
@@ -21,8 +21,8 @@ end
 ---@param description string key of the translation string
 ---@return number id used to query for the objective later
 AddSecondaryObjective = function(player, description)
-	local translation = UserInterface.Translate(description)
-	return player.AddObjective(translation, UserInterface.Translate("secondary-objective"), false)
+	local translation = UserInterface.GetFluentMessage(description)
+	return player.AddObjective(translation, UserInterface.GetFluentMessage("secondary-objective"), false)
 end
 
 ---Adds a new mandatory objective, translates it and announces it via in-game chat message.
@@ -30,8 +30,8 @@ end
 ---@param description string key of the translation string
 ---@return number id used to query for the objective later
 AddPrimaryObjective = function(player, description)
-	local translation = UserInterface.Translate(description)
-	return player.AddObjective(translation, UserInterface.Translate("primary-objective"), true)
+	local translation = UserInterface.GetFluentMessage(description)
+	return player.AddObjective(translation, UserInterface.GetFluentMessage("primary-objective"), true)
 end
 
 ---Adds a new optional objective, translates it and announces it via in-game chat message.
@@ -39,10 +39,10 @@ end
 ---@param description string key of the translation string
 ---@return number id used to query for the objective later
 AddSecondaryObjective = function(player, description)
-	local translation = UserInterface.Translate(description)
-	return player.AddObjective(translation, UserInterface.Translate("secondary-objective"), false)
+	local translation = UserInterface.GetFluentMessage(description)
+	return player.AddObjective(translation, UserInterface.GetFluentMessage("secondary-objective"), false)
 end
 
 TranslatedNotification = function(who, text, color)
-	Media.DisplayMessage(UserInterface.Translate(text), UserInterface.Translate(who), HSLColor.FromHex(color))
+	Media.DisplayMessage(UserInterface.GetFluentMessage(text), UserInterface.GetFluentMessage(who), HSLColor.FromHex(color))
 end
