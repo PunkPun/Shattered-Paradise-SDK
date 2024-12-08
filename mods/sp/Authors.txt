@@ -290,6 +290,7 @@ Assets come from three sources, Public, Vanilla and made by Nolt, if an asset is
    > Nod Engineer
    > Disc Thrower
    > Cyborg
+   > Mutant Civilians
  OverWatch:
    > Battle Bus
  ppap11404:
