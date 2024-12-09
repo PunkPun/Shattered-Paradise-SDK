@@ -122,7 +122,7 @@ templar:
 		Tick: 60
 	stand:
 		Facings: -8
-		ShadowStart: 321
+		ShadowStart: 319
 	run:
 		Start: 8
 		Length: 8
