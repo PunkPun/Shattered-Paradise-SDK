@@ -113,7 +113,7 @@ ORCA:
 		EmptySequence: pip-missileempty
 		Palette: pips
 	ActorStatValues:
-		Damage: 40
+		Damage: 80
 		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MinRange, None, MaxRange
 	ActorStatOverride@CeramicPlating:
 		Health: 18750

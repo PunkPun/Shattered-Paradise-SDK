@@ -188,7 +188,7 @@ APC: #Amphibious APC
 		Speed: 90
 		Locomotor: AmphAPCLocomotor
 	Health:
-		HP: 35000
+		HP: 30000
 	Turreted:
 		TurnSpeed: 20
 		Offset: -200,0,390

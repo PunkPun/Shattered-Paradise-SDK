@@ -638,13 +638,13 @@ SHADTEAM:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
 	Inherits@EXPERIENCE: ^GainsExperience
 	Valued:
-		Cost: 400
+		Cost: 600
 	Buildable:
 		Queue: Infantry.Shared, Infantry.Nod
 		BuildPaletteOrder: 19
 		Prerequisites: ~nahand, naradr, ~techlevel.4, ~campaignunit
 		Description: shadteam-desc
-		BuildDuration: 250
+		BuildDuration: 500
 		BuildDurationModifier: 100
 	Tooltip:
 		Name: shadteam-name
@@ -655,7 +655,7 @@ SHADTEAM:
 		VoiceSet: BlackHand
 		Volume: 8
 	Mobile:
-		Speed: 80
+		Speed: 75
 	Health:
 		HP: 15000
 	Transforms:
@@ -689,6 +689,8 @@ SHADTEAM:
 		IsPlayerPalette: true
 		-RequiresCondition:
 	-ExternalCondition@CLOAKGENERATOR:
+	ActorStatValues:
+		Damage: 45
 
 SHADTEAMAIR:
 	Inherits: ^AirInfantry
@@ -697,7 +699,7 @@ SHADTEAMAIR:
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@VISION: ^8CellVisionAir
 	Valued:
-		Cost: 400
+		Cost: 600
 	Tooltip:
 		Name: shadteam-name
 	UpdatesPlayerStatistics:
@@ -1165,7 +1167,7 @@ ZOMCA: ## Orca Fighter
 		EmptySequence: pip-apoloammoempty
 		Palette: apcyan
 	ActorStatValues:
-		Damage: 40
+		Damage: 200
 		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MinRange, None, MaxRange
 	ActorStatOverride@CeramicPlating:
 		Health: 25000
@@ -1352,7 +1354,7 @@ BEASTRIDER: # Beast Rider
 	Targetable:
 		TargetTypes: Ground, Vehicle, OrganicVehicle, NoRepair
 	Health:
-		HP: 26000
+		HP: 30000
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -1382,7 +1384,7 @@ BEASTRIDER: # Beast Rider
 	WithMuzzleOverlay:
 	Armament@PRIMARY:
 		Weapon: BeastRiderCannon
-		Damage: 140
+		Damage: 50
 		LocalOffset: 500,100,300
 		MuzzleSequence: muzzle
 		MuzzlePalette: gensmkexploj
@@ -1393,7 +1395,7 @@ BEASTRIDER: # Beast Rider
 		Name: secondary
 		Weapon: BeastRiderSwarmBlue
 		LocalOffset: 30,0,-480
-		Damage: 40
+		Damage: 50
 		RequiresCondition: blue_shards
 	Armament@Secondary2:
 		Name: secondary
@@ -1446,10 +1448,10 @@ BEASTRIDER: # Beast Rider
 	-ExternalCondition@ZealousBuff:
 	-WithIdleOverlayOnGround@ZealousBuff:
 	ActorStatValues:
-		Damage: 18
+		Damage: 50
 		Upgrades: upgrade.blue_shards, upgrade.tiberium_infusion
 	ActorStatOverride@Tibinfusion:
-		Health: 32500
+		Health: 37500
 		RequiresCondition: tibinfusion
 
 RAYRIDER:

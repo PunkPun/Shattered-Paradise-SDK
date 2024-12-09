@@ -1789,14 +1789,14 @@ zonedefr-desc = Durable Elite Soldier armed with an coil cannon.
      - Crush class: crushable only by Epics.
 
 shadteam-name =  Shadow Warrior
-shadteam-desc = Shadowy soldier armed with dual handgun and glider
+shadteam-desc = Invisible soldier with a glider, armed with dual handguns.
 
     Good vs: Infantry
 
     Special:
      - Will fly when ordered to deploy
-     - No weapon when fly
-     - Cloaked
+     - No weapon when in gliding mode
+     - Cloaked in both modes
      - Crush class: crushable
 
 predator-name = Predator Tank
@@ -2471,7 +2471,7 @@ templar-desc = Warrior resurrected regenesis prototype armed with a flamethrower
 
     Special:
      - Does not go prone after taking fire
-     - Immune to Tiberium fields
+     - Heals on Tiberium fields
      - Crush class: crushable
 
     Upgrades:

@@ -731,7 +731,7 @@ CRUSADER:
 		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MinRange, None, MaxRange
 
 TEMPLAR:
-	Inherits: ^Soldier
+	Inherits: ^MutantSoldier
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
 	Inherits@BLUEFLAME: ^AffectedByPurifyingFlame
 	Inherits@EXPERIENCE: ^GainsExperience
@@ -791,7 +791,6 @@ TEMPLAR:
 	AutoTarget:
 		ScanRadius: 5 #PREF: save trait looks up and scan armaments
 	RenderSprites:
-	-DamagedByTerrain:
 	-TakeCover:
 	ActorStatValues:
 		Damage: 80
@@ -811,7 +810,7 @@ EXEMPLAR:
 		Multiplier: 20
 		Prerequisites: AIOnly
 	Valued:
-		Cost: 400
+		Cost: 500
 	Tooltip:
 		Name: exemplar-name
 	UpdatesPlayerStatistics:
@@ -823,7 +822,6 @@ EXEMPLAR:
 		Volume: 1
 	Mobile:
 		Speed: 75
-		Locomotor: HeavyInfantry
 	Armament@1:
 		Weapon: ExemplarVulcan
 		LocalOffset: 450,180,480
@@ -841,8 +839,6 @@ EXEMPLAR:
 		Voice: Attack
 		Armaments: OnFoot
 		FacingTolerance: 2
-	Crushable:
-		CrushClasses: HeavyInfantry
 	AutoTarget:
 		ScanRadius: 6 #PREF: save trait looks up and scan armaments
 	BodyOrientation:
@@ -2385,7 +2381,7 @@ CBORG: #Missile Cyborg
 		BuildDuration: 250
 		BuildDurationModifier: 100
 	Health:
-		HP: 25000
+		HP: 30000
 	Voiced:
 		VoiceSet: Cyborg
 	Mobile:

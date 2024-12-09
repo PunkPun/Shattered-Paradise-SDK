@@ -115,11 +115,11 @@ upgrade.purifying_flame:
 	Buildable:
 		Queue: Upgrade.Shared, Upgrade.Nod
 		BuildPaletteOrder: 4
-		BuildDuration: 1875
+		BuildDuration: 1500
 		Prerequisites: ~upgrade.nod, naradr, ~techlevel.4
 		Description: purifying_flame-desc
 	Valued:
-		Cost: 2500
+		Cost: 2000
 	WithProductionIconOverlay:
 		Prerequisites: upgrade.purifying_flame
 
