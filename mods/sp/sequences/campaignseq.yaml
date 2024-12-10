@@ -804,7 +804,7 @@ apucmdo:
 		Length: 6
 		ShadowStart: 6
 	icon:
-		Filename: gosticon.shp
+		Filename: apucmdoicon.shp
 
 cyc3:
 	Inherits@1: ^InfantryDeathAnims
