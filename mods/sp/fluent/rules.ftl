@@ -1753,6 +1753,17 @@ umagon-desc = Umagon was one of the GDI's "good girls", she sure was.
      - Immune to mindcontrol
      - Crush class: crushable
 
+zonecomdo-name = Zone Commando
+zonecomdo-desc = Commando armed with a ion railgun and C4.
+
+    Good vs Infantry
+
+    Special:
+     - Maximum Supply of 1
+     - Heals on Tiberium fields
+     - Immune to mindcontrol
+     - Crush class: crushable only by Epics
+
 cycd-name = Cyborg Elite
 cycd-desc =  Elite cyborg armed with a plasma cannon.
 

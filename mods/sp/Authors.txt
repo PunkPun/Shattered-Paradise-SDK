@@ -282,6 +282,7 @@ Assets come from three sources, Public, Vanilla and made by Nolt, if an asset is
    > Multiple Civilian Vehicles, Tubes and Boxes
  ImP_RuLz:
    > Container model
+   > Zone Commando
  Jah:
    > Storm Rider voxel.	
  Super Joe:

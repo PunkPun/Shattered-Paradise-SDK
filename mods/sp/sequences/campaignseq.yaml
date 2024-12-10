@@ -763,6 +763,49 @@ umagon:
 	icon:
 		Filename: umagicon.shp
 
+apucmdo:
+	Inherits@1: ^InfantryDeathAnims
+	Defaults:
+		Filename: apucmdo.shp
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 146
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		ShadowStart: 154
+	shoot:
+		Start: 72
+		Length: 1
+		Facings: 8
+		ShadowStart: 218
+		Tick: 400
+		IgnoreWorldTint: true
+	idle1:
+		Start: 80
+		Length: 19
+		ShadowStart: 226
+	idle2:
+		Start: 99
+		Length: 20
+		ShadowStart: 245
+	die1:
+		Start: 119
+		Length: 14
+		ShadowStart: 265
+	die2:
+		Start: 133
+		Length: 12
+		ShadowStart: 279
+	webguy:
+		Filename: webguySPbig.shp
+		Length: 6
+		ShadowStart: 6
+	icon:
+		Filename: gosticon.shp
+
 cyc3:
 	Inherits@1: ^InfantryDeathAnims
 	Defaults:

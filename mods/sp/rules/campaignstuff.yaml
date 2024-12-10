@@ -525,6 +525,68 @@ CYC3:
 		Damage: 300
 		Upgrades: upgrade.cybernetic_leg_enhancements, upgrade.regenerative_materials
 
+APUCMDO: #ZoneCommando
+	Inherits: ^Soldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@COMMANDO: ^CommandoIcon
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: zonecomdo-name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Buildable:
+		Queue: Infantry.Shared, Infantry.GDI
+		Description: zonecomdo-desc
+		BuildPaletteOrder: 25
+		Prerequisites: ~gapile, gatech, upgrade.sonic_emitter_protocol, ~techlevel.5, ~campaignunit
+		BuildLimit: 1
+		BuildDuration: 1250
+		BuildDurationModifier: 100
+	Voiced:
+		VoiceSet: Ghost
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 140000
+	-Targetable@MC:
+	-DamagedByTerrain:
+	-TakeCover:
+	Armament:
+		Weapon: LtRail
+		LocalOffset: 600,100,900
+		Name: OnFoot
+		PauseOnCondition: WebDisable
+	Armament@pit:
+		Weapon: LtRailSmudge
+		LocalOffset: 600,100,900
+		Name: OnFoot
+		PauseOnCondition: WebDisable
+	Armament@garrison:
+		Weapon: GLtRail
+		MuzzleSequence: garrison-muzzle
+	Armament@garrisonpit:
+		Weapon: GLtRailSmudge
+	WithMuzzleOverlay:
+	Crushable:
+		CrushClasses: HeavyInfantry
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+		FacingTolerance: 2
+	AutoTarget:
+		ScanRadius: 9 #PREF: save trait looks up and scan armaments
+	Passenger:
+		CustomPipType: blue
+	WithDeathAnimation@explosion:
+		DeathSequence: die5
+		FallbackSequence: die5
+		UseDeathTypeSuffix: false
+		-DeathTypes:
+	ActorStatValues:
+		Damage: 90
+
 ZONERAIDER: #ZoneRaider
 	Inherits: ^Soldier
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
