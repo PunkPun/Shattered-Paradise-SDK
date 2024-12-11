@@ -1753,7 +1753,7 @@ umagon-desc = Umagon was one of the GDI's "good girls", she sure was.
      - Immune to mindcontrol
      - Crush class: crushable
 
-zonecomdo-name = Zone Commando
+zonecomdo-name = Ghost Stalker
 zonecomdo-desc = Commando armed with a ion railgun and C4.
 
     Good vs Infantry
