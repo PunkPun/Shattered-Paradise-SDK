@@ -2587,7 +2587,7 @@ seer-name = Tyrant
 seer-desc = Mutant infantry capable of channeling psychic energy waves and
     increasing the efficiency of nearby friendly units.
 
-    Good vs: Vehicles, Aircraft
+    Good vs: Everything
 
     Special:
      - Heals on Tiberium fields
