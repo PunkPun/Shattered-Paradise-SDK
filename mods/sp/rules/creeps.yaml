@@ -178,8 +178,6 @@ ZOMBIE:
 	-GrantRandomCondition@tiberium:
 	-SpawnActorOnDeath@tiberium1:
 	-SpawnActorOnDeath@tiberium2:
-	-DamagedByTintedCells@Default:
-	-DamagedByTintedCells@BlueRadiation:
 	TransformOnCondition:
 		IntoActor: berserker
 		RequiresCondition: Transform
@@ -249,8 +247,6 @@ BERSERKER:
 	-GrantRandomCondition@tiberium:
 	-SpawnActorOnDeath@tiberium1:
 	-SpawnActorOnDeath@tiberium2:
-	-DamagedByTintedCells@Default:
-	-DamagedByTintedCells@BlueRadiation:
 	MapEditorData:
 		Categories: Creep
 	-FirepowerMultiplier@ZealousBuff:
@@ -352,8 +348,6 @@ CRAB:
 		ReduceMoveRadiusDelay: 1
 		MinMoveDelay: 25
 		MaxMoveDelay: 100
-	-DamagedByTintedCells@Default:
-	-DamagedByTintedCells@BlueRadiation:
 	MapEditorData:
 		Categories: Creep
 	WithDeathAnimation@normal:
@@ -421,7 +415,7 @@ JFISH:
 	Health:
 		HP: 90000
 	Valued:
-		Cost: 100
+		Cost: 800
 	Armor:
 		Type: Light
 	Voiced:
@@ -494,7 +488,6 @@ JFISH:
 	-SpawnActorOnDeath@conversion:
 	-SpawnActorOnDeath@conversionUpg:
 	-TurnOnIdle:
-	-DamagedByTintedCells@BlueRadiation:
 	DamagedByTintedCells@OrangeRadiation:
 		RequiresCondition: attack
 	DamagedByTintedCells@Default:

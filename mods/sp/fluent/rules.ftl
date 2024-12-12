@@ -421,7 +421,16 @@ harv-desc = Collects Tiberium for processing.
 nodharv-name = Nod Harvester
 mutharv-name = Mutant Harvester
 cabharv-name = C.A.B.A.L. Harvester
+
 scrharv-name = Scrin Harvester
+harvscr-desc = Collects Tiberium for processing.
+
+    Special:
+     - Absorbs essence from killed units to heal
+     - Harvests Tiberium
+     - Immune to Veins
+     - Can crush infantry
+     - Selfheal
 
 gacnst-name = GDI Construction Yard
 gacnst-desc = Builds base structures.
@@ -1059,7 +1068,7 @@ sonic-desc = Armored high-tech vehicle with a powerful harmonic resonance cannon
      - Can attack while moving
 
 g4tnk-name = Mammoth Tank
-g4tnk-desc = Heavy assault tank.
+g4tnk-desc = Heavy assault tank. The pride of GDI's arsenal.
 
     Good vs: Vehicles, Aircraft
 
@@ -1172,7 +1181,7 @@ howtlizer-desc = High tech artillery armed with a self-propelled howitzer and a 
      - Can shoot over walls
      - Can crush infantry
      - Cloaked
-     - Cloaking malfunctions when at red hp
+     - Cloaking malfunctions when at critical hp
 
 stnk-name = Stealth Tank
 stnk-desc = Hit-and-run tank armed with twin dragon TOW missiles and a cloaking device.
@@ -1184,7 +1193,7 @@ stnk-desc = Hit-and-run tank armed with twin dragon TOW missiles and a cloaking 
      - Can attack air
      - Can shoot over walls
      - Can crush infantry
-     - Cloaking malfunctions when at red hp
+     - Cloaking malfunctions when at critical hp
      - Can attack while moving
 
     Upgrades:
@@ -1215,6 +1224,7 @@ mutquad-desc = Armored truck armed with a quad cannon.
     Good vs: Infantry, Aircraft
 
     Special:
+     - Can attack air
      - Provides stealth detection
      - Can attack while moving
 
@@ -1262,6 +1272,7 @@ wolf-desc = Tiberium beast that uses tiberium acid to melt its prey.
 
     Special:
      - Heals on Tiberium fields
+     - Immune to tiberium radiation
      - Attacks reduce target's attack and movement speed by 35%
      - Can attack enemies ahead while moving
      - Can mutate killed Infantry
@@ -1294,6 +1305,7 @@ deathclaw-desc = Melee beast from the outer redzones that brings death with its 
 
     Special:
      - Heals on Tiberium fields
+     - Immune to tiberium radiation
      - E.M.P. Immune
      - Slows enemy units with it's attack
      - Wild mind: Mind only controllable by Mastermind
@@ -1324,6 +1336,7 @@ weasau-desc = A long forgotten creature that has emerged again.
      - Immune to mind control
      - Can shoot over walls
      - Heals on Tiberium fields
+     - Immune to tiberium radiation
      - E.M.P. Immune
      - Deployability: Switch to melee attack gains +50 movement speed
        and Summons a brood of Weasaurus
@@ -1405,12 +1418,12 @@ spiderarty-desc = Heavy artillery that deploys drones at the targeted area.
 
     Special:
      - Minimum attack distance
-     - Spawns drones at target
-     - Gain 100% EXP from enemy killed by spawned drones
-     - Converts killed meaty creature into worker cyborgs
+     - Spawns drones at targetted area
+     - Gains 100% EXP from enemies killed by spawned drones
+     - Converts killed meaty creatures into worker cyborgs
      - Can shoot over walls
      - Can crush infantry
-     - Selfrepair
+     - Selfrepairs
 
     Upgrades:
      - Reclaim and Recycle
@@ -1421,7 +1434,7 @@ paladin-desc = Advanced walker armed with a twin laser cannon.
     Good vs: Ground targets
 
     Special:
-     - Selfrepair
+     - Selfrepairs
      - Can shoot over walls
      - Can crush infantry
 
@@ -1498,6 +1511,7 @@ tripod-desc = Advanced walker.
     Good vs Ground
 
     Special:
+     - Deals damage in a line
      - Absorbs essence from killed units to heal
      - Can shoot over walls
      - Can crush infantry
@@ -1576,8 +1590,8 @@ mutqueen-desc = Flying tiberium beast dealing high amount of damage and
     Good vs: Vehicles, Buildings
 
     Special:
-     - Lays eggs via deploy which later hatch as crabs that are hostile to anyone
-     - Gain 100% EXP from enemy killed by spawned crabs
+     - Lays eggs via deploy which later hatch as crabs that are hostile to everyone
+     - Gain 100% EXP from enemies killed by spawned crabs
      - Can attack enemies ahead while moving
      - Can mutate killed Infantry
 
@@ -1585,7 +1599,7 @@ mutqueen-desc = Flying tiberium beast dealing high amount of damage and
      - Tiberium Infusion
 
 falcon-name = Falcon
-falcon-desc = Fast jet that fires 4 high-exlosive rockets.
+falcon-desc = Super-sonic jet that fires 4 high-exlosive rockets.
 
     Good vs: Ground targets
 
@@ -1640,7 +1654,7 @@ scrdestroyer-desc = Scrin light frigate designed for long range combat.
 
     Upgrades:
      - Disc Barrage
-     - Hyper-Flight Rotors
+     - Hyper-Flight Engines
 
 scrtrans-name = Scrin Transport
 scrtrans-desc = Scrin transport.
@@ -1649,7 +1663,7 @@ scrtrans-desc = Scrin transport.
      - Can carry up to 3 vehicles or ten soldiers (no epics or nuke truck)
 
     Upgrades:
-     - Hyper-Flight Rotors
+     - Hyper-Flight Engines
 
 scrcarrier-name = Assault Carrier
 scrcarrier-desc = Scrin frigate.
@@ -1658,14 +1672,14 @@ scrcarrier-desc = Scrin frigate.
 
     Special:
      - Sends fighters at enemies 
-     - Gain 100% EXP from enemy killed by spawned fighters
+     - Gain 100% EXP from enemies killed by spawned fighters
      - Can attack Air
-     - Provides stealth detection when at air
+     - Provides stealth detection
      - Can absorb essence from killed enemies to heal
      - Can attack enemies while moving
 
     Upgrades:
-     - Hyper-Flight Rotors
+     - Hyper-Flight Engines
 
 scrbattleship-name = Battlecruiser
 scrbattleship-desc = The main battleship of Scrin and the pride of their fleet.
@@ -1680,7 +1694,7 @@ scrbattleship-desc = The main battleship of Scrin and the pride of their fleet.
      - Immune to mind control
 
     Upgrades:
-     - Hyper-Flight Rotors
+     - Hyper-Flight Engines
 
 wasp-name = Wasp
 wasp-desc = Aerial drone armed with dual railgun cannons.
@@ -1737,6 +1751,7 @@ ghost-desc =  Gil is the elite commando of Mutants, if not GDI.
      - Maximum Supply of 1
      - Demolishes structures with C4
      - Heals on Tiberium fields
+     - Immune to tiberium radiation
      - Immune to mindcontrol
      - Crush class: crushable
 
@@ -1750,17 +1765,19 @@ umagon-desc = Umagon was one of the GDI's "good girls", she sure was.
      - Maximum Supply of 1
      - Demolishes structures with C4
      - Heals on Tiberium fields
+     - Immune to tiberium radiation
      - Immune to mindcontrol
      - Crush class: crushable
 
 zonecomdo-name = Ghost Stalker
-zonecomdo-desc = Commando armed with a ion railgun and C4.
+zonecomdo-desc = Commando armed with an ion railgun and C4.
 
     Good vs Infantry
 
     Special:
      - Maximum Supply of 1
      - Heals on Tiberium fields
+     - Immune to tiberium radiation
      - Immune to mindcontrol
      - Crush class: crushable only by Epics
 
@@ -1780,24 +1797,24 @@ cycd-desc =  Elite cyborg armed with a plasma cannon.
      - Regenerative Materials
 
 zoneraider-name = Zone Raider
-zoneraider-desc = Elite Soldier armed with an sonic grenade launcher.
+zoneraider-desc = Elite soldier armed with a sonic grenade launcher.
 
     Good vs: Ground
 
     Special:
      - Does not go prone after taking fire
      - Immune to Tiberium fields
-     - Crush class: crushable only by Epics.
+     - Crush class: crushable only by Epics
 
 
 zonedefr-name = Zone Defender
-zonedefr-desc = Durable Elite Soldier armed with an coil cannon.
+zonedefr-desc = Durable elite soldier armed with a cannon.
 
     Good vs: Vehicles
 
     Special:
      - Immune to Tiberium fields
-     - Crush class: crushable only by Epics.
+     - Crush class: crushable only by Epics
 
 shadteam-name =  Shadow Warrior
 shadteam-desc = Invisible soldier with a glider, armed with dual handguns.
@@ -1825,7 +1842,7 @@ predator-desc =  GDI's main battle tank armed with an anti-tank cannon and missi
      - Railgun Barrels
 
 orcai-name = Orca Interceptor
-orcai-desc = Fast anti-air aircraft with missile and machine gun.
+orcai-desc = Fast aircraft armed with missile pods and machine guns.
 
     Good vs: Aircraft, Vehicles
 
@@ -1838,23 +1855,24 @@ orcai-desc = Fast anti-air aircraft with missile and machine gun.
      - Ceramic Plating
 
 zomca-name = Orca Fighter
-zomca-desc = Heavy aircraft with sonic ammo
+zomca-desc = High tech aircraft armed with sonic pods.
 
     Good vs: Ground
 
     Special:
      - Can attack enemies ahead while moving
+     - Deals splash damage
 
     Upgrades:
      - Ceramic Plating
 
 mujeep-name = Technical
-mujeep-desc = Infantry transport.
+mujeep-desc = Infantry transport with a mounted LMG.
 
     Good vs: Infantry.
 
     Special:
-     - Can transport 3 infantry units
+     - Can transport 5 infantry units
      - Can attack while moving
 
 ghumv-name = Humvee
@@ -1863,7 +1881,6 @@ ghumv-desc = Infantry transport.
     Good vs: Infantry.
 
     Special:
-     - Can transport 1 infantry units
      - Can attack while moving
 
 slighshot-name = Slingshot
@@ -1873,19 +1890,21 @@ slighshot-desc = Hover vehicle armed with a quad cannon.
     Good vs: Infantry, Aircraft
 
     Special:
+     - Can attack air
      - Provides stealth detection
      - Can attack while moving
      - Hovers (ignores terrain like Veins, Water and Radiations)
      - No longer hovers when disabled by EMP
 
 beastrider-name = Cavalry
-beastrider-desc =  Cavalry use recoilless rifle and tiberium bees
+beastrider-desc =  Cavalry use recoilless rifle and tiberium bees.
 
     Good vs: Vehicles, Light Vehicles
 
     Special:
-     - Recoilless rifle for vehicle, bees for Infantry
+     - Uses recoilless rifle vs vehicles, bees vs infantry
      - Heals on Tiberium fields
+     - Immune to tiberium radiation
      - Can attack enemies while moving
      - E.M.P. Immune
      - Wild mind: Mind only controllable by Mastermind
@@ -1896,12 +1915,12 @@ beastrider-desc =  Cavalry use recoilless rifle and tiberium bees
      - Tiberium Infusion
 
 rayrider-name = Air Cavalry
-rayrider-desc =  Cavalry use zaps and firey bomb
+rayrider-desc = Cavalry that uses electricity vs air and fire grenades vs ground.
     Good vs: Aircraft, Buildings
 
     Special:
      - Can attack enemies ahead while moving
-     - Instant hit air unit.
+     - Instant hit vs air units
 
     Upgrades:
      - Tiberium Infusion
@@ -1926,7 +1945,8 @@ weasau3-desc = A long forgotten creature trained by the mutants.
      - Wild mind: Mind only controllable by Mastermind
      - Can shoot over walls
      - Can crush Infantry 
-     - Heals on Tiberium 
+     - Heals on Tiberium
+     - Immune to tiberium radiation
      - E.M.P. Immune
      - Deployability: use melee attack for a short period
      - Does not slow down on critical HP
@@ -1995,13 +2015,13 @@ sgen-name = Mobile Stealth Generator
 sgen-desc = Support unit that projects a cloaking field.
 
     Special:
-     - Cloak nearby unit when deploy
+     - Cloaks nearby units when deployed
 
-icbm-name = Ballistic Missile Launcher
-icbm-desc = Even ICBM is deployed as the tension increased.
+icbm-name = Intercontinental Ballistic Missile Launcher
+icbm-desc = Devastating launcher that once threatened the Philadelphia.
 
     Special:
-     - Deploy to gain ICBM strike abiility
+     - Deploy to gain ICBM strike ability
 
 mwar-name = Mobile War Factory
 mwar-desc = Support unit can deploy into warfactory.
@@ -2011,27 +2031,27 @@ mwar-desc = Support unit can deploy into warfactory.
      - Needs Nod's War Factory to unlock basic vehicle.
      - Can crush infantry
 
-memp-name = Mobile EMP
+memp-name = EMP Tank
 memp-desc = Support unit can generate emp pulse.
 
     Special:
      - Deploy to generate emp pulse to disable all ground machines in the area
-         - For example: Buildings, Defenses, Vehicles and Cyborgs
-     - Immumes to EMP
+         - For example: Buildings, Defenses, Vehicles and Cyborgs (for half the duration)
+     - Immume to EMP
      - Can crush Infantry
 
 cabecm-name = Hacker Drone
-cabecm-desc = Support unit can recon and infiltrate.
+cabecm-desc = Support unit that can recon and infiltrate.
 
     Special:
-     - Force fire any location: Send the Quadrotor to recon
-     - Send the Quadrotor to hack hackable.
-     - Capture building without consumed.
+     - Force fire any location which will send the Quadrotor Drone to scout the area
+     - Quadrotor Drone can hack most structures
+     - Captures building from a far
 
 kodcruiser-name = Kodiak Cruiser
-kodcruiser-desc = Heavy cruiser that use coil cannon.
+kodcruiser-desc = Heavy cruiser armed with multiple autocannons.
 
-    Good vs: Vehicle
+    Good vs: Vehicles
 
     Special:
      - Can attack enemies while moving
@@ -2088,7 +2108,7 @@ hmectest-desc =  GDI's final creation for the war when everything is doomed.
 mkiiidrone-name = Minigun Drone
 
 scrincouncil-name = Scrin Council
-scrincouncil-desc = A council debates on the world's corpse.
+scrincouncil-desc = An interstellar council that decides wages the fate of all worlds.
 
     Good vs: Everything
 
@@ -2318,16 +2338,16 @@ eggs-name = Cravicus Eggs
 crab-name = Tiberian Cravicus
 pcrab-name = Tiberian Cravicus
 jfish-name = Floater
-jfish-desc  = Hovering amphibious lifeform attacks with electrical tentacles.
+jfish-desc  = Hovering amphibious lifeform that attacks with electrical tentacles.
 
     Good vs Ground targets
 
     Special:
      - Hovers (ignores terrain like Veins, Water and Radiations)
-     - Heals on Tiberium fields and Green Tiberium Radiation
-     - Can't hover when Attack.
-     - Attack with EMP : Disable ground machines for a short time
-         - For example: Buildings, Defenses, Vehicles and Cyborgs
+     - Heals on Tiberium fields and Tiberium Radiation
+     - Can't hover when Attacking
+     - Attack with EMP : Disables ground machines for a short time
+         - For example: Buildings, Defenses, Vehicles and Cyborgs (for half the duration)
      - Wild mind: Mind only controllable by Mastermind
      - Does not slow down on critical HP
 
@@ -2437,18 +2457,19 @@ eagleguard-desc = Elite Soldier armed with an EMP rifle.
 
     Special:
      - Immune to Tiberium fields
-     - Attack with EMP : Disable ground machines for a short time
-         - For example: Buildings, Defenses, Vehicles and Cyborgs
-     - Crush class: crushable only by Epics.
+     - Attack with EMP : Disables ground machines for a short time
+     - For example: Buildings, Defenses, Vehicles and Cyborgs (only half the duration)
+     - Crush class: crushable only by Epics
 
 jjcomm-name = Jumpjet Commando
 jjcomm-desc = GDI's commando unit equipped with a jetpack.
-    Armed with a Personal Ion Gun and orbital bombardment beacon.
+    Armed with a personal ion gun and orbital bombardment beacon.
 
     Good vs: Ground
 
     Special:
-     - Ion Gun hit instantly
+     - Uses the ion gun vs infantry and vehicles
+     - Uses the orbital bombardment beacon vs buildings and defences
      - Will fly when ordered to deploy
      - Immune to mind control
      - Build limit: 1
@@ -2483,6 +2504,7 @@ templar-desc = Warrior resurrected regenesis prototype armed with a flamethrower
     Special:
      - Does not go prone after taking fire
      - Heals on Tiberium fields
+     - Immune to tiberium radiation
      - Crush class: crushable
 
     Upgrades:
@@ -2506,8 +2528,7 @@ exemplar-desc = Experienced Cadre armed with an energy minigun.
     Special:
      - Grants nearby friendly infantry a 30% firepower bonus
      - Does not go prone after taking fire
-     - Immune to Tiberium fields
-     - Crush class: crushable only by Epics
+     - Crush class: crushable
 
 drillpod-name = Drill Pod
 
@@ -2535,7 +2556,8 @@ marauder-desc = Wasteland soldiers armed with shotguns.
 
     Special:
      - Heals on Tiberium fields
-     - Can deploy to increase health and attack range
+     - Immune to tiberium radiation
+     - Can deploy to increase durability and attack range
      - Crush class: crushable
 
     Upgrades:
@@ -2549,6 +2571,7 @@ mutfiend-desc = Tiberium beasts trained to take out enemies with tiberium shards
     Special:
      - Does not go prone after taking fire
      - Heals on Tiberium fields
+     - Immune to tiberium radiation
      - Can attack Air
      - Crush class: crushable
      - Wild mind: Mind only controllable by Mastermind
@@ -2567,6 +2590,7 @@ cutman-desc =  Support infantry.
      - Can repair buildings and bridges
      - Crush class: crushable
      - Heals on Tiberium fields
+     - Immune to tiberium radiation
 
 e3-name = Skirmisher
 e3-desc =  Siege militia armed with molotov mortars.
@@ -2575,6 +2599,7 @@ e3-desc =  Siege militia armed with molotov mortars.
 
     Special:
      - Heals on Tiberium fields
+     - Immune to tiberium radiation
      - High attack range
      - Has a minimum attack distance
      - Can shoot over walls
@@ -2591,8 +2616,10 @@ seer-desc = Mutant infantry capable of channeling psychic energy waves and
 
     Special:
      - Heals on Tiberium fields
+     - Immune to tiberium radiation
      - Can persuade friendly units to fight harder when deployed
-     - Affected units will gain 20% extra attack and movement speed but receive 20% more damage
+     - Affected units will gain 50% extra attack and movement speed
+     - Receive 50% more damage in return
      - Effect lasts 15 seconds
      - Can attack air
      - Can shoot over walls
@@ -2608,6 +2635,7 @@ psyker-desc = Forgotten Commando born with high level psychic powers.
     Special:
      - Build limit: 1
      - Heals on Tiberium fields
+     - Immune to tiberium radiation
      - Long Range and Strong AoE
      - Can shoot over walls
      - Immune to mind control 
@@ -2640,6 +2668,7 @@ shapeshifter-desc = Support infantry.
     Good vs: Buildings
 
     Special:
+     - Absorbs essence from killed enemies to heal
      - Can capture neutral and enemy structures
      - Can repair structures and bridges
      - Crush class: crushable
@@ -2663,7 +2692,7 @@ bug-desc =  Alien breed that poisons enemies.
     Special:
      - Units hit will become poisoned
      - Poisoned units take damage over time
-     - Projectile bouncea a second time
+     - Projectile bounces a second time
      - Can shoot over walls
      - Crush class: crushable only by Epics
      - Does not receive damage from tiberium fields
@@ -2679,9 +2708,9 @@ colossus-desc = Heavy duty alien.
     Good vs Infantry
 
     Special:
-     - Teleport and irradiate its surroundings at destination
+     - Can teleport to and irradiate the surrounding area
      - Radiation harms all units regardless of owner
-     - Can absorb essence from killed units to heal
+     - Absorbs essence from killed enemies to heal
      - Can shoot over walls
      - Crush class: crushable only by Epics
      - Does not go prone after taking fire
@@ -2864,7 +2893,6 @@ raider_passenger-desc = Raider Buggies start with a Militant in them.
 unlock_exemplar-name = Cardinals Emerge
 unlock_exemplar-desc = Allow deployment of Cardinals from Nod Radar.
     - Friendly infantry near Cardinals receive a firepower bonus of 30%
-    - Deployment of 3 Cardinals costs $1500
     - Cardinals are deployed via destructible Drill Pods
 
 improved_stealth_generator-name = Improved Stealth Generator
@@ -2895,7 +2923,7 @@ tunnel_repairs-desc = Enables Tunnel Networks to heal infantry and repair vehicl
 tiberium_infusion-name = Tiberium Infusion
 tiberium_infusion-desc = Increases the HP and speed of following units by 25% and 15 respectively and gives them self-healing:
     - Tiberium Fiend
-    - Carnotaurus
+    - Warg
     - Queen
     - Ravager
     - Weasaurus Lord

@@ -862,7 +862,6 @@ EXEMPLAR:
 		ValidRelationships: Enemy, Neutral, Ally
 	WithDeathAnimation@blood1:
 		Delay: 3
-	-DamagedByTerrain:
 	-TakeCover:
 	-FirepowerMultiplier@ZealousBuff:
 	-ExternalCondition@ZealousBuff:
@@ -1428,6 +1427,8 @@ CUTMAN:
 		-Image:
 		-FactionImages:
 	-DamagedByTerrain:
+	-DamagedByTintedCells@Default:
+	-DamagedByTintedCells@BlueRadiation:
 	RenderSprites:
 		PlayerPalette: playerunittemgreen
 	ExternalCondition@CLOAKGENERATOR:
@@ -1492,8 +1493,6 @@ E3:
 		FacingTolerance: 2
 	AutoTarget:
 		ScanRadius: 11 #PREF: save trait looks up and scan armaments
-	-DamagedByTintedCells@Default:
-	-DamagedByTintedCells@BlueRadiation:
 	ActorStatValues:
 		Damage: 40
 
@@ -1506,10 +1505,10 @@ SEER:
 		BuildPaletteOrder: 28
 		Description: seer-desc
 		Prerequisites: ~murax, muhall, ~techlevel.5
-		BuildDuration: 375
+		BuildDuration: 625
 		BuildDurationModifier: 100
 	Valued:
-		Cost: 600
+		Cost: 1000
 	Tooltip:
 		Name: seer-name
 	UpdatesPlayerStatistics:
@@ -1583,7 +1582,7 @@ SEER:
 	Passenger:
 		CustomPipType: blue
 	ActorStatValues:
-		Damage: 70
+		Damage: 75
 		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MinRange, None, MaxRange
 
 PSYKER:
@@ -1645,516 +1644,6 @@ PSYKER:
 		ScanRadius: 15 #PREF: save trait looks up and scan armaments
 	ActorStatValues:
 		Damage: 400
-
-SHARK:
-	Inherits: ^ScrinSoldier
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
-	Inherits@EXPERIENCE: ^GainsExperience
-	Buildable:
-		Queue: Infantry.Shared, Infantry.Scrin
-		BuildPaletteOrder: 9
-		Description: shark-desc
-		Prerequisites: ~scrrax, ~techlevel.1
-		BuildDuration: 50
-		BuildDurationModifier: 100
-	Valued:
-		Cost: 50
-	ProductionCostMultiplier@AI: ## AI cannot use it well
-		Multiplier: 20
-		Prerequisites: AIOnly
-	Tooltip:
-		Name: shark-name
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Selectable:
-		Class: Shark
-	Health:
-		HP: 6400
-	Mobile:
-		Speed: 90
-		Voice: Move
-	SpawnActorOnDeath@conversion:
-		Actor: chusk
-	SpawnActorOnDeath@conversionUpg:
-		Actor: cyborg15-scr
-	Armament@1:
-		Weapon: SharkJump
-		Name: OnFoot
-		PauseOnCondition: WebDisable
-	AttackFrontal:
-		Voice: Attack
-		FacingTolerance: 2
-		Armaments: OnFoot
-	AutoTargetPriority:
-		Priority: 1
-		ValidTargets: Infantry
-	AttackMove:
-		Voice: Move
-	AutoTarget:
-		ScanRadius: 5
-		InitialStance: AttackAnything
-	WithInfantryBody:
-		StandSequences: stand
-		IdleSequences: idle1, idle2, idle3, idle4
-	-TakeCover:
-	ActorStatValues:
-		Damage: 20
-
-LEGIO:
-	Inherits: ^ScrinSoldier
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMoveWithBerserkable
-	Inherits@EXPERIENCE: ^GainsExperience
-	Buildable:
-		Queue: Infantry.Shared, Infantry.Scrin
-		BuildPaletteOrder: 10
-		Description: legion-desc
-		Prerequisites: ~scrrax, ~techlevel.1
-		BuildDuration: 250
-		BuildDurationModifier: 100
-	Valued:
-		Cost: 300
-	Tooltip:
-		Name: legion-name
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 15000
-	Passenger:
-		CustomPipType: blue
-	TakeCover:
-		SpeedModifier: 100
-		ProneOffset: 0, 0, 0
-	Armament@1:
-		Weapon: LegioNeedler
-		LocalOffset: 350,200,800
-		FireDelay: 5
-		ReloadingCondition: reload-ground
-		MuzzleSequence: garrison-muzzle
-		MuzzlePalette: apblue
-		PauseOnCondition: WebDisable || reload-air
-		Name: OnFoot
-	Armament@2:
-		Weapon: LegioNeedlerAA
-		LocalOffset: 350,200,800
-		FireDelay: 5
-		ReloadingCondition: reload-air
-		MuzzleSequence: garrison-muzzle
-		MuzzlePalette: apblue
-		PauseOnCondition: WebDisable || reload-ground
-		Name: OnFoot
-	Armament@Garrison1:
-		Weapon: GLegioNeedler
-		FireDelay: 5
-		ReloadingCondition: reload-ground
-		MuzzleSequence: garrison-muzzle
-		MuzzlePalette: apblue
-		PauseOnCondition: WebDisable || reload-air
-	Armament@Garrison2:
-		Weapon: GLegioNeedlerAA
-		FireDelay: 5
-		ReloadingCondition: reload-air
-		MuzzleSequence: garrison-muzzle
-		MuzzlePalette: apblue
-		PauseOnCondition: WebDisable || reload-ground
-	WithMuzzleOverlay:
-	AttackFrontal:
-		Voice: Attack
-		Armaments: OnFoot
-		FacingTolerance: 2
-	AutoTarget:
-		ScanRadius: 9 #PREF: save trait looks up and scan armaments
-	SpawnActorOnDeath@conversion:
-		Actor: chusk
-	SpawnActorOnDeath@conversionUpg:
-		Actor: cyborg15-scr
-	ActorStatValues:
-		Damage: 30
-		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MinRange, None, MaxRange
-
-SHAPESHIFTER:
-	Inherits: ENGINEER
-	Inherits@1: ^ScrinReaper
-	Inherits@RENDER: ^ScrinRender
-	Inherits@DEATHANIM: ^ScrinInfantryDeath
-	Inherits@SELECTIONMODE: ^LowPrioritySelectionMode
-	Tooltip:
-		Name: shapeshifter-name
-	Buildable:
-		Queue: Infantry.Shared, Infantry.Scrin
-		BuildPaletteOrder: 14
-		Prerequisites: ~scrrax, ~techlevel.1
-		Description: shapeshifter-desc
-		BuildDuration: 375
-		BuildDurationModifier: 100
-	Passenger:
-		Voice: Action
-	SharedPassenger:
-		Voice: Action
-	InstantlyRepairs:
-		Voice: Action
-	Voiced:
-		VoiceSet: Hijacker
-	Mobile:
-		Locomotor: TibInmuneInfantry
-	-DamagedByTerrain:
-	WithInfantryBody:
-		IdleSequences: idle1, idle2, idle3, idle4
-		MinIdleDelay: 2
-		MaxIdleDelay: 2
-	SpawnActorOnDeath@conversion:
-		Actor: chusk
-	SpawnActorOnDeath@conversionUpg:
-		Actor: cyborg15-scr
-	RenderSprites:
-		Image: shapeshifter
-		-FactionImages:
-
-FLOAT:
-	Inherits: ^ScrinSoldier
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
-	Inherits@EXPERIENCE: ^GainsExperience
-	Inherits@VISION: ^7CellVision
-	Buildable:
-		Queue: Infantry.Shared, Infantry.Scrin
-		BuildPaletteOrder: 22
-		Description: float-desc
-		Prerequisites: ~scrrax, scrradr, ~techlevel.4
-		BuildDuration: 250
-		BuildDurationModifier: 100
-	Valued:
-		Cost: 250
-	Tooltip:
-		Name: float-name
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Health:
-		HP: 17500
-	Mobile:
-		Locomotor: HoverInfantry
-	Hovers:
-		FallTicks: 5
-		RiseTicks: 10
-		RequiresCondition: !WebDisable
-	Crushable:
-		CrushClasses: HeavyInfantry
-	Armament@1:
-		Weapon: FloatTesla
-		LocalOffset: 0,0,500
-		FireDelay: 10
-		PauseOnCondition: WebDisable
-		ForceTargetRelationships: Enemy
-		MuzzleSequence: muzzle
-		MuzzlePalette: appurp
-		Name: OnFoot
-	Armament@Garrison:
-		Weapon: GFloatTesla
-		PauseOnCondition: WebDisable
-		MuzzleSequence: garrison-muzzle
-		MuzzlePalette: appurp
-		ForceTargetRelationships: Enemy
-	WithMuzzleOverlay:
-	AttackFrontal:
-		Voice: Attack
-		Armaments: OnFoot
-		FacingTolerance: 2
-	AutoTarget:
-		ScanRadius: 7 #PREF: save trait looks up and scan armaments
-	-TakeCover:
-	GuardsSelection:
-		ValidTargetsToGuard: ScrinUnit
-		InvalidTargetsToGuard: Air, LandedCraft, Summoned
-		GuardsSelectionLevel: 2
-	GrantConditionOnTerrain:
-		Condition: hoverunitonwater
-		TerrainTypes: Water
-	KillsSelf@DisabledOnWater:
-		RequiresCondition: hoverunitonwater && WebDisable
-		DamageTypes: DrownedDeath
-	LeavesTrails:
-		RequiresCondition: hoverunitonwater
-		Image: wake
-		Palette: terrain
-		TerrainTypes: Water
-		StationaryInterval: 18
-		MovingInterval: 12
-		Sequences: idle2
-	ActorStatValues:
-		Damage: -40
-	SpawnActorOnDeath@conversion:
-		Actor: chusk
-		RequiresCondition: !hoverunitonwater
-	SpawnActorOnDeath@conversionUpg:
-		Actor: cyborg15-scr
-		RequiresCondition: !hoverunitonwater
-	DamagedByTintedCells@Default:
-		RequiresCondition: WebDisable
-	DamagedByTintedCells@BlueRadiation:
-		RequiresCondition: WebDisable
-	DamagedByTintedCells@OrangeRadiation:
-		RequiresCondition: WebDisable
-	RA2Chronoshiftable:
-		-TerrainsAndDeathTypes:
-	-FirepowerMultiplier@ZealousBuff:
-	-ExternalCondition@ZealousBuff:
-	-WithIdleOverlayOnGround@ZealousBuff:
-
-BUG:
-	Inherits: ^ScrinSoldier
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
-	Inherits@EXPERIENCE: ^GainsExperience
-	Inherits@IMPPLAGUEGAS: ^AffectedByImprovedPlagueGas
-	Buildable:
-		Queue: Infantry.Shared, Infantry.Scrin
-		BuildPaletteOrder: 23
-		Description: bug-desc
-		Prerequisites: ~scrrax, scrradr, ~techlevel.4
-		BuildDuration: 375
-		BuildDurationModifier: 100
-	Valued:
-		Cost: 400
-	Tooltip:
-		Name: bug-name
-	Voiced:
-		VoiceSet: PlaugeTrooper
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Selectable:
-		Bounds: 784,1809,0,-603
-	Health:
-		HP: 30000
-	Mobile:
-		Speed: 75
-		Locomotor: HeavyInfantry
-	Crushable:
-		CrushClasses: HeavyInfantry
-	SpawnActorOnDeath@conversion:
-		Actor: chusk
-	SpawnActorOnDeath@conversionUpg:
-		Actor: cyborg15-scr
-	Armament@1:
-		Weapon: FloatGlaive
-		LocalOffset: 300,0,500
-		Name: OnFoot
-		MuzzleSequence: garrison-muzzle
-		MuzzlePalette: gensmkexplojFblue
-		PauseOnCondition: WebDisable
-		RequiresCondition: !impplaguegas
-	Armament@Garrison:
-		Weapon: GFloatGlaive
-		MuzzleSequence: garrison-muzzle
-		MuzzlePalette: gensmkexplojFblue
-		PauseOnCondition: WebDisable
-		RequiresCondition: !impplaguegas
-	Armament@1Upg:
-		Weapon: FloatGlaiveUpg
-		LocalOffset: 300,0,500
-		Name: OnFoot
-		MuzzleSequence: garrison-muzzle
-		MuzzlePalette: gensmkexplojFblue
-		PauseOnCondition: WebDisable
-		RequiresCondition: impplaguegas
-	Armament@GarrisonUpg:
-		Weapon: GFloatGlaiveUpg
-		MuzzleSequence: garrison-muzzle
-		MuzzlePalette: gensmkexplojFblue
-		PauseOnCondition: WebDisable
-		RequiresCondition: impplaguegas
-	WithMuzzleOverlay:
-	AttackFrontal:
-		Voice: Attack
-		Armaments: OnFoot
-		FacingTolerance: 2
-	AutoTarget:
-		ScanRadius: 6 #PREF: save trait looks up and scan armaments
-	-TakeCover:
-	Passenger:
-		CustomPipType: blue
-	ActorStatValues:
-		Damage: 20
-
-COLOSSI:
-	Inherits: ^ScrinSoldier
-	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
-	Inherits@EXPERIENCE: ^GainsExperience
-	Inherits@VINIFERA: ^AffectedByViniferaComponents
-	Buildable:
-		Queue: Infantry.Shared, Infantry.Scrin
-		BuildPaletteOrder: 35
-		Description: colossus-desc
-		Prerequisites: ~scrrax, scrtech, ~techlevel.5
-		BuildDuration: 500
-		BuildDurationModifier: 100
-	Valued:
-		Cost: 800
-	Tooltip:
-		Name: colossus-name
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	Selectable:
-		Bounds: 784,1809,0,-603
-	Health:
-		HP: 40000
-	Mobile:
-		Locomotor: HeavyInfantry
-	SpawnActorOnDeath@conversion:
-		Actor: chusk
-	SpawnActorOnDeath@conversionUpg:
-		Actor: cyborg15-scr
-	Armament@1:
-		Weapon: ColossiShard
-		LocalOffset: 400,0,1300
-		PauseOnCondition: WebDisable
-		Name: OnFoot
-	Armament@Garrison:
-		Weapon: GColossiShard
-		PauseOnCondition: WebDisable
-	ExplodeWeaponTeleportEffect@1:
-		TeleportType: ColoussTele
-		ImpactWeapon: ColoussTeleFrom
-		TeleportWeapon: ColoussTeleTo
-		RequiresCondition: !vinifera_components
-	ExplodeWeaponTeleportEffect@blue:
-		TeleportType: ColoussTele
-		ImpactWeapon: ColoussTeleFromBlue
-		TeleportWeapon: ColoussTeleToBlue
-		RequiresCondition: vinifera_components
-	RA2PortableChrono:
-		TeleportType: ColoussTele
-		Voice: Move
-		ChargeDelay: 1200
-		MaxTeleportDistance: 8
-		TargetCursor: emp
-	AttackFrontal:
-		Voice: Attack
-		Armaments: OnFoot
-		FacingTolerance: 2
-	AutoTarget:
-		ScanRadius: 6 #PREF: save trait looks up and scan armaments
-	Crushable:
-		CrushClasses: HeavyInfantry
-	-DamagedByTintedCells@Default:
-	-DamagedByTintedCells@BlueRadiation:
-	-TakeCover:
-	WithInfantryBody:
-		RequiresCondition:  !WebDisable && !inside-tunnel
-	ActorStatValues:
-		Damage: 200
-
-MASTERMIND: #Mastermind
-	Inherits: ^ScrinSoldier
-	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMoveWithBerserkable
-	Inherits@COMMANDO: ^CommandoIcon
-	Inherits@VISION: ^8CellVision
-	Inherits@EXPERIENCE: ^GainsExperienceNonCombat
-	Inherits@AImicroManagable: ^AImicroManagable
-	AutoTargetPriority@DEFAULT:
-		RequiresCondition: !stance-attackanything && !assault-move && (!controlling || AImicroManage)
-	AutoTargetPriority@ATTACKANYTHING:
-		RequiresCondition: (stance-attackanything || assault-move) && (!controlling || AImicroManage)
-	Buildable:
-		Queue: Infantry.Shared, Infantry.Scrin
-		BuildPaletteOrder: 36
-		Description: mastermind-desc
-		Prerequisites: ~scrrax, scrtech, ~techlevel.5
-		BuildLimit: 1
-		BuildDuration: 1250
-		BuildDurationModifier: 100
-	Valued:
-		Cost: 2000
-	Tooltip:
-		Name: mastermind-name
-	UpdatesPlayerStatistics:
-		AddToArmyValue: true
-	MindController:
-		Capacity: 1
-		ArmamentNames: control
-		Sounds: sonpulse.aud
-		ControllingCondition: controlling
-	Armament@PRIMARY:
-		Name: control
-		Weapon: MindControllerMastermind
-		CasingWeapon: MindEnergyCasing
-		CasingSpawnLocalOffset: 0,0,2000
-		CasingTargetOffset: 0,0,2000
-		CasingHitGroundLevel: false
-		PauseOnCondition: !ammo
-	Armament@BUILDING:
-		Weapon: MindControllerMastermindBuilding
-		PauseOnCondition: !ammo
-		RequiresCondition: !control
-		Name: OnFoot
-	Armament@BUILDINGCONTROL:
-		Name: control
-		Weapon: MindControllerMastermindBuilding
-		CasingWeapon: MindEnergyCasing
-		CasingSpawnLocalOffset: 0,0,2000
-		CasingTargetOffset: 0,0,2000
-		CasingHitGroundLevel: false
-		PauseOnCondition: !ammo
-		RequiresCondition: control
-	GrantConditionOnAttack@CONTROL:
-		Condition: control
-		ArmamentNames: OnFoot
-		RequiredShotsPerInstance: 8
-		MaximumInstances: 1
-		RevokeDelay: 11
-		RevokeAll: true
-		RevokeOnNewTarget: true
-	AmmoPool:
-		Ammo: 1
-		ReloadDelay: 100
-		AmmoCondition: ammo
-		Armaments: control
-	ReloadAmmoPool:
-		Delay: 100
-	-TakeCover:
-	-Targetable@MC:
-	Health:
-		HP: 25000
-	Mobile:
-		TurnSpeed: 1023
-		Speed: 75
-		Locomotor: HeavyInfantry
-	Crushable:
-		CrushClasses: HeavyInfantry
-	AttackFrontal:
-		Armaments: OnFoot, control
-	AutoTarget:
-		ScanRadius: 6 #PREF: save trait looks up and scan armaments
-	RenderRangeCircle:
-		RangeCircleType: Subjugator
-		Color: 800080CC
-		BorderWidth: 0
-		Width: 2
-	WithMindControllerPipsDecoration:
-		Margin: 4, 3
-		Palette: pips
-		Position: BottomLeft
-		RequiresSelection: true
-		ValidRelationships: Ally, Neutral, Enemy
-	RA2PortableChrono:
-		TeleportType: MasterMindTele
-		Voice: Move
-		ChargeDelay: 500
-		TargetCursor: emp
-	ExplodeWeaponTeleportEffect:
-		TeleportType: MasterMindTele
-		ImpactWeapon: MasterMindTeleFrom
-		TeleportWeapon: MasterMindTeleTo
-	Passenger:
-		CustomPipType: red
-	SharedPassenger:
-		CustomPipType: red
-	SpawnActorOnDeath@conversion:
-		Actor: chusk
-	SpawnActorOnDeath@conversionUpg:
-		Actor: cyborg15-scr
-	-FirepowerMultiplier@ZealousBuff:
-	-ExternalCondition@ZealousBuff:
-	-WithIdleOverlayOnGround@ZealousBuff:
-	ActorStatValues:
-		ReloadDelay: 100
-		Stats: Armor, Sight, Speed, MindControl, ReloadDelay, MinRange, None, MaxRange
 
 CABSENTRY:
 	Inherits: ^DroneSoldier
@@ -2962,3 +2451,513 @@ NANOS:
 		CrushClasses: HeavyInfantry
 	ActorStatValues:
 		Damage: 16
+
+SHARK:
+	Inherits: ^ScrinSoldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
+	Inherits@EXPERIENCE: ^GainsExperience
+	Buildable:
+		Queue: Infantry.Shared, Infantry.Scrin
+		BuildPaletteOrder: 9
+		Description: shark-desc
+		Prerequisites: ~scrrax, ~techlevel.1
+		BuildDuration: 50
+		BuildDurationModifier: 100
+	Valued:
+		Cost: 50
+	ProductionCostMultiplier@AI: ## AI cannot use it well
+		Multiplier: 20
+		Prerequisites: AIOnly
+	Tooltip:
+		Name: shark-name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Selectable:
+		Class: Shark
+	Health:
+		HP: 6400
+	Mobile:
+		Speed: 90
+		Voice: Move
+	SpawnActorOnDeath@conversion:
+		Actor: chusk
+	SpawnActorOnDeath@conversionUpg:
+		Actor: cyborg15-scr
+	Armament@1:
+		Weapon: SharkJump
+		Name: OnFoot
+		PauseOnCondition: WebDisable
+	AttackFrontal:
+		Voice: Attack
+		FacingTolerance: 2
+		Armaments: OnFoot
+	AutoTargetPriority:
+		Priority: 1
+		ValidTargets: Infantry
+	AttackMove:
+		Voice: Move
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+	WithInfantryBody:
+		StandSequences: stand
+		IdleSequences: idle1, idle2, idle3, idle4
+	-TakeCover:
+	ActorStatValues:
+		Damage: 20
+
+LEGIO:
+	Inherits: ^ScrinSoldier
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMoveWithBerserkable
+	Inherits@EXPERIENCE: ^GainsExperience
+	Buildable:
+		Queue: Infantry.Shared, Infantry.Scrin
+		BuildPaletteOrder: 10
+		Description: legion-desc
+		Prerequisites: ~scrrax, ~techlevel.1
+		BuildDuration: 250
+		BuildDurationModifier: 100
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: legion-name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 15000
+	Passenger:
+		CustomPipType: blue
+	TakeCover:
+		SpeedModifier: 100
+		ProneOffset: 0, 0, 0
+	Armament@1:
+		Weapon: LegioNeedler
+		LocalOffset: 350,200,800
+		FireDelay: 5
+		ReloadingCondition: reload-ground
+		MuzzleSequence: garrison-muzzle
+		MuzzlePalette: apblue
+		PauseOnCondition: WebDisable || reload-air
+		Name: OnFoot
+	Armament@2:
+		Weapon: LegioNeedlerAA
+		LocalOffset: 350,200,800
+		FireDelay: 5
+		ReloadingCondition: reload-air
+		MuzzleSequence: garrison-muzzle
+		MuzzlePalette: apblue
+		PauseOnCondition: WebDisable || reload-ground
+		Name: OnFoot
+	Armament@Garrison1:
+		Weapon: GLegioNeedler
+		FireDelay: 5
+		ReloadingCondition: reload-ground
+		MuzzleSequence: garrison-muzzle
+		MuzzlePalette: apblue
+		PauseOnCondition: WebDisable || reload-air
+	Armament@Garrison2:
+		Weapon: GLegioNeedlerAA
+		FireDelay: 5
+		ReloadingCondition: reload-air
+		MuzzleSequence: garrison-muzzle
+		MuzzlePalette: apblue
+		PauseOnCondition: WebDisable || reload-ground
+	WithMuzzleOverlay:
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+		FacingTolerance: 2
+	AutoTarget:
+		ScanRadius: 9 #PREF: save trait looks up and scan armaments
+	SpawnActorOnDeath@conversion:
+		Actor: chusk
+	SpawnActorOnDeath@conversionUpg:
+		Actor: cyborg15-scr
+	ActorStatValues:
+		Damage: 30
+		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MinRange, None, MaxRange
+
+SHAPESHIFTER:
+	Inherits: ENGINEER
+	Inherits@1: ^ScrinReaper
+	Inherits@RENDER: ^ScrinRender
+	Inherits@DEATHANIM: ^ScrinInfantryDeath
+	Inherits@SELECTIONMODE: ^LowPrioritySelectionMode
+	Tooltip:
+		Name: shapeshifter-name
+	Buildable:
+		Queue: Infantry.Shared, Infantry.Scrin
+		BuildPaletteOrder: 14
+		Prerequisites: ~scrrax, ~techlevel.1
+		Description: shapeshifter-desc
+		BuildDuration: 375
+		BuildDurationModifier: 100
+	Passenger:
+		Voice: Action
+	SharedPassenger:
+		Voice: Action
+	InstantlyRepairs:
+		Voice: Action
+	Voiced:
+		VoiceSet: Hijacker
+	Mobile:
+		Locomotor: TibInmuneInfantry
+	-DamagedByTerrain:
+	WithInfantryBody:
+		IdleSequences: idle1, idle2, idle3, idle4
+		MinIdleDelay: 2
+		MaxIdleDelay: 2
+	SpawnActorOnDeath@conversion:
+		Actor: chusk
+	SpawnActorOnDeath@conversionUpg:
+		Actor: cyborg15-scr
+	RenderSprites:
+		Image: shapeshifter
+		-FactionImages:
+
+FLOAT:
+	Inherits: ^ScrinSoldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@VISION: ^7CellVision
+	Buildable:
+		Queue: Infantry.Shared, Infantry.Scrin
+		BuildPaletteOrder: 22
+		Description: float-desc
+		Prerequisites: ~scrrax, scrradr, ~techlevel.4
+		BuildDuration: 250
+		BuildDurationModifier: 100
+	Valued:
+		Cost: 250
+	Tooltip:
+		Name: float-name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Health:
+		HP: 17500
+	Mobile:
+		Locomotor: HoverInfantry
+	Hovers:
+		FallTicks: 5
+		RiseTicks: 10
+		RequiresCondition: !WebDisable
+	Crushable:
+		CrushClasses: HeavyInfantry
+	Armament@1:
+		Weapon: FloatTesla
+		LocalOffset: 0,0,500
+		FireDelay: 10
+		PauseOnCondition: WebDisable
+		ForceTargetRelationships: Enemy
+		MuzzleSequence: muzzle
+		MuzzlePalette: appurp
+		Name: OnFoot
+	Armament@Garrison:
+		Weapon: GFloatTesla
+		PauseOnCondition: WebDisable
+		MuzzleSequence: garrison-muzzle
+		MuzzlePalette: appurp
+		ForceTargetRelationships: Enemy
+	WithMuzzleOverlay:
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+		FacingTolerance: 2
+	AutoTarget:
+		ScanRadius: 7 #PREF: save trait looks up and scan armaments
+	-TakeCover:
+	GuardsSelection:
+		ValidTargetsToGuard: ScrinUnit
+		InvalidTargetsToGuard: Air, LandedCraft, Summoned
+		GuardsSelectionLevel: 2
+	GrantConditionOnTerrain:
+		Condition: hoverunitonwater
+		TerrainTypes: Water
+	KillsSelf@DisabledOnWater:
+		RequiresCondition: hoverunitonwater && WebDisable
+		DamageTypes: DrownedDeath
+	LeavesTrails:
+		RequiresCondition: hoverunitonwater
+		Image: wake
+		Palette: terrain
+		TerrainTypes: Water
+		StationaryInterval: 18
+		MovingInterval: 12
+		Sequences: idle2
+	ActorStatValues:
+		Damage: -40
+	SpawnActorOnDeath@conversion:
+		Actor: chusk
+		RequiresCondition: !hoverunitonwater
+	SpawnActorOnDeath@conversionUpg:
+		Actor: cyborg15-scr
+		RequiresCondition: !hoverunitonwater
+	DamagedByTintedCells@Default:
+		RequiresCondition: WebDisable
+	DamagedByTintedCells@BlueRadiation:
+		RequiresCondition: WebDisable
+	DamagedByTintedCells@OrangeRadiation:
+		RequiresCondition: WebDisable
+	RA2Chronoshiftable:
+		-TerrainsAndDeathTypes:
+	-FirepowerMultiplier@ZealousBuff:
+	-ExternalCondition@ZealousBuff:
+	-WithIdleOverlayOnGround@ZealousBuff:
+
+BUG:
+	Inherits: ^ScrinSoldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@IMPPLAGUEGAS: ^AffectedByImprovedPlagueGas
+	Buildable:
+		Queue: Infantry.Shared, Infantry.Scrin
+		BuildPaletteOrder: 23
+		Description: bug-desc
+		Prerequisites: ~scrrax, scrradr, ~techlevel.4
+		BuildDuration: 375
+		BuildDurationModifier: 100
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: bug-name
+	Voiced:
+		VoiceSet: PlaugeTrooper
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Selectable:
+		Bounds: 784,1809,0,-603
+	Health:
+		HP: 30000
+	Mobile:
+		Speed: 75
+		Locomotor: HeavyInfantry
+	Crushable:
+		CrushClasses: HeavyInfantry
+	SpawnActorOnDeath@conversion:
+		Actor: chusk
+	SpawnActorOnDeath@conversionUpg:
+		Actor: cyborg15-scr
+	Armament@1:
+		Weapon: FloatGlaive
+		LocalOffset: 300,0,500
+		Name: OnFoot
+		MuzzleSequence: garrison-muzzle
+		MuzzlePalette: gensmkexplojFblue
+		PauseOnCondition: WebDisable
+		RequiresCondition: !impplaguegas
+	Armament@Garrison:
+		Weapon: GFloatGlaive
+		MuzzleSequence: garrison-muzzle
+		MuzzlePalette: gensmkexplojFblue
+		PauseOnCondition: WebDisable
+		RequiresCondition: !impplaguegas
+	Armament@1Upg:
+		Weapon: FloatGlaiveUpg
+		LocalOffset: 300,0,500
+		Name: OnFoot
+		MuzzleSequence: garrison-muzzle
+		MuzzlePalette: gensmkexplojFblue
+		PauseOnCondition: WebDisable
+		RequiresCondition: impplaguegas
+	Armament@GarrisonUpg:
+		Weapon: GFloatGlaiveUpg
+		MuzzleSequence: garrison-muzzle
+		MuzzlePalette: gensmkexplojFblue
+		PauseOnCondition: WebDisable
+		RequiresCondition: impplaguegas
+	WithMuzzleOverlay:
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+		FacingTolerance: 2
+	AutoTarget:
+		ScanRadius: 6 #PREF: save trait looks up and scan armaments
+	-TakeCover:
+	Passenger:
+		CustomPipType: blue
+	ActorStatValues:
+		Damage: 20
+
+COLOSSI:
+	Inherits: ^ScrinSoldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
+	Inherits@EXPERIENCE: ^GainsExperience
+	Inherits@VINIFERA: ^AffectedByViniferaComponents
+	Buildable:
+		Queue: Infantry.Shared, Infantry.Scrin
+		BuildPaletteOrder: 35
+		Description: colossus-desc
+		Prerequisites: ~scrrax, scrtech, ~techlevel.5
+		BuildDuration: 625
+		BuildDurationModifier: 100
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: colossus-name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Selectable:
+		Bounds: 784,1809,0,-603
+	Health:
+		HP: 40000
+	Mobile:
+		Locomotor: HeavyInfantry
+	SpawnActorOnDeath@conversion:
+		Actor: chusk
+	SpawnActorOnDeath@conversionUpg:
+		Actor: cyborg15-scr
+	Armament@1:
+		Weapon: ColossiShard
+		LocalOffset: 400,0,1300
+		PauseOnCondition: WebDisable
+		Name: OnFoot
+	Armament@Garrison:
+		Weapon: GColossiShard
+		PauseOnCondition: WebDisable
+	ExplodeWeaponTeleportEffect@1:
+		TeleportType: ColoussTele
+		ImpactWeapon: ColoussTeleFrom
+		TeleportWeapon: ColoussTeleTo
+		RequiresCondition: !vinifera_components
+	ExplodeWeaponTeleportEffect@blue:
+		TeleportType: ColoussTele
+		ImpactWeapon: ColoussTeleFromBlue
+		TeleportWeapon: ColoussTeleToBlue
+		RequiresCondition: vinifera_components
+	RA2PortableChrono:
+		TeleportType: ColoussTele
+		Voice: Move
+		ChargeDelay: 1200
+		MaxTeleportDistance: 8
+		TargetCursor: emp
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+		FacingTolerance: 2
+	AutoTarget:
+		ScanRadius: 6 #PREF: save trait looks up and scan armaments
+	Crushable:
+		CrushClasses: HeavyInfantry
+	-DamagedByTintedCells@Default:
+	-DamagedByTintedCells@BlueRadiation:
+	-TakeCover:
+	WithInfantryBody:
+		RequiresCondition:  !WebDisable && !inside-tunnel
+	ActorStatValues:
+		Damage: 200
+
+MASTERMIND: #Mastermind
+	Inherits: ^ScrinSoldier
+	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMoveWithBerserkable
+	Inherits@COMMANDO: ^CommandoIcon
+	Inherits@VISION: ^8CellVision
+	Inherits@EXPERIENCE: ^GainsExperienceNonCombat
+	Inherits@AImicroManagable: ^AImicroManagable
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything && !assault-move && (!controlling || AImicroManage)
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: (stance-attackanything || assault-move) && (!controlling || AImicroManage)
+	Buildable:
+		Queue: Infantry.Shared, Infantry.Scrin
+		BuildPaletteOrder: 36
+		Description: mastermind-desc
+		Prerequisites: ~scrrax, scrtech, ~techlevel.5
+		BuildLimit: 1
+		BuildDuration: 1250
+		BuildDurationModifier: 100
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: mastermind-name
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	MindController:
+		Capacity: 1
+		ArmamentNames: control
+		Sounds: sonpulse.aud
+		ControllingCondition: controlling
+	Armament@PRIMARY:
+		Name: control
+		Weapon: MindControllerMastermind
+		CasingWeapon: MindEnergyCasing
+		CasingSpawnLocalOffset: 0,0,2000
+		CasingTargetOffset: 0,0,2000
+		CasingHitGroundLevel: false
+		PauseOnCondition: !ammo
+	Armament@BUILDING:
+		Weapon: MindControllerMastermindBuilding
+		PauseOnCondition: !ammo
+		RequiresCondition: !control
+		Name: OnFoot
+	Armament@BUILDINGCONTROL:
+		Name: control
+		Weapon: MindControllerMastermindBuilding
+		CasingWeapon: MindEnergyCasing
+		CasingSpawnLocalOffset: 0,0,2000
+		CasingTargetOffset: 0,0,2000
+		CasingHitGroundLevel: false
+		PauseOnCondition: !ammo
+		RequiresCondition: control
+	GrantConditionOnAttack@CONTROL:
+		Condition: control
+		ArmamentNames: OnFoot
+		RequiredShotsPerInstance: 8
+		MaximumInstances: 1
+		RevokeDelay: 11
+		RevokeAll: true
+		RevokeOnNewTarget: true
+	AmmoPool:
+		Ammo: 1
+		ReloadDelay: 100
+		AmmoCondition: ammo
+		Armaments: control
+	ReloadAmmoPool:
+		Delay: 100
+	-TakeCover:
+	-Targetable@MC:
+	Health:
+		HP: 25000
+	Mobile:
+		TurnSpeed: 1023
+		Speed: 75
+		Locomotor: HeavyInfantry
+	Crushable:
+		CrushClasses: HeavyInfantry
+	AttackFrontal:
+		Armaments: OnFoot, control
+	AutoTarget:
+		ScanRadius: 6 #PREF: save trait looks up and scan armaments
+	RenderRangeCircle:
+		RangeCircleType: Subjugator
+		Color: 800080CC
+		BorderWidth: 0
+		Width: 2
+	WithMindControllerPipsDecoration:
+		Margin: 4, 3
+		Palette: pips
+		Position: BottomLeft
+		RequiresSelection: true
+		ValidRelationships: Ally, Neutral, Enemy
+	RA2PortableChrono:
+		TeleportType: MasterMindTele
+		Voice: Move
+		ChargeDelay: 500
+		TargetCursor: emp
+	ExplodeWeaponTeleportEffect:
+		TeleportType: MasterMindTele
+		ImpactWeapon: MasterMindTeleFrom
+		TeleportWeapon: MasterMindTeleTo
+	Passenger:
+		CustomPipType: red
+	SharedPassenger:
+		CustomPipType: red
+	SpawnActorOnDeath@conversion:
+		Actor: chusk
+	SpawnActorOnDeath@conversionUpg:
+		Actor: cyborg15-scr
+	-FirepowerMultiplier@ZealousBuff:
+	-ExternalCondition@ZealousBuff:
+	-WithIdleOverlayOnGround@ZealousBuff:
+	ActorStatValues:
+		ReloadDelay: 100
+		Stats: Armor, Sight, Speed, MindControl, ReloadDelay, MinRange, None, MaxRange

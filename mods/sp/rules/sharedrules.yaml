@@ -293,6 +293,7 @@ SCRHARV:
 		Queue: Vehicle.Shared, Vehicle.Scrin
 		BuildPaletteOrder: 5
 		Prerequisites: ~scrweap, proc, ~techlevel.1, ~!global-megawealth
+		Description: harvscr-desc
 	Mobile:
 		Locomotor: InfantryCrusherVehicle
 	RenderSprites:

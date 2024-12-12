@@ -415,7 +415,7 @@ UMAGON:
 		Multiplier: 30
 		Prerequisites: AIOnly
 	Mobile:
-		Speed: 80
+		Speed: 75
 	-Targetable@MC:
 	Health:
 		HP: 20000
@@ -526,12 +526,12 @@ CYC3:
 		Upgrades: upgrade.cybernetic_leg_enhancements, upgrade.regenerative_materials
 
 APUCMDO: #ZoneCommando
-	Inherits: ^Soldier
+	Inherits: ^MutantSoldier
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@COMMANDO: ^CommandoIcon
 	Valued:
-		Cost: 700
+		Cost: 2000
 	Tooltip:
 		Name: zonecomdo-name
 	UpdatesPlayerStatistics:
@@ -551,7 +551,6 @@ APUCMDO: #ZoneCommando
 	Health:
 		HP: 140000
 	-Targetable@MC:
-	-DamagedByTerrain:
 	-TakeCover:
 	Armament:
 		Weapon: LtRail
@@ -915,7 +914,6 @@ GHUMV: #Humvee
 	Inherits: ^Tank
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMoveWithBerserkable
 	Inherits@EXPERIENCE: ^GainsExperience
-	Inherits@PIPS: ^CargoPips
 	Inherits@VISION: ^8CellVision
 	Valued:
 		Cost: 400
@@ -946,17 +944,6 @@ GHUMV: #Humvee
 		Armaments: primary
 	AutoTarget:
 		ScanRadius: 7 #PREF: save trait looks up and scan armaments
-	Cargo:
-		Types: Infantry
-		MaxWeight: 1
-		AfterLoadDelay: 0
-		BeforeUnloadDelay: 0
-		AfterUnloadDelay: 0
-		UnloadVoice: Move
-		OwnerChangedAffectsPassengers: false
-		LoadedCondition: loaded
-	Passenger:
-		CargoType: Apc
 	Armament@primary:
 		Weapon: JeepWeapon
 		LocalOffset: 200,0,50
@@ -1235,7 +1222,7 @@ ZOMCA: ## Orca Fighter
 		Health: 25000
 		RequiresCondition: ceramic_plating
 
-MUJEEP:
+MUJEEP: #Technical
 	Inherits: ^Tank
 	Inherits@RENDER: ^MutRenderGreen
 	Inherits@AUTOTARGET: ^AutoTargetAllAssaultMoveWithBerserkable
@@ -1280,6 +1267,9 @@ MUJEEP:
 		UnloadVoice: Move
 		OwnerChangedAffectsPassengers: false
 		LoadedCondition: loaded
+	WithCargoSounds:
+		EnterSounds: genter1a.wav
+		ExitSounds: gexit1a.wav
 	Passenger:
 		CargoType: Apc
 	Selectable:
@@ -1714,7 +1704,7 @@ MRINOTNK: ## Goliath tank
 		Offset: -20,0,540
 	Armament@PRIMARY:
 		Weapon: GoliathCannon
-		Damage: 140
+		Damage: 100
 		LocalOffset: 880,100,100, 880,-100,100
 		MuzzleSequence: muzzle
 		MuzzlePalette: gensmkexploj
