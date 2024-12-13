@@ -3769,10 +3769,9 @@ Actors:
 		Owner: Nod
 		Facing: 384
 		Location: 34,-4
-	NodMcv1: nodmcv
+	NodMcv1: nodyard
 		Owner: Nod
-		Location: 53,22
-		Facing: 384
+		Location: 52,21
 	Reinforcepoint1: waypoint
 		Owner: Neutral
 		Location: 161,93

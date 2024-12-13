@@ -836,8 +836,13 @@ WorldLoaded = function()
 			if not Mech1.IsDead then
 				Mech1.GrantCondition("empdisable")
 			end
-
-
+			
+			-- HACK: Sell the MCV if AI deploy MCV near player
+			Trigger.AfterDelay(450, function()
+				for key,unit in ipairs(Nod_AI.GetActorsByType("cabyard")) do
+					AISell(unit)
+				end
+			end)
 		end
 
 		if FindMCVTrigger ~= nil then
