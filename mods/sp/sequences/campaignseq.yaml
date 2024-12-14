@@ -799,6 +799,11 @@ apucmdo:
 		Start: 133
 		Length: 12
 		ShadowStart: 279
+	die-crushed:
+		Start: 128
+		Length: 5
+		ShadowStart: 274
+		Tick: 400
 	webguy:
 		Filename: webguySPbig.shp
 		Length: 6

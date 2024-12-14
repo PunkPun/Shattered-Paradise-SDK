@@ -958,18 +958,10 @@ GHUMV: #Humvee
 	BodyOrientation:
 		QuantizedFacings: 32
 		CameraPitch: 250
-	WithCargoPipsDecoration:
-		Position: BottomLeft
-		RequiresSelection: true
 	ExplodesAlsoTransported:
 		Weapon: UnitExplodeSmall
 	ActorStatValues:
 		Stats: Armor, Sight, Speed, Damage, ReloadDelay, MaxRange, Cargo
-	IssueOrderToBot@AI:
-		RequiresCondition: loaded
-		OrderName: Unload
-		OrderChance: 100
-		OrderInterval: 45
 
 ORCAI: #Orca Interceptor
 	Inherits: ^CombatPlane
