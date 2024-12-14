@@ -413,11 +413,11 @@ APACHE:
 		InitialStance: ReturnFire
 		InitialStanceAI: AttackAnything
 	WithIdleOverlay@ROTORAIR:
-		Offset: 0,0,450
+		Offset: 0,0,400 
 		Sequence: rotor
 		RequiresCondition: airborne
 	WithIdleOverlay@ROTORGROUND:
-		Offset: 0,0,450
+		Offset: 0,0,400 #0,0,450
 		Sequence: slow-rotor
 		RequiresCondition: !airborne
 	SpawnHuskEffectOnDeath:
@@ -426,7 +426,7 @@ APACHE:
 	SpawnHuskEffectOnDeath@ROTOR:
 		Weapon: big.rotor.husk
 		RandomFacing: true
-		LocalOffset: 0,0,450
+		LocalOffset: 0,0,400
 		RequiresCondition: airborne
 	WithAmmoPipsDecoration:
 		Position: BottomLeft
