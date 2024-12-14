@@ -1906,9 +1906,6 @@
 ^MutantSoldier:
 	Inherits: ^Soldier
 	Inherits@1: ^HealsOnTiberium
-	-DamagedByTerrain:
-	-DamagedByTintedCells@Default:
-	-DamagedByTintedCells@BlueRadiation:
 	Mobile:
 		Locomotor: TibInmuneInfantry
 
@@ -1920,9 +1917,6 @@
 		Actor: cybdog
 	SpawnActorOnDeath@conversionUpg:
 		Actor: cyborg15-beast
-	-DamagedByTerrain:
-	-DamagedByTintedCells@Default:
-	-DamagedByTintedCells@BlueRadiation:
 	WithDeathAnimation@normal:
 		DeathTypes:
 			BulletDeath: 1, 2
