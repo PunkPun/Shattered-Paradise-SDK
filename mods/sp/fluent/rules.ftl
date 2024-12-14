@@ -1272,7 +1272,6 @@ wolf-desc = Tiberium beast that uses tiberium acid to melt its prey.
 
     Special:
      - Heals on Tiberium fields
-     - Immune to tiberium radiation
      - Attacks reduce target's attack and movement speed by 35%
      - Can attack enemies ahead while moving
      - Can mutate killed Infantry
@@ -1305,7 +1304,6 @@ deathclaw-desc = Melee beast from the outer redzones that brings death with its 
 
     Special:
      - Heals on Tiberium fields
-     - Immune to tiberium radiation
      - E.M.P. Immune
      - Slows enemy units with it's attack
      - Wild mind: Mind only controllable by Mastermind
@@ -1336,7 +1334,6 @@ weasau-desc = A long forgotten creature that has emerged again.
      - Immune to mind control
      - Can shoot over walls
      - Heals on Tiberium fields
-     - Immune to tiberium radiation
      - E.M.P. Immune
      - Deployability: Switch to melee attack gains +50 movement speed
        and Summons a brood of Weasaurus
@@ -1751,7 +1748,6 @@ ghost-desc =  Gil is the elite commando of Mutants, if not GDI.
      - Maximum Supply of 1
      - Demolishes structures with C4
      - Heals on Tiberium fields
-     - Immune to tiberium radiation
      - Immune to mindcontrol
      - Crush class: crushable
 
@@ -1765,7 +1761,6 @@ umagon-desc = Umagon was one of the GDI's "good girls", she sure was.
      - Maximum Supply of 1
      - Demolishes structures with C4
      - Heals on Tiberium fields
-     - Immune to tiberium radiation
      - Immune to mindcontrol
      - Crush class: crushable
 
@@ -1777,7 +1772,6 @@ zonecomdo-desc = Commando armed with an ion railgun and C4.
     Special:
      - Maximum Supply of 1
      - Heals on Tiberium fields
-     - Immune to tiberium radiation
      - Immune to mindcontrol
      - Crush class: crushable only by Epics
 
@@ -1904,7 +1898,6 @@ beastrider-desc =  Cavalry use recoilless rifle and tiberium bees.
     Special:
      - Uses recoilless rifle vs vehicles, bees vs infantry
      - Heals on Tiberium fields
-     - Immune to tiberium radiation
      - Can attack enemies while moving
      - E.M.P. Immune
      - Wild mind: Mind only controllable by Mastermind
@@ -1946,7 +1939,6 @@ weasau3-desc = A long forgotten creature trained by the mutants.
      - Can shoot over walls
      - Can crush Infantry 
      - Heals on Tiberium
-     - Immune to tiberium radiation
      - E.M.P. Immune
      - Deployability: use melee attack for a short period
      - Does not slow down on critical HP
@@ -2504,7 +2496,6 @@ templar-desc = Warrior resurrected regenesis prototype armed with a flamethrower
     Special:
      - Does not go prone after taking fire
      - Heals on Tiberium fields
-     - Immune to tiberium radiation
      - Crush class: crushable
 
     Upgrades:
@@ -2556,7 +2547,6 @@ marauder-desc = Wasteland soldiers armed with shotguns.
 
     Special:
      - Heals on Tiberium fields
-     - Immune to tiberium radiation
      - Can deploy to increase durability and attack range
      - Crush class: crushable
 
@@ -2571,7 +2561,6 @@ mutfiend-desc = Tiberium beasts trained to take out enemies with tiberium shards
     Special:
      - Does not go prone after taking fire
      - Heals on Tiberium fields
-     - Immune to tiberium radiation
      - Can attack Air
      - Crush class: crushable
      - Wild mind: Mind only controllable by Mastermind
@@ -2590,7 +2579,6 @@ cutman-desc =  Support infantry.
      - Can repair buildings and bridges
      - Crush class: crushable
      - Heals on Tiberium fields
-     - Immune to tiberium radiation
 
 e3-name = Skirmisher
 e3-desc =  Siege militia armed with molotov mortars.
@@ -2599,7 +2587,6 @@ e3-desc =  Siege militia armed with molotov mortars.
 
     Special:
      - Heals on Tiberium fields
-     - Immune to tiberium radiation
      - High attack range
      - Has a minimum attack distance
      - Can shoot over walls
@@ -2616,7 +2603,6 @@ seer-desc = Mutant infantry capable of channeling psychic energy waves and
 
     Special:
      - Heals on Tiberium fields
-     - Immune to tiberium radiation
      - Can persuade friendly units to fight harder when deployed
      - Affected units will gain 50% extra attack and movement speed
      - Receive 50% more damage in return
@@ -2635,7 +2621,6 @@ psyker-desc = Forgotten Commando born with high level psychic powers.
     Special:
      - Build limit: 1
      - Heals on Tiberium fields
-     - Immune to tiberium radiation
      - Long Range and Strong AoE
      - Can shoot over walls
      - Immune to mind control 
