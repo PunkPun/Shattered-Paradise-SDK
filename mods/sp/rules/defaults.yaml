@@ -1906,6 +1906,7 @@
 ^MutantSoldier:
 	Inherits: ^Soldier
 	Inherits@1: ^HealsOnTiberium
+	-DamagedByTerrain:
 	Mobile:
 		Locomotor: TibInmuneInfantry
 
@@ -1917,6 +1918,7 @@
 		Actor: cybdog
 	SpawnActorOnDeath@conversionUpg:
 		Actor: cyborg15-beast
+	-DamagedByTerrain:
 	WithDeathAnimation@normal:
 		DeathTypes:
 			BulletDeath: 1, 2
