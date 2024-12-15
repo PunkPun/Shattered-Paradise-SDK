@@ -55,7 +55,7 @@ upgrade.power_turbines:
 	Buildable:
 		Queue: Upgrade.Shared, Upgrade.GDI
 		BuildPaletteOrder: 3
-		BuildDuration: 750
+		BuildDuration: 1500
 		Prerequisites: ~upgrade.gdi, garadr, ~techlevel.4
 		Description: power_turbines-desc
 	Valued:

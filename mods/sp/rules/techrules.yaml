@@ -276,9 +276,9 @@ NEUTRALPOWERPLANT: #Nuclear Power Plant
 		Footprint: xxx xxx xxx
 		Dimensions: 3, 3
 	Health:
-		HP: 150000
+		HP: 100000
 	Power:
-		Amount: 1000
+		Amount: 400
 		RequiresCondition: !empdisable
 	BaseProvider:
 		Range: 8c0
