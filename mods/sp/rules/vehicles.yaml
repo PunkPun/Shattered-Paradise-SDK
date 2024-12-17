@@ -37,25 +37,25 @@ SMECH: #Wolverine
 	Voiced:
 		VoiceSet: Mech
 	Selectable:
-		Bounds: 806,1709, 0, -700
+		Bounds: 1006,1409, 0, -500
 	Armament:
 		Weapon: WolverineVulcan
 		PauseOnCondition: empdisable
-		LocalOffset: 0,0,880
+		LocalOffset: 0,0,620
 		RequiresCondition: !apammo
 	Armament@AP:
 		Weapon: WolverineVulcanAP
 		PauseOnCondition: empdisable
-		LocalOffset: 0,0,880
+		LocalOffset: 0,0,620
 		RequiresCondition: apammo
 	Armament@2Bullet:
 		Name: decoration
 		Weapon: WolverineVulcanLine
 		PauseOnCondition: empdisable
 		MuzzleSequence: muzzle
-		LocalOffset: 375,300,880, 375,-300,880
+		LocalOffset: 0,280,600, 0,-280,600
 		CasingWeapon: CasingDebris
-		CasingSpawnLocalOffset: 300,300,880, 300,-300,880
+		CasingSpawnLocalOffset:  0,280,600, 0,-280,600
 		CasingTargetOffset: 0, 600, 0, 0, -600, 0
 		RequiresCondition: !apammo
 	Armament@2BulletAP:
@@ -63,9 +63,9 @@ SMECH: #Wolverine
 		Weapon: WolverineVulcanLineAP
 		PauseOnCondition: empdisable
 		MuzzleSequence: muzzle
-		LocalOffset: 375,300,880, 375,-300,880
+		LocalOffset: 0,280,600, 0,-280,600
 		CasingWeapon: CasingDebris
-		CasingSpawnLocalOffset: 300,300,880, 300,-300,880
+		CasingSpawnLocalOffset:  0,280,600, 0,-280,600
 		CasingTargetOffset: 0, 600, 0, 0, -600, 0
 		RequiresCondition: apammo
 	WithMuzzleOverlay:

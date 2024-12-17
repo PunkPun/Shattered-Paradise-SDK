@@ -707,20 +707,24 @@ smech:
 	Defaults:
 		Filename: smech.shp
 	stand:
-		Start: 0
+		Start: 96
 		Facings: -8
-		ShadowStart: 72
+		ShadowStart: 232
 	run:
-		Start: 8
 		Facings: -8
-		Length: 8
-		ShadowStart: 80
-		Tick: 50
+		Length: 12
+		ShadowStart: 136
+		Tick: 48
+	shoot:
+		Start: 104
+		Length: 4
+		Facings: -8
+		ShadowStart: 240
+		Tick: 80
 	emp-overlay:
 		Filename: emp_fx01.shp
 	icon:
 		Filename: smchicon.shp
-
 
 predator:
 	Inherits@1: ^SpriteVehicleWithShadowAndTurret
