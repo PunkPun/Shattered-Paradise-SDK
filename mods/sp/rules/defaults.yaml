@@ -874,10 +874,12 @@
 		RequiresCondition: lowpower
 		Condition: disabled
 
-^DisableOnLowPowerOrPowerDown:
-	Inherits: ^DisableOnLowPower
+^DisableOnPowerDown:
+	WithColoredOverlay@IDISABLE:
+		Color: 00000080
+		RequiresCondition: disabled
 	GrantCondition@IDISABLE:
-		RequiresCondition: lowpower || powerdown
+		RequiresCondition: powerdown
 		Condition: disabled
 	ToggleConditionOnOrder:
 		DisabledSpeech: DisablePower
@@ -895,6 +897,12 @@
 	PowerMultiplier@POWERDOWN:
 		RequiresCondition: powerdown
 		Modifier: 0
+
+^DisableOnLowPowerOrPowerDown:
+	Inherits: ^DisableOnLowPower
+	Inherits@2: ^DisableOnPowerDown
+	GrantCondition@IDISABLE:
+		RequiresCondition: lowpower || powerdown
 
 ^WebDisable:
 	TimedConditionBar@WebDisable:

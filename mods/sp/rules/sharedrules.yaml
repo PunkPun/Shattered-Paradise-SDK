@@ -866,44 +866,32 @@ GACNST:
 		BuildDurationModifier: 100
 	Valued:
 		Cost: 1500
-	ProvidesPrerequisite:
+	ProvidesPrerequisite@buildingname:
+		RequiresCondition: !powerdown
+	ProvidesPrerequisite@radar:
 		Prerequisite: radar
+		RequiresCondition: !powerdown
+	ProvidesPrerequisite@radarscan:
+		Prerequisite: radarscan
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Health:
 		HP: 100000
-	GrantConditionOnPowerState@LOWPOWER:
-		Condition: lowpower
-		ValidPowerStates: Low, Critical
-	ToggleConditionOnOrder:
-		DisabledSpeech: DisablePower
-		EnabledSpeech: EnablePower
-		Condition: powerdown
-		OrderName: PowerDown
 	ProvidesRadar:
 		RequiresCondition: !disabled && !empdisable
 	DetectCloaked:
 		Range: 10c0
+		RequiresCondition: !disabled && !empdisable
 	RenderDetectionCircle:
 	Targetable:
 		TargetTypes: Building, Ground, C4
 	Power:
 		Amount: -75
-	ProvidesPrerequisite@buildingname:
 	WithSpriteBody:
 		PauseOnCondition: disabled
-	WithDecoration@POWERDOWN:
-		Image: poweroff
-		Sequence: offline
-		Palette: mouse
-		RequiresCondition: powerdown
-		Position: Center
 	RequiresBuildableArea:
 		AreaTypes: building
-	PowerMultiplier@POWERDOWN:
-		RequiresCondition: powerdown
-		Modifier: 0
 	SupportPowerChargeBar:
 	SpawnActorPower:
 		OrderName: RadarScan
@@ -912,7 +900,7 @@ GACNST:
 		Cursor: emp
 		BlockedCursor: emp-blocked
 		Prerequisites:
-			1: radar
+			1: radarscan
 		Icons:
 			1: radarscan
 		ChargeInterval: 3000
@@ -937,7 +925,7 @@ GACNST:
 		Cursor: emp
 		BlockedCursor: emp-blocked
 		Prerequisites:
-			1: radar
+			1: radarscan
 		Icons:
 			1: radarscan
 		ChargeInterval: 3000
@@ -1130,6 +1118,7 @@ SCRDEPOT:
 
 ^TechCenter:
 	Inherits: ^AffectPowerBuilding
+	Inherits@LOWPOWER: ^DisableOnPowerDown
 	Buildable:
 		BuildDuration: 1500
 		BuildDurationModifier: 100
@@ -1146,6 +1135,7 @@ SCRDEPOT:
 	Power:
 		Amount: -150
 	ProvidesPrerequisite@buildingname:
+		RequiresCondition: !powerdown
 	RequiresBuildableArea:
 		AreaTypes: building
 	Voiced:

@@ -285,6 +285,7 @@ GARADR:
 		RequiresCondition: !Building-Buildup
 	ProvidesPrerequisite@upgrade.gdi:
 		Prerequisite: upgrade.gdi
+		RequiresCondition: !powerdown
 	SpawnActorPower:
 		OrderName: RadarScan
 		Icons:
@@ -359,6 +360,7 @@ GATECH:
 		RequiresCondition: !Building-Buildup
 	ProvidesPrerequisite@upgrade.gdi:
 		Prerequisite: upgrade.gdi
+		RequiresCondition: !powerdown
 	RequiresBuildableArea:
 		AreaTypes: building
 	IsometricSelectable:
@@ -779,6 +781,7 @@ NARADR:
 		RequiresCondition: !Building-Buildup
 	ProvidesPrerequisite@upgrade.nod:
 		Prerequisite: upgrade.nod
+		RequiresCondition: !powerdown
 	SpawnActorPower:
 		OrderName: RadarScan
 		Icons:
@@ -930,6 +933,7 @@ NATECH:
 		Palette: bright
 	ProvidesPrerequisite@upgrade.nod:
 		Prerequisite: upgrade.nod
+		RequiresCondition: !powerdown
 	RequiresBuildableArea:
 		AreaTypes: building
 	ProvidesPrerequisite@AI-Limit:
@@ -972,11 +976,14 @@ NAMISL:
 		Condition: powerdown
 		OrderName: PowerDown
 	ProvidesPrerequisite@buildingname:
+		RequiresCondition: !powerdown
+	ProvidesPrerequisite@clustermissile:
+		Prerequisite: clustermissile
 	ProvidesPrerequisite@swlimit:
 		Prerequisite: enoughnamisl
 	NukePower:
 		Prerequisites:
-			1: namisl
+			1: clustermissile
 		Icons:
 			1: clustermissile
 		ChargeInterval: 6000
@@ -1316,6 +1323,7 @@ MURADR:
 		Prerequisites: ~mutyard, proc, ~techlevel.4, ~!hasTech.mutT2
 	ProvidesPrerequisite@upgrade.mut:
 		Prerequisite: upgrade.mut
+		RequiresCondition: !powerdown
 	SpawnActorPower:
 		OrderName: RadarScan
 		Icons:
@@ -1378,6 +1386,7 @@ MUHALL:
 		Dimensions: 3,4
 	ProvidesPrerequisite@upgrade.mut:
 		Prerequisite: upgrade.mut
+		RequiresCondition: !powerdown
 	RequiresBuildableArea:
 		AreaTypes: building
 	ProvidesPrerequisite@AI-Limit:
@@ -1408,12 +1417,15 @@ MUTSW2:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
 	ProvidesPrerequisite@buildingname:
+		RequiresCondition: !powerdown
+	ProvidesPrerequisite@veinholesw:
+		Prerequisite: veinholesw
 	ProvidesPrerequisite@swlimit:
 		Prerequisite: enoughmutsw2
 	NukePower:
 		Cursor: bioweapon
 		Prerequisites:
-			1: mutsw2
+			1: veinholesw
 		MissileWeapons:
 			1: VeinholeSummonerWeapon
 		Icons:
@@ -1797,6 +1809,7 @@ SCRRADR:
 		AreaTypes: building
 	ProvidesPrerequisite@upgrade.scr:
 		Prerequisite: upgrade.scr
+		RequiresCondition: !powerdown
 	SpawnActorPower:
 		OrderName: RadarScan
 		Icons:
@@ -1884,9 +1897,9 @@ SCRTECH:
 	Building:
 		Footprint: xx xx xx
 		Dimensions: 2,3
-	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@upgrade.scr:
 		Prerequisite: upgrade.scr
+		RequiresCondition: !powerdown
 	RequiresBuildableArea:
 		AreaTypes: building
 	FireProjectilesOnDeath@SMALL:
@@ -1920,6 +1933,9 @@ SCRADVPOWR:
 	Valued:
 		Cost: 2500
 	ProvidesPrerequisite@buildingname:
+		RequiresCondition: !powerdown
+	ProvidesPrerequisite@wormhole:
+		Prerequisite: wormhole
 	ProvidesPrerequisite@swlimit:
 		Prerequisite: enoughscradvpowr
 	Building:
@@ -1931,7 +1947,7 @@ SCRADVPOWR:
 		PauseOnCondition: empdisable || disabled
 		AllowMultiple: true
 		Prerequisites:
-			1: scradvpowr
+			1: wormhole
 		Icons:
 			1: wormholeicon
 		IconPalette: playerscrin
@@ -1971,7 +1987,7 @@ SCRADVPOWR:
 	NukePower:
 		RequiresCondition: AImicroManage
 		Prerequisites:
-			1: scradvpowr
+			1: wormhole
 		MissileWeapons:
 			1: ColossiSummonerWeapon
 		Icons:
@@ -2297,6 +2313,7 @@ CABRADR:
 		AreaTypes: building
 	ProvidesPrerequisite@upgrade.cab:
 		Prerequisite: upgrade.cab
+		RequiresCondition: !powerdown
 	SpawnActorPower:
 		OrderName: RadarScan
 		Icons:
@@ -2369,6 +2386,7 @@ CABTECH:
 		Dimensions: 3,2
 	ProvidesPrerequisite@upgrade.cab:
 		Prerequisite: upgrade.cab
+		RequiresCondition: !powerdown
 	RequiresBuildableArea:
 		AreaTypes: building
 	ProvidesPrerequisite@AI-Limit:
@@ -2399,6 +2417,9 @@ CABOBELISK:
 	BodyOrientation:
 		QuantizedFacings: 32
 	ProvidesPrerequisite@buildingname:
+		RequiresCondition: !powerdown
+	ProvidesPrerequisite@nanomachineswarm:
+		Prerequisite: nanomachineswarm
 	ProvidesPrerequisite@swlimit:
 		Prerequisite: enoughcabobelisk
 	SpawnActorPower@nanomachinesson:
@@ -2406,7 +2427,7 @@ CABOBELISK:
 		Cursor: ioncannon
 		BlockedCursor: move-blocked
 		Prerequisites:
-			1: cabobelisk
+			1: nanomachineswarm
 		Icons:
 			1: nanomachineswarm
 		Names:
