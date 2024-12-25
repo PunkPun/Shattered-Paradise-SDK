@@ -994,7 +994,7 @@ GAFIRE:
 	-RevealOnFire:
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	-GivesBuildableArea:
+	GivesBuildableArea:
 	Voiced:
 		VoiceSet: FirestormGeneratorVoice
 		Volume: 0.5
@@ -1160,7 +1160,7 @@ NASTLH:
 		Prerequisite: AINASTLHBuildLimit
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	-GivesBuildableArea:
+	GivesBuildableArea:
 	Voiced:
 		VoiceSet: StealthGeneratorVoice
 		Volume: 0.5
@@ -1337,6 +1337,7 @@ MUVENTI:
 	ProvidesPrerequisite@swlimit:
 		RequiresPrerequisites: global-swlimit
 		Prerequisite: enoughmuventi
+	GivesBuildableArea:
 	SupportPowerChargeBar:
 	NukePower:
 		PauseOnCondition: empdisable
@@ -1677,7 +1678,7 @@ CABEYE:
 	Voiced:
 		VoiceSet: EyeOfCABALVoice
 		Volume: 0.5
-	-GivesBuildableArea:
+	GivesBuildableArea:
 
 CABSW1:
 	Inherits: ^AffectPowerBuilding

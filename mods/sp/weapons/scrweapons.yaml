@@ -18,7 +18,7 @@ SharkJump:
 LegioNeedler:
 	Inherits: ^RocketWeapon
 	Inherits@2: ^Scrin_Pulse
-	ReloadDelay: 60
+	ReloadDelay: 50
 	Range: 6c0
 	Report: photon1.wav
 	ValidTargets: Ground, Water, Infantry, Vehicle, Building

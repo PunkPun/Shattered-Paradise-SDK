@@ -71,7 +71,7 @@ MarauderShotgunInnacurate:
 
 FiendShard2:
 	Inherits: ^ArmorPierceAmmoWeapon
-	ReloadDelay: 60
+	ReloadDelay: 50
 	Burst: 2
 	Range: 5c0
 	StartBurstReport: fiend2.aud

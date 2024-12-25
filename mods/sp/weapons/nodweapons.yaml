@@ -17,7 +17,7 @@ HologramMilitantRifle:
 CrusaderBazooka:
 	Inherits: ^RocketWeapon
 	Inherits@2: ^Small_Clsn
-	ReloadDelay: 60
+	ReloadDelay: 50
 	Range: 6c0
 	Report: rketinf1.aud
 	ValidTargets: Ground, Water, Vehicle, Building, Infantry

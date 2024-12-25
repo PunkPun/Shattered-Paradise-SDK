@@ -170,7 +170,7 @@ APC: #Amphibious APC
 	Inherits@EXPERIENCE: ^GainsExperience
 	Inherits@PIPS: ^CargoPips
 	Valued:
-		Cost: 800
+		Cost: 850
 	Tooltip:
 		Name: apc-name
 	UpdatesPlayerStatistics:
@@ -181,14 +181,14 @@ APC: #Amphibious APC
 		Description: apc-desc
 		BuildPaletteOrder: 23
 		Prerequisites: ~gaweap, gapile, ~techlevel.2
-		BuildDuration: 500
+		BuildDuration: 625
 		BuildDurationModifier: 100
 	Mobile:
 		TurnSpeed: 24
 		Speed: 90
 		Locomotor: AmphAPCLocomotor
 	Health:
-		HP: 30000
+		HP: 35000
 	Turreted:
 		TurnSpeed: 20
 		Offset: -200,0,390
