@@ -562,7 +562,7 @@ RavagerStrike:
 	Inherits@1: ^MeleeClaw
 	ReloadDelay: 30
 	Range: 1c650
-	Report: Monster_Attack2.wav
+	Report: SSUSBLargeMonster0000.aud, SSUSBLargeMonster0001.aud, SSUSBLargeMonster0002.aud, SSUSBLargeMonster0003.aud, SSUSBLargeMonster0004.aud
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamageWithCondition
 		Spread: 0c200
@@ -963,7 +963,7 @@ WeasaurusStrike:
 	Inherits: ^FullDamage
 	ReloadDelay: 20
 	Range: 2c0
-	Report: Monster_Attack2.aud
+	Report: SSUSBLargeMonster0000.aud, SSUSBLargeMonster0001.aud, SSUSBLargeMonster0002.aud, SSUSBLargeMonster0003.aud, SSUSBLargeMonster0004.aud
 	Projectile: InstantHit
 	Warhead@1Dam: SpreadDamageWithCondition
 		Spread: 0c256

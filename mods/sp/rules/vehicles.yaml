@@ -2389,7 +2389,7 @@ DEATHCLAW: #Ravager
 	Selectable:
 		DecorationBounds: 903,2400,0,-1207
 	Voiced:
-		VoiceSet: LargeBeast
+		VoiceSet: Ravager
 		Volume: 1.5
 	Carryable:
 		LocalOffset: 0, 0, 1000

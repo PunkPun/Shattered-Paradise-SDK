@@ -901,6 +901,17 @@ BattleBusVoice:
 		Move: vbusmoa, vbusmob, vbusmoc, vbusmod
 		Action: vbusata, vbusatb, vbusatc, vbusatd, vbusate
 
+Ravager:
+	Voices:
+		Build: SSUSBLargeMonster0009
+		Select: SSUSBLargeMonster0005, SSUSBLargeMonster0006 
+		Attack: SSUSBLargeMonster0009, SSUSBLargeMonster0010, SSUSBLargeMonster0011, SSUSBLargeMonster0012, SSUSBLargeMonster0013
+		Action: SSUSBLargeMonster0009, SSUSBLargeMonster0010, SSUSBLargeMonster0011, SSUSBLargeMonster0012, SSUSBLargeMonster0013
+		Move: SSUSBLargeMonster0009, SSUSBLargeMonster0010, SSUSBLargeMonster0011, SSUSBLargeMonster0012, SSUSBLargeMonster0013
+		Die: SSUSBLargeMonster0007, SSUSBLargeMonster0008
+		Burned: SSUSBLargeMonster0007, SSUSBLargeMonster0008
+		Zapped: SSUSBLargeMonster0007, SSUSBLargeMonster0008
+
 DemoTruck:
 	Voices:
 		Build: demotruckvoice0002

@@ -1,7 +1,7 @@
 SharkJump:
 	Inherits: ^RifleDamage
 	SoundVolume: 0.5
-	Report: antbite.aud
+	Report: Monster_Attack2.aud, SSUSBLargeMonster0000.aud
 	ValidTargets: Ground, Water
 	ReloadDelay: 20
 	Range: 1c512
@@ -1229,7 +1229,7 @@ ColoussTeleTo:
 		AirThreshold: 8c0
 	Warhead@8Radio: CreateTintedCells
 		Spread: 0c768
-		Level: 60
+		Level: 120
 		Falloff: 100, 85, 60, 45, 30, 15
 		LayerName: radioactivity
 		AirThreshold: 8c0
