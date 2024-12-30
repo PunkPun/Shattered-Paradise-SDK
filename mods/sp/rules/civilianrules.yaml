@@ -3483,7 +3483,8 @@ TDREPD:
 	-WithRepairOverlay@CRANE-BRIGHT:
 	-WithDeathAnimation@BIB:
 	-Sellable:
-	-GrantConditionOnHostDock:
+	-ProximityExternalCondition@Sellable:
+	-ExternalCondition@Docked:
 	-IssueOrderToBot@AISell:
 	-SpawnActorsOnSell@gdi:
 	-SpawnActorsOnSell@nod:

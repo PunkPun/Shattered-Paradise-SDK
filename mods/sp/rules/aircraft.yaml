@@ -862,7 +862,8 @@ MUTQUEEN:
 		Health: 18750
 		RequiresCondition: tibinfusion
 	-Sellable:
-	-GrantConditionOnClientDock@Sellable:
+	-ProximityExternalCondition@Docked:
+	-ExternalCondition@Sellable:
 	-IssueOrderToBot@AISell:
 
 WETP:

@@ -2344,10 +2344,11 @@
 		Notification: UnitSold
 		TextNotification: notification-unit-sold
 		RequiresCondition: unit.sellable
-	GrantConditionOnClientDock@Sellable:
+	ProximityExternalCondition@Docked:
+		Condition: unit.docked
+		Range: 1c0
+	ExternalCondition@Sellable:
 		Condition: unit.sellable
-		AfterDockDuration: 20
-		DockHostNames: gadept, scrdepot, tdrepd
 	HiddenUnderFog:
 	Guard:
 		Voice: Move
@@ -2651,10 +2652,11 @@
 		Notification: UnitSold
 		TextNotification: notification-unit-sold
 		RequiresCondition: unit.sellable
-	GrantConditionOnClientDock@Sellable:
+	ProximityExternalCondition@Docked:
+		Condition: unit.docked
+		Range: 1c0
+	ExternalCondition@Sellable:
 		Condition: unit.sellable
-		AfterDockDuration: 20
-		DockHostNames: gadept, scrdepot, tdrepd
 	Repairable:
 		RepairActors: gadept, scrdepot, tdrepd, civheli
 		Voice: Move
@@ -2766,7 +2768,8 @@
 	Cloak@CLOAKGENERATOR:
 		-CloakedCondition:
 	-Sellable:
-	-GrantConditionOnClientDock@Sellable:
+	-ProximityExternalCondition@Docked:
+	-ExternalCondition@Sellable:
 	-IssueOrderToBot@AISell:
 
 ^Plane:
@@ -2831,7 +2834,8 @@
 	-MapEditorData:
 
 	-Sellable:
-	-GrantConditionOnClientDock@Sellable:
+	-ProximityExternalCondition@Docked:
+	-ExternalCondition@Sellable:
 	-IssueOrderToBot@AISell:
 
 	-ChangesHealth@nanomachinerecovery:

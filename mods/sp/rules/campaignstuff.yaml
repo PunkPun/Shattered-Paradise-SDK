@@ -1579,7 +1579,8 @@ RAYRIDER:
 		Health: 11250
 		RequiresCondition: tibinfusion
 	-Sellable:
-	-GrantConditionOnClientDock@Sellable:
+	-ProximityExternalCondition@Docked:
+	-ExternalCondition@Sellable:
 	-IssueOrderToBot@AISell:
 
 

@@ -997,16 +997,18 @@ GADEPT:
 		Actors: REPAIRDRONE, REPAIRDRONE, REPAIRDRONE
 		SpawnOffset: -1024, 1024, 0, 0,0,0, 1024, 1024, 0
 		GatherCell: 1, 2, 1,1, 2,1
-	GrantConditionOnHostDock:
-		Condition: serving
-		AfterDockDuration: 20
 	RenderRangeCircle:
 		Color: FFFF00CC
 		BorderColor: 000000CC
 		BorderWidth: 0
 		Width: 2
 	Sellable:
-		RequiresCondition: !serving && !Building-Buildup
+		RequiresCondition: !unit.docked && !Building-Buildup
+	ProximityExternalCondition@Sellable:
+		Condition: unit.sellable
+		Range: 1c0
+	ExternalCondition@Docked:
+		Condition: unit.docked
 	WithSpriteBody:
 	RallyPoint:
 		Palette: mouse
