@@ -827,8 +827,8 @@ MUTQUEEN:
 		Sequence: run
 	BodyOrientation:
 		QuantizedFacings: 8
-	GrantConditionOnDeployWithCharge:
-		DeployedCondition: deployed
+	GrantChargedConditionOnToggle:
+		ActivatedCondition: deployed
 		ChargeDuration: 4500
 		ConditionDuration: 14
 	SpawnSparks@Deployed:

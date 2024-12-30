@@ -984,8 +984,8 @@ NCONF:
 	Voiced:
 		VoiceSet: BlackHand
 		Volume: 8
-	GrantConditionOnDeployWithCharge:
-		DeployedCondition: HologramSpawn
+	GrantChargedConditionOnToggle:
+		ActivatedCondition: HologramSpawn
 		ChargeDuration: 4000
 		ConditionDuration: 10
 	SpawnSparks@Deployed:
@@ -1558,8 +1558,8 @@ SEER:
 		FacingTolerance: 2
 	AutoTarget:
 		ScanRadius: 9 #PREF: save trait looks up and scan armaments
-	GrantConditionOnDeployWithCharge:
-		DeployedCondition: deployed
+	GrantChargedConditionOnToggle:
+		ActivatedCondition: deployed
 		ChargeDuration: 2000
 		ConditionDuration: 60
 		PauseOnCondition: WebDisable

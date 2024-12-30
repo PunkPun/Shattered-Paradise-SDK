@@ -1232,8 +1232,8 @@
 	GrantConditionOnPrerequisite@megawealth:
 		Condition: megawealth
 		Prerequisites: global-megawealth
-	GrantConditionOnDeployWithCharge@TIBCONVERSION:
-		DeployedCondition: absorbTib
+	GrantChargedConditionOnToggle@TIBCONVERSION:
+		ActivatedCondition: absorbTib
 		ChargeDuration: 2000
 		ConditionDuration: 50
 		PauseOnCondition: empdisable
@@ -3725,8 +3725,8 @@
 	WithSpriteBody:
 
 ^FirestormWallSP:
-	GrantConditionOnDeployWithCharge@FirestormWall:
-		DeployedCondition: FirestormGen
+	GrantChargedConditionOnToggle@FirestormWall:
+		ActivatedCondition: FirestormGen
 		ChargeDuration: 1500
 		InitialCharge: 0
 		ConditionDuration: 300

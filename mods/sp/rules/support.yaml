@@ -923,7 +923,7 @@ GAFIRE:
 		Color: 8888FFCC
 		BorderWidth: 0
 		Width: 2
-	GrantConditionOnDeployWithCharge@FirestormWall:
+	GrantChargedConditionOnToggle@FirestormWall:
 		PauseOnCondition: (empdisable || disabled)  && !FirestormGen
 	ProximityExternalCondition@FirestormWall:
 		RequiresCondition: FirestormGen && !empdisable && !disabled

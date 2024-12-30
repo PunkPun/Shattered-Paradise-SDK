@@ -1927,8 +1927,8 @@ WEASAU3: #Green Weasaurus
 		Weapon: WeasaurusStrikeGreen
 		LocalOffset: 990,0,1210
 		RequiresCondition: deployed
-	GrantConditionOnDeployWithCharge:
-		DeployedCondition: deployed
+	GrantChargedConditionOnToggle:
+		ActivatedCondition: deployed
 		ChargeDuration: 1500
 		ConditionDuration: 500
 		DeployedColor: FF0000
@@ -2681,8 +2681,8 @@ M_EMP:
 		ScanRadius: 6
 		InitialStance: HoldFire
 		InitialStanceAI: AttackAnything
-	GrantConditionOnDeployWithCharge:
-		DeployedCondition: empSpawn
+	GrantChargedConditionOnToggle:
+		ActivatedCondition: empSpawn
 		ChargeDuration: 1600
 		ConditionDuration: 1
 	SpawnSparks@Deployed:
@@ -3457,7 +3457,7 @@ COREDEFENDER:
 		Pieces: 2, 4
 		Weapons: LargeDebris
 	## Firestorm on Deploy
-	GrantConditionOnDeployWithCharge@FirestormWall:
+	GrantChargedConditionOnToggle@FirestormWall:
 		InitialCharge: -1
 		PauseOnCondition: empdisable && !FirestormGen
 	ProximityExternalCondition@FirestormWall:

@@ -12,7 +12,7 @@ ModCredits:
 PackageFormats: Mix
 
 FileSystem: ContentInstallerFileSystem
-    Packages:
+    SystemPackages:
 		^EngineDir
 		^EngineDir|mods/cnc: cnc
 		^EngineDir|mods/common: common

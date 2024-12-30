@@ -1911,8 +1911,8 @@ SCORPION:
 		Delay: 10
 		ShowSelectionBar: false
 		RequiresCondition: chargingLaser
-	GrantConditionOnDeployWithCharge:
-		DeployedCondition: rage
+	GrantChargedConditionOnToggle:
+		ActivatedCondition: rage
 		ChargeDuration: 2250
 		ConditionDuration: 25
 		PauseOnCondition: empdisable
@@ -2573,8 +2573,8 @@ WEASAU:
 		Weapon: WeasaurusStrike
 		LocalOffset: 1100,0,1350
 		RequiresCondition: deployed
-	GrantConditionOnDeployWithCharge:
-		DeployedCondition: deployed
+	GrantChargedConditionOnToggle:
+		ActivatedCondition: deployed
 		ChargeDuration: 1500
 		ConditionDuration: 500
 		DeployedColor: FF0000
