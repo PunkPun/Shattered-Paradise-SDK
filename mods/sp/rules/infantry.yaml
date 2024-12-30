@@ -304,7 +304,7 @@ JUMPJET:
 	Buildable:
 		Queue: Infantry.Shared, Infantry.GDI
 		BuildPaletteOrder: 18
-		Prerequisites: ~gapile, garadr, ~techlevel.4, !jumpjet
+		Prerequisites: ~gapile, garadr, ~techlevel.4
 		Description: jumpjet-desc
 		BuildDuration: 250
 		BuildDurationModifier: 100
@@ -353,9 +353,6 @@ JUMPJET:
 		OrderInterval: 550
 		OrderChance: 100
 	ActorStatValues:
-		Icon: icon
-		IconPalette: chrome
-		TooltipActor: jumpjetair
 		Damage: 50
 
 JUMPJETAIR:
@@ -414,6 +411,9 @@ JUMPJETAIR:
 		Weapon: jumpjetair-fire.husk
 		LocalOffset: 0,0,700
 	ActorStatValues:
+		Icon: icon
+		IconPalette: chrome
+		TooltipActor: jumpjet
 		Damage: 50
 
 EAGLEGUARD:

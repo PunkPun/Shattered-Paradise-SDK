@@ -1932,7 +1932,7 @@ WEASAU3: #Green Weasaurus
 		ActivatedCondition: deployed
 		ChargeDuration: 1500
 		ConditionDuration: 500
-		DeployedColor: FF0000
+		ActivatedColor: FF0000
 	SpawnSparks@Deployed:
 		Interval: 9999999
 		LocalOffset: 0,0,1800

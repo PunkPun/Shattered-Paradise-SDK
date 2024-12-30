@@ -2577,7 +2577,7 @@ WEASAU:
 		ActivatedCondition: deployed
 		ChargeDuration: 1500
 		ConditionDuration: 500
-		DeployedColor: FF0000
+		ActivatedColor: FF0000
 	SpawnSparks@Deployed:
 		SparkWeapon: WeasaurusCall
 		Amount: 1
