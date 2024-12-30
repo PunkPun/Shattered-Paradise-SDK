@@ -864,7 +864,7 @@ BGGY: #Raider Buggy
 	############################################
 	Armament:
 		Weapon: BuggyCannon
-		Damage: 40
+		Damage: 30
 		LocalOffset: 250,0,125
 		MuzzleSequence: muzzle
 		CasingWeapon: BuggyBullet2Spawner
@@ -2223,10 +2223,10 @@ WOLF: #Warg
 		BuildPaletteOrder: 30
 		Description: wolf-desc
 		Prerequisites: ~muweap, muradr, ~techlevel.4
-		BuildDuration: 375
+		BuildDuration: 250
 		BuildDurationModifier: 100
 	Valued:
-		Cost: 500
+		Cost: 300
 	Tooltip:
 		Name: wolf-name
 	Voiced:
@@ -2239,9 +2239,9 @@ WOLF: #Warg
 		Weapon: WolfAcid
 		LocalOffset: 256,0,700
 	Health:
-		HP: 20000
+		HP: 25000
 	Armor:
-		Type: Heavy
+		Type: Light
 	Mobile:
 		Speed: 120
 		Locomotor: HeavyInfantry
@@ -2275,7 +2275,7 @@ WOLF: #Warg
 	ActorStatValues:
 		Damage: 18
 	ActorStatOverride@Tibinfusion:
-		Health: 25000
+		Health: 31250
 		RequiresCondition: tibinfusion
 
 MRLS: #Blighter MLRS

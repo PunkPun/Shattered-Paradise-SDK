@@ -301,6 +301,13 @@ JUMPJET:
 	Inherits: ^Soldier
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMoveWithBerserkable
 	Inherits@EXPERIENCE: ^GainsExperience
+	Buildable:
+		Queue: Infantry.Shared, Infantry.GDI
+		BuildPaletteOrder: 18
+		Prerequisites: ~gapile, garadr, ~techlevel.4, !jumpjet
+		Description: jumpjet-desc
+		BuildDuration: 250
+		BuildDurationModifier: 100
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -363,13 +370,6 @@ JUMPJETAIR:
 		Name: jumpjet-name
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
-	Buildable:
-		Queue: Infantry.Shared, Infantry.GDI
-		BuildPaletteOrder: 18
-		Prerequisites: ~gapile, garadr, ~techlevel.4
-		Description: jumpjet-desc
-		BuildDuration: 250
-		BuildDurationModifier: 100
 	Voiced:
 		VoiceSet: Jumpjet
 		Volume: 8

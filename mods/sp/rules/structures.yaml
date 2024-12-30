@@ -635,8 +635,6 @@ NAHAND:
 		AreaTypes: building
 	Voiced:
 		VoiceSet: HandOfNodVoice
-	ActorStatValues:
-		Upgrades: upgrade.unlock_exemplar
 
 NODREF:
 	Inherits: ^Refinery
@@ -826,6 +824,8 @@ NARADR:
 		-IncomingTextNotification:
 	Voiced:
 		VoiceSet: NodRadarVoice
+	ActorStatValues:
+		Upgrades: upgrade.unlock_exemplar
 
 NAAPWR:
 	Inherits: ^Powerplant
