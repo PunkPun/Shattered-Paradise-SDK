@@ -191,9 +191,6 @@ Cursors:
 		repair-blocked:
 			Start: 190
 			Length: 1
-		sell2:
-			Start: 139
-			Length: 10
 		powerdown-blocked:
 			Start: 345
 			Length: 1
@@ -250,4 +247,8 @@ Cursors:
 			Length: 10
 		guard-minimap:
 			Start: 10
+			Length: 10
+	sell-green.shp: mouse
+		sell2:
+			Start: 0
 			Length: 10
