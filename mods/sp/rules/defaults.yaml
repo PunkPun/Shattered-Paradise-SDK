@@ -2340,6 +2340,7 @@
 	Sellable:
 		SellSounds: cashturn.aud
 		Cursor: sell2
+		SellDirectly: true
 		Notification: UnitSold
 		TextNotification: notification-unit-sold
 		RequiresCondition: unit.sellable
@@ -2646,6 +2647,7 @@
 	Sellable:
 		SellSounds: cashturn.aud
 		Cursor: sell2
+		SellDirectly: true
 		Notification: UnitSold
 		TextNotification: notification-unit-sold
 		RequiresCondition: unit.sellable
