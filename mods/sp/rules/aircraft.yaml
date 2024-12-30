@@ -988,13 +988,19 @@ WETP:
 			VerticalTopOffset: 512
 		TargetableOffsets: -1300, 0, 0
 	DamageMultiplier@supersonic:
-		RequiresCondition: ammo && attacking
+		RequiresCondition: ammo && attacking && !suddendeath
 		Modifier: 0
+	DamageMultiplier@supersonic-suddendeath:
+		RequiresCondition: ammo && attacking && suddendeath
+		Modifier: 75
 	SpeedMultiplier@tractorstop:
 		RequiresCondition: (!ammo || !attacking) && tractorstop
 	RejectsOrders@AI:
 		Reject: Move, Attack, ReturnToBase
 		RequiresCondition: AImicroManage && ammo && attacking
+	GrantConditionOnPrerequisite@SUDDENDEATH:
+		Condition: suddendeath
+		Prerequisites: global-suddendeath
 	ActorStatValues:
 		Damage: 400
 
