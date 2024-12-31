@@ -2226,7 +2226,7 @@ WOLF: #Warg
 		BuildDuration: 250
 		BuildDurationModifier: 100
 	Valued:
-		Cost: 300
+		Cost: 400
 	Tooltip:
 		Name: wolf-name
 	Voiced:
@@ -2239,7 +2239,7 @@ WOLF: #Warg
 		Weapon: WolfAcid
 		LocalOffset: 256,0,700
 	Health:
-		HP: 25000
+		HP: 20000
 	Armor:
 		Type: Light
 	Mobile:
@@ -2275,7 +2275,7 @@ WOLF: #Warg
 	ActorStatValues:
 		Damage: 18
 	ActorStatOverride@Tibinfusion:
-		Health: 31250
+		Health: 25000
 		RequiresCondition: tibinfusion
 
 MRLS: #Blighter MLRS
