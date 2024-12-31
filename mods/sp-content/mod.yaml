@@ -4,7 +4,7 @@ Metadata:
 	Hidden: true
 
 FileSystem: DefaultFileSystem
-	SystemPackages:
+	Packages:
 		^EngineDir
 		^EngineDir|mods/ts-content: tscontent
 		^EngineDir|mods/common-content: content
